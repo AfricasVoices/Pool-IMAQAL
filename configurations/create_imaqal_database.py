@@ -37,7 +37,48 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     FlowResultConfiguration("ssf_elections_demog", "household language", "household_language"),
                     FlowResultConfiguration("ssf_elections_demog", "recently displaced", "recently_displaced"),
                 ],
-                uuid_filter=None
+            )
+        ),
+        RapidProSource(
+            rapid_pro=RapidProClientConfiguration(
+                domain="textit.com",
+                token_file_url="gs://avf-credentials/SSF_DCF-SLD-Textit-Token.txt"
+            ),
+            sync_config=RapidProToEngagementDBConfiguration(
+                flow_result_configurations=[
+                    FlowResultConfiguration("ssf_dcf_demog", "age", "age"),
+                    FlowResultConfiguration("ssf_dcf_demog", "district", "district"),
+                    FlowResultConfiguration("ssf_dcf_demog", "gender", "gender"),
+                    FlowResultConfiguration("ssf_dcf_demog", "household language", "household_language"),
+                    FlowResultConfiguration("ssf_dcf_demog", "recently displaced", "recently_displaced"),
+
+                    FlowResultConfiguration("ssf_sld_demog", "age", "age"),
+                    FlowResultConfiguration("ssf_sld_demog", "district", "district"),
+                    FlowResultConfiguration("ssf_sld_demog", "gender", "gender"),
+                    FlowResultConfiguration("ssf_sld_demog", "household language", "household_language"),
+                    FlowResultConfiguration("ssf_sld_demog", "recently displaced", "recently_displaced"),
+                ],
+            )
+        ),
+        RapidProSource(
+            rapid_pro=RapidProClientConfiguration(
+                domain="textit.com",
+                token_file_url="gs://avf-credentials/SSF_REC-PPE-Textit-Token.txt"
+            ),
+            sync_config=RapidProToEngagementDBConfiguration(
+                flow_result_configurations=[
+                    FlowResultConfiguration("ssf_ppe_demog", "age", "age"),
+                    FlowResultConfiguration("ssf_ppe_demog", "district", "district"),
+                    FlowResultConfiguration("ssf_ppe_demog", "gender", "gender"),
+                    FlowResultConfiguration("ssf_ppe_demog", "household language", "household_language"),
+                    FlowResultConfiguration("ssf_ppe_demog", "recently displaced", "recently_displaced"),
+                    
+                    FlowResultConfiguration("ssf_rec_demog", "age", "age"),
+                    FlowResultConfiguration("ssf_rec_demog", "district", "district"),
+                    FlowResultConfiguration("ssf_rec_demog", "gender", "gender"),
+                    FlowResultConfiguration("ssf_rec_demog", "household language", "household_language"),
+                    FlowResultConfiguration("ssf_rec_demog", "recently displaced", "recently_displaced"),
+                ],
             )
         )
     ],
