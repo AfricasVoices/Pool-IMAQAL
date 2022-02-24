@@ -84,4 +84,57 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
             )
         )
     ],
+    coda_sync=CodaConfiguration(
+        coda=CodaClientConfiguration(credentials_file_url="gs://avf-credentials/coda-production.json"),
+        sync_config=CodaSyncConfiguration(
+            dataset_configurations=[
+                CodaDatasetConfiguration(
+                    coda_dataset_id="IMAQAL_age",
+                    engagement_db_dataset="age",
+                    code_scheme_configurations=[
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("age"), auto_coder=None)
+                    ],
+                    ws_code_string_value="age"
+                ),
+                CodaDatasetConfiguration(
+                    coda_dataset_id="IMAQAL_gender",
+                    engagement_db_dataset="gender",
+                    code_scheme_configurations=[
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("gender"), auto_coder=None)
+                    ],
+                    ws_code_string_value="gender"
+                ),
+                CodaDatasetConfiguration(
+                    coda_dataset_id="IMAQAL_household_language",
+                    engagement_db_dataset="household_language",
+                    code_scheme_configurations=[
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("household_language"), auto_coder=None)
+                    ],
+                    ws_code_string_value="hh language"
+                ),
+                CodaDatasetConfiguration(
+                    coda_dataset_id="IMAQAL_location",
+                    engagement_db_dataset="location",
+                    code_scheme_configurations=[
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("mogadishu_sub_district"), auto_coder=None),
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("somalia_district"), auto_coder=None),
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("somalia_region"), auto_coder=None),
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("somalia_state"), auto_coder=None),
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("somalia_zone"), auto_coder=None),
+                    ],
+                    ws_code_string_value="location"
+                ),
+                CodaDatasetConfiguration(
+                    coda_dataset_id="IMAQAL_recently_displaced",
+                    engagement_db_dataset="recently_displaced",
+                    code_scheme_configurations=[
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("recently_displaced"), auto_coder=None)
+                    ],
+                    ws_code_string_value="recently displaced"
+                ),
+            ],
+            ws_correct_dataset_code_scheme=load_code_scheme("ws_correct_dataset"),
+            project_users_file_url="gs://avf-project-datasets/2022/IMAQAL-POOL/coda_users.json"
+        )
+    )
 )
