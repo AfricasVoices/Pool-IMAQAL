@@ -136,5 +136,41 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
             ws_correct_dataset_code_scheme=load_code_scheme("ws_correct_dataset"),
             project_users_file_url="gs://avf-project-datasets/2022/IMAQAL-POOL/coda_users.json"
         )
+    ),
+    rapid_pro_target=RapidProTarget(
+        rapid_pro=RapidProClientConfiguration(
+            domain="textit.com",
+            token_file_url="gs://avf-credentials/imaqal-text-it-token.txt"
+        ),
+        sync_config=EngagementDBToRapidProConfiguration(
+            normal_datasets=[
+                DatasetConfiguration(
+                    engagement_db_datasets=["age"], 
+                    rapid_pro_contact_field=ContactField(key="engagement_db_age", label="DB Age")
+                ),
+                DatasetConfiguration(
+                    engagement_db_datasets=["gender"], 
+                    rapid_pro_contact_field=ContactField(key="engagement_db_gender", label="DB Gender")
+                ),
+                DatasetConfiguration(
+                    engagement_db_datasets=["household_language"], 
+                    rapid_pro_contact_field=ContactField(key="engagement_db_household_language", label="DB Household Language")
+                ),
+                DatasetConfiguration(
+                    engagement_db_datasets=["location"], 
+                    rapid_pro_contact_field=ContactField(key="engagement_db_district", label="DB District")
+                ),
+                DatasetConfiguration(
+                    engagement_db_datasets=["recently_displaced"], 
+                    rapid_pro_contact_field=ContactField(key="engagement_db_recently_displaced", label="DB Recently Displaced")
+                ),
+            ],
+            consent_withdrawn_dataset=DatasetConfiguration(
+                engagement_db_datasets=["age", "gender", "household_language", "location", "recently_displaced"],
+                rapid_pro_contact_field=ContactField(key="engagement_db_consent_withdrawn", label="DB Consent Withdrawn")
+
+            ),
+            write_mode=WriteModes.CONCATENATE_TEXTS
+        )
     )
 )
