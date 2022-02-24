@@ -1,0 +1,1345 @@
+{
+    "SchemeID": "Scheme-fffee09d89",
+    "Name": "WS - Correct Dataset",
+    "Version": "0.0.0.2",
+    "Codes": [
+        {
+            "CodeID": "code-70ac05ab",
+            "CodeType": "Normal",
+            "DisplayText": "age",
+            "StringValue": "age",
+            "NumericValue": 1,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "age"
+            ]
+        },
+        {
+            "CodeID": "code-6774cedd",
+            "CodeType": "Normal",
+            "DisplayText": "gender",
+            "StringValue": "gender",
+            "NumericValue": 2,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "gender"
+            ]
+        },
+        {
+            "CodeID": "code-dda6e4b4",
+            "CodeType": "Normal",
+            "DisplayText": "district",
+            "StringValue": "district",
+            "NumericValue": 3,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "location"
+            ]
+        },
+        {
+            "CodeID": "code-c2ef3b7f",
+            "CodeType": "Normal",
+            "DisplayText": "recently displaced",
+            "StringValue": "recently displaced",
+            "NumericValue": 4,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "recently displaced"
+            ]
+        },
+        {
+            "CodeID": "code-87ec1cb8",
+            "CodeType": "Normal",
+            "DisplayText": "hh language",
+            "StringValue": "hh language",
+            "NumericValue": 6,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "hh language"
+            ]
+        },
+        {
+            "CodeID": "code-4207270e",
+            "CodeType": "Normal",
+            "DisplayText": "ssf ppe s01e01",
+            "StringValue": "ssf_ppe_s01e01",
+            "NumericValue": 114,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "ssf ppe s01e01"
+            ]
+        },
+        {
+            "CodeID": "code-f08b11cc",
+            "CodeType": "Normal",
+            "DisplayText": "ssf ppe s01e02",
+            "StringValue": "ssf_ppe_s01e02",
+            "NumericValue": 115,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "ssf ppe s01e02"
+            ]
+        },
+        {
+            "CodeID": "code-d55340f6",
+            "CodeType": "Normal",
+            "DisplayText": "ssf ppe s01 closeout",
+            "StringValue": "ssf_ppe_s01_closeout",
+            "NumericValue": 121,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "ssf ppe s01 closeout"
+            ]
+        },
+        {
+            "CodeID": "code-50c1ed8d",
+            "CodeType": "Normal",
+            "DisplayText": "ssf sld s01e01",
+            "StringValue": "ssf_sld_s01e01",
+            "NumericValue": 116,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "ssf sld s01e01"
+            ]
+        },
+        {
+            "CodeID": "code-0a62e205",
+            "CodeType": "Normal",
+            "DisplayText": "ssf sld s01e02",
+            "StringValue": "ssf_sld_s01e02",
+            "NumericValue": 117,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "ssf sld s01e02"
+            ]
+        },
+        {
+            "CodeID": "code-ae623712",
+            "CodeType": "Normal",
+            "DisplayText": "ssf sld s01e03",
+            "StringValue": "ssf_sld_s01e03",
+            "NumericValue": 118,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "ssf sld s01e03"
+            ]
+        },
+        {
+            "CodeID": "code-69dda336",
+            "CodeType": "Normal",
+            "DisplayText": "ssf sld s01e04",
+            "StringValue": "ssf_sld_s01e04",
+            "NumericValue": 119,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "ssf sld s01e04"
+            ]
+        },
+        {
+            "CodeID": "code-c49631db",
+            "CodeType": "Normal",
+            "DisplayText": "ssf sld s01e05",
+            "StringValue": "ssf_sld_s01e05",
+            "NumericValue": 120,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "ssf sld s01e05"
+            ]
+        },
+        {
+            "CodeID": "code-360eb1ce",
+            "CodeType": "Normal",
+            "DisplayText": "ssf rec s01e01",
+            "StringValue": "ssf_rec_s01e01",
+            "NumericValue": 106,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "ssf rec s01e01"
+            ]
+        },
+        {
+            "CodeID": "code-cbb39483",
+            "CodeType": "Normal",
+            "DisplayText": "ssf rec s01e02",
+            "StringValue": "ssf_rec_s01e02",
+            "NumericValue": 107,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "ssf rec s01e02"
+            ]
+        },
+        {
+            "CodeID": "code-bd17923b",
+            "CodeType": "Normal",
+            "DisplayText": "ssf rec s01e03",
+            "StringValue": "ssf_rec_s01e03",
+            "NumericValue": 108,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "ssf rec s01e03"
+            ]
+        },
+        {
+            "CodeID": "code-c069ddc9",
+            "CodeType": "Normal",
+            "DisplayText": "ssf rec s01e04",
+            "StringValue": "ssf_rec_s01e04",
+            "NumericValue": 109,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "ssf rec s01e04"
+            ]
+        },
+        {
+            "CodeID": "code-30d0e028",
+            "CodeType": "Normal",
+            "DisplayText": "ssf elections s01e01",
+            "StringValue": "ssf_elections_s01e01",
+            "NumericValue": 99,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "ssf elections s01e01"
+            ]
+        },
+        {
+            "CodeID": "code-70ad6746",
+            "CodeType": "Normal",
+            "DisplayText": "ssf elections s01e02",
+            "StringValue": "ssf_elections_s01e02",
+            "NumericValue": 100,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "ssf elections s01e02"
+            ]
+        },
+        {
+            "CodeID": "code-08370f4e",
+            "CodeType": "Normal",
+            "DisplayText": "ssf elections s01e03",
+            "StringValue": "ssf_elections_s01e03",
+            "NumericValue": 101,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "ssf elections s01e03"
+            ]
+        },
+        {
+            "CodeID": "code-3194113f",
+            "CodeType": "Normal",
+            "DisplayText": "ssf elections s01e04",
+            "StringValue": "ssf_elections_s01e04",
+            "NumericValue": 102,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "ssf elections s01e04"
+            ]
+        },
+        {
+            "CodeID": "code-fd46c865",
+            "CodeType": "Normal",
+            "DisplayText": "ssf elections s01e05",
+            "StringValue": "ssf_elections_s01e05",
+            "NumericValue": 103,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "ssf elections s01e05"
+            ]
+        },
+        {
+            "CodeID": "code-23bfc5e0",
+            "CodeType": "Normal",
+            "DisplayText": "ssf elections s01e06",
+            "StringValue": "ssf_elections_s01e06",
+            "NumericValue": 104,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "ssf elections s01e06"
+            ]
+        },
+        {
+            "CodeID": "code-7396616c",
+            "CodeType": "Normal",
+            "DisplayText": "ssf elections s01e07",
+            "StringValue": "ssf_elections_s01e07",
+            "NumericValue": 105,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "ssf elections s01e07"
+            ]
+        },
+        {
+            "CodeID": "code-1854b761",
+            "CodeType": "Normal",
+            "DisplayText": "ssf dcf s01e01",
+            "StringValue": "ssf_dcf_s01e01",
+            "NumericValue": 110,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "ssf dcf s01e01"
+            ]
+        },
+        {
+            "CodeID": "code-96b47292",
+            "CodeType": "Normal",
+            "DisplayText": "ssf dcf s01e02",
+            "StringValue": "ssf_dcf_s01e02",
+            "NumericValue": 111,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "ssf dcf s01e02"
+            ]
+        },
+        {
+            "CodeID": "code-3f1d5626",
+            "CodeType": "Normal",
+            "DisplayText": "ssf dcf s01e03",
+            "StringValue": "ssf_dcf_s01e03",
+            "NumericValue": 112,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "ssf dcf s01e03"
+            ]
+        },
+        {
+            "CodeID": "code-8a5ed50b",
+            "CodeType": "Normal",
+            "DisplayText": "ssf dcf s01e04",
+            "StringValue": "ssf_dcf_s01e04",
+            "NumericValue": 113,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "ssf dcf s01e04"
+            ]
+        },
+        {
+            "CodeID": "code-a0c9f592",
+            "CodeType": "Normal",
+            "DisplayText": "imaqal covid19 s02e01 promo",
+            "StringValue": "imaqal_covid19_s02e01_promo",
+            "NumericValue": 93,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "imaqal covid19 s02e01 promo"
+            ]
+        },
+        {
+            "CodeID": "code-2555fb3a",
+            "CodeType": "Normal",
+            "DisplayText": "imaqal covid19 s02e02 promo",
+            "StringValue": "imaqal_covid19_s02e02_promo",
+            "NumericValue": 94,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "imaqal covid19 s02e02 promo"
+            ]
+        },
+        {
+            "CodeID": "code-5e78257b",
+            "CodeType": "Normal",
+            "DisplayText": "imaqal covid19 s02e03 promo",
+            "StringValue": "imaqal_covid19_s02e03_promo",
+            "NumericValue": 95,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "imaqal covid19 s02e03 promo"
+            ]
+        },
+        {
+            "CodeID": "code-9bf0b68a",
+            "CodeType": "Normal",
+            "DisplayText": "imaqal covid19 s02e04",
+            "StringValue": "imaqal_covid19_s02e04",
+            "NumericValue": 96,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "imaqal covid19 s02e04"
+            ]
+        },
+        {
+            "CodeID": "code-7423d64a",
+            "CodeType": "Normal",
+            "DisplayText": "imaqal covid19 vaccination thoughts",
+            "StringValue": "imaqal_covid19_vaccination_thoughts",
+            "NumericValue": 97,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "imaqal covid19 vaccination thoughts"
+            ]
+        },
+        {
+            "CodeID": "code-a942b32b",
+            "CodeType": "Normal",
+            "DisplayText": "imaqal covid19 vaccination thoughts other messages",
+            "StringValue": "imaqal_covid19_vaccination_thoughts_other_messages",
+            "NumericValue": 98,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "imaqal covid19 vaccination thoughts other messages"
+            ]
+        },
+        {
+            "CodeID": "code-5601ee85",
+            "CodeType": "Normal",
+            "DisplayText": "imaqal covid19 s01e01",
+            "StringValue": "imaqal covid19 s01e01",
+            "NumericValue": 68,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "imaqal covid19 s01e01"
+            ]
+        },
+        {
+            "CodeID": "code-e9b0c780",
+            "CodeType": "Normal",
+            "DisplayText": "imaqal covid19 s01e02",
+            "StringValue": "imaqal covid19 s01e02",
+            "NumericValue": 69,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "imaqal covid19 s01e02"
+            ]
+        },
+        {
+            "CodeID": "code-0b670b28",
+            "CodeType": "Normal",
+            "DisplayText": "imaqal covid19 s01e03",
+            "StringValue": "imaqal covid19 s01e03",
+            "NumericValue": 70,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "imaqal covid19 s01e03"
+            ]
+        },
+        {
+            "CodeID": "code-47d81f54",
+            "CodeType": "Normal",
+            "DisplayText": "imaqal covid19 s01e04",
+            "StringValue": "imaqal covid19 s01e04",
+            "NumericValue": 71,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "imaqal covid19 s01e04"
+            ]
+        },
+        {
+            "CodeID": "code-2dbe4fa9",
+            "CodeType": "Normal",
+            "DisplayText": "imaqal covid19 s01e05",
+            "StringValue": "imaqal covid19 s01e05",
+            "NumericValue": 72,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "imaqal covid19 s01e05"
+            ]
+        },
+        {
+            "CodeID": "code-35f30103",
+            "CodeType": "Normal",
+            "DisplayText": "imaqal covid19 s01e06",
+            "StringValue": "imaqal covid19 s01e06",
+            "NumericValue": 73,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "imaqal covid19 s01e06"
+            ]
+        },
+        {
+            "CodeID": "code-6b3f3960",
+            "CodeType": "Normal",
+            "DisplayText": "imaqal covid19 s01e07",
+            "StringValue": "imaqal covid19 s01e07",
+            "NumericValue": 74,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "imaqal covid19 s01e07"
+            ]
+        },
+        {
+            "CodeID": "code-aa0142d1",
+            "CodeType": "Normal",
+            "DisplayText": "imaqal covid19 s01e08",
+            "StringValue": "imaqal covid19 s01e08",
+            "NumericValue": 75,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "imaqal covid19 s01e08"
+            ]
+        },
+        {
+            "CodeID": "code-08e8353a",
+            "CodeType": "Normal",
+            "DisplayText": "imaqal covid19 s01e09",
+            "StringValue": "imaqal covid19 s01e09",
+            "NumericValue": 76,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "imaqal covid19 s01e09"
+            ]
+        },
+        {
+            "CodeID": "code-aac6f93f",
+            "CodeType": "Normal",
+            "DisplayText": "imaqal covid19 s01e10",
+            "StringValue": "imaqal covid19 s01e10",
+            "NumericValue": 77,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "imaqal covid19 s01e10"
+            ]
+        },
+        {
+            "CodeID": "code-da061a23",
+            "CodeType": "Normal",
+            "DisplayText": "imaqal covid19 s01e11",
+            "StringValue": "imaqal covid19 s01e11",
+            "NumericValue": 78,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "imaqal covid19 s01e11"
+            ]
+        },
+        {
+            "CodeID": "code-6b7223c5",
+            "CodeType": "Normal",
+            "DisplayText": "imaqal covid19 s01e12",
+            "StringValue": "imaqal covid19 s01e12",
+            "NumericValue": 79,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "imaqal covid19 s01e12"
+            ]
+        },
+        {
+            "CodeID": "code-ab266e22",
+            "CodeType": "Normal",
+            "DisplayText": "imaqal covid19 diagnostic s01e03",
+            "StringValue": "imaqal covid19 diagnostic s01e03",
+            "NumericValue": 80,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "imaqal covid19 diagnostic s01e03"
+            ]
+        },
+        {
+            "CodeID": "code-9058244e",
+            "CodeType": "Normal",
+            "DisplayText": "imaqal covid19 s01e13",
+            "StringValue": "imaqal covid19 s01e13",
+            "NumericValue": 81,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "imaqal covid19 s01e13"
+            ]
+        },
+        {
+            "CodeID": "code-141ed426",
+            "CodeType": "Normal",
+            "DisplayText": "imaqal covid19 s01e14",
+            "StringValue": "imaqal covid19 s01e14",
+            "NumericValue": 82,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "imaqal covid19 s01e14"
+            ]
+        },
+        {
+            "CodeID": "code-86cdee4b",
+            "CodeType": "Normal",
+            "DisplayText": "imaqal covid19 s01e15",
+            "StringValue": "imaqal covid19 s01e15",
+            "NumericValue": 83,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "imaqal covid19 s01e15"
+            ]
+        },
+        {
+            "CodeID": "code-baf07ad9",
+            "CodeType": "Normal",
+            "DisplayText": "imaqal covid19 s01e16",
+            "StringValue": "imaqal covid19 s01e16",
+            "NumericValue": 84,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "imaqal covid19 s01e16"
+            ]
+        },
+        {
+            "CodeID": "code-de1a5ad7",
+            "CodeType": "Normal",
+            "DisplayText": "imaqal covid19 s01e17",
+            "StringValue": "imaqal covid19 s01e17",
+            "NumericValue": 85,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "imaqal covid19 s01e17"
+            ]
+        },
+        {
+            "CodeID": "code-348be913",
+            "CodeType": "Normal",
+            "DisplayText": "imaqal covid19 s01e18",
+            "StringValue": "imaqal covid19 s01e18",
+            "NumericValue": 86,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "imaqal covid19 s01e18"
+            ]
+        },
+        {
+            "CodeID": "code-4ab01c38",
+            "CodeType": "Normal",
+            "DisplayText": "imaqal covid19 s01e19",
+            "StringValue": "imaqal covid19 s01e19",
+            "NumericValue": 87,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "imaqal covid19 s01e19"
+            ]
+        },
+        {
+            "CodeID": "code-03648b79",
+            "CodeType": "Normal",
+            "DisplayText": "imaqal covid19 s01e20",
+            "StringValue": "imaqal covid19 s01e20",
+            "NumericValue": 88,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "imaqal covid19 s01e20"
+            ]
+        },
+        {
+            "CodeID": "code-98e438bb",
+            "CodeType": "Normal",
+            "DisplayText": "imaqal covid19 s01e21",
+            "StringValue": "imaqal covid19 s01e21",
+            "NumericValue": 89,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "imaqal covid19 s01e21"
+            ]
+        },
+        {
+            "CodeID": "code-c53b469c",
+            "CodeType": "Normal",
+            "DisplayText": "imaqal covid19 s01e22",
+            "StringValue": "imaqal covid19 s01e22",
+            "NumericValue": 90,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "imaqal covid19 s01e22"
+            ]
+        },
+        {
+            "CodeID": "code-65a2704e",
+            "CodeType": "Normal",
+            "DisplayText": "imaqal covid19 s01e23",
+            "StringValue": "imaqal covid19 s01e23",
+            "NumericValue": 91,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "imaqal covid19 s01e23"
+            ]
+        },
+        {
+            "CodeID": "code-ade07527",
+            "CodeType": "Normal",
+            "DisplayText": "imaqal covid19 s01 closeout",
+            "StringValue": "imaqal_covid19_s01_closeout",
+            "NumericValue": 92,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "imaqal covid19 s01 closeout"
+            ]
+        },
+        {
+            "CodeID": "code-cb80874e",
+            "CodeType": "Normal",
+            "DisplayText": "covid19 som s01e01",
+            "StringValue": "covid19_som_s01e01",
+            "NumericValue": 65,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "covid19 som s01e01"
+            ]
+        },
+        {
+            "CodeID": "code-0eb00586",
+            "CodeType": "Normal",
+            "DisplayText": "covid19 som s01e02",
+            "StringValue": "covid19_som_s01e02",
+            "NumericValue": 67,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "covid19 som s01e02"
+            ]
+        },
+        {
+            "CodeID": "code-9bd0f2b1",
+            "CodeType": "Normal",
+            "DisplayText": "s01e01",
+            "StringValue": "s01e01",
+            "NumericValue": 7,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "s01e01"
+            ]
+        },
+        {
+            "CodeID": "code-9a5f15d6",
+            "CodeType": "Normal",
+            "DisplayText": "s01e02",
+            "StringValue": "s01e02",
+            "NumericValue": 8,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "s01e02"
+            ]
+        },
+        {
+            "CodeID": "code-e8621530",
+            "CodeType": "Normal",
+            "DisplayText": "s01e03",
+            "StringValue": "s01e03",
+            "NumericValue": 9,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "s01e03"
+            ]
+        },
+        {
+            "CodeID": "code-f7a875ee",
+            "CodeType": "Normal",
+            "DisplayText": "s01e04",
+            "StringValue": "s01e04",
+            "NumericValue": 10,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "s01e04"
+            ]
+        },
+        {
+            "CodeID": "code-4dc91858",
+            "CodeType": "Normal",
+            "DisplayText": "s01e05",
+            "StringValue": "s01e05",
+            "NumericValue": 11,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "s01e05"
+            ]
+        },
+        {
+            "CodeID": "code-93ae8d7f",
+            "CodeType": "Normal",
+            "DisplayText": "s01e06",
+            "StringValue": "s01e06",
+            "NumericValue": 12,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "s01e06"
+            ]
+        },
+        {
+            "CodeID": "code-d321aaf7",
+            "CodeType": "Normal",
+            "DisplayText": "s01e07",
+            "StringValue": "s01e07",
+            "NumericValue": 13,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "s01e07"
+            ]
+        },
+        {
+            "DisplayText": "women participation",
+            "VisibleInCoda": true,
+            "NumericValue": 14,
+            "CodeID": "code-h321daf4",
+            "CodeType": "Normal",
+            "StringValue": "women_participation",
+            "MatchValues": [
+                "women_participation"
+            ]
+        },
+        {
+            "DisplayText": "s01mag03",
+            "VisibleInCoda": true,
+            "NumericValue": 15,
+            "CodeID": "code-5779c382",
+            "CodeType": "Normal",
+            "StringValue": "s01mag03",
+            "MatchValues": [
+                "s01mag03"
+            ]
+        },
+        {
+            "DisplayText": "s01mag04",
+            "VisibleInCoda": true,
+            "NumericValue": 16,
+            "CodeID": "code-0e19748c",
+            "CodeType": "Normal",
+            "StringValue": "s01mag04",
+            "MatchValues": [
+                "s01mag04"
+            ]
+        },
+        {
+            "DisplayText": "s01mag05",
+            "VisibleInCoda": true,
+            "NumericValue": 17,
+            "CodeID": "code-2dcbe7ba",
+            "CodeType": "Normal",
+            "StringValue": "s01mag05",
+            "MatchValues": [
+                "s01mag05"
+            ]
+        },
+        {
+            "DisplayText": "s01mag06",
+            "VisibleInCoda": true,
+            "NumericValue": 18,
+            "CodeID": "code-617439b6",
+            "CodeType": "Normal",
+            "StringValue": "s01mag06",
+            "MatchValues": [
+                "s01mag06"
+            ]
+        },
+        {
+            "DisplayText": "s01mag07",
+            "VisibleInCoda": true,
+            "NumericValue": 19,
+            "CodeID": "code-8fa0ec44",
+            "CodeType": "Normal",
+            "StringValue": "s01mag07",
+            "MatchValues": [
+                "s01mag07"
+            ]
+        },
+        {
+            "DisplayText": "s01mag08",
+            "VisibleInCoda": true,
+            "NumericValue": 20,
+            "CodeID": "code-f27ee566",
+            "CodeType": "Normal",
+            "StringValue": "s01mag08",
+            "MatchValues": [
+                "s01mag08"
+            ]
+        },
+        {
+            "DisplayText": "s01mag09",
+            "VisibleInCoda": true,
+            "NumericValue": 21,
+            "CodeID": "code-0cb9f95f",
+            "CodeType": "Normal",
+            "StringValue": "s01mag09",
+            "MatchValues": [
+                "s01mag09"
+            ]
+        },
+        {
+            "DisplayText": "s01mag10",
+            "VisibleInCoda": true,
+            "NumericValue": 22,
+            "CodeID": "code-424c1d93",
+            "CodeType": "Normal",
+            "StringValue": "s01mag10",
+            "MatchValues": [
+                "s01mag10"
+            ]
+        },
+        {
+            "DisplayText": "s01mag11",
+            "VisibleInCoda": true,
+            "NumericValue": 23,
+            "CodeID": "code-93f0c63c",
+            "CodeType": "Normal",
+            "StringValue": "s01mag11",
+            "MatchValues": [
+                "s01mag11"
+            ]
+        },
+        {
+            "DisplayText": "s01mag12",
+            "VisibleInCoda": true,
+            "NumericValue": 24,
+            "CodeID": "code-86b74420",
+            "CodeType": "Normal",
+            "StringValue": "s01mag12",
+            "MatchValues": [
+                "s01mag12"
+            ]
+        },
+        {
+            "DisplayText": "s01mag13",
+            "VisibleInCoda": true,
+            "NumericValue": 25,
+            "CodeID": "code-dd19ad74",
+            "CodeType": "Normal",
+            "StringValue": "s01mag13",
+            "MatchValues": [
+                "s01mag13"
+            ]
+        },
+        {
+            "DisplayText": "s01mag14",
+            "VisibleInCoda": true,
+            "NumericValue": 26,
+            "CodeID": "code-d587b931",
+            "CodeType": "Normal",
+            "StringValue": "s01mag14",
+            "MatchValues": [
+                "s01mag14"
+            ]
+        },
+        {
+            "DisplayText": "s01mag15",
+            "VisibleInCoda": true,
+            "NumericValue": 27,
+            "CodeID": "code-eb74cbca",
+            "CodeType": "Normal",
+            "StringValue": "s01mag15",
+            "MatchValues": [
+                "s01mag15"
+            ]
+        },
+        {
+            "DisplayText": "minority clan issues",
+            "VisibleInCoda": true,
+            "NumericValue": 28,
+            "CodeID": "code-3a0e771e",
+            "CodeType": "Normal",
+            "StringValue": "minority_clan_issues",
+            "MatchValues": [
+                "minority_clan_issues"
+            ]
+        },
+        {
+            "DisplayText": "young people issues",
+            "VisibleInCoda": true,
+            "NumericValue": 29,
+            "CodeID": "code-130c3221",
+            "CodeType": "Normal",
+            "StringValue": "young_people_issues",
+            "MatchValues": [
+                "young_people_issues"
+            ]
+        },
+        {
+            "DisplayText": "s01mag16",
+            "VisibleInCoda": true,
+            "NumericValue": 30,
+            "CodeID": "code-4d4e1ac9",
+            "CodeType": "Normal",
+            "StringValue": "s01mag16",
+            "MatchValues": [
+                "s01mag16"
+            ]
+        },
+        {
+            "DisplayText": "s01mag17",
+            "VisibleInCoda": true,
+            "NumericValue": 31,
+            "CodeID": "code-3c592378",
+            "CodeType": "Normal",
+            "StringValue": "s01mag17",
+            "MatchValues": [
+                "s01mag17"
+            ]
+        },
+        {
+            "DisplayText": "s01mag18",
+            "VisibleInCoda": true,
+            "NumericValue": 32,
+            "CodeID": "code-8b9fc454",
+            "CodeType": "Normal",
+            "StringValue": "s01mag18",
+            "MatchValues": [
+                "s01mag18"
+            ]
+        },
+        {
+            "DisplayText": "s01mag19",
+            "VisibleInCoda": true,
+            "NumericValue": 33,
+            "CodeID": "code-7007a173",
+            "CodeType": "Normal",
+            "StringValue": "s01mag19",
+            "MatchValues": [
+                "s01mag19"
+            ]
+        },
+        {
+            "DisplayText": "s01mag20",
+            "VisibleInCoda": true,
+            "NumericValue": 34,
+            "CodeID": "code-94bd4fa7",
+            "CodeType": "Normal",
+            "StringValue": "s01mag20",
+            "MatchValues": [
+                "s01mag20"
+            ]
+        },
+        {
+            "DisplayText": "decisions minority clan",
+            "VisibleInCoda": true,
+            "NumericValue": 35,
+            "CodeID": "code-5b57a1de",
+            "CodeType": "Normal",
+            "StringValue": "decisions_minority_clan",
+            "MatchValues": [
+                "decisions_minority_clan"
+            ]
+        },
+        {
+            "CodeID": "code-ecbf2545",
+            "CodeType": "Normal",
+            "DisplayText": "s02e08",
+            "StringValue": "s02e08",
+            "NumericValue": 36,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "s02e08"
+            ]
+        },
+        {
+            "CodeID": "code-34b3a11b",
+            "CodeType": "Normal",
+            "DisplayText": "s02e09",
+            "StringValue": "s02e09",
+            "NumericValue": 37,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "s02e09"
+            ]
+        },
+        {
+            "CodeID": "code-49398542",
+            "CodeType": "Normal",
+            "DisplayText": "s02e10",
+            "StringValue": "s02e10",
+            "NumericValue": 38,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "s02e10"
+            ]
+        },
+        {
+            "CodeID": "code-8005a3e4",
+            "CodeType": "Normal",
+            "DisplayText": "s02e11",
+            "StringValue": "s02e11",
+            "NumericValue": 39,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "s02e11"
+            ]
+        },
+        {
+            "CodeID": "code-2873b936",
+            "CodeType": "Normal",
+            "DisplayText": "s02e12",
+            "StringValue": "s02e12",
+            "NumericValue": 40,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "s02e12"
+            ]
+        },
+        {
+            "CodeID": "code-0547e333",
+            "CodeType": "Normal",
+            "DisplayText": "s02e13",
+            "StringValue": "s02e13",
+            "NumericValue": 41,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "s02e13"
+            ]
+        },
+        {
+            "CodeID": "code-492a3e5a",
+            "CodeType": "Normal",
+            "DisplayText": "s02e14",
+            "StringValue": "s02e14",
+            "NumericValue": 42,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "s02e14"
+            ]
+        },
+        {
+            "CodeID": "code-1a487e5d",
+            "CodeType": "Normal",
+            "DisplayText": "idps decision making opportunities",
+            "StringValue": "idps_decision_making_opportunities",
+            "NumericValue": 43,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "idps_decision_making_opportunities"
+            ]
+        },
+        {
+            "CodeID": "code-057336a7",
+            "CodeType": "Normal",
+            "DisplayText": "women decision making opportunities",
+            "StringValue": "women_decision_making_opportunities",
+            "NumericValue": 44,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "women_decision_making_opportunities"
+            ]
+        },
+        {
+            "DisplayText": "s02mag21",
+            "VisibleInCoda": true,
+            "NumericValue": 45,
+            "CodeID": "code-de2de1e3",
+            "CodeType": "Normal",
+            "StringValue": "s02mag21",
+            "MatchValues": [
+                "s02mag21"
+            ]
+        },
+        {
+            "DisplayText": "s02mag22",
+            "VisibleInCoda": true,
+            "NumericValue": 46,
+            "CodeID": "code-3973947b",
+            "CodeType": "Normal",
+            "StringValue": "s02mag22",
+            "MatchValues": [
+                "s02mag22"
+            ]
+        },
+        {
+            "DisplayText": "s02mag23",
+            "VisibleInCoda": true,
+            "NumericValue": 47,
+            "CodeID": "code-a0e4f6c5",
+            "CodeType": "Normal",
+            "StringValue": "s02mag23",
+            "MatchValues": [
+                "s02mag23"
+            ]
+        },
+        {
+            "DisplayText": "s02mag24",
+            "VisibleInCoda": true,
+            "NumericValue": 48,
+            "CodeID": "code-eeee28b2",
+            "CodeType": "Normal",
+            "StringValue": "s02mag24",
+            "MatchValues": [
+                "s02mag24"
+            ]
+        },
+        {
+            "DisplayText": "s02mag25",
+            "VisibleInCoda": true,
+            "NumericValue": 49,
+            "CodeID": "code-067d10f9",
+            "CodeType": "Normal",
+            "StringValue": "s02mag25",
+            "MatchValues": [
+                "s02mag25"
+            ]
+        },
+        {
+            "DisplayText": "s02mag26",
+            "VisibleInCoda": true,
+            "NumericValue": 50,
+            "CodeID": "code-c464380c",
+            "CodeType": "Normal",
+            "StringValue": "s02mag26",
+            "MatchValues": [
+                "s02mag26"
+            ]
+        },
+        {
+            "DisplayText": "s02mag27",
+            "VisibleInCoda": true,
+            "NumericValue": 51,
+            "CodeID": "code-68afc5f5",
+            "CodeType": "Normal",
+            "StringValue": "s02mag27",
+            "MatchValues": [
+                "s02mag27"
+            ]
+        },
+        {
+            "DisplayText": "s02mag28",
+            "VisibleInCoda": true,
+            "NumericValue": 52,
+            "CodeID": "code-2b087bd6",
+            "CodeType": "Normal",
+            "StringValue": "s02mag28",
+            "MatchValues": [
+                "s02mag28"
+            ]
+        },
+        {
+            "DisplayText": "s02mag29",
+            "VisibleInCoda": true,
+            "NumericValue": 53,
+            "CodeID": "code-b3977063",
+            "CodeType": "Normal",
+            "StringValue": "s02mag29",
+            "MatchValues": [
+                "s02mag29"
+            ]
+        },
+        {
+            "DisplayText": "s02mag30",
+            "VisibleInCoda": true,
+            "NumericValue": 54,
+            "CodeID": "code-f6d0e044",
+            "CodeType": "Normal",
+            "StringValue": "s02mag30",
+            "MatchValues": [
+                "s02mag30"
+            ]
+        },
+        {
+            "DisplayText": "idps_minority_clan_decision_making_opportunities",
+            "VisibleInCoda": true,
+            "NumericValue": 55,
+            "CodeID": "code-110c88c3",
+            "CodeType": "Normal",
+            "StringValue": "idps_minority_clan_decision_making_opportunities",
+            "MatchValues": [
+                "idps_minority_clan_decision_making_opportunities"
+            ]
+        },
+        {
+            "DisplayText": "young_people_issues_two",
+            "VisibleInCoda": true,
+            "NumericValue": 56,
+            "CodeID": "code-6daf1602",
+            "CodeType": "Normal",
+            "StringValue": "young_people_issues_two",
+            "MatchValues": [
+                "young_people_issues_two"
+            ]
+        },
+        {
+            "CodeID": "code-8b99aa8a",
+            "CodeType": "Normal",
+            "DisplayText": "imaqal_special_show",
+            "StringValue": "imaqal_special_show",
+            "NumericValue": 57,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "imaqal_special_show"
+            ]
+        },
+        {
+            "CodeID": "code-a7f72834",
+            "CodeType": "Normal",
+            "DisplayText": "s03e15",
+            "StringValue": "s03e15",
+            "NumericValue": 58,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "s03e15"
+            ]
+        },
+        {
+            "CodeID": "code-d1d0e82a",
+            "CodeType": "Normal",
+            "DisplayText": "s03e16",
+            "StringValue": "s03e16",
+            "NumericValue": 59,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "s03e16"
+            ]
+        },
+        {
+            "CodeID": "code-9f6adb45",
+            "CodeType": "Normal",
+            "DisplayText": "s03e17",
+            "StringValue": "s03e17",
+            "NumericValue": 60,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "s03e17"
+            ]
+        },
+        {
+            "CodeID": "code-9dd64963",
+            "CodeType": "Normal",
+            "DisplayText": "s03e18",
+            "StringValue": "s03e18",
+            "NumericValue": 61,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "s03e18"
+            ]
+        },
+        {
+            "CodeID": "code-7b00ff2c",
+            "CodeType": "Normal",
+            "DisplayText": "s03e19",
+            "StringValue": "s03e19",
+            "NumericValue": 62,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "s03e19"
+            ]
+        },
+        {
+            "CodeID": "code-88402f85",
+            "CodeType": "Normal",
+            "DisplayText": "s03e20",
+            "StringValue": "s03e20",
+            "NumericValue": 63,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "s03e20"
+            ]
+        },
+        {
+            "CodeID": "code-c44a5419",
+            "CodeType": "Normal",
+            "DisplayText": "s03e21",
+            "StringValue": "s03e21",
+            "NumericValue": 64,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "s03e21"
+            ]
+        },
+        {
+            "CodeID": "code-1e9ac8fc",
+            "CodeType": "Normal",
+            "DisplayText": "youth decision making opportunities",
+            "StringValue": "youth_decision_making_opportunities",
+            "NumericValue": 66,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "youth_decision_making_opportunities"
+            ]
+        },
+        {
+            "CodeID": "code-NR-5e3eee23",
+            "CodeType": "Control",
+            "ControlCode": "NR",
+            "DisplayText": "NR (not reviewed)",
+            "NumericValue": -40,
+            "StringValue": "NR",
+            "VisibleInCoda": false
+        },
+        {
+            "CodeID": "code-CE-016c1e22",
+            "CodeType": "Control",
+            "ControlCode": "CE",
+            "DisplayText": "CE (coding error)",
+            "NumericValue": -110,
+            "StringValue": "CE",
+            "VisibleInCoda": false
+        }
+    ]
+}
