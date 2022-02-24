@@ -10,8 +10,8 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
     ),
     uuid_table=UUIDTableClientConfiguration(
         credentials_file_url="gs://avf-credentials/avf-id-infrastructure-firebase-adminsdk-6xps8-b9173f2bfd.json",
-        table_name="IMAQAL",
-        uuid_prefix="avf-phone-uuid-"
+        table_name="avf-global-urn-to-participant-uuid",
+        uuid_prefix="avf-participant-uuid-"
     ),
     rapid_pro_sources=[
         RapidProSource(
