@@ -168,7 +168,6 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
             consent_withdrawn_dataset=DatasetConfiguration(
                 engagement_db_datasets=["age", "gender", "household_language", "location", "recently_displaced"],
                 rapid_pro_contact_field=ContactField(key="engagement_db_consent_withdrawn", label="DB Consent Withdrawn")
-
             ),
             write_mode=WriteModes.CONCATENATE_TEXTS
         )
