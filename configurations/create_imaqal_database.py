@@ -92,7 +92,9 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     coda_dataset_id="IMAQAL_age",
                     engagement_db_dataset="age",
                     code_scheme_configurations=[
-                        CodeSchemeConfiguration(code_scheme=load_code_scheme("age"), auto_coder=None)
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("age"), 
+                            auto_coder=lambda text: str(somali.DemographicCleaner.clean_age_within_range(text))
+                        ),
                     ],
                     ws_code_string_value="age"
                 ),
@@ -100,7 +102,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     coda_dataset_id="IMAQAL_gender",
                     engagement_db_dataset="gender",
                     code_scheme_configurations=[
-                        CodeSchemeConfiguration(code_scheme=load_code_scheme("gender"), auto_coder=None)
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("gender"), auto_coder=somali.DemographicCleaner.clean_gender)
                     ],
                     ws_code_string_value="gender"
                 ),
@@ -116,8 +118,11 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     coda_dataset_id="IMAQAL_location",
                     engagement_db_dataset="location",
                     code_scheme_configurations=[
-                        CodeSchemeConfiguration(code_scheme=load_code_scheme("mogadishu_sub_district"), auto_coder=None),
-                        CodeSchemeConfiguration(code_scheme=load_code_scheme("somalia_district"), auto_coder=None),
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("mogadishu_sub_district"),
+                                                auto_coder=somali.DemographicCleaner.clean_mogadishu_sub_district),
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("somalia_district"), auto_coder=lambda text:
+                                                somali.DemographicCleaner.clean_somalia_district(text)
+                                                if somali.DemographicCleaner.clean_mogadishu_sub_district == Codes.NOT_CODED else Codes.NOT_CODED),
                         CodeSchemeConfiguration(code_scheme=load_code_scheme("somalia_region"), auto_coder=None),
                         CodeSchemeConfiguration(code_scheme=load_code_scheme("somalia_state"), auto_coder=None),
                         CodeSchemeConfiguration(code_scheme=load_code_scheme("somalia_zone"), auto_coder=None),
@@ -128,7 +133,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     coda_dataset_id="IMAQAL_recently_displaced",
                     engagement_db_dataset="recently_displaced",
                     code_scheme_configurations=[
-                        CodeSchemeConfiguration(code_scheme=load_code_scheme("recently_displaced"), auto_coder=None)
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("recently_displaced"), auto_coder=somali.DemographicCleaner.clean_yes_no)
                     ],
                     ws_code_string_value="recently displaced"
                 ),
