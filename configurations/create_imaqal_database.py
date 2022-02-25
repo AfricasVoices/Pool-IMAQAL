@@ -13,6 +13,9 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
         table_name="avf-global-urn-to-participant-uuid",
         uuid_prefix="avf-participant-uuid-"
     ),
+    operations_dashboard=OperationsDashboardConfiguration(
+        credentials_file_url="gs://avf-credentials/avf-dashboards-firebase-adminsdk-gvecb-ef772e79b6.json",
+    ),
     rapid_pro_sources=[
         RapidProSource(
             rapid_pro=RapidProClientConfiguration(
@@ -176,5 +179,9 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
             ),
             write_mode=WriteModes.CONCATENATE_TEXTS
         )
+    ),
+    archive_configuration=ArchiveConfiguration(
+        archive_upload_bucket="gs://pipeline-execution-backup-archive",
+        bucket_dir_path="2022/IMAQAL-POOL"
     )
 )
