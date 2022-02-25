@@ -1,3 +1,4 @@
+from dateutil.parser import isoparse
 from src.pipeline_configuration_spec import *
 
 PIPELINE_CONFIGURATION = PipelineConfiguration(
