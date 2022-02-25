@@ -158,24 +158,24 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                 ),
                 DatasetConfiguration(
                     engagement_db_datasets=["gender"], 
-                    rapid_pro_contact_field=ContactField(key="engagement_db_gender", label="DB Gender")
+                    rapid_pro_contact_field=ContactField(key="imaqal_engagement_db_gender", label="imaqal engagement db gender")
                 ),
                 DatasetConfiguration(
                     engagement_db_datasets=["household_language"], 
-                    rapid_pro_contact_field=ContactField(key="engagement_db_household_language", label="DB Household Language")
+                    rapid_pro_contact_field=ContactField(key="imaqal_engagement_db_household_language", label="imaqal engagement db household language")
                 ),
                 DatasetConfiguration(
                     engagement_db_datasets=["location"], 
-                    rapid_pro_contact_field=ContactField(key="engagement_db_district", label="DB District")
+                    rapid_pro_contact_field=ContactField(key="imaqal_engagement_db_district", label="imaqal engagement db district")
                 ),
                 DatasetConfiguration(
                     engagement_db_datasets=["recently_displaced"], 
-                    rapid_pro_contact_field=ContactField(key="engagement_db_recently_displaced", label="DB Recently Displaced")
+                    rapid_pro_contact_field=ContactField(key="imaqal_engagement_db_recently_displaced", label="imaqal engagement db recently displaced")
                 ),
             ],
             consent_withdrawn_dataset=DatasetConfiguration(
                 engagement_db_datasets=["age", "gender", "household_language", "location", "recently_displaced"],
-                rapid_pro_contact_field=ContactField(key="engagement_db_consent_withdrawn", label="DB Consent Withdrawn")
+                rapid_pro_contact_field=ContactField(key="imaqal_engagement_db_consent_withdrawn", label="imaqal engagement db consent withdrawn")
             ),
             write_mode=WriteModes.CONCATENATE_TEXTS
         )
