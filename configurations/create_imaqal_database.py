@@ -154,7 +154,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
             normal_datasets=[
                 DatasetConfiguration(
                     engagement_db_datasets=["age"], 
-                    rapid_pro_contact_field=ContactField(key="engagement_db_age", label="DB Age")
+                    rapid_pro_contact_field=ContactField(key="imaqal_engagement_db_age", label="imaqal engagement db age")
                 ),
                 DatasetConfiguration(
                     engagement_db_datasets=["gender"], 
