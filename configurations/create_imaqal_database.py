@@ -24,17 +24,17 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
             ),
             sync_config=RapidProToEngagementDBConfiguration(
                 flow_result_configurations=[
-                    FlowResultConfiguration("imaqal_covid19_demog", "age", "age"),
-                    FlowResultConfiguration("imaqal_covid19_demog", "district", "location"),
-                    FlowResultConfiguration("imaqal_covid19_demog", "gender", "gender"),
-                    FlowResultConfiguration("imaqal_covid19_demog", "household_language", "household_language"),
-                    FlowResultConfiguration("imaqal_covid19_demog", "recently_displaced", "recently_displaced"),
-
                     FlowResultConfiguration("imaqal_demog", "age", "age"),
                     FlowResultConfiguration("imaqal_demog", "district", "location"),
                     FlowResultConfiguration("imaqal_demog", "gender", "gender"),
                     FlowResultConfiguration("imaqal_demog", "household_language", "household_language"),
                     FlowResultConfiguration("imaqal_demog", "recently_displaced", "recently_displaced"),
+
+                    FlowResultConfiguration("imaqal_covid19_demog", "age", "age"),
+                    FlowResultConfiguration("imaqal_covid19_demog", "district", "location"),
+                    FlowResultConfiguration("imaqal_covid19_demog", "gender", "gender"),
+                    FlowResultConfiguration("imaqal_covid19_demog", "household_language", "household_language"),
+                    FlowResultConfiguration("imaqal_covid19_demog", "recently_displaced", "recently_displaced"),
 
                     FlowResultConfiguration("ssf_elections_demog", "age", "age"),
                     FlowResultConfiguration("ssf_elections_demog", "district", "location"),
@@ -72,17 +72,17 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
             ),
             sync_config=RapidProToEngagementDBConfiguration(
                 flow_result_configurations=[
-                    FlowResultConfiguration("ssf_ppe_demog", "age", "age"),
-                    FlowResultConfiguration("ssf_ppe_demog", "district", "location"),
-                    FlowResultConfiguration("ssf_ppe_demog", "gender", "gender"),
-                    FlowResultConfiguration("ssf_ppe_demog", "household language", "household_language"),
-                    FlowResultConfiguration("ssf_ppe_demog", "recently displaced", "recently_displaced"),
-
                     FlowResultConfiguration("ssf_rec_demog", "age", "age"),
                     FlowResultConfiguration("ssf_rec_demog", "district", "location"),
                     FlowResultConfiguration("ssf_rec_demog", "gender", "gender"),
                     FlowResultConfiguration("ssf_rec_demog", "household language", "household_language"),
                     FlowResultConfiguration("ssf_rec_demog", "recently displaced", "recently_displaced"),
+                    
+                    FlowResultConfiguration("ssf_ppe_demog", "age", "age"),
+                    FlowResultConfiguration("ssf_ppe_demog", "district", "location"),
+                    FlowResultConfiguration("ssf_ppe_demog", "gender", "gender"),
+                    FlowResultConfiguration("ssf_ppe_demog", "household language", "household_language"),
+                    FlowResultConfiguration("ssf_ppe_demog", "recently displaced", "recently_displaced"),
                 ],
             )
         )
