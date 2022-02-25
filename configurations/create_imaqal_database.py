@@ -79,7 +79,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     FlowResultConfiguration("ssf_rec_demog", "gender", "gender"),
                     FlowResultConfiguration("ssf_rec_demog", "household language", "household_language"),
                     FlowResultConfiguration("ssf_rec_demog", "recently displaced", "recently_displaced"),
-                    
+
                     FlowResultConfiguration("ssf_ppe_demog", "age", "age"),
                     FlowResultConfiguration("ssf_ppe_demog", "district", "location"),
                     FlowResultConfiguration("ssf_ppe_demog", "gender", "gender"),
