@@ -9,12 +9,12 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
     description="Creates the initial Imaqal Pool from demographics responses to IMAQAL, IMAQAL_COVID19, "
                 "SSF-ELECTIONS, SSF-DCF, SSF-SLD, SSF-REC, and SSF-PPE.",
     engagement_database=EngagementDatabaseClientConfiguration(
-        credentials_file_url="gs://avf-credentials/avf-engagement-databases-firebase-credentials-file.json",
-        database_path="engagement_databases/IMAQAL"
+        credentials_file_url="gs://avf-credentials/firebase-test.json",
+        database_path="engagement_db_experiments/experimental_test"
     ),
     uuid_table=UUIDTableClientConfiguration(
-        credentials_file_url="gs://avf-credentials/avf-id-infrastructure-firebase-adminsdk-6xps8-b9173f2bfd.json",
-        table_name="avf-global-urn-to-participant-uuid",
+        credentials_file_url="gs://avf-credentials/firebase-test.json",
+        table_name="_engagement_db_test",
         uuid_prefix="avf-participant-uuid-"
     ),
     operations_dashboard=OperationsDashboardConfiguration(
@@ -92,7 +92,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
         )
     ],
     coda_sync=CodaConfiguration(
-        coda=CodaClientConfiguration(credentials_file_url="gs://avf-credentials/coda-production.json"),
+        coda=CodaClientConfiguration(credentials_file_url="gs://avf-credentials/coda-staging.json"),
         sync_config=CodaSyncConfiguration(
             dataset_configurations=[
                 CodaDatasetConfiguration(
@@ -152,7 +152,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
     rapid_pro_target=RapidProTarget(
         rapid_pro=RapidProClientConfiguration(
             domain="textit.com",
-            token_file_url="gs://avf-credentials/imaqal-text-it-token.txt"
+            token_file_url="gs://avf-credentials/experimental-sync-test-textit-token.txt"
         ),
         sync_config=EngagementDBToRapidProConfiguration(
             normal_datasets=[
