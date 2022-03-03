@@ -157,28 +157,28 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
             normal_datasets=[
                 DatasetConfiguration(
                     engagement_db_datasets=["age"], 
-                    rapid_pro_contact_field=ContactField(key="imaqal_engagement_db_age", label="imaqal engagement db age")
+                    rapid_pro_contact_field=ContactField(key="imaqal_pool_age", label="imaqal pool age")
                 ),
                 DatasetConfiguration(
                     engagement_db_datasets=["gender"], 
-                    rapid_pro_contact_field=ContactField(key="imaqal_engagement_db_gender", label="imaqal engagement db gender")
+                    rapid_pro_contact_field=ContactField(key="imaqal_pool_gender", label="imaqal pool gender")
                 ),
                 DatasetConfiguration(
                     engagement_db_datasets=["household_language"], 
-                    rapid_pro_contact_field=ContactField(key="imaqal_engagement_db_household_language", label="imaqal engagement db household language")
+                    rapid_pro_contact_field=ContactField(key="imaqal_pool_household_language", label="imaqal pool household language")
                 ),
                 DatasetConfiguration(
                     engagement_db_datasets=["location"], 
-                    rapid_pro_contact_field=ContactField(key="imaqal_engagement_db_district", label="imaqal engagement db district")
+                    rapid_pro_contact_field=ContactField(key="imaqal_pool_district", label="imaqal pool district")
                 ),
                 DatasetConfiguration(
                     engagement_db_datasets=["recently_displaced"], 
-                    rapid_pro_contact_field=ContactField(key="imaqal_engagement_db_recently_displaced", label="imaqal engagement db recently displaced")
+                    rapid_pro_contact_field=ContactField(key="imaqal_pool_recently_displaced", label="imaqal pool recently displaced")
                 ),
             ],
             consent_withdrawn_dataset=DatasetConfiguration(
                 engagement_db_datasets=["age", "gender", "household_language", "location", "recently_displaced"],
-                rapid_pro_contact_field=ContactField(key="imaqal_engagement_db_consent_withdrawn", label="imaqal engagement db consent withdrawn")
+                rapid_pro_contact_field=ContactField(key="imaqal_pool_consent_withdrawn", label="imaqal pool consent withdrawn")
             ),
             write_mode=WriteModes.CONCATENATE_TEXTS
         )
