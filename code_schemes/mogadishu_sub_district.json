@@ -1,0 +1,348 @@
+{
+  "SchemeID": "Scheme-07dfc611",
+  "Name": "Mogadishu Sub-District",
+  "Version": "0.0.0.6",
+  "Codes": [
+    {
+      "CodeID": "code-d170504a",
+      "CodeType": "Normal",
+      "DisplayText": "boondheere",
+      "StringValue": "boondheere",
+      "NumericValue": 1,
+      "VisibleInCoda": true,
+      "MatchValues": [
+        "boondheere"
+      ]
+    },
+    {
+      "CodeID": "code-6a343003",
+      "CodeType": "Normal",
+      "DisplayText": "cabdlcasiis",
+      "StringValue": "cabdlcasiis",
+      "NumericValue": 2,
+      "VisibleInCoda": true,
+      "MatchValues": [
+        "cabdlcasiis"
+      ]
+    },
+    {
+      "CodeID": "code-d43c2e7a",
+      "CodeType": "Normal",
+      "DisplayText": "daynile",
+      "StringValue": "daynile",
+      "NumericValue": 3,
+      "VisibleInCoda": true,
+      "MatchValues": [
+        "daynile"
+      ]
+    },
+    {
+      "CodeID": "code-e72eee9b",
+      "CodeType": "Normal",
+      "DisplayText": "dharkenley",
+      "StringValue": "dharkenley",
+      "NumericValue": 4,
+      "VisibleInCoda": true,
+      "MatchValues": [
+        "dharkenley"
+      ]
+    },
+    {
+      "CodeID": "code-1333e076",
+      "CodeType": "Normal",
+      "DisplayText": "heliwa",
+      "StringValue": "heliwa",
+      "NumericValue": 5,
+      "VisibleInCoda": true,
+      "MatchValues": [
+        "heliwa"
+      ]
+    },
+    {
+      "CodeID": "code-ae4b5ca2",
+      "CodeType": "Normal",
+      "DisplayText": "hodan",
+      "StringValue": "hodan",
+      "NumericValue": 6,
+      "VisibleInCoda": true,
+      "MatchValues": [
+        "hodan"
+      ]
+    },
+    {
+      "CodeID": "code-f8845af1",
+      "CodeType": "Normal",
+      "DisplayText": "hawl wadaag",
+      "StringValue": "hawl wadaag",
+      "NumericValue": 7,
+      "VisibleInCoda": true,
+      "MatchValues": [
+        "hawl wadaag"
+      ]
+    },
+    {
+      "CodeID": "code-156f94ee",
+      "CodeType": "Normal",
+      "DisplayText": "karaan",
+      "StringValue": "karaan",
+      "NumericValue": 8,
+      "VisibleInCoda": true,
+      "MatchValues": [
+        "karaan"
+      ]
+    },
+    {
+      "CodeID": "code-15b664b5",
+      "CodeType": "Normal",
+      "DisplayText": "kaxda",
+      "StringValue": "kaxda",
+      "NumericValue": 17,
+      "VisibleInCoda": true,
+      "MatchValues": [
+        "kaxda"
+      ]
+    },
+    {
+      "CodeID": "code-22f2f7d6",
+      "CodeType": "Normal",
+      "DisplayText": "shangaani",
+      "StringValue": "shangaani",
+      "NumericValue": 9,
+      "VisibleInCoda": true,
+      "MatchValues": [
+        "shangaani"
+      ]
+    },
+    {
+      "CodeID": "code-ea1d62ae",
+      "CodeType": "Normal",
+      "DisplayText": "shibis",
+      "StringValue": "shibis",
+      "NumericValue": 10,
+      "VisibleInCoda": true,
+      "MatchValues": [
+        "shibis"
+      ]
+    },
+    {
+      "CodeID": "code-b425d5db",
+      "CodeType": "Normal",
+      "DisplayText": "waaberi",
+      "StringValue": "waaberi",
+      "NumericValue": 11,
+      "VisibleInCoda": true,
+      "MatchValues": [
+        "waaberi"
+      ]
+    },
+    {
+      "CodeID": "code-eb4fdeb3",
+      "CodeType": "Normal",
+      "DisplayText": "wadajir",
+      "StringValue": "wadajir",
+      "NumericValue": 12,
+      "VisibleInCoda": true,
+      "MatchValues": [
+        "wadajir"
+      ]
+    },
+    {
+      "CodeID": "code-818d857f",
+      "CodeType": "Normal",
+      "DisplayText": "wardhiigleey",
+      "StringValue": "wardhiigleey",
+      "NumericValue": 13,
+      "VisibleInCoda": true,
+      "MatchValues": [
+        "wardhiigleey"
+      ]
+    },
+    {
+      "CodeID": "code-d618fa3a",
+      "CodeType": "Normal",
+      "DisplayText": "xamar jaabjab",
+      "StringValue": "xamar jaabjab",
+      "NumericValue": 14,
+      "VisibleInCoda": true,
+      "MatchValues": [
+        "xamar jaabjab"
+      ]
+    },
+    {
+      "CodeID": "code-2e3cedff",
+      "CodeType": "Normal",
+      "DisplayText": "xamar weyne",
+      "StringValue": "xamar weyne",
+      "NumericValue": 15,
+      "VisibleInCoda": true,
+      "MatchValues": [
+        "xamar weyne"
+      ]
+    },
+    {
+      "CodeID": "code-d16d73ca",
+      "CodeType": "Normal",
+      "DisplayText": "yaaqshid",
+      "StringValue": "yaaqshid",
+      "NumericValue": 16,
+      "VisibleInCoda": true,
+      "MatchValues": [
+        "yaaqshid"
+      ]
+    },
+    {
+      "CodeID": "code-NA-f93d3eb7",
+      "CodeType": "Control",
+      "ControlCode": "NA",
+      "DisplayText": "NA (missing)",
+      "NumericValue": -10,
+      "StringValue": "NA",
+      "VisibleInCoda": false
+    },
+    {
+      "CodeID": "code-NS-2c11b7c9",
+      "CodeType": "Control",
+      "ControlCode": "NS",
+      "DisplayText": "NS (skip)",
+      "NumericValue": -20,
+      "StringValue": "NS",
+      "VisibleInCoda": false
+    },
+    {
+      "CodeID": "code-NC-42f1d983",
+      "CodeType": "Control",
+      "ControlCode": "NC",
+      "DisplayText": "NC (not coded)",
+      "NumericValue": -30,
+      "StringValue": "NC",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-NR-5e3eee23",
+      "CodeType": "Control",
+      "ControlCode": "NR",
+      "DisplayText": "NR (not reviewed)",
+      "NumericValue": -40,
+      "StringValue": "NR",
+      "VisibleInCoda": false
+    },
+    {
+      "CodeID": "code-NIC-99631cb8",
+      "CodeType": "Control",
+      "ControlCode": "NIC",
+      "DisplayText": "NIC (not internally consistent)",
+      "NumericValue": -50,
+      "StringValue": "NIC",
+      "VisibleInCoda": false
+    },
+    {
+      "CodeID": "code-STOP-08b832a8",
+      "CodeType": "Control",
+      "ControlCode": "STOP",
+      "DisplayText": "STOP",
+      "NumericValue": -90,
+      "StringValue": "STOP",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-WS-adb25603b7af",
+      "CodeType": "Control",
+      "ControlCode": "WS",
+      "DisplayText": "WS (wrong scheme)",
+      "NumericValue": -100,
+      "StringValue": "WS",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-CE-016c1e22",
+      "CodeType": "Control",
+      "ControlCode": "CE",
+      "DisplayText": "CE (coding error)",
+      "NumericValue": -110,
+      "StringValue": "CE",
+      "VisibleInCoda": false
+    },
+    {
+      "CodeID": "code-PB-a434a800",
+      "CodeType": "Meta",
+      "MetaCode": "push_back",
+      "DisplayText": "meta: push back",
+      "NumericValue": -100000,
+      "StringValue": "push_back",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-SQ-5e8f0122",
+      "CodeType": "Meta",
+      "MetaCode": "showtime_question",
+      "DisplayText": "meta: showtime question",
+      "NumericValue": -100030,
+      "StringValue": "showtime_question",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-Q-a5d3700d",
+      "CodeType": "Meta",
+      "MetaCode": "question",
+      "DisplayText": "meta: question",
+      "NumericValue": -100010,
+      "StringValue": "question",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-G-97cb3199",
+      "CodeType": "Meta",
+      "MetaCode": "greeting",
+      "DisplayText": "meta: greeting",
+      "NumericValue": -100020,
+      "StringValue": "greeting",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-OI-c5f1d054",
+      "CodeType": "Meta",
+      "MetaCode": "opt_in",
+      "DisplayText": "meta: opt-in",
+      "NumericValue": -100040,
+      "StringValue": "opt_in",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-SC-a3a065bc",
+      "CodeType": "Meta",
+      "MetaCode": "similar_content",
+      "DisplayText": "meta: similar content",
+      "NumericValue": -100050,
+      "StringValue": "similar_content",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-PI-83b90d32",
+      "CodeType": "Meta",
+      "MetaCode": "participation_incentive",
+      "DisplayText": "meta: participation incentive",
+      "NumericValue": -100060,
+      "StringValue": "participation_incentive",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-EC-3a704f5b",
+      "CodeType": "Meta",
+      "MetaCode": "exclusion_complaint",
+      "DisplayText": "meta: exclusion complaint",
+      "NumericValue": -100070,
+      "StringValue": "exclusion_complaint",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-E-720cdb66",
+      "CodeType": "Meta",
+      "MetaCode": "escalate",
+      "DisplayText": "meta: ESCALATE",
+      "NumericValue": -100080,
+      "StringValue": "escalate",
+      "VisibleInCoda": true,
+      "Shortcut": "e"
+    }
+  ]
+}
