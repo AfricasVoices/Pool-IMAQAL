@@ -34,11 +34,11 @@ ARCHIVE_FILE="$ARCHIVE_LOCATION/data-$RUN_ID.tar.gzip"
 ./docker-sync-coda-to-engagement-db.sh --incremental-cache-volume "$PIPELINE_NAME-coda-to-engagement-db-cache" "$USER" \
                         "$GOOGLE_CLOUD_CREDENTIALS_PATH" "$CONFIGURATION_MODULE" "$DATA_DIR"
 
-./docker-run-engagement-db-to-analysis.sh --incremental-cache-volume "$PIPELINE_NAME-engagement-db-to-analysis-cache" \
-                        "$USER" "$GOOGLE_CLOUD_CREDENTIALS_PATH" "$CONFIGURATION_MODULE" "$DATA_DIR"
+# ./docker-run-engagement-db-to-analysis.sh --incremental-cache-volume "$PIPELINE_NAME-engagement-db-to-analysis-cache" \
+#                         "$USER" "$GOOGLE_CLOUD_CREDENTIALS_PATH" "$CONFIGURATION_MODULE" "$DATA_DIR"
 
-./archive_data_dir.sh "$DATA_DIR" "$ARCHIVE_FILE"
+# ./archive_data_dir.sh "$DATA_DIR" "$ARCHIVE_FILE"
 
-pipenv run python upload_archive_files.py "$USER" "$GOOGLE_CLOUD_CREDENTIALS_PATH" "$CONFIGURATION_MODULE" "$ARCHIVE_LOCATION"
+# pipenv run python upload_archive_files.py "$USER" "$GOOGLE_CLOUD_CREDENTIALS_PATH" "$CONFIGURATION_MODULE" "$ARCHIVE_LOCATION"
 
 ./docker-run-log-pipeline-event.sh  "$CONFIGURATION_MODULE" "$GOOGLE_CLOUD_CREDENTIALS_PATH" "$RUN_ID" "PipelineRunEnd"
