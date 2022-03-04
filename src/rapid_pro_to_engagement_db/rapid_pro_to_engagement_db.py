@@ -1,5 +1,7 @@
 import json
+from collections import defaultdict
 from datetime import timedelta
+from itertools import groupby
 
 from core_data_modules.cleaners import URNCleaner
 from core_data_modules.logging import Logger
@@ -8,7 +10,7 @@ from engagement_database.data_models import (Message, MessageDirections, Message
 from storage.google_cloud import google_cloud_utils
 
 from src.rapid_pro_to_engagement_db.cache import RapidProSyncCache
-from src.rapid_pro_to_engagement_db.sync_stats import RapidProToEngagementDBSyncStats, RapidProSyncEvents
+from src.rapid_pro_to_engagement_db.sync_stats import FlowStats, FlowResultToEngagementDBSyncStats, RapidProSyncEvents
 
 log = Logger(__name__)
 
@@ -26,19 +28,15 @@ def _get_contacts_from_cache(cache=None):
         return cache.get_contacts()
 
 
-def _get_new_runs(rapid_pro, flow_id, flow_result_field, cache=None):
+def _get_new_runs(rapid_pro, flow_id, cache=None):
     """
     Gets new runs from Rapid Pro for the given flow.
-
     If a cache is provided and it contains a timestamp of a previous export, only returns runs that have been modified
     since the last export.
-
     :param rapid_pro: Rapid Pro client to use to download new runs.
     :type rapid_pro: rapid_pro_tools.rapid_pro_client.RapidProClient
     :param flow_id: Flow id to download runs for.
     :type flow_id: str
-    :param flow_result_field: Result field in the flow.
-    :type flow_result_field: str
     :param cache: Cache to check for a timestamp of a previous export. If None, downloads all runs.
     :type cache: src.rapid_pro_to_engagement_db.cache.RapidProSyncCache | None
     :return: Runs modified for the given flow since the cache was last updated, if possible, else from all of time.
@@ -47,7 +45,7 @@ def _get_new_runs(rapid_pro, flow_id, flow_result_field, cache=None):
     # Try to get the last modified timestamp from the cache
     flow_last_updated = None
     if cache is not None:
-        flow_last_updated = cache.get_latest_run_timestamp(flow_id, flow_result_field)
+        flow_last_updated = cache.get_latest_run_timestamp(flow_id)
 
     # If there is a last updated timestamp in the cache, only download and return runs that have been modified since.
     filter_last_modified_after = None
@@ -60,9 +58,7 @@ def _get_new_runs(rapid_pro, flow_id, flow_result_field, cache=None):
 def _normalise_and_validate_contact_urn(contact_urn):
     """
     Normalises and validates the given URN.
-
     Fails with an AssertionError if the given URN is invalid.
-
     :param contact_urn: URN to de-identify.
     :type contact_urn: str
     :return: Normalised contact urn.
@@ -85,7 +81,6 @@ def _normalise_and_validate_contact_urn(contact_urn):
 def _engagement_db_has_message(engagement_db, message):
     """
     Checks if an engagement database contains a message with the same origin id as the given message.
-
     :param engagement_db: Engagement database to check for the message.
     :type engagement_db: engagement_database.EngagementDatabase
     :param message: Message to check for existence.
@@ -103,10 +98,8 @@ def _engagement_db_has_message(engagement_db, message):
 def _ensure_engagement_db_has_message(engagement_db, message, message_origin_details, dry_run=False):
     """
     Ensures that the given message exists in an engagement database.
-
     This function will only write to the database if a message with the same text, timestamp, and participant_uuid
     doesn't already exist in the database.
-
     :param engagement_db: Engagement database to use.
     :type engagement_db: engagement_database.EngagementDatabase
     :param message: Message to make sure exists in the engagement database.
@@ -134,7 +127,6 @@ def _ensure_engagement_db_has_message(engagement_db, message, message_origin_det
 def sync_rapid_pro_to_engagement_db(rapid_pro, engagement_db, uuid_table, rapid_pro_config, google_cloud_credentials_file_path, cache_path=None, dry_run=False):
     """
     Synchronises runs from a Rapid Pro workspace to an engagement database.
-
     :param rapid_pro: Rapid Pro client to sync from.
     :type rapid_pro: rapid_pro_tools.rapid_pro_client.RapidProClient
     :param engagement_db: Engagement database to sync to.
@@ -152,9 +144,7 @@ def sync_rapid_pro_to_engagement_db(rapid_pro, engagement_db, uuid_table, rapid_
     # This implementation is WIP. It shows how we can non-incrementally synchronise a workspace to the database.
     # To enter production, we still need the following:
     # TODO: Handle deleted contacts.
-    # TODO: Optimise fetching fields from the same flows, so we don't have to download the same runs multiple times.
-    workspace_name = rapid_pro.get_workspace_name()
-    workspace_uuid = rapid_pro.get_workspace_uuid()
+    workspace_name, workspace_uuid = rapid_pro.get_workspace_name(), rapid_pro.get_workspace_uuid()
 
     if rapid_pro_config.uuid_filter is not None:
         valid_participant_uuids = set(json.loads(google_cloud_utils.download_blob_to_string(
@@ -174,15 +164,14 @@ def sync_rapid_pro_to_engagement_db(rapid_pro, engagement_db, uuid_table, rapid_
     # (If the cache or a contacts file for this workspace don't exist, `contacts` will be `None` for now)
     contacts = _get_contacts_from_cache(cache)
 
-    dataset_to_sync_stats = dict()  # of '{flow_name}.{flow_result_field}' -> RapidProToEngagementDBSyncStats
-    for flow_config in rapid_pro_config.flow_result_configurations:
-        sync_stats = RapidProToEngagementDBSyncStats()
+    flow_stats = dict() # of flow_name -> FlowStats
+    dataset_to_sync_stats = defaultdict(lambda: FlowResultToEngagementDBSyncStats())  # of '{flow_name}.{flow_result_field}' -> FlowResultToEngagementDBSyncStats
+    for flow_name, flow_configs in groupby(rapid_pro_config.flow_result_configurations, lambda x: x.flow_name):
+        flow_configs = list(flow_configs)
+        stats = FlowStats()
         # Get the latest runs for this flow.
-        flow_id = rapid_pro.get_flow_id(flow_config.flow_name)
-        runs = _get_new_runs(rapid_pro, flow_id, flow_config.flow_result_field, cache)
-
-        for _ in runs:
-            sync_stats.add_event(RapidProSyncEvents.READ_RUN_FROM_RAPID_PRO)
+        flow_id = rapid_pro.get_flow_id(flow_name)
+        runs = _get_new_runs(rapid_pro, flow_id, cache)
 
         # Get any contacts that have been updated since we last asked, in case any of the downloaded runs are for very
         # new contacts.
@@ -191,20 +180,18 @@ def sync_rapid_pro_to_engagement_db(rapid_pro, engagement_db, uuid_table, rapid_
             cache.set_contacts(contacts)
         contacts_lut = {c.uuid: c for c in contacts}
 
-        # Process each run in turn, adding it the engagement database if it contains a message relevant to this flow
-        # config and the message hasn't already been added to the engagement database.
-        log.info(f"Processing {len(runs)} new runs for flow '{flow_config.flow_name}'")
+        # Process each run in turn, adding its values to the engagement database if it contains messages relevant to this flow
+        # configurations and the messages haven't already been added to the engagement database.
+        log.info(f"Processing {len(runs)} new runs for flow '{flow_name}'")
         for i, run in enumerate(runs):
             log.debug(f"Processing run {i + 1}/{len(runs)}, id {run.id}...")
 
-            # Get the relevant result from this run, if it exists.
-            rapid_pro_result = run.values.get(flow_config.flow_result_field)
-            if rapid_pro_result is None:
+            if len(run.values) == 0:
                 log.debug("No relevant run result; skipping")
-                sync_stats.add_event(RapidProSyncEvents.RUN_EMPTY)
-                # Update the cache so we know not to check this run again in this flow + result field context.
-                if cache is not None and not dry_run:
-                    cache.set_latest_run_timestamp(flow_id, flow_config.flow_result_field, run.modified_on)
+                stats.add_event(RapidProSyncEvents.RUN_EMPTY)
+                # Update the cache so we know not to check this run again in this flow.
+                if cache is not None:
+                    cache.set_latest_run_timestamp(flow_id, run.modified_on)
                 continue
 
             # De-identify the contact's full urn.
@@ -212,9 +199,9 @@ def sync_rapid_pro_to_engagement_db(rapid_pro, engagement_db, uuid_table, rapid_
                 log.warning(f"Found a run from a contact that isn't present in the contacts export; skipping. "
                             f"This is most likely because the contact was deleted, but could suggest a more serious "
                             f"problem.")
-                sync_stats.add_event(RapidProSyncEvents.RUN_CONTACT_UUID_NOT_IN_CONTACTS)
+                stats.add_event(RapidProSyncEvents.RUN_CONTACT_UUID_NOT_IN_CONTACTS)
                 if cache is not None and not dry_run:
-                    cache.set_latest_run_timestamp(flow_id, flow_config.flow_result_field, run.modified_on)
+                    cache.set_latest_run_timestamp(flow_id, run.modified_on)
                 continue
             contact = contacts_lut[run.contact.uuid]
             assert len(contact.urns) == 1, len(contact.urns)
@@ -226,60 +213,82 @@ def sync_rapid_pro_to_engagement_db(rapid_pro, engagement_db, uuid_table, rapid_
                 # table entry for people who didn't consent for us to continue to keep their data.
                 if not uuid_table.has_data(contact_urn):
                     log.info("A uuid filter was specified but the message is not from a participant in the "
-                             "uuid_table; skipping")
-                    sync_stats.add_event(RapidProSyncEvents.UUID_FILTER_CONTACT_NOT_IN_UUID_TABLE)
+                            "uuid_table; skipping")
+                    stats.add_event(RapidProSyncEvents.UUID_FILTER_CONTACT_NOT_IN_UUID_TABLE)
                     if cache is not None and not dry_run:
-                        cache.set_latest_run_timestamp(flow_id, flow_config.flow_result_field, run.modified_on)
+                        cache.set_latest_run_timestamp(flow_id, run.modified_on)
                     continue
                 if uuid_table.data_to_uuid(contact_urn) not in valid_participant_uuids:
                     log.info("A uuid filter was specified and the message is from a participant in the "
-                             "uuid_table but is not in the uuid filter; skipping")
-                    sync_stats.add_event(RapidProSyncEvents.CONTACT_NOT_IN_UUID_FILTER)
+                            "uuid_table but is not in the uuid filter; skipping")
+                    stats.add_event(RapidProSyncEvents.CONTACT_NOT_IN_UUID_FILTER)
                     if cache is not None and not dry_run:
-                        cache.set_latest_run_timestamp(flow_id, flow_config.flow_result_field, run.modified_on)
+                        cache.set_latest_run_timestamp(flow_id, run.modified_on)
                     continue
 
             participant_uuid = uuid_table.data_to_uuid(contact_urn)
 
-            # Create a message and origin objects for this result and ensure it's in the engagement database.
-            msg = Message(
-                participant_uuid=participant_uuid,
-                text=rapid_pro_result.input,  # Raw text received from a participant
-                timestamp=rapid_pro_result.time,  # Time at which Rapid Pro processed this message in the flow.
-                direction=MessageDirections.IN,
-                channel_operator=URNCleaner.clean_operator(contact_urn),
-                status=MessageStatuses.LIVE,
-                dataset=flow_config.engagement_db_dataset,
-                labels=[],
-                origin=MessageOrigin(
-                    origin_id=f"rapid_pro.workspace_{workspace_uuid}.flow_{flow_id}.run_{run.id}.result_{rapid_pro_result.name}",
-                    origin_type="rapid_pro"
-                )
-            )
-            message_origin_details = {
-                "rapid_pro_workspace": workspace_name,
-                "run_id": run.id,
-                "flow_id": flow_id,
-                "flow_name": flow_config.flow_name,
-                "run_value": rapid_pro_result.serialize()
-            }
-            sync_event = _ensure_engagement_db_has_message(engagement_db, msg, message_origin_details, dry_run)
-            sync_stats.add_event(sync_event)
-
+            for config in flow_configs:
+                sync_stats = FlowResultToEngagementDBSyncStats()
+                # Get the relevant result from this run, if it exists.
+                rapid_pro_result = run.values.get(config.flow_result_field)
+                if rapid_pro_result is None:
+                    log.debug(f"Field `{config.flow_result_field}` has no relevant run result.")
+                    sync_stats.add_event(RapidProSyncEvents.RUN_VALUE_EMPTY)
+                else:
+                    # Create a message and origin objects for this result and ensure it's in the engagement database.
+                    msg = Message(
+                        participant_uuid=participant_uuid,
+                        text=rapid_pro_result.input,  # Raw text received from a participant
+                        timestamp=rapid_pro_result.time,  # Time at which Rapid Pro processed this message in the flow.
+                        direction=MessageDirections.IN,
+                        channel_operator=URNCleaner.clean_operator(contact_urn),
+                        status=MessageStatuses.LIVE,
+                        dataset=config.engagement_db_dataset,
+                        labels=[],
+                        origin=MessageOrigin(
+                            origin_id=f"rapid_pro.workspace_{workspace_uuid}.flow_{flow_id}.run_{run.id}.result_{rapid_pro_result.name}",
+                            origin_type="rapid_pro"
+                        )
+                    )
+                    message_origin_details = {
+                        "rapid_pro_workspace": workspace_name,
+                        "run_id": run.id,
+                        "flow_id": flow_id,
+                        "flow_name": flow_name,
+                        "run_value": rapid_pro_result.serialize()
+                    }
+                    sync_event = _ensure_engagement_db_has_message(engagement_db, msg, message_origin_details, dry_run)
+                    sync_stats.add_event(sync_event)
+                dataset_to_sync_stats[f"{flow_name}.{config.flow_result_field}"].add_stats(sync_stats)
+            
             # Update the cache so we know not to check this run again in this flow + result field context.
+            # TODO: Update the cache if we've read the last run, or the next run's last modified timestamp is greater
+            # than the run we are currently syncing.
             if cache is not None and not dry_run:
-                cache.set_latest_run_timestamp(flow_id, flow_config.flow_result_field, run.modified_on)
+                cache.set_latest_run_timestamp(flow_id, run.modified_on)
 
-        dataset_to_sync_stats[f"{flow_config.flow_name}.{flow_config.flow_result_field}"] = sync_stats
+        for _ in runs:
+            stats.add_event(RapidProSyncEvents.READ_RUN_FROM_RAPID_PRO)
+        flow_stats[flow_name] = stats
 
-    # Log the summaries of actions taken for each dataset then for all datasets combined.
-    all_sync_stats = RapidProToEngagementDBSyncStats()
-    for flow_config in rapid_pro_config.flow_result_configurations:
-        result_field = f"{flow_config.flow_name}.{flow_config.flow_result_field}"
-        log.info(f"Summary of actions for flow result field '{result_field}':")
-        dataset_to_sync_stats[result_field].print_summary()
-        all_sync_stats.add_stats(dataset_to_sync_stats[result_field])
+    # Log the summaries of actions taken for each flow and each dataset then for all flows and datasets combined.
+    all_flow_stats = FlowStats()
+    all_sync_stats = FlowResultToEngagementDBSyncStats()
+    for flow_name, flow_configs in groupby(rapid_pro_config.flow_result_configurations, lambda x: x.flow_name):
+        flow_configs = list(flow_configs)
+        log.info(f"Summary of actions for flow '{flow_name}':")
+        flow_stats[flow_name].print_summary()
+        all_flow_stats.add_stats(flow_stats[flow_name])
+
+        for config in flow_configs:
+            result_field = f"{flow_name}.{config.flow_result_field}"
+            log.info(f"Summary of actions for flow result field '{result_field}':")
+            dataset_to_sync_stats[result_field].print_summary()
+            all_sync_stats.add_stats(dataset_to_sync_stats[result_field])
 
     dry_run_text = "(dry run)" if dry_run else ""
+    log.info(f"Summary of actions for all flows {dry_run_text}:")
+    all_flow_stats.print_summary()
     log.info(f"Summary of actions for all flow result fields {dry_run_text}:")
     all_sync_stats.print_summary()
