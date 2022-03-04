@@ -33,7 +33,8 @@
             "NumericValue": 3,
             "VisibleInCoda": true,
             "MatchValues": [
-                "location"
+                "location",
+                "district"
             ]
         },
         {
