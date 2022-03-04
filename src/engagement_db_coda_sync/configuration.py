@@ -41,5 +41,7 @@ class CodaSyncConfiguration:
         for config in self.dataset_configurations:
             if config.ws_code_string_value == string_value:
                 return config
+            elif self.ws_correct_dataset_code_scheme.get_code_with_match_value(string_value):
+                return config
         raise ValueError(f"Coda configuration does not contain a dateset_configuration with ws_code_string_value "
                          f"'{string_value}'")
