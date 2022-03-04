@@ -8,7 +8,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                 "SSF-ELECTIONS, SSF-DCF, SSF-SLD, SSF-REC, and SSF-PPE.",
     engagement_database=EngagementDatabaseClientConfiguration(
         credentials_file_url="gs://avf-credentials/firebase-test.json",
-        database_path="engagement_db_experiments/experimental_test"
+        database_path="engagement_db_experiments/imaqal_pool_test"
     ),
     uuid_table=UUIDTableClientConfiguration(
         credentials_file_url="gs://avf-credentials/firebase-test.json",
