@@ -28,8 +28,8 @@
         {
             "CodeID": "code-dda6e4b4",
             "CodeType": "Normal",
-            "DisplayText": "district",
-            "StringValue": "district",
+            "DisplayText": "location",
+            "StringValue": "location",
             "NumericValue": 3,
             "VisibleInCoda": true,
             "MatchValues": [
