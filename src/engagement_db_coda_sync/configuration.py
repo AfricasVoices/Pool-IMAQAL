@@ -39,6 +39,9 @@ class CodaSyncConfiguration:
 
     def get_dataset_config_by_ws_code_string_value(self, string_value):
         for config in self.dataset_configurations:
+            print(string_value)
+            print(config.ws_code_string_value)
+            print(config.engagement_db_dataset)
             if config.ws_code_string_value == string_value:
                 return config
             elif self.ws_correct_dataset_code_scheme.get_code_with_match_value(string_value):
