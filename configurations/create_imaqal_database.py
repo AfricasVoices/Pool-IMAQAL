@@ -132,7 +132,8 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                         CodeSchemeConfiguration(code_scheme=load_code_scheme("somalia_state"), auto_coder=None),
                         CodeSchemeConfiguration(code_scheme=load_code_scheme("somalia_zone"), auto_coder=None),
                     ],
-                    ws_code_string_value="location"
+                    ws_code_string_value="location",
+                    ws_code_match_values=["district"]
                 ),
                 CodaDatasetConfiguration(
                     coda_dataset_id="IMAQAL_recently_displaced",
