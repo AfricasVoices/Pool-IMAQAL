@@ -42,6 +42,8 @@ class CodaSyncConfiguration:
             print(string_value)
             print(config.ws_code_string_value)
             print(config.engagement_db_dataset)
+            print(config.ws_code_string_value == string_value)
+            print(self.ws_correct_dataset_code_scheme.get_code_with_match_value(string_value))
             if config.ws_code_string_value == string_value:
                 return config
             elif self.ws_correct_dataset_code_scheme.get_code_with_match_value(string_value):
