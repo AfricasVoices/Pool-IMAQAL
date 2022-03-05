@@ -291,14 +291,15 @@ def _update_engagement_db_message_from_coda_message(engagement_db, engagement_db
             correct_dataset = \
                 coda_config.get_dataset_config_by_ws_code_string_value(ws_code.string_value).engagement_db_dataset
         except ValueError as e:
-            if ws_code.string_value in other_ws_datasets:
+            if coda_config.ws_correct_dataset_code_scheme.get_code_with_match_value(ws_code.string_value):
                 correct_dataset = ws_code.string_value
             # No dataset configuration found with an appropriate ws_code_string_value to move the message to.
             # Fallback to the default dataset if available, otherwise crash.
-            elif coda_config.default_ws_dataset is None:
+            elif coda_config.default_ws_dataset is not None:
+                correct_dataset = coda_config.default_ws_dataset
+            else:
                 raise e
-            correct_dataset = coda_config.default_ws_dataset
-
+            
         # Ensure this message isn't being moved to a dataset which it has previously been assigned to.
         # This is because if the message has already been in this new dataset, there is a chance there is an
         # infinite loop in the WS labels, which could get very expensive if we end up cycling this message through
