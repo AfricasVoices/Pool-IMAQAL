@@ -291,9 +291,11 @@ def _update_engagement_db_message_from_coda_message(engagement_db, engagement_db
             correct_dataset = \
                 coda_config.get_dataset_config_by_ws_code_string_value(ws_code.string_value).engagement_db_dataset
         except ValueError as e:
+            if ws_code.string_value in other_ws_datasets:
+                correct_dataset = ws_code.string_value
             # No dataset configuration found with an appropriate ws_code_string_value to move the message to.
             # Fallback to the default dataset if available, otherwise crash.
-            if coda_config.default_ws_dataset is None:
+            elif coda_config.default_ws_dataset is None:
                 raise e
             correct_dataset = coda_config.default_ws_dataset
 
