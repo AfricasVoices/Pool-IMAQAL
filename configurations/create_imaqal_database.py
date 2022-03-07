@@ -103,7 +103,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                             auto_coder=lambda text: str(somali.DemographicCleaner.clean_age_within_range(text))
                         ),
                     ],
-                    ws_code_match_values=["age"]
+                    ws_code_match_value="age"
                 ),
                 CodaDatasetConfiguration(
                     coda_dataset_id="IMAQAL_gender",
@@ -111,7 +111,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     code_scheme_configurations=[
                         CodeSchemeConfiguration(code_scheme=load_code_scheme("gender"), auto_coder=somali.DemographicCleaner.clean_gender)
                     ],
-                    ws_code_match_values=["gender"]
+                    ws_code_match_value="gender"
                 ),
                 CodaDatasetConfiguration(
                     coda_dataset_id="IMAQAL_household_language",
@@ -119,7 +119,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     code_scheme_configurations=[
                         CodeSchemeConfiguration(code_scheme=load_code_scheme("household_language"), auto_coder=None)
                     ],
-                    ws_code_match_values=["hh language"]
+                    ws_code_match_value="hh language"
                 ),
                 CodaDatasetConfiguration(
                     coda_dataset_id="IMAQAL_location",
@@ -134,7 +134,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                         CodeSchemeConfiguration(code_scheme=load_code_scheme("somalia_state"), auto_coder=None),
                         CodeSchemeConfiguration(code_scheme=load_code_scheme("somalia_zone"), auto_coder=None),
                     ],
-                    ws_code_match_values=["location"]
+                    ws_code_match_value="location"
                 ),
                 CodaDatasetConfiguration(
                     coda_dataset_id="IMAQAL_recently_displaced",
@@ -142,7 +142,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     code_scheme_configurations=[
                         CodeSchemeConfiguration(code_scheme=load_code_scheme("recently_displaced"), auto_coder=somali.DemographicCleaner.clean_yes_no)
                     ],
-                    ws_code_match_values=["recently displaced"]
+                    ws_code_match_value="recently displaced"
                 ),
             ],
             ws_correct_dataset_code_scheme=load_code_scheme("ws_correct_dataset"),
