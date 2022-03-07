@@ -37,9 +37,10 @@ class CodaSyncConfiguration:
                 return config
         raise ValueError(f"Coda configuration does not contain a dataset_configuration with dataset '{dataset}'")
 
-    def get_dataset_config_by_ws_code_string_value(self, string_value):
+    def get_dataset_config_by_ws_code_match_values(self, match_values):
         for config in self.dataset_configurations:
-            if config.ws_code_string_value == string_value:
-                return config
+            for value in match_values:
+                if value in config.ws_code_match_values:
+                    return config
         raise ValueError(f"Coda configuration does not contain a dateset_configuration with ws_code_string_value "
                          f"'{string_value}'")
