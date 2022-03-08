@@ -291,7 +291,6 @@ def _update_engagement_db_message_from_coda_message(engagement_db, engagement_db
             correct_dataset = \
                 coda_config.get_dataset_config_by_ws_code_match_values(ws_code.match_values).engagement_db_dataset
         except ValueError as e:
-            # TODO: Update code schemes to have a function that gets code with string value
             if coda_config.ws_correct_dataset_code_scheme.get_code_with_match_value(ws_code.string_value.replace("_", " ")):
                 correct_dataset = ws_code.string_value
 
