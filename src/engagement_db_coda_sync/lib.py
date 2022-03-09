@@ -79,7 +79,8 @@ def ensure_coda_datasets_up_to_date(coda, coda_config, google_cloud_credentials_
         repo_code_schemes.append(ws_correct_dataset_code_scheme)
         repo_code_schemes_lut = {code_scheme.scheme_id: code_scheme for code_scheme in repo_code_schemes}
 
-        coda_code_schemes = coda.get_all_code_schemes(dataset_config.coda_dataset_id)
+        # coda_code_schemes = coda.get_all_code_schemes(dataset_config.coda_dataset_id)
+        coda_code_schemes = []
         coda_code_schemes_lut = {code_scheme.scheme_id: code_scheme for code_scheme in coda_code_schemes}
 
         for coda_scheme_id, coda_code_scheme in coda_code_schemes_lut.items():
