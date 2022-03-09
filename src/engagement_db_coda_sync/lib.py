@@ -52,10 +52,17 @@ def ensure_coda_datasets_up_to_date(coda, coda_config, google_cloud_credentials_
         else:
             config_user_ids = default_project_user_ids
 
-        coda_user_ids = coda.get_dataset_user_ids(dataset_config.coda_dataset_id)
-        if coda_user_ids is None or set(coda_user_ids) != set(config_user_ids):
-            if not dry_run:
-                coda.set_dataset_user_ids(dataset_config.coda_dataset_id, config_user_ids)
+        # TODO: Fix not being able to get user ids when inconsistent
+        # coda_user_ids = coda.get_dataset_user_ids(dataset_config.coda_dataset_id)
+        # if coda_user_ids is None or set(coda_user_ids) != set(config_user_ids):
+        #     if not dry_run:
+        #         coda.set_dataset_user_ids(dataset_config.coda_dataset_id, config_user_ids)
+        #     log.info(f"User ids added to Coda: {len(config_user_ids)}")
+        # else:
+        #     log.info(f"User ids are up to date")
+
+        if not dry_run and len(config_user_ids) > 0:
+            coda.set_dataset_user_ids(dataset_config.coda_dataset_id, config_user_ids)
             log.info(f"User ids added to Coda: {len(config_user_ids)}")
         else:
             log.info(f"User ids are up to date")
