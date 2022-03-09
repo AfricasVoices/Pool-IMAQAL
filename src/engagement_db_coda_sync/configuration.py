@@ -44,4 +44,4 @@ class CodaSyncConfiguration:
                     return config
         joined_match_values = ",".join(match_values)
         raise ValueError(f"Coda configuration does not contain a dataset_configuration with ws_code_match_values "
-                         f"'{match_values}'")
+                         f"'{joined_match_values}'")
