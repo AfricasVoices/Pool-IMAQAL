@@ -52,10 +52,17 @@ def ensure_coda_datasets_up_to_date(coda, coda_config, google_cloud_credentials_
         else:
             config_user_ids = default_project_user_ids
 
-        coda_user_ids = coda.get_dataset_user_ids(dataset_config.coda_dataset_id)
-        if coda_user_ids is None or set(coda_user_ids) != set(config_user_ids):
-            if not dry_run:
-                coda.set_dataset_user_ids(dataset_config.coda_dataset_id, config_user_ids)
+        # TODO: Fix not being able to get user ids when inconsistent
+        # coda_user_ids = coda.get_dataset_user_ids(dataset_config.coda_dataset_id)
+        # if coda_user_ids is None or set(coda_user_ids) != set(config_user_ids):
+        #     if not dry_run:
+        #         coda.set_dataset_user_ids(dataset_config.coda_dataset_id, config_user_ids)
+        #     log.info(f"User ids added to Coda: {len(config_user_ids)}")
+        # else:
+        #     log.info(f"User ids are up to date")
+
+        if not dry_run and len(config_user_ids) > 0:
+            coda.set_dataset_user_ids(dataset_config.coda_dataset_id, config_user_ids)
             log.info(f"User ids added to Coda: {len(config_user_ids)}")
         else:
             log.info(f"User ids are up to date")
@@ -72,7 +79,8 @@ def ensure_coda_datasets_up_to_date(coda, coda_config, google_cloud_credentials_
         repo_code_schemes.append(ws_correct_dataset_code_scheme)
         repo_code_schemes_lut = {code_scheme.scheme_id: code_scheme for code_scheme in repo_code_schemes}
 
-        coda_code_schemes = coda.get_all_code_schemes(dataset_config.coda_dataset_id)
+        # coda_code_schemes = coda.get_all_code_schemes(dataset_config.coda_dataset_id)
+        coda_code_schemes = []
         coda_code_schemes_lut = {code_scheme.scheme_id: code_scheme for code_scheme in coda_code_schemes}
 
         for coda_scheme_id, coda_code_scheme in coda_code_schemes_lut.items():
@@ -289,13 +297,17 @@ def _update_engagement_db_message_from_coda_message(engagement_db, engagement_db
     if ws_code is not None:
         try:
             correct_dataset = \
-                coda_config.get_dataset_config_by_ws_code_string_value(ws_code.string_value).engagement_db_dataset
+                coda_config.get_dataset_config_by_ws_code_match_values(ws_code.match_values).engagement_db_dataset
         except ValueError as e:
+            if ws_code.string_value in ws_code.match_values: 
+                correct_dataset = ws_code.string_value
+
             # No dataset configuration found with an appropriate ws_code_string_value to move the message to.
             # Fallback to the default dataset if available, otherwise crash.
-            if coda_config.default_ws_dataset is None:
-                raise e
-            correct_dataset = coda_config.default_ws_dataset
+            elif coda_config.default_ws_dataset is not None:
+                correct_dataset = coda_config.default_ws_dataset
+            else:
+                raise e  
 
         # Ensure this message isn't being moved to a dataset which it has previously been assigned to.
         # This is because if the message has already been in this new dataset, there is a chance there is an

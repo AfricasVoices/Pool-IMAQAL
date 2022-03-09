@@ -16,7 +16,7 @@ class CodaDatasetConfiguration:
     coda_dataset_id: str
     engagement_db_dataset: str
     code_scheme_configurations: [CodeSchemeConfiguration]
-    ws_code_string_value: str
+    ws_code_match_value: str
     dataset_users_file_url: Optional[str] = None
 
 
@@ -37,9 +37,11 @@ class CodaSyncConfiguration:
                 return config
         raise ValueError(f"Coda configuration does not contain a dataset_configuration with dataset '{dataset}'")
 
-    def get_dataset_config_by_ws_code_string_value(self, string_value):
+    def get_dataset_config_by_ws_code_match_values(self, match_values):
         for config in self.dataset_configurations:
-            if config.ws_code_string_value == string_value:
-                return config
-        raise ValueError(f"Coda configuration does not contain a dateset_configuration with ws_code_string_value "
-                         f"'{string_value}'")
+            for value in match_values:
+                if config.ws_code_match_value == value:
+                    return config
+        joined_match_values = ",".join(match_values)
+        raise ValueError(f"Coda configuration does not contain a dataset_configuration with ws_code_match_values "
+                         f"'{joined_match_values}'")

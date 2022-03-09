@@ -4,8 +4,6 @@ from src.pipeline_configuration_spec import *
 
 PIPELINE_CONFIGURATION = PipelineConfiguration(
     pipeline_name="CREATE-IMAQAL-POOL",
-    project_start_date=isoparse("2020-01-01T00:00:00+03:00"),
-    project_end_date=isoparse("2021-12-31T00:00:00+03:00"),
     description="Creates the initial Imaqal Pool from demographics responses to IMAQAL, IMAQAL_COVID19, "
                 "SSF-ELECTIONS, SSF-DCF, SSF-SLD, SSF-REC, and SSF-PPE.",
     engagement_database=EngagementDatabaseClientConfiguration(
@@ -28,18 +26,6 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
             ),
             sync_config=RapidProToEngagementDBConfiguration(
                 flow_result_configurations=[
-                    FlowResultConfiguration("imaqal_demog", "age", "age"),
-                    FlowResultConfiguration("imaqal_demog", "district", "location"),
-                    FlowResultConfiguration("imaqal_demog", "gender", "gender"),
-                    FlowResultConfiguration("imaqal_demog", "household_language", "household_language"),
-                    FlowResultConfiguration("imaqal_demog", "recently_displaced", "recently_displaced"),
-
-                    FlowResultConfiguration("imaqal_covid19_demog", "age", "age"),
-                    FlowResultConfiguration("imaqal_covid19_demog", "district", "location"),
-                    FlowResultConfiguration("imaqal_covid19_demog", "gender", "gender"),
-                    FlowResultConfiguration("imaqal_covid19_demog", "household_language", "household_language"),
-                    FlowResultConfiguration("imaqal_covid19_demog", "recently_displaced", "recently_displaced"),
-
                     FlowResultConfiguration("ssf_elections_demog", "age", "age"),
                     FlowResultConfiguration("ssf_elections_demog", "district", "location"),
                     FlowResultConfiguration("ssf_elections_demog", "gender", "gender"),
@@ -103,7 +89,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                             auto_coder=lambda text: str(somali.DemographicCleaner.clean_age_within_range(text))
                         ),
                     ],
-                    ws_code_string_value="age"
+                    ws_code_match_value="age"
                 ),
                 CodaDatasetConfiguration(
                     coda_dataset_id="IMAQAL_gender",
@@ -111,7 +97,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     code_scheme_configurations=[
                         CodeSchemeConfiguration(code_scheme=load_code_scheme("gender"), auto_coder=somali.DemographicCleaner.clean_gender)
                     ],
-                    ws_code_string_value="gender"
+                    ws_code_match_value="gender"
                 ),
                 CodaDatasetConfiguration(
                     coda_dataset_id="IMAQAL_household_language",
@@ -119,7 +105,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     code_scheme_configurations=[
                         CodeSchemeConfiguration(code_scheme=load_code_scheme("household_language"), auto_coder=None)
                     ],
-                    ws_code_string_value="hh language"
+                    ws_code_match_value="household_language"
                 ),
                 CodaDatasetConfiguration(
                     coda_dataset_id="IMAQAL_location",
@@ -134,7 +120,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                         CodeSchemeConfiguration(code_scheme=load_code_scheme("somalia_state"), auto_coder=None),
                         CodeSchemeConfiguration(code_scheme=load_code_scheme("somalia_zone"), auto_coder=None),
                     ],
-                    ws_code_string_value="location"
+                    ws_code_match_value="location"
                 ),
                 CodaDatasetConfiguration(
                     coda_dataset_id="IMAQAL_recently_displaced",
@@ -142,7 +128,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     code_scheme_configurations=[
                         CodeSchemeConfiguration(code_scheme=load_code_scheme("recently_displaced"), auto_coder=somali.DemographicCleaner.clean_yes_no)
                     ],
-                    ws_code_string_value="recently displaced"
+                    ws_code_match_value="recently_displaced"
                 ),
             ],
             ws_correct_dataset_code_scheme=load_code_scheme("ws_correct_dataset"),
