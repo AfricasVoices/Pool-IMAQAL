@@ -119,7 +119,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     code_scheme_configurations=[
                         CodeSchemeConfiguration(code_scheme=load_code_scheme("household_language"), auto_coder=None)
                     ],
-                    ws_code_match_value="hh language"
+                    ws_code_match_value="household_language"
                 ),
                 CodaDatasetConfiguration(
                     coda_dataset_id="IMAQAL_location",
@@ -142,7 +142,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     code_scheme_configurations=[
                         CodeSchemeConfiguration(code_scheme=load_code_scheme("recently_displaced"), auto_coder=somali.DemographicCleaner.clean_yes_no)
                     ],
-                    ws_code_match_value="recently displaced"
+                    ws_code_match_value="recently_displaced"
                 ),
             ],
             ws_correct_dataset_code_scheme=load_code_scheme("ws_correct_dataset"),
