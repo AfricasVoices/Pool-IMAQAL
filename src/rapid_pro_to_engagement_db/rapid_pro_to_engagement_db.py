@@ -64,6 +64,7 @@ def _normalise_and_validate_contact_urn(contact_urn):
     :return: Normalised contact urn.
     :rtype: str
     """
+    print(contact_urn)
     if contact_urn.startswith("tel:"):
         # TODO: This is known to fail for golis numbers via Shaqodoon. Leaving as a fail-safe for now
         #       until we're ready to test with golis numbers.
