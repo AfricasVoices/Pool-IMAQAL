@@ -66,6 +66,8 @@ def _normalise_and_validate_contact_urn(contact_urn):
     """
     print(contact_urn)
     if contact_urn.startswith("tel:"):
+        if contact_urn.startswith("tel:252"): # tel:252...
+            contact_urn = f"{contact_urn[:4]}+{contact_urn[4:]}"
         # TODO: This is known to fail for golis numbers via Shaqodoon. Leaving as a fail-safe for now
         #       until we're ready to test with golis numbers.
         assert contact_urn.startswith("tel:+")
