@@ -27,6 +27,12 @@ def _get_contacts_from_cache(cache=None):
     else:
         return cache.get_contacts()
 
+def _get_runs_from_cache(cache=None):
+    if cache is None:
+        return None
+    else:
+        return cache.get_runs()
+
 
 def _get_new_runs(rapid_pro, flow_id, cache=None):
     """
@@ -174,7 +180,9 @@ def sync_rapid_pro_to_engagement_db(rapid_pro, engagement_db, uuid_table, rapid_
         stats = FlowStats()
         # Get the latest runs for this flow.
         flow_id = rapid_pro.get_flow_id(flow_name)
-        runs = _get_new_runs(rapid_pro, flow_id)
+
+        runs = _get_runs_from_cache(cache)
+        # runs = _get_new_runs(rapid_pro, flow_id, cache)
         if cache is not None and not dry_run:
             cache.set_runs(runs)
 
