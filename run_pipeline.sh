@@ -25,11 +25,14 @@ ARCHIVE_FILE="$ARCHIVE_LOCATION/data-$RUN_ID.tar.gzip"
 
 ./docker-run-log-pipeline-event.sh  "$CONFIGURATION_MODULE" "$GOOGLE_CLOUD_CREDENTIALS_PATH" "$RUN_ID" "PipelineRunStart"
 
+./docker-sync-engagement-db-to-rapid-pro.sh --incremental-cache-volume "$PIPELINE_NAME-engagement-db-to-rapid-pro-cache" \
+                                            "$USER" "$GOOGLE_CLOUD_CREDENTIALS_PATH" "$CONFIGURATION_MODULE"
+
 # ./docker-sync-rapid-pro-to-engagement-db.sh --incremental-cache-volume "$PIPELINE_NAME-rapid-pro-to-engagement-db-cache"  \
 #                          "$USER" "$GOOGLE_CLOUD_CREDENTIALS_PATH" "$CONFIGURATION_MODULE" "$DATA_DIR"
 
-./docker-sync-engagement-db-to-coda.sh --incremental-cache-volume "$PIPELINE_NAME-engagement-db-to-coda-cache" "$USER" \
-                        "$GOOGLE_CLOUD_CREDENTIALS_PATH" "$CONFIGURATION_MODULE" "$DATA_DIR"
+# ./docker-sync-engagement-db-to-coda.sh --incremental-cache-volume "$PIPELINE_NAME-engagement-db-to-coda-cache" "$USER" \
+#                         "$GOOGLE_CLOUD_CREDENTIALS_PATH" "$CONFIGURATION_MODULE" "$DATA_DIR"
 
 # ./docker-sync-coda-to-engagement-db.sh --incremental-cache-volume "$PIPELINE_NAME-coda-to-engagement-db-cache" "$USER" \
 #                         "$GOOGLE_CLOUD_CREDENTIALS_PATH" "$CONFIGURATION_MODULE" "$DATA_DIR"
