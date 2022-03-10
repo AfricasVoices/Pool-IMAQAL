@@ -18,6 +18,12 @@ class RapidProSyncCache(Cache):
         """
         self.set_rapid_pro_contacts("contacts", contacts)
 
+    def get_runs(self):
+        self.get_rapid_pro_runs("runs")
+
+    def set_runs(self, runs):
+        self.set_rapid_pro_runs("runs", runs)
+
     def get_latest_run_timestamp(self, flow_id):
         """
         Gets the latest seen run.modified_on cache for the given flow_id.

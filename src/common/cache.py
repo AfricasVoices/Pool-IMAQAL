@@ -5,7 +5,7 @@ import json
 
 from core_data_modules.util import IOUtils
 from engagement_database.data_models import Message
-from temba_client.v2 import Contact
+from temba_client.v2 import Contact, Run
 
 
 class Cache:
@@ -43,6 +43,19 @@ class Cache:
         try:
             with open(f"{self.cache_dir}/{entry_name}.json") as f:
                 return [Contact.deserialize(d) for d in json.load(f)]
+        except FileNotFoundError:
+            return None
+
+    def set_rapid_pro_runs(self, entry_name, runs):
+        export_path = f"{self.cache_dir}/{entry_name}.json"
+        IOUtils.ensure_dirs_exist_for_file(export_path)
+        with open(export_path, "w") as f:
+            json.dump([r.serialize() for r in runs], f)
+
+    def get_rapid_pro_runs(self, entry_name):
+        try:
+            with open(f"{self.cache_dir}/{entry_name}.json") as f:
+                return [Run.deserialize(d) for d in json.load(f)]
         except FileNotFoundError:
             return None
 

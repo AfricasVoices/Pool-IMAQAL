@@ -174,11 +174,13 @@ def sync_rapid_pro_to_engagement_db(rapid_pro, engagement_db, uuid_table, rapid_
         stats = FlowStats()
         # Get the latest runs for this flow.
         flow_id = rapid_pro.get_flow_id(flow_name)
-        runs = _get_new_runs(rapid_pro, flow_id, cache)
+        runs = _get_new_runs(rapid_pro, flow_id)
+        if cache is not None and not dry_run:
+            cache.set_runs(runs)
 
         # Get any contacts that have been updated since we last asked, in case any of the downloaded runs are for very
         # new contacts.
-        contacts = rapid_pro.update_raw_contacts_with_latest_modified(contacts)
+        # contacts = rapid_pro.update_raw_contacts_with_latest_modified(contacts)
         if cache is not None and not dry_run:
             cache.set_contacts(contacts)
         contacts_lut = {c.uuid: c for c in contacts}
