@@ -69,8 +69,9 @@ def _normalise_and_validate_contact_urn(contact_urn):
     :rtype: str
     """
     if contact_urn.startswith("tel:"):
-        # TODO: This is known to fail for golis numbers via Shaqodoon. Leaving as a fail-safe for now
-        #       until we're ready to test with golis numbers.
+        # Some historical Golis numbers had missing `+` sign so the need to be reformatted here.
+        if contact_urn.startswith("tel:25290"):
+            contact_urn = f"{contact_urn[:4]}+{contact_urn[4:]}"
         assert contact_urn.startswith("tel:+")
 
     if contact_urn.startswith("telegram:"):
