@@ -81,7 +81,7 @@
         "codav2pythonclient": {
             "editable": true,
             "git": "https://www.github.com/AfricasVoices/CodaV2PythonClient",
-            "ref": "a5ca727e7510f1fbca96fa032d6137442245b9f8"
+            "ref": "6ceb6b688040567a091948ba05d596f4ca542574"
         },
         "coredatamodules": {
             "editable": true,
