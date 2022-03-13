@@ -19,7 +19,8 @@ def make_rqa_coda_dataset_configs(dataset_name_prefix, coda_dataset_id_prefix, c
                         code_scheme=load_code_scheme(f"{code_scheme_prefix}{i}"),
                         auto_coder=None)
                 ],
-                ws_code_match_value=f"{dataset_name_prefix}{i}"
+                ws_code_match_value=f"{dataset_name_prefix}{i}",
+                update_users_and_code_schemes=False
             )
         )
     return dataset_configs
@@ -132,7 +133,69 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                 CSVDatasetConfiguration("ssf_elections_s01e06", start_date=isoparse("2021-10-27T08:00+03:00"), end_date=isoparse("2021-11-03T08:00+03:00"))
             ],
             timezone="Africa/Mogadishu"
-        )
+        ),
+
+        # SSF-DCF
+        # https://github.com/AfricasVoices/Project-SSF-DCF/blob/main/configuration/pipeline_config.json
+        CSVSource(
+            "gs://avf-project-datasets/2022/IMAQAL-POOL/recovery_csvs/2021_SSF_DCF_recovered_golis_s01e01_de_identified.csv",
+            engagement_db_datasets=[
+                CSVDatasetConfiguration("ssf_dcf_s01e01", start_date=isoparse("2021-09-10T00:00:00+03:00"), end_date=isoparse("2021-09-16T24:00:00+03:00"))
+            ],
+            timezone="Africa/Mogadishu"
+        ),
+        CSVSource(
+            "gs://avf-project-datasets/2022/IMAQAL-POOL/recovery_csvs/dcf_recovered_hormuud_september_de_identified.csv",
+            engagement_db_datasets=[
+                CSVDatasetConfiguration("ssf_dcf_s01e01", start_date=isoparse("2021-09-10T00:00:00+03:00"), end_date=isoparse("2021-09-16T24:00:00+03:00")),
+                CSVDatasetConfiguration("ssf_dcf_s01e02", start_date=isoparse("2021-09-17T08:00:00+03:00"), end_date=isoparse("2021-09-23T24:00:00+03:00")),
+                CSVDatasetConfiguration("ssf_dcf_s01e03", start_date=isoparse("2021-09-24T00:00:00+03:00"), end_date=isoparse("2021-09-30T24:00:00+03:00"))
+            ],
+            timezone="Africa/Mogadishu"
+        ),
+
+        # SSF-SLD
+        # https://github.com/AfricasVoices/Project-SSF-DCF/blob/main/configuration/sld_pipeline_config.json
+        CSVSource(
+            "gs://avf-project-datasets/2022/IMAQAL-POOL/recovery_csvs/2021_SSF-SLD_recovered_hormuud_october_de_identified.csv",
+            engagement_db_datasets=[
+                CSVDatasetConfiguration("ssf_sld_s01e01", start_date=isoparse("2021-10-08T00:00:00+03:00"), end_date=isoparse("2021-10-15T08:00:00+03:00")),
+                CSVDatasetConfiguration("ssf_sld_s01e02", start_date=isoparse("2021-10-15T08:00:00+03:00"), end_date=isoparse("2021-10-22T08:00:00+03:00")),
+                CSVDatasetConfiguration("ssf_sld_s01e03", start_date=isoparse("2021-10-22T08:00:00+03:00"), end_date=isoparse("2021-10-29T08:00:00+03:00")),
+                CSVDatasetConfiguration("ssf_sld_s01e04", start_date=isoparse("2021-10-29T08:00:00+03:00"), end_date=isoparse("2021-10-31T24:00:00+03:00"))
+            ],
+            timezone="Africa/Mogadishu"
+        ),
+
+        # SSF-REC
+        # https://github.com/AfricasVoices/Project-SSF-REC/blob/main/configuration/pipeline_config.json
+        CSVSource(
+            "gs://avf-project-datasets/2022/IMAQAL-POOL/recovery_csvs/2021_SSF_REC_recovered_golis_s01e01_de_identified.csv",
+            engagement_db_datasets=[
+                CSVDatasetConfiguration("ssf_rec_s01e01", start_date=isoparse("2021-09-12T00:00:00+03:00"), end_date=isoparse("2021-09-18T08:00:00+03:00"))
+            ],
+            timezone="Africa/Mogadishu"
+        ),
+        CSVSource(
+            "gs://avf-project-datasets/2022/IMAQAL-POOL/recovery_csvs/rec_recovered_hormuud_september_de_identified.csv",
+            engagement_db_datasets=[
+                CSVDatasetConfiguration("ssf_rec_s01e01", start_date=isoparse("2021-09-12T00:00:00+03:00"), end_date=isoparse("2021-09-18T08:00:00+03:00")),
+                CSVDatasetConfiguration("ssf_rec_s01e02", start_date=isoparse("2021-09-19T00:00:00+03:00"), end_date=isoparse("2021-09-26T24:00:00+03:00")),
+                CSVDatasetConfiguration("ssf_rec_s01e03", start_date=isoparse("2021-09-27T00:00:00+03:00"), end_date=isoparse("2021-09-30T24:00:00+03:00")),
+            ],
+            timezone="Africa/Mogadishu"
+        ),
+
+        # SSF-PPE
+        # https://github.com/AfricasVoices/Project-SSF-REC/blob/main/configuration/ppe_pipeline_config.json
+        CSVSource(
+            "gs://avf-project-datasets/2022/IMAQAL-POOL/recovery_csvs/2021_SSF-PPE_recovered_hormuud_october_de_identified.csv",
+            engagement_db_datasets=[
+                CSVDatasetConfiguration("ssf_ppe_s01e01", start_date=isoparse("2021-10-17T08:00:00+03:00"), end_date=isoparse("2021-10-24T08:00:00+03:00")),
+                CSVDatasetConfiguration("ssf_ppe_s01e02", start_date=isoparse("2021-10-24T08:00:00+03:00"), end_date=isoparse("2021-10-31T24:00:00+03:00"))
+            ],
+            timezone="Africa/Mogadishu"
+        ),
     ],
     coda_sync=CodaConfiguration(
         coda=CodaClientConfiguration(credentials_file_url="gs://avf-credentials/coda-production.json"),
@@ -146,7 +209,32 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     coda_dataset_id_prefix="SSF_ELECTIONS_s01e0",
                     code_scheme_prefix="previous_rqas/ssf_elections/ssf_elections_rqa_s01e0",
                     number_of_datasets=7
-                ) + [
+                ) +
+                make_rqa_coda_dataset_configs(
+                    dataset_name_prefix="ssf_dcf_s01e0",
+                    coda_dataset_id_prefix="SSF_DCF_s01e0",
+                    code_scheme_prefix="previous_rqas/ssf_dcf/ssf_dcf_rqa_s01e0",
+                    number_of_datasets=3
+                ) +
+                make_rqa_coda_dataset_configs(
+                    dataset_name_prefix="ssf_sld_s01e0",
+                    coda_dataset_id_prefix="SSF_SLD_s01e0",
+                    code_scheme_prefix="previous_rqas/ssf_sld/ssf_sld_rqa_s01e0",
+                    number_of_datasets=4
+                ) +
+                make_rqa_coda_dataset_configs(
+                    dataset_name_prefix="ssf_rec_s01e0",
+                    coda_dataset_id_prefix="SSF_REC_s01e0",
+                    code_scheme_prefix="previous_rqas/ssf_rec/ssf_rec_rqa_s01e0",
+                    number_of_datasets=3
+                ) +
+                make_rqa_coda_dataset_configs(
+                    dataset_name_prefix="ssf_ppe_s01e0",
+                    coda_dataset_id_prefix="SSF_PPE_s01e0",
+                    code_scheme_prefix="previous_rqas/ssf_ppe/ssf_ppe_rqa_s01e0",
+                    number_of_datasets=2
+                ) +
+                [
                 CodaDatasetConfiguration(
                     coda_dataset_id="IMAQAL_age",
                     engagement_db_dataset="age",
