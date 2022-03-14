@@ -321,7 +321,8 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                 engagement_db_datasets=["age", "gender", "household_language", "location", "recently_displaced"],
                 rapid_pro_contact_field=ContactField(key="imaqal_pool_consent_withdrawn", label="imaqal pool consent withdrawn")
             ),
-            write_mode=WriteModes.CONCATENATE_TEXTS
+            write_mode=WriteModes.CONCATENATE_TEXTS,
+            allow_clearing_fields=True,
         )
     ),
     archive_configuration=ArchiveConfiguration(
