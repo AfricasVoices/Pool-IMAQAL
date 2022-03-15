@@ -25,12 +25,14 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                 token_file_url="gs://avf-credentials/imaqal-text-it-token.txt"
             ),
             sync_config=RapidProToEngagementDBConfiguration(
-                FlowResultConfiguration("RVI_elections_demog", "imaqal_pool_age", "age"),
-                FlowResultConfiguration("RVI_elections_demog", "imaqal_pool_district", "location"),
-                FlowResultConfiguration("RVI_elections_demog", "imaqal_pool_gender", "gender"),
-                FlowResultConfiguration("RVI_elections_demog", "imaqal_pool_recently_displaced", "recently_displaced"),
+                flow_result_configurations=[
+                    FlowResultConfiguration("RVI_elections_demog", "imaqal_pool_age", "age"),
+                    FlowResultConfiguration("RVI_elections_demog", "imaqal_pool_district", "location"),
+                    FlowResultConfiguration("RVI_elections_demog", "imaqal_pool_gender", "gender"),
+                    FlowResultConfiguration("RVI_elections_demog", "imaqal_pool_recently_displaced", "recently_displaced"),
 
-                FlowResultConfiguration("RVI_elections_s01e01_activation", "rqa_rvi_elections_s01e01", "rvi_elections_s01e01"),
+                    FlowResultConfiguration("RVI_elections_s01e01_activation", "rqa_rvi_elections_s01e01", "rvi_elections_s01e01"),
+                ]
             )
         )
     ],
