@@ -99,7 +99,6 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
             credentials_file_url="gs://avf-credentials/pipeline-runner-service-acct-avf-data-core-64cc71459fe7.json",
             drive_dir="rvi_elections_analysis_outputs"
         ),
-
         dataset_configurations=[
             AnalysisDatasetConfiguration(
                 engagement_db_datasets=["rvi_elections_s01e01"],
