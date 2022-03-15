@@ -39,6 +39,15 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
         sync_config=CodaSyncConfiguration(
             dataset_configurations=[
                 CodaDatasetConfiguration(
+                    coda_dataset_id="RVI_ELECTIONS_s01e01",
+                    engagement_db_dataset="rvi_elections_s01e01",
+                    code_scheme_configurations=[
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("s01e01"),
+                                                auto_coder=None, coda_code_schemes_count=3)
+                    ],
+                    ws_code_match_value="rvi_elections_s01e01"
+                ),
+                CodaDatasetConfiguration(
                     coda_dataset_id="IMAQAL_age",
                     engagement_db_dataset="age",
                     code_scheme_configurations=[
