@@ -99,7 +99,99 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
             credentials_file_url="gs://avf-credentials/pipeline-runner-service-acct-avf-data-core-64cc71459fe7.json",
             drive_dir="rvi_elections_analysis_outputs"
         ),
-        dataset_configurations=[],
+
+        dataset_configurations=[
+            AnalysisDatasetConfiguration(
+                engagement_db_datasets=["rvi_elections_s01e01"],
+                dataset_type=DatasetTypes.RESEARCH_QUESTION_ANSWER,
+                raw_dataset="rvi_elections_s01e01_raw",
+                coding_configs=[
+                    CodingConfiguration(
+                        code_scheme=load_code_scheme("s01e01"),
+                        analysis_dataset="s01e01"
+                    )
+                ]
+            ),
+            AnalysisDatasetConfiguration(
+                engagement_db_datasets=["age"],
+                dataset_type=DatasetTypes.DEMOGRAPHIC,
+                raw_dataset="age_raw",
+                coding_configs=[
+                    CodingConfiguration(
+                        code_scheme=load_code_scheme("age"),
+                        analysis_dataset="age"
+                    ),
+                    CodingConfiguration(
+                        code_scheme=load_code_scheme("age_category"),
+                        analysis_dataset="age_category",
+                        age_category_config=AgeCategoryConfiguration(
+                            age_analysis_dataset="age",
+                            categories={
+                                (10, 14): "10 to 14",
+                                (15, 17): "15 to 17",
+                                (18, 35): "18 to 35",
+                                (36, 54): "36 to 54",
+                                (55, 99): "55 to 99"
+                            }
+                        )
+                    ),
+                ]
+            ),
+            AnalysisDatasetConfiguration(
+                engagement_db_datasets=["gender"],
+                dataset_type=DatasetTypes.DEMOGRAPHIC,
+                raw_dataset="gender_raw",
+                coding_configs=[
+                    CodingConfiguration(
+                        code_scheme=load_code_scheme("gender"),
+                        analysis_dataset="gender"
+                    )
+                ]
+            ),
+            AnalysisDatasetConfiguration(
+                engagement_db_datasets=["location"],
+                dataset_type=DatasetTypes.DEMOGRAPHIC,
+                raw_dataset="location_raw",
+                coding_configs=[
+                    CodingConfiguration(
+                        code_scheme=load_code_scheme("mogadishu_sub_district"),
+                        analysis_dataset="mogadishu_sub_district",
+                        analysis_location=AnalysisLocations.MOGADISHU_SUB_DISTRICT
+                    ),
+                    CodingConfiguration(
+                        code_scheme=load_code_scheme("somalia_district"),
+                        analysis_dataset="district",
+                        analysis_location=AnalysisLocations.SOMALIA_DISTRICT
+                    ),
+                    CodingConfiguration(
+                        code_scheme=load_code_scheme("somalia_region"),
+                        analysis_dataset="region",
+                        analysis_location=AnalysisLocations.SOMALIA_REGION
+                    ),
+                    CodingConfiguration(
+                        code_scheme=load_code_scheme("somalia_state"),
+                        analysis_dataset="state",
+                        analysis_location=AnalysisLocations.SOMALIA_STATE
+                    ),
+                    CodingConfiguration(
+                        code_scheme=load_code_scheme("somalia_zone"),
+                        analysis_dataset="zone",
+                        analysis_location=AnalysisLocations.SOMALIA_ZONE
+                    )
+                ]
+            ),
+            AnalysisDatasetConfiguration(
+                engagement_db_datasets=["recently_displaced"],
+                dataset_type=DatasetTypes.DEMOGRAPHIC,
+                raw_dataset="recently_displaced",
+                coding_configs=[
+                    CodingConfiguration(
+                        code_scheme=load_code_scheme("recently_displaced"),
+                        analysis_dataset="recently_displaced"
+                    )
+                ]
+            ),
+        ],
         ws_correct_dataset_code_scheme=load_code_scheme("ws_correct_dataset")
     ),
     archive_configuration=ArchiveConfiguration(
