@@ -58,7 +58,8 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                                                     somali.DemographicCleaner.clean_age_within_range(text))
                                                 ),
                     ],
-                    ws_code_match_value="age"
+                    ws_code_match_value="age",
+                    dataset_users_file_url="gs://avf-project-datasets/2022/IMAQAL-POOL/coda_users.json"
                 ),
                 CodaDatasetConfiguration(
                     coda_dataset_id="IMAQAL_gender",
@@ -67,7 +68,8 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                         CodeSchemeConfiguration(code_scheme=load_code_scheme("gender"),
                                                 auto_coder=somali.DemographicCleaner.clean_gender)
                     ],
-                    ws_code_match_value="gender"
+                    ws_code_match_value="gender",
+                    dataset_users_file_url="gs://avf-project-datasets/2022/IMAQAL-POOL/coda_users.json"
                 ),
                 CodaDatasetConfiguration(
                     coda_dataset_id="IMAQAL_household_language",
@@ -75,7 +77,8 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     code_scheme_configurations=[
                         CodeSchemeConfiguration(code_scheme=load_code_scheme("household_language"), auto_coder=None)
                     ],
-                    ws_code_match_value="household_language"
+                    ws_code_match_value="household_language",
+                    dataset_users_file_url="gs://avf-project-datasets/2022/IMAQAL-POOL/coda_users.json"
                 ),
                 CodaDatasetConfiguration(
                     coda_dataset_id="IMAQAL_location",
@@ -90,7 +93,8 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                         CodeSchemeConfiguration(code_scheme=load_code_scheme("somalia_state"), auto_coder=None),
                         CodeSchemeConfiguration(code_scheme=load_code_scheme("somalia_zone"), auto_coder=None),
                     ],
-                    ws_code_match_value="location"
+                    ws_code_match_value="location",
+                    dataset_users_file_url="gs://avf-project-datasets/2022/IMAQAL-POOL/coda_users.json"
                 ),
                 CodaDatasetConfiguration(
                     coda_dataset_id="IMAQAL_recently_displaced",
@@ -99,7 +103,8 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                         CodeSchemeConfiguration(code_scheme=load_code_scheme("recently_displaced"),
                                                 auto_coder=somali.DemographicCleaner.clean_yes_no)
                     ],
-                    ws_code_match_value="recently_displaced"
+                    ws_code_match_value="recently_displaced",
+                    dataset_users_file_url="gs://avf-project-datasets/2022/IMAQAL-POOL/coda_users.json"
                 ),
             ],
             ws_correct_dataset_code_scheme=load_code_scheme("ws_correct_dataset"),
