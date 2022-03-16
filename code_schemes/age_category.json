@@ -201,6 +201,16 @@
       "NumericValue": -100070,
       "StringValue": "exclusion_complaint",
       "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-E-720cdb66",
+      "CodeType": "Meta",
+      "MetaCode": "escalate",
+      "DisplayText": "meta: ESCALATE",
+      "NumericValue": -100080,
+      "StringValue": "escalate",
+      "VisibleInCoda": true,
+      "Shortcut": "e"
     }
   ]
 }
