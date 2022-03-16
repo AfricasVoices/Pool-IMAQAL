@@ -45,9 +45,9 @@ if __name__ == "__main__":
 
         for td in data:
             if td["consent_withdrawn"] == Codes.TRUE:
-                opt_out_uuids.add(td["participant_uuid"])
+                opt_out_uuids.add(td["uid"])
 
-            uuids.add(td["participant_uuid"])
+            uuids.add(td["uid"])
     log.info(f"Loaded {len(uuids)} uuids from TracedData (of which {len(opt_out_uuids)} uuids withdrew consent)")
     uuids = uuids - opt_out_uuids
     log.info(f"Proceeding with {len(uuids)} opt-in uuids")
