@@ -154,7 +154,7 @@ def _sync_coda_dataset_to_engagement_db(coda, engagement_db, coda_config, datase
         )
         sync_stats.add_stats(message_sync_stats)
 
-        if coda_message.last_updated is None:
+        if coda_message.last_updated is None or coda_messages[i + 1].last_updated:
             continue
 
         # If there's a cache and we've read the last message, or the next message's last updated timestamp is greater
