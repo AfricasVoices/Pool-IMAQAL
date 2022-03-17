@@ -28,7 +28,7 @@ def load_code_scheme(fname):
         return CodeScheme.from_firebase_map(json.load(f))
 
 
-def make_rqa_coda_dataset_configs(dataset_name_prefix, coda_dataset_id_prefix, code_scheme_prefix, number_of_datasets):
+def make_rqa_coda_dataset_configs(dataset_name_prefix, coda_dataset_id_prefix, code_scheme_prefix, number_of_datasets, update_users_and_code_schemes=True):
     """
     Creates a list of n rqa coda dataset configs, indexed from 1 to `number_of_datasets`.
     This allows us to configure the highly repetitive rqa configurations very succinctly.
@@ -46,6 +46,7 @@ def make_rqa_coda_dataset_configs(dataset_name_prefix, coda_dataset_id_prefix, c
                         auto_coder=None, coda_code_schemes_count=3)
                 ],
                 ws_code_match_value=f"{dataset_name_prefix}{i}",
+                update_users_and_code_schemes=update_users_and_code_schemes
             )
         )
     return dataset_configs
