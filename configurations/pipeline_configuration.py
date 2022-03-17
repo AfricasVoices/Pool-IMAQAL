@@ -57,9 +57,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     engagement_db_dataset="age",
                     code_scheme_configurations=[
                         CodeSchemeConfiguration(code_scheme=load_code_scheme("age"),
-                                                auto_coder=lambda text: str(
-                            somali.DemographicCleaner.clean_age_within_range(text))
-                        ),
+                                                auto_coder=lambda text: str(somali.DemographicCleaner.clean_age_within_range(text))),
                     ],
                     ws_code_match_value="age",
                     dataset_users_file_url="gs://avf-project-datasets/2022/IMAQAL-POOL/coda_users.json"
