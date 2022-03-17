@@ -2,6 +2,7 @@ from core_data_modules.cleaners import Codes, somali
 from dateutil.parser import isoparse
 from src.pipeline_configuration_spec import *
 
+
 PIPELINE_CONFIGURATION = PipelineConfiguration(
     pipeline_name="RVI-ELECTIONS",
     project_start_date=isoparse("2022-03-11T00:00:00+03:00"),
@@ -32,6 +33,11 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     FlowResultConfiguration("RVI_elections_demog", "imaqal_pool_recently_displaced", "recently_displaced"),
 
                     FlowResultConfiguration("RVI_elections_s01e01_activation", "rqa_rvi_elections_s01e01", "rvi_elections_s01e01"),
+                    # FlowResultConfiguration("RVI_elections_s01e02_activation", "rqa_rvi_elections_s01e02", "rvi_elections_s01e02"),
+                    # FlowResultConfiguration("RVI_elections_s01e03_activation", "rqa_rvi_elections_s01e03", "rvi_elections_s01e03"),
+                    # FlowResultConfiguration("RVI_elections_s01e04_activation", "rqa_rvi_elections_s01e04", "rvi_elections_s01e04"),
+                    # FlowResultConfiguration("RVI_elections_s01e05_activation", "rqa_rvi_elections_s01e05", "rvi_elections_s01e05"),
+                    # FlowResultConfiguration("RVI_elections_s01e06_activation", "rqa_rvi_elections_s01e06", "rvi_elections_s01e06"),
                 ]
             )
         )
@@ -39,16 +45,13 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
     coda_sync=CodaConfiguration(
         coda=CodaClientConfiguration(credentials_file_url="gs://avf-credentials/coda-production.json"),
         sync_config=CodaSyncConfiguration(
-            dataset_configurations=[
-                CodaDatasetConfiguration(
-                    coda_dataset_id="RVI_ELECTIONS_s01e01",
-                    engagement_db_dataset="rvi_elections_s01e01",
-                    code_scheme_configurations=[
-                        CodeSchemeConfiguration(code_scheme=load_code_scheme("s01e01"),
-                                                auto_coder=None, coda_code_schemes_count=3)
-                    ],
-                    ws_code_match_value="rvi_elections_s01e01"
-                ),
+            dataset_configurations=make_rqa_coda_dataset_configs(
+                coda_dataset_id_prefix="RVI_ELECTIONS_s01e0",
+                dataset_name_prefix="rvi_elections_s01e0",
+                code_scheme_prefix="s01e0",
+                number_of_datasets=6
+            ) +
+            [
                 CodaDatasetConfiguration(
                     coda_dataset_id="IMAQAL_age",
                     engagement_db_dataset="age",
