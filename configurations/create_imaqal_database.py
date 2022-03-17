@@ -208,31 +208,36 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     dataset_name_prefix="ssf_elections_s01e0",
                     coda_dataset_id_prefix="SSF_ELECTIONS_s01e0",
                     code_scheme_prefix="previous_rqas/ssf_elections/ssf_elections_rqa_s01e0",
-                    number_of_datasets=7
+                    number_of_datasets=7,
+                    update_users_and_code_schemes=False
                 ) +
                 make_rqa_coda_dataset_configs(
                     dataset_name_prefix="ssf_dcf_s01e0",
                     coda_dataset_id_prefix="SSF_DCF_s01e0",
                     code_scheme_prefix="previous_rqas/ssf_dcf/ssf_dcf_rqa_s01e0",
-                    number_of_datasets=3
+                    number_of_datasets=3,
+                    update_users_and_code_schemes=False
                 ) +
                 make_rqa_coda_dataset_configs(
                     dataset_name_prefix="ssf_sld_s01e0",
                     coda_dataset_id_prefix="SSF_SLD_s01e0",
                     code_scheme_prefix="previous_rqas/ssf_sld/ssf_sld_rqa_s01e0",
-                    number_of_datasets=4
+                    number_of_datasets=4,
+                    update_users_and_code_schemes=False
                 ) +
                 make_rqa_coda_dataset_configs(
                     dataset_name_prefix="ssf_rec_s01e0",
                     coda_dataset_id_prefix="SSF_REC_s01e0",
                     code_scheme_prefix="previous_rqas/ssf_rec/ssf_rec_rqa_s01e0",
-                    number_of_datasets=3
+                    number_of_datasets=3,
+                    update_users_and_code_schemes=False
                 ) +
                 make_rqa_coda_dataset_configs(
                     dataset_name_prefix="ssf_ppe_s01e0",
                     coda_dataset_id_prefix="SSF_PPE_s01e0",
                     code_scheme_prefix="previous_rqas/ssf_ppe/ssf_ppe_rqa_s01e0",
-                    number_of_datasets=2
+                    number_of_datasets=2,
+                    update_users_and_code_schemes=False
                 ) +
                 [
                 CodaDatasetConfiguration(
