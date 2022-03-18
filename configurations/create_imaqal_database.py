@@ -3,29 +3,6 @@ from dateutil.parser import isoparse
 from src.pipeline_configuration_spec import *
 
 
-def make_rqa_coda_dataset_configs(dataset_name_prefix, coda_dataset_id_prefix, code_scheme_prefix, number_of_datasets):
-    """
-    Creates a list of n rqa coda dataset configs, indexed from 1 to `number_of_datasets`.
-    This allows us to configure the highly repetitive rqa configurations from previous projects very succinctly.
-    """
-    dataset_configs = []
-    for i in range(1, number_of_datasets + 1):
-        dataset_configs.append(
-            CodaDatasetConfiguration(
-                coda_dataset_id=f"{coda_dataset_id_prefix}{i}",
-                engagement_db_dataset=f"{dataset_name_prefix}{i}",
-                code_scheme_configurations=[
-                    CodeSchemeConfiguration(
-                        code_scheme=load_code_scheme(f"{code_scheme_prefix}{i}"),
-                        auto_coder=None)
-                ],
-                ws_code_match_value=f"{dataset_name_prefix}{i}",
-                update_users_and_code_schemes=False
-            )
-        )
-    return dataset_configs
-
-
 PIPELINE_CONFIGURATION = PipelineConfiguration(
     pipeline_name="CREATE-IMAQAL-POOL",
     description="Creates the initial Imaqal Pool from demographics responses to IMAQAL, IMAQAL_COVID19, "
