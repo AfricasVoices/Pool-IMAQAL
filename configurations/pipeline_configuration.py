@@ -33,11 +33,11 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     FlowResultConfiguration("RVI_elections_demog", "imaqal_pool_recently_displaced", "recently_displaced"),
 
                     FlowResultConfiguration("RVI_elections_s01e01_activation", "rqa_rvi_elections_s01e01", "rvi_elections_s01e01"),
-                    # FlowResultConfiguration("RVI_elections_s01e02_activation", "rqa_rvi_elections_s01e02", "rvi_elections_s01e02"),
-                    # FlowResultConfiguration("RVI_elections_s01e03_activation", "rqa_rvi_elections_s01e03", "rvi_elections_s01e03"),
-                    # FlowResultConfiguration("RVI_elections_s01e04_activation", "rqa_rvi_elections_s01e04", "rvi_elections_s01e04"),
-                    # FlowResultConfiguration("RVI_elections_s01e05_activation", "rqa_rvi_elections_s01e05", "rvi_elections_s01e05"),
-                    # FlowResultConfiguration("RVI_elections_s01e06_activation", "rqa_rvi_elections_s01e06", "rvi_elections_s01e06"),
+                    FlowResultConfiguration("RVI_elections_s01e02_activation", "rqa_rvi_elections_s01e02", "rvi_elections_s01e02"),
+                    FlowResultConfiguration("RVI_elections_s01e03_activation", "rqa_rvi_elections_s01e03", "rvi_elections_s01e03"),
+                    FlowResultConfiguration("RVI_elections_s01e04_activation", "rqa_rvi_elections_s01e04", "rvi_elections_s01e04"),
+                    FlowResultConfiguration("RVI_elections_s01e05_activation", "rqa_rvi_elections_s01e05", "rvi_elections_s01e05"),
+                    FlowResultConfiguration("RVI_elections_s01e06_activation", "rqa_rvi_elections_s01e06", "rvi_elections_s01e06"),
                 ]
             )
         )
