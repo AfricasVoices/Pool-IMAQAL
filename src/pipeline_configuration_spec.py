@@ -51,6 +51,23 @@ def make_rqa_coda_dataset_configs(dataset_name_prefix, coda_dataset_id_prefix, c
         )
     return dataset_configs
 
+def make_rqa_analysis_dataset_configs(dataset_name_prefix, code_scheme_prefix, number_of_datasets):
+    dataset_configs = []
+    for i in range(1, number_of_datasets + 1):
+        dataset_configs.append(
+            AnalysisDatasetConfiguration(
+                engagement_db_datasets=[f"{dataset_name_prefix}{i}"],
+                dataset_type=DatasetTypes.RESEARCH_QUESTION_ANSWER,
+                raw_dataset=f"{dataset_name_prefix}{i}_raw",
+                coding_configs=[
+                    CodingConfiguration(
+                        code_scheme=load_code_scheme(f"{code_scheme_prefix}{i}"),
+                        analysis_dataset=f"{code_scheme_prefix}{i}"
+                    )
+                ]
+            )
+        )
+
 
 @dataclass
 class RapidProSource:
