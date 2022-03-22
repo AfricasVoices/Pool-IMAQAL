@@ -326,7 +326,8 @@ def _update_engagement_db_message_from_coda_message(engagement_db, engagement_db
             f"Engagement db message '{engagement_db_message.message_id}' (text '{engagement_db_message.text}') " \
             f"is being WS-corrected to dataset '{correct_dataset}', but already has this dataset in its " \
             f"previous_datasets ({engagement_db_message.previous_datasets}). " \
-            f"This suggests an infinite loop in the WS labels."
+            f"This suggests an infinite loop in the WS labels." \
+            f"Coda message id {coda_message.message_id}"
 
         # Clear the labels and correct the dataset (the message will sync with the new dataset on the next sync)
         log.debug(f"WS correcting from {engagement_db_message.dataset} to {correct_dataset}")
