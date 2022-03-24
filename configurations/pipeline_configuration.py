@@ -119,18 +119,12 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
             credentials_file_url="gs://avf-credentials/pipeline-runner-service-acct-avf-data-core-64cc71459fe7.json",
             drive_dir="rvi_elections_analysis_outputs"
         ),
-        dataset_configurations=[
-            AnalysisDatasetConfiguration(
-                engagement_db_datasets=["rvi_elections_s01e01"],
-                dataset_type=DatasetTypes.RESEARCH_QUESTION_ANSWER,
-                raw_dataset="rvi_elections_s01e01_raw",
-                coding_configs=[
-                    CodingConfiguration(
-                        code_scheme=load_code_scheme("s01e01"),
-                        analysis_dataset="s01e01"
-                    )
-                ]
-            ),
+        dataset_configurations=make_rqa_analysis_dataset_configs(
+                dataset_name_prefix="rvi_elections_s01e0",
+                code_scheme_prefix="s01e0",
+                number_of_datasets=6
+        ) +
+        [
             AnalysisDatasetConfiguration(
                 engagement_db_datasets=["age"],
                 dataset_type=DatasetTypes.DEMOGRAPHIC,
