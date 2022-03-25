@@ -32,7 +32,7 @@
             "CodeType": "Normal",
             "DisplayText": "election has not caused war and bloodshed",
             "NumericValue": 4,
-            "StringValue": "the_election_has_not_caused_war_and_bloodshed",
+            "StringValue": "election_has_not_caused_war_and_bloodshed",
             "VisibleInCoda": true
         },
         {
