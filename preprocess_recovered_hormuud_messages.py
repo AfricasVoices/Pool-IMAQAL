@@ -12,7 +12,7 @@ from storage.google_cloud import google_cloud_utils
 
 log = Logger(__name__)
 
-TARGET_SHORTCODE = "359"
+TARGET_SHORTCODE = "378"
 
 
 def get_incoming_hormuud_messages_from_rapid_pro(google_cloud_credentials_file_path, rapid_pro_domain,
