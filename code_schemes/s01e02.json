@@ -30,7 +30,7 @@
         {
             "CodeID": "code-ac522bc9",
             "CodeType": "Normal",
-            "DisplayText": "the election has not caused war and bloodshed",
+            "DisplayText": "election has not caused war and bloodshed",
             "NumericValue": 4,
             "StringValue": "the_election_has_not_caused_war_and_bloodshed",
             "VisibleInCoda": true
