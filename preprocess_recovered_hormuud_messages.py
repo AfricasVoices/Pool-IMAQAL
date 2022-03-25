@@ -12,7 +12,7 @@ from storage.google_cloud import google_cloud_utils
 
 log = Logger(__name__)
 
-TARGET_SHORTCODE = "378"
+TARGET_SHORTCODE = "359"
 
 
 def get_incoming_hormuud_messages_from_rapid_pro(google_cloud_credentials_file_path, rapid_pro_domain,
@@ -62,24 +62,24 @@ def get_incoming_hormuud_messages_from_recovery_csv(csv_path,
         msg["Sender"] = "tel:+" + msg["Sender"]
         # Convert times with a try/catch because there are two possible formats due to the omission of ms when ms == 000
         try:
-            msg["ReceivedOn"] = pytz.timezone("Africa/Mogadishu").localize(
+            msg["timestamp"] = pytz.timezone("Africa/Mogadishu").localize(
                 datetime.strptime(msg["ReceivedOn"], "%d/%m/%Y %H:%M:%S.%f")
             )
         except ValueError:
-            msg["ReceivedOn"] = pytz.timezone("Africa/Mogadishu").localize(
+            msg["timestamp"] = pytz.timezone("Africa/Mogadishu").localize(
                 datetime.strptime(msg["ReceivedOn"], "%d/%m/%Y %H:%M:%S")
             )
 
     if received_after_inclusive is not None:
         log.info(f"Filtering out messages sent before {received_after_inclusive}...")
         incoming_recovered_messages = [msg for msg in incoming_recovered_messages
-                                       if msg["ReceivedOn"] >= received_after_inclusive]
+                                       if msg["timestamp"] >= received_after_inclusive]
         log.info(f"Filtered out messages sent before {received_after_inclusive}: "
                  f"{len(incoming_recovered_messages)} messages remain")
     if received_before_exclusive is not None:
         log.info(f"Filtering out messages sent after {received_before_exclusive}...")
         incoming_recovered_messages = [msg for msg in incoming_recovered_messages
-                                       if msg["ReceivedOn"] < received_before_exclusive]
+                                       if msg["timestamp"] < received_before_exclusive]
         log.info(f"Filtered out messages sent after {received_before_exclusive}: "
                  f"{len(incoming_recovered_messages)} messages remain")
 
@@ -140,7 +140,7 @@ if __name__ == "__main__":
     # Group the messages by the sender's urn, and store in container dicts where we can write the best matching Rapid
     # Pro message to when we find it.
     recovered_lut = dict()  # of urn -> list of recovered message dict
-    recovered_messages.sort(key=lambda msg: msg["ReceivedOn"])
+    recovered_messages.sort(key=lambda msg: msg["timestamp"])
     for msg in recovered_messages:
         urn = msg["Sender"]
         if urn not in recovered_lut:
@@ -171,7 +171,7 @@ if __name__ == "__main__":
         for recovery_item in recovered_lut[rapid_pro_msg.urn]:
             if recovery_item["rapid_pro_message"] is None and \
                     recovery_item["recovered_message"]["Message"] == rapid_pro_text and \
-                    rapid_pro_msg.sent_on - recovery_item["recovered_message"]["ReceivedOn"] < timedelta(minutes=5):
+                    rapid_pro_msg.sent_on - recovery_item["recovered_message"]["timestamp"] < timedelta(minutes=5):
                 recovery_item["rapid_pro_message"] = rapid_pro_msg
                 break
         else:
@@ -200,7 +200,7 @@ if __name__ == "__main__":
         for recovery_item in recovered_lut[rapid_pro_msg.urn]:
             if recovery_item["rapid_pro_message"] is None and \
                     recovery_item["recovered_message"]["Message"] == rapid_pro_text and \
-                    rapid_pro_msg.sent_on - recovery_item["recovered_message"]["ReceivedOn"] < timedelta(minutes=5):
+                    rapid_pro_msg.sent_on - recovery_item["recovered_message"]["timestamp"] < timedelta(minutes=5):
                 recovery_item["rapid_pro_message"] = rapid_pro_msg
                 break
         else:
@@ -220,7 +220,7 @@ if __name__ == "__main__":
         for rapid_pro_msg in rapid_pro_messages:
             for recovery_item in recovered_lut[rapid_pro_msg.urn]:
                 if recovery_item["rapid_pro_message"] is None and \
-                        rapid_pro_msg.sent_on - recovery_item["recovered_message"]["ReceivedOn"] < timedelta(minutes=5):
+                        rapid_pro_msg.sent_on - recovery_item["recovered_message"]["timestamp"] < timedelta(minutes=5):
                     writer.writerow({
                         "Rapid Pro": rapid_pro_msg.text,
                         "Hormuud Recovery": recovery_item["recovered_message"]["Message"]
@@ -267,4 +267,9 @@ if __name__ == "__main__":
         writer.writeheader()
 
         for msg in unmatched_recovered_messages:
-            writer.writerow(msg)
+            writer.writerow({
+                "Sender": msg["Sender"],
+                "Receiver": msg["Receiver"],
+                "Message": msg["Message"],
+                "ReceivedOn": msg["ReceivedOn"]
+            })
