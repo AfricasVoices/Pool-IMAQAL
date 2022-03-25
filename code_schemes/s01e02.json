@@ -4,6 +4,78 @@
     "Version": "0.0.0.1",
     "Codes": [
         {
+            "CodeID": "code-9072263b",
+            "CodeType": "Normal",
+            "DisplayText": "election has caused war and bloodshed",
+            "NumericValue": 1,
+            "StringValue": "election_has_caused_war_and_bloodshed",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-6f546f0c",
+            "CodeType": "Normal",
+            "DisplayText": "insecurity",
+            "NumericValue": 2,
+            "StringValue": "insecurity",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-347d263a",
+            "CodeType": "Normal",
+            "DisplayText": "economic hardships",
+            "NumericValue": 3,
+            "StringValue": "economic_hardships",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-ac522bc9",
+            "CodeType": "Normal",
+            "DisplayText": "election has not caused war and bloodshed",
+            "NumericValue": 4,
+            "StringValue": "the_election_has_not_caused_war_and_bloodshed",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-12e46a1d",
+            "CodeType": "Normal",
+            "DisplayText": "drought",
+            "NumericValue": 5,
+            "StringValue": "drought",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-328b65ce",
+            "CodeType": "Normal",
+            "DisplayText": "corruption",
+            "NumericValue": 6,
+            "StringValue": "corruption",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-d2d781ee",
+            "CodeType": "Normal",
+            "DisplayText": "concflict and dispute",
+            "NumericValue": 7,
+            "StringValue": "concflict_and_dispute",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-188720b1",
+            "CodeType": "Normal",
+            "DisplayText": "lack of justice and faireness",
+            "NumericValue": 8,
+            "StringValue": "lack_of_justice_and_faireness",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-1d39de8e",
+            "CodeType": "Normal",
+            "DisplayText": "other theme",
+            "NumericValue": 9,
+            "StringValue": "other_theme",
+            "VisibleInCoda": true
+        },
+        {
             "CodeID": "code-NA-f93d3eb7",
             "CodeType": "Control",
             "ControlCode": "NA",
