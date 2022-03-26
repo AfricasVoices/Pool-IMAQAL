@@ -67,6 +67,7 @@ def make_rqa_analysis_dataset_configs(dataset_name_prefix, code_scheme_prefix, n
                 ]
             )
         )
+    return dataset_configs
 
 
 @dataclass
