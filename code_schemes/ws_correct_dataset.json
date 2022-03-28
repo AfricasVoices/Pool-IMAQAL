@@ -70,6 +70,61 @@
             ]
         },
         {
+            "CodeID": "code-6338cd67",
+            "CodeType": "Normal",
+            "DisplayText": "rvi elections s01e02",
+            "StringValue": "rvi_elections_s01e02",
+            "NumericValue": 123,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "rvi_elections_s01e02"
+            ]
+        },
+        {
+            "CodeID": "code-92a54a1a",
+            "CodeType": "Normal",
+            "DisplayText": "rvi elections s01e03",
+            "StringValue": "rvi_elections_s01e03",
+            "NumericValue": 124,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "rvi_elections_s01e03"
+            ]
+        },
+        {
+            "CodeID": "code-c71b472d",
+            "CodeType": "Normal",
+            "DisplayText": "rvi elections s01e04",
+            "StringValue": "rvi_elections_s01e04",
+            "NumericValue": 125,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "rvi_elections_s01e04"
+            ]
+        },
+        {
+            "CodeID": "code-47e3540e",
+            "CodeType": "Normal",
+            "DisplayText": "rvi elections s01e05",
+            "StringValue": "rvi_elections_s01e05",
+            "NumericValue": 126,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "rvi_elections_s01e05"
+            ]
+        },
+        {
+            "CodeID": "code-5ccd9bb9",
+            "CodeType": "Normal",
+            "DisplayText": "rvi elections s01e06",
+            "StringValue": "rvi_elections_s01e06",
+            "NumericValue": 127,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "rvi_elections_s01e06"
+            ]
+        },
+        {
             "CodeID": "code-4207270e",
             "CodeType": "Normal",
             "DisplayText": "ssf ppe s01e01",

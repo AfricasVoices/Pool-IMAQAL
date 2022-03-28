@@ -22,9 +22,52 @@ from src.engagement_db_to_analysis.configuration import (AnalysisDatasetConfigur
                                                          CodingConfiguration, GoogleDriveUploadConfiguration,
                                                          MembershipGroupConfiguration, AnalysisConfiguration)
 
+
 def load_code_scheme(fname):
     with open(f"code_schemes/{fname}.json") as f:
         return CodeScheme.from_firebase_map(json.load(f))
+
+
+def make_rqa_coda_dataset_configs(dataset_name_prefix, coda_dataset_id_prefix, code_scheme_prefix, number_of_datasets, update_users_and_code_schemes=True):
+    """
+    Creates a list of n rqa coda dataset configs, indexed from 1 to `number_of_datasets`.
+    This allows us to configure the highly repetitive rqa configurations very succinctly.
+    Note handles rqas less than 10
+    """
+    dataset_configs = []
+    for i in range(1, number_of_datasets + 1):
+        dataset_configs.append(
+            CodaDatasetConfiguration(
+                coda_dataset_id=f"{coda_dataset_id_prefix}{i}",
+                engagement_db_dataset=f"{dataset_name_prefix}{i}",
+                code_scheme_configurations=[
+                    CodeSchemeConfiguration(
+                        code_scheme=load_code_scheme(f"{code_scheme_prefix}{i}"),
+                        auto_coder=None, coda_code_schemes_count=3)
+                ],
+                ws_code_match_value=f"{dataset_name_prefix}{i}",
+                update_users_and_code_schemes=update_users_and_code_schemes
+            )
+        )
+    return dataset_configs
+
+def make_rqa_analysis_dataset_configs(dataset_name_prefix, code_scheme_prefix, number_of_datasets):
+    dataset_configs = []
+    for i in range(1, number_of_datasets + 1):
+        dataset_configs.append(
+            AnalysisDatasetConfiguration(
+                engagement_db_datasets=[f"{dataset_name_prefix}{i}"],
+                dataset_type=DatasetTypes.RESEARCH_QUESTION_ANSWER,
+                raw_dataset=f"{dataset_name_prefix}{i}_raw",
+                coding_configs=[
+                    CodingConfiguration(
+                        code_scheme=load_code_scheme(f"{code_scheme_prefix}{i}"),
+                        analysis_dataset=f"{code_scheme_prefix}{i}"
+                    )
+                ]
+            )
+        )
+    return dataset_configs
 
 
 @dataclass

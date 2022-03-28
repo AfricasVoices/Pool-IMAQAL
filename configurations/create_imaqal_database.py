@@ -3,29 +3,6 @@ from dateutil.parser import isoparse
 from src.pipeline_configuration_spec import *
 
 
-def make_rqa_coda_dataset_configs(dataset_name_prefix, coda_dataset_id_prefix, code_scheme_prefix, number_of_datasets):
-    """
-    Creates a list of n rqa coda dataset configs, indexed from 1 to `number_of_datasets`.
-    This allows us to configure the highly repetitive rqa configurations from previous projects very succinctly.
-    """
-    dataset_configs = []
-    for i in range(1, number_of_datasets + 1):
-        dataset_configs.append(
-            CodaDatasetConfiguration(
-                coda_dataset_id=f"{coda_dataset_id_prefix}{i}",
-                engagement_db_dataset=f"{dataset_name_prefix}{i}",
-                code_scheme_configurations=[
-                    CodeSchemeConfiguration(
-                        code_scheme=load_code_scheme(f"{code_scheme_prefix}{i}"),
-                        auto_coder=None)
-                ],
-                ws_code_match_value=f"{dataset_name_prefix}{i}",
-                update_users_and_code_schemes=False
-            )
-        )
-    return dataset_configs
-
-
 PIPELINE_CONFIGURATION = PipelineConfiguration(
     pipeline_name="CREATE-IMAQAL-POOL",
     description="Creates the initial Imaqal Pool from demographics responses to IMAQAL, IMAQAL_COVID19, "
@@ -208,31 +185,36 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     dataset_name_prefix="ssf_elections_s01e0",
                     coda_dataset_id_prefix="SSF_ELECTIONS_s01e0",
                     code_scheme_prefix="previous_rqas/ssf_elections/ssf_elections_rqa_s01e0",
-                    number_of_datasets=7
+                    number_of_datasets=7,
+                    update_users_and_code_schemes=False
                 ) +
                 make_rqa_coda_dataset_configs(
                     dataset_name_prefix="ssf_dcf_s01e0",
                     coda_dataset_id_prefix="SSF_DCF_s01e0",
                     code_scheme_prefix="previous_rqas/ssf_dcf/ssf_dcf_rqa_s01e0",
-                    number_of_datasets=3
+                    number_of_datasets=3,
+                    update_users_and_code_schemes=False
                 ) +
                 make_rqa_coda_dataset_configs(
                     dataset_name_prefix="ssf_sld_s01e0",
                     coda_dataset_id_prefix="SSF_SLD_s01e0",
                     code_scheme_prefix="previous_rqas/ssf_sld/ssf_sld_rqa_s01e0",
-                    number_of_datasets=4
+                    number_of_datasets=4,
+                    update_users_and_code_schemes=False
                 ) +
                 make_rqa_coda_dataset_configs(
                     dataset_name_prefix="ssf_rec_s01e0",
                     coda_dataset_id_prefix="SSF_REC_s01e0",
                     code_scheme_prefix="previous_rqas/ssf_rec/ssf_rec_rqa_s01e0",
-                    number_of_datasets=3
+                    number_of_datasets=3,
+                    update_users_and_code_schemes=False
                 ) +
                 make_rqa_coda_dataset_configs(
                     dataset_name_prefix="ssf_ppe_s01e0",
                     coda_dataset_id_prefix="SSF_PPE_s01e0",
                     code_scheme_prefix="previous_rqas/ssf_ppe/ssf_ppe_rqa_s01e0",
-                    number_of_datasets=2
+                    number_of_datasets=2,
+                    update_users_and_code_schemes=False
                 ) +
                 [
                 CodaDatasetConfiguration(

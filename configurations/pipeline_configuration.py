@@ -2,6 +2,7 @@ from core_data_modules.cleaners import Codes, somali
 from dateutil.parser import isoparse
 from src.pipeline_configuration_spec import *
 
+
 PIPELINE_CONFIGURATION = PipelineConfiguration(
     pipeline_name="RVI-ELECTIONS",
     project_start_date=isoparse("2022-03-11T00:00:00+03:00"),
@@ -32,6 +33,11 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     FlowResultConfiguration("RVI_elections_demog", "imaqal_pool_recently_displaced", "recently_displaced"),
 
                     FlowResultConfiguration("RVI_elections_s01e01_activation", "rqa_rvi_elections_s01e01", "rvi_elections_s01e01"),
+                    FlowResultConfiguration("RVI_elections_s01e02_activation", "rqa_rvi_elections_s01e02", "rvi_elections_s01e02"),
+                    FlowResultConfiguration("RVI_elections_s01e03_activation", "rqa_rvi_elections_s01e03", "rvi_elections_s01e03"),
+                    FlowResultConfiguration("RVI_elections_s01e04_activation", "rqa_rvi_elections_s01e04", "rvi_elections_s01e04"),
+                    FlowResultConfiguration("RVI_elections_s01e05_activation", "rqa_rvi_elections_s01e05", "rvi_elections_s01e05"),
+                    FlowResultConfiguration("RVI_elections_s01e06_activation", "rqa_rvi_elections_s01e06", "rvi_elections_s01e06"),
                 ]
             )
         )
@@ -39,16 +45,13 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
     coda_sync=CodaConfiguration(
         coda=CodaClientConfiguration(credentials_file_url="gs://avf-credentials/coda-production.json"),
         sync_config=CodaSyncConfiguration(
-            dataset_configurations=[
-                CodaDatasetConfiguration(
-                    coda_dataset_id="RVI_ELECTIONS_s01e01",
-                    engagement_db_dataset="rvi_elections_s01e01",
-                    code_scheme_configurations=[
-                        CodeSchemeConfiguration(code_scheme=load_code_scheme("s01e01"),
-                                                auto_coder=None, coda_code_schemes_count=3)
-                    ],
-                    ws_code_match_value="rvi_elections_s01e01"
-                ),
+            dataset_configurations=make_rqa_coda_dataset_configs(
+                coda_dataset_id_prefix="RVI_ELECTIONS_s01e0",
+                dataset_name_prefix="rvi_elections_s01e0",
+                code_scheme_prefix="s01e0",
+                number_of_datasets=6
+            ) +
+            [
                 CodaDatasetConfiguration(
                     coda_dataset_id="IMAQAL_age",
                     engagement_db_dataset="age",
@@ -58,7 +61,8 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                                                     somali.DemographicCleaner.clean_age_within_range(text))
                                                 ),
                     ],
-                    ws_code_match_value="age"
+                    ws_code_match_value="age",
+                    dataset_users_file_url="gs://avf-project-datasets/2022/IMAQAL-POOL/coda_users.json"
                 ),
                 CodaDatasetConfiguration(
                     coda_dataset_id="IMAQAL_gender",
@@ -67,7 +71,8 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                         CodeSchemeConfiguration(code_scheme=load_code_scheme("gender"),
                                                 auto_coder=somali.DemographicCleaner.clean_gender)
                     ],
-                    ws_code_match_value="gender"
+                    ws_code_match_value="gender",
+                    dataset_users_file_url="gs://avf-project-datasets/2022/IMAQAL-POOL/coda_users.json"
                 ),
                 CodaDatasetConfiguration(
                     coda_dataset_id="IMAQAL_household_language",
@@ -75,7 +80,8 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     code_scheme_configurations=[
                         CodeSchemeConfiguration(code_scheme=load_code_scheme("household_language"), auto_coder=None)
                     ],
-                    ws_code_match_value="household_language"
+                    ws_code_match_value="household_language",
+                    dataset_users_file_url="gs://avf-project-datasets/2022/IMAQAL-POOL/coda_users.json"
                 ),
                 CodaDatasetConfiguration(
                     coda_dataset_id="IMAQAL_location",
@@ -90,7 +96,8 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                         CodeSchemeConfiguration(code_scheme=load_code_scheme("somalia_state"), auto_coder=None),
                         CodeSchemeConfiguration(code_scheme=load_code_scheme("somalia_zone"), auto_coder=None),
                     ],
-                    ws_code_match_value="location"
+                    ws_code_match_value="location",
+                    dataset_users_file_url="gs://avf-project-datasets/2022/IMAQAL-POOL/coda_users.json"
                 ),
                 CodaDatasetConfiguration(
                     coda_dataset_id="IMAQAL_recently_displaced",
@@ -99,7 +106,8 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                         CodeSchemeConfiguration(code_scheme=load_code_scheme("recently_displaced"),
                                                 auto_coder=somali.DemographicCleaner.clean_yes_no)
                     ],
-                    ws_code_match_value="recently_displaced"
+                    ws_code_match_value="recently_displaced",
+                    dataset_users_file_url="gs://avf-project-datasets/2022/IMAQAL-POOL/coda_users.json"
                 ),
             ],
             ws_correct_dataset_code_scheme=load_code_scheme("ws_correct_dataset"),
@@ -111,18 +119,12 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
             credentials_file_url="gs://avf-credentials/pipeline-runner-service-acct-avf-data-core-64cc71459fe7.json",
             drive_dir="rvi_elections_analysis_outputs"
         ),
-        dataset_configurations=[
-            AnalysisDatasetConfiguration(
-                engagement_db_datasets=["rvi_elections_s01e01"],
-                dataset_type=DatasetTypes.RESEARCH_QUESTION_ANSWER,
-                raw_dataset="rvi_elections_s01e01_raw",
-                coding_configs=[
-                    CodingConfiguration(
-                        code_scheme=load_code_scheme("s01e01"),
-                        analysis_dataset="s01e01"
-                    )
-                ]
-            ),
+        dataset_configurations=make_rqa_analysis_dataset_configs(
+                dataset_name_prefix="rvi_elections_s01e0",
+                code_scheme_prefix="s01e0",
+                number_of_datasets=6
+        ) +
+        [
             AnalysisDatasetConfiguration(
                 engagement_db_datasets=["age"],
                 dataset_type=DatasetTypes.DEMOGRAPHIC,

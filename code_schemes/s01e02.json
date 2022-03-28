@@ -1,85 +1,77 @@
 {
-    "SchemeID": "Scheme-a2d7c75b",
-    "Name": "RQA S01E01",
+    "SchemeID": "Scheme-d34e16d3",
+    "Name": "RQA S01E02",
     "Version": "0.0.0.1",
     "Codes": [
         {
-            "CodeID": "code-40bf305c",
+            "CodeID": "code-9072263b",
             "CodeType": "Normal",
-            "DisplayText": "inflation",
+            "DisplayText": "election has caused war and bloodshed",
             "NumericValue": 1,
-            "StringValue": "inflation",
+            "StringValue": "election_has_caused_war_and_bloodshed",
             "VisibleInCoda": true
         },
         {
-            "CodeID": "code-0a710964",
-            "CodeType": "Normal",
-            "DisplayText": "unemployment",
-            "NumericValue": 2,
-            "StringValue": "unemployment",
-            "VisibleInCoda": true
-        },
-        {
-            "CodeID": "code-a5737cf5",
-            "CodeType": "Normal",
-            "DisplayText": "political instability",
-            "NumericValue": 3,
-            "StringValue": "political_instability",
-            "VisibleInCoda": true
-        },
-        {
-            "CodeID": "code-998347e9",
-            "CodeType": "Normal",
-            "DisplayText": "general impact",
-            "NumericValue": 4,
-            "StringValue": "general_impact",
-            "VisibleInCoda": true
-        },
-        {
-            "CodeID": "code-468f4fc5",
+            "CodeID": "code-6f546f0c",
             "CodeType": "Normal",
             "DisplayText": "insecurity",
-            "NumericValue": 5,
+            "NumericValue": 2,
             "StringValue": "insecurity",
             "VisibleInCoda": true
         },
         {
-            "CodeID": "code-bd1b433c",
+            "CodeID": "code-347d263a",
+            "CodeType": "Normal",
+            "DisplayText": "economic hardships",
+            "NumericValue": 3,
+            "StringValue": "economic_hardships",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-ac522bc9",
+            "CodeType": "Normal",
+            "DisplayText": "election has not caused war and bloodshed",
+            "NumericValue": 4,
+            "StringValue": "the_election_has_not_caused_war_and_bloodshed",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-12e46a1d",
             "CodeType": "Normal",
             "DisplayText": "drought",
-            "NumericValue": 6,
+            "NumericValue": 5,
             "StringValue": "drought",
             "VisibleInCoda": true
         },
         {
-            "CodeID": "code-6455702e",
-            "CodeType": "Normal",
-            "DisplayText": "no impact",
-            "NumericValue": 7,
-            "StringValue": "no_impact",
-            "VisibleInCoda": true
-        },
-        {
-            "CodeID": "code-51e2899e",
-            "CodeType": "Normal",
-            "DisplayText": "restriction on movement",
-            "NumericValue": 8,
-            "StringValue": "restriction_on_movement",
-            "VisibleInCoda": true
-        },
-        {
-            "CodeID": "code-3cb3e319",
+            "CodeID": "code-328b65ce",
             "CodeType": "Normal",
             "DisplayText": "corruption",
-            "NumericValue": 9,
+            "NumericValue": 6,
             "StringValue": "corruption",
             "VisibleInCoda": true
         },
         {
-            "CodeID": "code-f79b0cf9",
+            "CodeID": "code-d2d781ee",
+            "CodeType": "Normal",
+            "DisplayText": "concflict and dispute",
+            "NumericValue": 7,
+            "StringValue": "concflict_and_dispute",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-188720b1",
+            "CodeType": "Normal",
+            "DisplayText": "lack of justice and faireness",
+            "NumericValue": 8,
+            "StringValue": "lack_of_justice_and_faireness",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-1d39de8e",
             "CodeType": "Normal",
             "DisplayText": "other theme",
-            "NumericValue": 10,
+            "NumericValue": 9,
             "StringValue": "other_theme",
             "VisibleInCoda": true
         },
