@@ -50,6 +50,14 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                 CSVDatasetConfiguration("rvi_elections_s01e01", start_date=isoparse("2022-03-12T00:00:00+03:00"))
             ],
             timezone="Africa/Mogadishu"
+        ),
+        CSVSource(
+            "gs://avf-project-datasets/2022/RVI-ELECTIONS/recovered_hormuud_2022_03_19_to_2022_03_25_de_identified.csv",
+            engagement_db_datasets=[
+                # This contains data from 19th March, until 25th March.
+                CSVDatasetConfiguration("rvi_elections_s01e02", start_date=isoparse("2022-03-19T00:00:00+03:00"))
+            ],
+            timezone="Africa/Mogadishu"
         )
     ],
     coda_sync=CodaConfiguration(
