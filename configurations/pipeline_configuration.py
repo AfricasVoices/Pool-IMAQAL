@@ -59,7 +59,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                 # This contains data from 19th March, until 25th March.
                 CSVDatasetConfiguration("rvi_elections_s01e02",
                                         start_date=isoparse("2022-03-19T00:00:00+03:00"),
-                                        end_date=isoparse("2022-03-25T00:00:00+03:00"))
+                                        end_date=isoparse("2022-03-26T00:00:00+03:00"))
             ],
             timezone="Africa/Mogadishu"
         )
