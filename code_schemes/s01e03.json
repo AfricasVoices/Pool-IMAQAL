@@ -4,6 +4,62 @@
     "Version": "0.0.0.1",
     "Codes": [
         {
+            "CodeID": "code-26a1888f",
+            "CodeType": "Normal",
+            "DisplayText": "lack of justice and fairness",
+            "NumericValue": 1,
+            "StringValue": "lack_of_justice_and_fairness",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-d753fa33",
+            "CodeType": "Normal",
+            "DisplayText": "insecurity",
+            "NumericValue": 2,
+            "StringValue": "insecurity",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-58e59592",
+            "CodeType": "Normal",
+            "DisplayText": "corruption",
+            "NumericValue": 3,
+            "StringValue": "corruption",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-6a21040d",
+            "CodeType": "Normal",
+            "DisplayText": "the election is going well",
+            "NumericValue": 4,
+            "StringValue": "the_election_is_going_well",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-574dc49c",
+            "CodeType": "Normal",
+            "DisplayText": "religious hope",
+            "NumericValue": 5,
+            "StringValue": "religious_hope",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-09ed282a",
+            "CodeType": "Normal",
+            "DisplayText": "war and conflict",
+            "NumericValue": 6,
+            "StringValue": "war_and_conflict",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-2ac1414d",
+            "CodeType": "Normal",
+            "DisplayText": "other theme",
+            "NumericValue": 7,
+            "StringValue": "other_theme",
+            "VisibleInCoda": true
+        },
+        {
             "CodeID": "code-NA-f93d3eb7",
             "CodeType": "Control",
             "ControlCode": "NA",
