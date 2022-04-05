@@ -7,6 +7,10 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
     pipeline_name="RVI-ELECTIONS",
     project_start_date=isoparse("2022-03-11T00:00:00+03:00"),
     project_end_date=isoparse("2100-01-01T00:00:00+03:00"),
+    test_participant_uuids=[
+        "52d96e0b-5cd5-446c-b0d7-a4d5ae3954c5",
+        "5cbab408-2962-489c-a4f7-951de839d9cd"
+    ],
     engagement_database=EngagementDatabaseClientConfiguration(
         credentials_file_url="gs://avf-credentials/avf-engagement-databases-firebase-credentials-file.json",
         database_path="engagement_databases/IMAQAL"
