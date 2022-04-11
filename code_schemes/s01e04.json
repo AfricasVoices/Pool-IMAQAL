@@ -4,6 +4,70 @@
     "Version": "0.0.0.1",
     "Codes": [
         {
+            "CodeID": "code-dfe19f10",
+            "CodeType": "Normal",
+            "DisplayText": "women should not be included",
+            "NumericValue": 1,
+            "StringValue": "women_should_not_be_included",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-5e02f845",
+            "CodeType": "Normal",
+            "DisplayText": "women are included",
+            "NumericValue": 2,
+            "StringValue": "women_are_included",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-be8af7d7",
+            "CodeType": "Normal",
+            "DisplayText": "youth are participating in election",
+            "NumericValue": 3,
+            "StringValue": "youth_are_participating_in_election",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-426c44f8",
+            "CodeType": "Normal",
+            "DisplayText": "electoral quotas for women were not met",
+            "NumericValue": 4,
+            "StringValue": "electoral_quotas_for_women_were_not_met",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-6675c1cd",
+            "CodeType": "Normal",
+            "DisplayText": "youth are not included",
+            "NumericValue": 5,
+            "StringValue": "youth_are_not_included",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-de4d4c07",
+            "CodeType": "Normal",
+            "DisplayText": "views on the election",
+            "NumericValue": 6,
+            "StringValue": "views_on_the_election",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-1bf85825",
+            "CodeType": "Normal",
+            "DisplayText": "lack of free and fair process",
+            "NumericValue": 7,
+            "StringValue": "lack_of_free_and_fair_process",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-4552659c",
+            "CodeType": "Normal",
+            "DisplayText": "other theme",
+            "NumericValue": 8,
+            "StringValue": "other_theme",
+            "VisibleInCoda": true
+        },
+        {
             "CodeID": "code-NA-f93d3eb7",
             "CodeType": "Control",
             "ControlCode": "NA",

@@ -43,13 +43,65 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
         )
     ],
     csv_sources=[
+        # Hormud
         CSVSource(
             "gs://avf-project-datasets/2022/RVI-ELECTIONS/recovered_hormuud_2022_03_12_to_2022_03_18_de_identified.csv",
             engagement_db_datasets=[
                 # This contains data from 12th March, until 18th March.
-                CSVDatasetConfiguration("rvi_elections_s01e01", 
+                CSVDatasetConfiguration("rvi_elections_s01e01",
                                         start_date=isoparse("2022-03-12T00:00:00+03:00"), 
                                         end_date=isoparse("2022-03-19T00:00:00+03:00"))
+            ],
+            timezone="Africa/Mogadishu"
+        ),
+        CSVSource(
+            "gs://avf-project-datasets/2022/RVI-ELECTIONS/recovered_hormuud_2022_03_19_to_2022_03_25_de_identified.csv",
+            engagement_db_datasets=[
+                # This contains data from 19th March, until 25th March.
+                CSVDatasetConfiguration("rvi_elections_s01e02",
+                                        start_date=isoparse("2022-03-19T00:00:00+03:00"),
+                                        end_date=isoparse("2022-03-26T00:00:00+03:00"))
+            ],
+            timezone="Africa/Mogadishu"
+        ),
+        CSVSource(
+            "gs://avf-project-datasets/2022/RVI-ELECTIONS/recovered_hormuud_2022_03_26_to_2022_04_02_de_identified.csv",
+            engagement_db_datasets=[
+                # This contains data from 26th March, until 1st April.
+                CSVDatasetConfiguration("rvi_elections_s01e03",
+                                        start_date=isoparse("2022-03-26T00:00:00+03:00"),
+                                        end_date=isoparse("2022-04-02T00:00:00+03:00"))
+            ],
+            timezone="Africa/Mogadishu"
+        ),
+        CSVSource(
+            "gs://avf-project-datasets/2022/RVI-ELECTIONS/recovered_hormuud_2022_03_26_to_2022_04_02_de_identified.csv",
+            engagement_db_datasets=[
+                # This contains data from 2nd April.
+                CSVDatasetConfiguration("rvi_elections_s01e04",
+                                        start_date=isoparse("2022-04-02T00:00:00+03:00"),
+                                        end_date=isoparse("2022-04-03T00:00:00+03:00"))
+            ],
+            timezone="Africa/Mogadishu"
+        ),
+        CSVSource(
+            "gs://avf-project-datasets/2022/RVI-ELECTIONS/recovered_hormuud_2022_04_03_to_2022_04_07_de_identified.csv",
+            engagement_db_datasets=[
+                # This contains data from 3rd April, until 7th April.
+                CSVDatasetConfiguration("rvi_elections_s01e04",
+                                        start_date=isoparse("2022-04-03T00:00:00+03:00"),
+                                        end_date=isoparse("2022-04-08T00:00:00+03:00"))
+            ],
+            timezone="Africa/Mogadishu"
+        ),
+        # Golis
+        CSVSource(
+            "gs://avf-project-datasets/2022/RVI-ELECTIONS/recovered_golis_2022_03_27_to_2022_03_28_de_identified.csv",
+            engagement_db_datasets=[
+                # This contains data from 27th March, until 28th March.
+                CSVDatasetConfiguration("rvi_elections_s01e03",
+                                        start_date=isoparse("2022-03-27T00:00:00+03:00"),
+                                        end_date=isoparse("2022-03-29T00:00:00+03:00"))
             ],
             timezone="Africa/Mogadishu"
         )
