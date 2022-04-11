@@ -67,10 +67,30 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
         CSVSource(
             "gs://avf-project-datasets/2022/RVI-ELECTIONS/recovered_hormuud_2022_03_26_to_2022_04_02_de_identified.csv",
             engagement_db_datasets=[
-                # This contains data from 26th March, until 2nd April.
+                # This contains data from 26th March, until 1st April.
                 CSVDatasetConfiguration("rvi_elections_s01e03",
                                         start_date=isoparse("2022-03-26T00:00:00+03:00"),
+                                        end_date=isoparse("2022-04-02T00:00:00+03:00"))
+            ],
+            timezone="Africa/Mogadishu"
+        ),
+        CSVSource(
+            "gs://avf-project-datasets/2022/RVI-ELECTIONS/recovered_hormuud_2022_03_26_to_2022_04_02_de_identified.csv",
+            engagement_db_datasets=[
+                # This contains data from 2nd April.
+                CSVDatasetConfiguration("rvi_elections_s01e04",
+                                        start_date=isoparse("2022-04-02T00:00:00+03:00"),
                                         end_date=isoparse("2022-04-03T00:00:00+03:00"))
+            ],
+            timezone="Africa/Mogadishu"
+        ),
+        CSVSource(
+            "gs://avf-project-datasets/2022/RVI-ELECTIONS/recovered_hormuud_2022_04_03_to_2022_04_07_de_identified.csv",
+            engagement_db_datasets=[
+                # This contains data from 3rd April, until 7th April.
+                CSVDatasetConfiguration("rvi_elections_s01e04",
+                                        start_date=isoparse("2022-04-03T00:00:00+03:00"),
+                                        end_date=isoparse("2022-04-08T00:00:00+03:00"))
             ],
             timezone="Africa/Mogadishu"
         ),
