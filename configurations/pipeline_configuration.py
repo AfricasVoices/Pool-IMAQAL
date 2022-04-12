@@ -186,7 +186,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
         dataset_configurations=make_rqa_analysis_dataset_configs(
                 dataset_name_prefix="rvi_elections_s01e0",
                 code_scheme_prefix="s01e0",
-                number_of_datasets=6
+                number_of_datasets=4
         ) +
         [
             AnalysisDatasetConfiguration(
