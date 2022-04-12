@@ -1,5 +1,5 @@
 from core_data_modules.analysis import (engagement_counts, repeat_participations, theme_distributions, sample_messages,
-                                        AnalysisConfiguration, traffic_analysis)
+                                        AnalysisConfiguration, traffic_analysis, cross_tabs)
 from core_data_modules.analysis.mapping import participation_maps, kenya_mapper, somalia_mapper
 from core_data_modules.logging import Logger
 from core_data_modules.util import IOUtils
@@ -57,6 +57,22 @@ def run_automated_analysis(messages_by_column, participants_by_column, analysis_
     with open(f"{export_dir_path}/sample_messages.csv", "w") as f:
         sample_messages.export_sample_messages_csv(
             messages_by_column, "consent_withdrawn", rqa_column_configs, f, limit_per_code=100
+        )
+
+    log.info("Exporting cross-tabs for age category and gender...")
+    with open(f"{export_dir_path}/age_category_vs_gender_cross_tabs.csv", "w") as f:
+        age_category_config = demog_column_configs[1]
+        gender_config = demog_column_configs[2]
+        cross_tabs.export_cross_tabs_csv(
+            participants_by_column, "consent_withdrawn", age_category_config, gender_config, f
+        )
+
+    log.info("Exporting cross-tabs for state and gender...")
+    with open(f"{export_dir_path}/state_vs_gender_cross_tabs.csv", "w") as f:
+        state_config = demog_column_configs[6]
+        gender_config = demog_column_configs[2]
+        cross_tabs.export_cross_tabs_csv(
+            participants_by_column, "consent_withdrawn", state_config, gender_config, f
         )
 
     if analysis_config.traffic_labels is not None:
