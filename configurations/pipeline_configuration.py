@@ -272,17 +272,26 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
         ws_correct_dataset_code_scheme=load_code_scheme("ws_correct_dataset"),
         traffic_labels=[
             TrafficLabel(isoparse("2022-03-12T00:00+03:00"), isoparse("2022-03-13T24:00+03:00"), "E01 Promo"),
-            
+
             TrafficLabel(isoparse("2022-03-19T00:00+03:00"), isoparse("2022-03-20T24:00+03:00"), "E02 Promo"),
-            
+            TrafficLabel(isoparse("2022-03-21T00:00+03:00"), isoparse("2022-03-21T17:30+03:00"), "E02 Pre Ad"),
+            TrafficLabel(isoparse("2022-03-21T17:30+03:00"), isoparse("2022-03-21T08:00+03:00"), "E02 Ad"),
+
             TrafficLabel(isoparse("2022-03-26T00:00+03:00"), isoparse("2022-03-27T24:00+03:00"), "E03 Promo"),
-            
+            TrafficLabel(isoparse("2022-03-28T00:00+03:00"), isoparse("2022-03-28T17:30+03:00"), "E03 Pre Ad"),
+            TrafficLabel(isoparse("2022-03-28T17:30+03:00"), isoparse("2022-03-28T08:00+03:00"), "E03 Ad"),
+
             TrafficLabel(isoparse("2022-04-02T00:00+03:00"), isoparse("2022-04-03T24:00+03:00"), "E04 Promo"),
-            
+            TrafficLabel(isoparse("2022-04-04T00:00+03:00"), isoparse("2022-04-04T17:30+03:00"), "E04 Pre Ad"),
+            TrafficLabel(isoparse("2022-04-04T17:30+03:00"), isoparse("2022-04-04T08:00+03:00"), "E04 Ad"),
+
             TrafficLabel(isoparse("2022-04-09T00:00+03:00"), isoparse("2022-04-10T24:00+03:00"), "E05 Promo"),
-            
+            TrafficLabel(isoparse("2022-04-11T00:00+03:00"), isoparse("2022-04-11T17:30+03:00"), "E05 Pre Ad"),
+            TrafficLabel(isoparse("2022-04-11T17:30+03:00"), isoparse("2022-04-11T08:00+03:00"), "E05 Ad"),
+
             TrafficLabel(isoparse("2022-04-16T00:00+03:00"), isoparse("2022-04-17T24:00+03:00"), "E06 Promo"),
-            
+            TrafficLabel(isoparse("2022-04-18T00:00+03:00"), isoparse("2022-04-18T17:30+03:00"), "E06 Pre Ad"),
+            TrafficLabel(isoparse("2022-04-18T17:30+03:00"), isoparse("2022-04-18T08:00+03:00"), "E06 Ad"),
         ]
     ),
     archive_configuration=ArchiveConfiguration(
