@@ -269,7 +269,21 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                 ]
             ),
         ],
-        ws_correct_dataset_code_scheme=load_code_scheme("ws_correct_dataset")
+        ws_correct_dataset_code_scheme=load_code_scheme("ws_correct_dataset"),
+        traffic_labels=[
+            TrafficLabel(isoparse("2022-03-12T00:00+03:00"), isoparse("2022-03-13T24:00+03:00"), "E01 Promo"),
+            
+            TrafficLabel(isoparse("2022-03-19T00:00+03:00"), isoparse("2022-03-20T24:00+03:00"), "E02 Promo"),
+            
+            TrafficLabel(isoparse("2022-03-26T00:00+03:00"), isoparse("2022-03-27T24:00+03:00"), "E03 Promo"),
+            
+            TrafficLabel(isoparse("2022-04-02T00:00+03:00"), isoparse("2022-04-03T24:00+03:00"), "E04 Promo"),
+            
+            TrafficLabel(isoparse("2022-04-09T00:00+03:00"), isoparse("2022-04-10T24:00+03:00"), "E05 Promo"),
+            
+            TrafficLabel(isoparse("2022-04-16T00:00+03:00"), isoparse("2022-04-17T24:00+03:00"), "E06 Promo"),
+            
+        ]
     ),
     archive_configuration=ArchiveConfiguration(
         archive_upload_bucket="gs://pipeline-execution-backup-archive",
