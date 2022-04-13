@@ -278,37 +278,49 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
             TrafficLabel(isoparse("2022-03-16T00:00+03:00"), isoparse("2022-03-17T16:29+03:00"), "E01 None"),
             TrafficLabel(isoparse("2022-03-17T16:30+03:00"), isoparse("2022-03-18T23:59+03:00"), "E01 Ad, Group B"),
 
+            # S02E02
             TrafficLabel(isoparse("2022-03-19T00:00+03:00"), isoparse("2022-03-19T23:59+03:00"), "E02 Sat, Promo"),
             TrafficLabel(isoparse("2022-03-20T00:00+03:00"), isoparse("2022-03-20T23:59+03:00"), "E02 Sun, Promo"),
+
             TrafficLabel(isoparse("2022-03-21T00:00+03:00"), isoparse("2022-03-21T17:39+03:00"), "E02 Mon, None"),
             TrafficLabel(isoparse("2022-03-21T17:40+03:00"), isoparse("2022-03-21T23:59+03:00"), "E02 Mon, Ad"),
+
             TrafficLabel(isoparse("2022-03-22T00:00+03:00"), isoparse("2022-03-22T10:59+03:00"), "E02 Tue, None"),
             TrafficLabel(isoparse("2022-03-22T11:00+03:00"), isoparse("2022-03-22T23:59+03:00"), "E02 Tue, Radio"),
+
             TrafficLabel(isoparse("2022-03-23T00:00+03:00"), isoparse("2022-03-23T23:59+03:00"), "E02 Wed, None"),
             TrafficLabel(isoparse("2022-03-24T00:00+03:00"), isoparse("2022-03-24T23:59+03:00"), "E02 Thu, None"),
             TrafficLabel(isoparse("2022-03-25T00:00+03:00"), isoparse("2022-03-25T23:59+03:00"), "E02 Thu, None"),
 
+            # S02E03
             TrafficLabel(isoparse("2022-03-26T00:00+03:00"), isoparse("2022-03-26T23:59+03:00"), "E03 Sat, Promo"),
             TrafficLabel(isoparse("2022-03-27T00:00+03:00"), isoparse("2022-03-27T23:59+03:00"), "E03 Sun, Promo"),
+
             TrafficLabel(isoparse("2022-03-28T00:00+03:00"), isoparse("2022-03-28T17:29+03:00"), "E03 Mon, None"),
             TrafficLabel(isoparse("2022-03-28T17:30+03:00"), isoparse("2022-03-28T23:59+03:00"), "E03 Mon, Ad"),
+
             TrafficLabel(isoparse("2022-03-29T00:00+03:00"), isoparse("2022-03-29T10:59+03:00"), "E03 Tue, None"),
             TrafficLabel(isoparse("2022-03-29T11:00+03:00"), isoparse("2022-03-29T23:59+03:00"), "E03 Tue, Radio"),
+
             TrafficLabel(isoparse("2022-03-30T00:00+03:00"), isoparse("2022-03-30T23:59+03:00"), "E03 Wed, None"),
             TrafficLabel(isoparse("2022-03-31T00:00+03:00"), isoparse("2022-03-31T23:59+03:00"), "E03 Thur, None"),
             TrafficLabel(isoparse("2022-04-01T00:00+03:00"), isoparse("2022-04-01T23:59+03:00"), "E03 Fri, None"),
 
+            # S02E04
             TrafficLabel(isoparse("2022-04-02T00:00+03:00"), isoparse("2022-04-02T23:59+03:00"), "E04 Sat, Promo"),
             TrafficLabel(isoparse("2022-04-03T00:00+03:00"), isoparse("2022-04-03T23:59+03:00"), "E04 Sun, Promo"),
+
             TrafficLabel(isoparse("2022-04-04T00:00+03:00"), isoparse("2022-04-04T17:19+03:00"), "E04 Mon, None"),
             TrafficLabel(isoparse("2022-04-04T17:20+03:00"), isoparse("2022-04-04T23:59+03:00"), "E04 Mon, Ad"),
+
             TrafficLabel(isoparse("2022-04-05T00:00+03:00"), isoparse("2022-04-05T10:59+03:00"), "E04 Tue, None"),
             TrafficLabel(isoparse("2022-04-05T11:00+03:00"), isoparse("2022-04-05T23:59+03:00"), "E04 Tue, Radio"),
+
             TrafficLabel(isoparse("2022-04-06T00:00+03:00"), isoparse("2022-04-06T23:59+03:00"), "E04 Wed, None"),
             TrafficLabel(isoparse("2022-04-07T00:00+03:00"), isoparse("2022-04-07T23:59+03:00"), "E04 Thu, None"),
             TrafficLabel(isoparse("2022-04-08T00:00+03:00"), isoparse("2022-04-08T23:59+03:00"), "E04 Fri, None"),
 
-            # s02e05
+            # S02E05
             TrafficLabel(isoparse("2022-04-09T00:00+03:00"), isoparse("2022-04-09T23:59+03:00"), "E05 Sat, Promo"),
             TrafficLabel(isoparse("2022-04-10T00:00+03:00"), isoparse("2022-04-10T23:59+03:00"), "E05 Sun, Promo"),
 
@@ -317,16 +329,24 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
 
             TrafficLabel(isoparse("2022-04-12T00:00+03:00"), isoparse("2022-04-12T10:59+03:00"), "E05 Tue, None"),
             TrafficLabel(isoparse("2022-04-12T11:00+03:00"), isoparse("2022-04-12T23:59+03:00"), "E05 Tue, Radio"),
-            
+
             TrafficLabel(isoparse("2022-04-13T00:00+03:00"), isoparse("2022-04-13T23:59+03:00"), "E05 Wed, None"),
             TrafficLabel(isoparse("2022-04-14T00:00+03:00"), isoparse("2022-04-14T23:59+03:00"), "E05 Thu, None"),
             TrafficLabel(isoparse("2022-04-15T00:00+03:00"), isoparse("2022-04-15T23:59+03:00"), "E05 Fri, None"),
 
-            # TrafficLabel(isoparse("2022-04-16T00:00+03:00"), isoparse("2022-04-17T23:59+03:00"), "E06 Promo"),
-            # TrafficLabel(isoparse("2022-04-18T00:00+03:00"), isoparse("2022-04-18T17:29+03:00"), "E06 None"),
-            # TrafficLabel(isoparse("2022-04-18T17:30+03:00"), isoparse("2022-04-18T10:59+03:00"), "E06 Ad"),
-            # TrafficLabel(isoparse("2022-04-19T11:00+03:00"), isoparse("2022-04-19T23:59+03:00"), "E06 Radio"),
-            # TrafficLabel(isoparse("2022-04-20T00:00+03:00"), isoparse("2022-04-22T23:59+03:00"), "E06 None"),
+            # S02E06
+            TrafficLabel(isoparse("2022-04-16T00:00+03:00"), isoparse("2022-04-16T23:59+03:00"), "E06 Sat, Promo"),
+            TrafficLabel(isoparse("2022-04-17T00:00+03:00"), isoparse("2022-04-17T23:59+03:00"), "E06 Sun, Promo"),
+
+            TrafficLabel(isoparse("2022-04-18T00:00+03:00"), isoparse("2022-04-18T17:29+03:00"), "E06 Mon, None"),
+            TrafficLabel(isoparse("2022-04-18T17:30+03:00"), isoparse("2022-04-18T23:59+03:00"), "E06 Mon, Ad"),
+
+            TrafficLabel(isoparse("2022-04-19T00:00+03:00"), isoparse("2022-04-19T10:59+03:00"), "E06 Tue, None"),
+            TrafficLabel(isoparse("2022-04-19T11:00+03:00"), isoparse("2022-04-19T23:59+03:00"), "E06 Tue, Radio"),
+            
+            TrafficLabel(isoparse("2022-04-20T00:00+03:00"), isoparse("2022-04-20T23:59+03:00"), "E06 Wed, None"),
+            TrafficLabel(isoparse("2022-04-21T00:00+03:00"), isoparse("2022-04-21T23:59+03:00"), "E06 Thu, None"),
+            TrafficLabel(isoparse("2022-04-22T00:00+03:00"), isoparse("2022-04-22T23:59+03:00"), "E06 Fri, None"),
         ]
     ),
     archive_configuration=ArchiveConfiguration(
