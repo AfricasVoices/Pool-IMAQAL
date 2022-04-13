@@ -306,7 +306,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
             # --------------------------------------- 23 - 25 March ----------------------------------------------
             TrafficLabel(isoparse("2022-03-23T00:00+03:00"), isoparse("2022-03-23T23:59+03:00"), "E02 Wed, None"),
             TrafficLabel(isoparse("2022-03-24T00:00+03:00"), isoparse("2022-03-24T23:59+03:00"), "E02 Thu, None"),
-            TrafficLabel(isoparse("2022-03-25T00:00+03:00"), isoparse("2022-03-25T23:59+03:00"), "E02 Thu, None"),
+            TrafficLabel(isoparse("2022-03-25T00:00+03:00"), isoparse("2022-03-25T23:59+03:00"), "E02 Fri, None"),
 
             # S01E03
             # --------------------------------------- 26 - 27 March -----------------------------------------------
