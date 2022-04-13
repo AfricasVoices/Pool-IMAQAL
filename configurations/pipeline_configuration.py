@@ -275,7 +275,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
         ],
         ws_correct_dataset_code_scheme=load_code_scheme("ws_correct_dataset"),
         traffic_labels=[
-            # S02E01
+            # S01E01
             # --------------------------------------- 12 - 13 March -----------------------------------------------                                       
             TrafficLabel(isoparse("2022-03-12T00:00+03:00"), isoparse("2022-03-12T23:59+03:00"), "E01 Sat, Promo"),
             TrafficLabel(isoparse("2022-03-13T00:00+03:00"), isoparse("2022-03-13T23:59+03:00"), "E01 Sun, Promo"),
@@ -293,7 +293,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
             # --------------------------------------- 18 March ---------------------------------------------- 
             TrafficLabel(isoparse("2022-03-18T00:00+03:00"), isoparse("2022-03-18T23:59+03:00"), "E01 None"),
 
-            # S02E02
+            # S01E02
             # --------------------------------------- 19 - 20 March -----------------------------------------------
             TrafficLabel(isoparse("2022-03-19T00:00+03:00"), isoparse("2022-03-19T23:59+03:00"), "E02 Sat, Promo"),
             TrafficLabel(isoparse("2022-03-20T00:00+03:00"), isoparse("2022-03-20T23:59+03:00"), "E02 Sun, Promo"),
@@ -308,7 +308,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
             TrafficLabel(isoparse("2022-03-24T00:00+03:00"), isoparse("2022-03-24T23:59+03:00"), "E02 Thu, None"),
             TrafficLabel(isoparse("2022-03-25T00:00+03:00"), isoparse("2022-03-25T23:59+03:00"), "E02 Thu, None"),
 
-            # S02E03
+            # S01E03
             # --------------------------------------- 26 - 27 March -----------------------------------------------
             TrafficLabel(isoparse("2022-03-26T00:00+03:00"), isoparse("2022-03-26T23:59+03:00"), "E03 Sat, Promo"),
             TrafficLabel(isoparse("2022-03-27T00:00+03:00"), isoparse("2022-03-27T23:59+03:00"), "E03 Sun, Promo"),
@@ -323,7 +323,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
             TrafficLabel(isoparse("2022-03-31T00:00+03:00"), isoparse("2022-03-31T23:59+03:00"), "E03 Thur, None"),
             TrafficLabel(isoparse("2022-04-01T00:00+03:00"), isoparse("2022-04-01T23:59+03:00"), "E03 Fri, None"),
 
-            # S02E04
+            # S01E04
             # --------------------------------------- 02 - 03 April ----------------------------------------------- 
             TrafficLabel(isoparse("2022-04-02T00:00+03:00"), isoparse("2022-04-02T23:59+03:00"), "E04 Sat, Promo"),
             TrafficLabel(isoparse("2022-04-03T00:00+03:00"), isoparse("2022-04-03T23:59+03:00"), "E04 Sun, Promo"),
@@ -338,7 +338,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
             TrafficLabel(isoparse("2022-04-07T00:00+03:00"), isoparse("2022-04-07T23:59+03:00"), "E04 Thu, None"),
             TrafficLabel(isoparse("2022-04-08T00:00+03:00"), isoparse("2022-04-08T23:59+03:00"), "E04 Fri, None"),
 
-            # S02E05
+            # S01E05
             # --------------------------------------- 09 - 10 April -----------------------------------------------
             TrafficLabel(isoparse("2022-04-09T00:00+03:00"), isoparse("2022-04-09T23:59+03:00"), "E05 Sat, Promo"),
             TrafficLabel(isoparse("2022-04-10T00:00+03:00"), isoparse("2022-04-10T23:59+03:00"), "E05 Sun, Promo"),
@@ -353,7 +353,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
             TrafficLabel(isoparse("2022-04-14T00:00+03:00"), isoparse("2022-04-14T23:59+03:00"), "E05 Thu, None"),
             TrafficLabel(isoparse("2022-04-15T00:00+03:00"), isoparse("2022-04-15T23:59+03:00"), "E05 Fri, None"),
 
-            # S02E06
+            # S01E06
             # --------------------------------------- 16 - 17 April -----------------------------------------------
             TrafficLabel(isoparse("2022-04-16T00:00+03:00"), isoparse("2022-04-16T23:59+03:00"), "E06 Sat, Promo"),
             TrafficLabel(isoparse("2022-04-17T00:00+03:00"), isoparse("2022-04-17T23:59+03:00"), "E06 Sun, Promo"),
