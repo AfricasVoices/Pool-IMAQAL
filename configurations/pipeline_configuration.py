@@ -308,11 +308,19 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
             TrafficLabel(isoparse("2022-04-07T00:00+03:00"), isoparse("2022-04-07T23:59+03:00"), "E04 Thu, None"),
             TrafficLabel(isoparse("2022-04-08T00:00+03:00"), isoparse("2022-04-08T23:59+03:00"), "E04 Fri, None"),
 
-            TrafficLabel(isoparse("2022-04-09T00:00+03:00"), isoparse("2022-04-10T23:59+03:00"), "E05 Promo"),
-            TrafficLabel(isoparse("2022-04-11T00:00+03:00"), isoparse("2022-04-11T17:29+03:00"), "E05 None"),
-            TrafficLabel(isoparse("2022-04-11T17:30+03:00"), isoparse("2022-04-11T10:59+03:00"), "E05 Ad"),
-            TrafficLabel(isoparse("2022-04-12T11:00+03:00"), isoparse("2022-04-12T23:59+03:00"), "E05 Radio"),
-            TrafficLabel(isoparse("2022-04-13T00:00+03:00"), isoparse("2022-04-15T23:59+03:00"), "E05 None"),
+            # s02e05
+            TrafficLabel(isoparse("2022-04-09T00:00+03:00"), isoparse("2022-04-09T23:59+03:00"), "E05 Sat, Promo"),
+            TrafficLabel(isoparse("2022-04-10T00:00+03:00"), isoparse("2022-04-10T23:59+03:00"), "E05 Sun, Promo"),
+
+            TrafficLabel(isoparse("2022-04-11T00:00+03:00"), isoparse("2022-04-11T17:29+03:00"), "E05 Mon, None"),
+            TrafficLabel(isoparse("2022-04-11T17:30+03:00"), isoparse("2022-04-11T23:59+03:00"), "E05 Mon, Ad"),
+
+            TrafficLabel(isoparse("2022-04-12T00:00+03:00"), isoparse("2022-04-12T10:59+03:00"), "E05 Tue, None"),
+            TrafficLabel(isoparse("2022-04-12T11:00+03:00"), isoparse("2022-04-12T23:59+03:00"), "E05 Tue, Radio"),
+            
+            TrafficLabel(isoparse("2022-04-13T00:00+03:00"), isoparse("2022-04-13T23:59+03:00"), "E05 Wed, None"),
+            TrafficLabel(isoparse("2022-04-14T00:00+03:00"), isoparse("2022-04-14T23:59+03:00"), "E05 Thu, None"),
+            TrafficLabel(isoparse("2022-04-15T00:00+03:00"), isoparse("2022-04-15T23:59+03:00"), "E05 Fri, None"),
 
             # TrafficLabel(isoparse("2022-04-16T00:00+03:00"), isoparse("2022-04-17T23:59+03:00"), "E06 Promo"),
             # TrafficLabel(isoparse("2022-04-18T00:00+03:00"), isoparse("2022-04-18T17:29+03:00"), "E06 None"),
