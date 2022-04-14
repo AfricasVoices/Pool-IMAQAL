@@ -283,13 +283,13 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
             TrafficLabel(isoparse("2022-03-14T00:00+03:00"), isoparse("2022-03-14T23:59+03:00"), "E01 Mon, None"),
             # --------------------------------------- 15 March ---------------------------------------------------
             TrafficLabel(isoparse("2022-03-15T00:00+03:00"), isoparse("2022-03-15T09:19+03:00"), "E01 Tue, None"),
-            TrafficLabel(isoparse("2022-03-15T09:20+03:00"), isoparse("2022-03-15T10:59+03:00"), "E01 Tue, Ad, Group A (6,965)"),
+            TrafficLabel(isoparse("2022-03-15T09:20+03:00"), isoparse("2022-03-15T10:59+03:00"), "E01 Tue, Ad, Group A (6,286)"),
             TrafficLabel(isoparse("2022-03-15T11:00+03:00"), isoparse("2022-03-15T23:59+03:00"), "E01 Tue, Radio & Ad"),
             # --------------------------------------- 16 March ------------------------------------------------------------------
             TrafficLabel(isoparse("2022-03-16T00:00+03:00"), isoparse("2022-03-16T23:59+03:00"), "E01 Wed, None"),
             # --------------------------------------- 17 March ---------------------------------------------------
             TrafficLabel(isoparse("2022-03-17T00:00+03:00"), isoparse("2022-03-17T16:29+03:00"), "E01 Thu, None"),
-            TrafficLabel(isoparse("2022-03-17T16:30+03:00"), isoparse("2022-03-17T23:59+03:00"), "E01 Thu, Ad, Group B (7,718)"),
+            TrafficLabel(isoparse("2022-03-17T16:30+03:00"), isoparse("2022-03-17T23:59+03:00"), "E01 Thu, Ad, Group B (8,397)"),
             # --------------------------------------- 18 March ------------------------------------------------------------------ 
             TrafficLabel(isoparse("2022-03-18T00:00+03:00"), isoparse("2022-03-18T23:59+03:00"), "E01 Fri, None"),
 
