@@ -11,7 +11,9 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
         "avf-participant-uuid-368c7741-7034-474a-9a87-6ae32a51f5a0",
         "avf-participant-uuid-5ca68e07-3dba-484b-a29c-7a6c989036b7",
         "avf-participant-uuid-45d15c2d-623c-4f89-bd91-7518147bf1dc",
-        "avf-participant-uuid-88ef05ba-4c56-41f8-a00c-29104abab73e"
+        "avf-participant-uuid-88ef05ba-4c56-41f8-a00c-29104abab73e",
+        "avf-participant-uuid-d9745740-3da5-43cc-a9d1-37fccb75380b",
+        "avf-participant-uuid-96ff0ba1-a7df-4715-84c5-9c90e9093eb4"
     ],
     engagement_database=EngagementDatabaseClientConfiguration(
         credentials_file_url="gs://avf-credentials/avf-engagement-databases-firebase-credentials-file.json",
