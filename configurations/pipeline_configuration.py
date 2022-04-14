@@ -9,7 +9,9 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
     project_end_date=isoparse("2100-01-01T00:00:00+03:00"),
     test_participant_uuids=[
         "avf-participant-uuid-368c7741-7034-474a-9a87-6ae32a51f5a0",
-        "avf-participant-uuid-5ca68e07-3dba-484b-a29c-7a6c989036b7"
+        "avf-participant-uuid-5ca68e07-3dba-484b-a29c-7a6c989036b7",
+        "avf-participant-uuid-45d15c2d-623c-4f89-bd91-7518147bf1dc",
+        "avf-participant-uuid-88ef05ba-4c56-41f8-a00c-29104abab73e"
     ],
     engagement_database=EngagementDatabaseClientConfiguration(
         credentials_file_url="gs://avf-credentials/avf-engagement-databases-firebase-credentials-file.json",
