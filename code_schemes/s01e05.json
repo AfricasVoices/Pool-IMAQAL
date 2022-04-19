@@ -4,6 +4,94 @@
     "Version": "0.0.0.1",
     "Codes": [
         {
+            "CodeID": "code-6d644047",
+            "CodeType": "Normal",
+            "DisplayText": "one-person-one-vote system",
+            "NumericValue": 1,
+            "StringValue": "one_person_one_vote_system",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-6f94a902",
+            "CodeType": "Normal",
+            "DisplayText": "it will be indirect election",
+            "NumericValue": 2,
+            "StringValue": "it_will_be_indirect_election",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-908aec97",
+            "CodeType": "Normal",
+            "DisplayText": "free and fair election",
+            "NumericValue": 3,
+            "StringValue": "free_and_fair_election",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-34d2d2d8",
+            "CodeType": "Normal",
+            "DisplayText": "war and conflict",
+            "NumericValue": 4,
+            "StringValue": "war_and_conflict",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-04145c56",
+            "CodeType": "Normal",
+            "DisplayText": "corruption",
+            "NumericValue": 5,
+            "StringValue": "corruption",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-67351fc8",
+            "CodeType": "Normal",
+            "DisplayText": "religious hope",
+            "NumericValue": 6,
+            "StringValue": "religious_hope",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-204d3a6c",
+            "CodeType": "Normal",
+            "DisplayText": "views on the current election",
+            "NumericValue": 7,
+            "StringValue": "views_on_the_current_election",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-92068dd9",
+            "CodeType": "Normal",
+            "DisplayText": "similar to the current one",
+            "NumericValue": 8,
+            "StringValue": "similar_to_the_current_one",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-fe8f233f",
+            "CodeType": "Normal",
+            "DisplayText": "different from the current one",
+            "NumericValue": 9,
+            "StringValue": "different_from_the_current_one",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-5f12bc2b",
+            "CodeType": "Normal",
+            "DisplayText": "stop clannism",
+            "NumericValue": 10,
+            "StringValue": "stop_clannism",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-20ae53c8",
+            "CodeType": "Normal",
+            "DisplayText": "other theme",
+            "NumericValue": 11,
+            "StringValue": "other_theme",
+            "VisibleInCoda": true
+        },
+        {
             "CodeID": "code-NA-f93d3eb7",
             "CodeType": "Control",
             "ControlCode": "NA",
