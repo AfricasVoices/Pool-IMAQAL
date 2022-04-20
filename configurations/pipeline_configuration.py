@@ -366,13 +366,14 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
             TrafficLabel(isoparse("2022-04-16T00:00+03:00"), isoparse("2022-04-16T24:00+03:00"), "E06 Sat, Promo"),
             TrafficLabel(isoparse("2022-04-17T00:00+03:00"), isoparse("2022-04-17T24:00+03:00"), "E06 Sun, Promo"),
             # --------------------------------------- 18 April ---------------------------------------------------
-            TrafficLabel(isoparse("2022-04-18T00:00+03:00"), isoparse("2022-04-18T17:30+03:00"), "E06 Mon, None"),
-            TrafficLabel(isoparse("2022-04-18T17:30+03:00"), isoparse("2022-04-18T24:00+03:00"), "E06 Mon, Ad"),
+            TrafficLabel(isoparse("2022-04-18T00:00+03:00"), isoparse("2022-04-18T24:00+03:00"), "E06 Mon, None"),
             # --------------------------------------- 19 April ---------------------------------------------------
             TrafficLabel(isoparse("2022-04-19T00:00+03:00"), isoparse("2022-04-19T11:00+03:00"), "E06 Tue, None"),
             TrafficLabel(isoparse("2022-04-19T11:00+03:00"), isoparse("2022-04-19T24:00+03:00"), "E06 Tue, Radio"),
-            # --------------------------------------- 20 - 22 April ----------------------------------------------
-            TrafficLabel(isoparse("2022-04-20T00:00+03:00"), isoparse("2022-04-20T24:00+03:00"), "E06 Wed, None"),
+            # --------------------------------------- 20 April ----------------------------------------------------
+            TrafficLabel(isoparse("2022-04-20T00:00+03:00"), isoparse("2022-04-20T17:30+03:00"), "E06 Wed, None"),
+            TrafficLabel(isoparse("2022-04-20T17:30+03:00"), isoparse("2022-04-20T24:00+03:00"), "E06 Wed, Ad"),
+            # --------------------------------------- 21 - 22 April ----------------------------------------------
             TrafficLabel(isoparse("2022-04-21T00:00+03:00"), isoparse("2022-04-21T24:00+03:00"), "E06 Thu, None"),
             TrafficLabel(isoparse("2022-04-22T00:00+03:00"), isoparse("2022-04-22T24:00+03:00"), "E06 Fri, None"),
         ]
