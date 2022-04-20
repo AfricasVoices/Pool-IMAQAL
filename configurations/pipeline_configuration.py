@@ -186,6 +186,10 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
             project_users_file_url="gs://avf-project-datasets/2022/RVI-ELECTIONS/coda_users.json"
         )
     ),
+    archive_configuration=ArchiveConfiguration(
+        archive_upload_bucket="gs://pipeline-execution-backup-archive",
+        bucket_dir_path="2022/RVI-ELECTIONS"
+    ),
     analysis=AnalysisConfiguration(
         google_drive_upload=GoogleDriveUploadConfiguration(
             credentials_file_url="gs://avf-credentials/pipeline-runner-service-acct-avf-data-core-64cc71459fe7.json",
@@ -277,10 +281,101 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                 ]
             ),
         ],
-        ws_correct_dataset_code_scheme=load_code_scheme("ws_correct_dataset")
-    ),
-    archive_configuration=ArchiveConfiguration(
-        archive_upload_bucket="gs://pipeline-execution-backup-archive",
-        bucket_dir_path="2022/RVI-ELECTIONS"
+        ws_correct_dataset_code_scheme=load_code_scheme("ws_correct_dataset"),
+        traffic_labels=[
+            # S01E01
+            # --------------------------------------- 12 - 13 March -----------------------------------------------                                       
+            TrafficLabel(isoparse("2022-03-12T00:00+03:00"), isoparse("2022-03-12T24:00+03:00"), "E01 Sat, Promo"),
+            TrafficLabel(isoparse("2022-03-13T00:00+03:00"), isoparse("2022-03-13T24:00+03:00"), "E01 Sun, Promo"),
+            # --------------------------------------- 14 March ---------------------------------------------------
+            TrafficLabel(isoparse("2022-03-14T00:00+03:00"), isoparse("2022-03-14T24:00+03:00"), "E01 Mon, None"),
+            # --------------------------------------- 15 March ---------------------------------------------------
+            TrafficLabel(isoparse("2022-03-15T00:00+03:00"), isoparse("2022-03-15T09:20+03:00"), "E01 Tue, None"),
+            TrafficLabel(isoparse("2022-03-15T09:20+03:00"), isoparse("2022-03-15T11:00+03:00"), "E01 Tue, Ad, Group A (6,286)"),
+            TrafficLabel(isoparse("2022-03-15T11:00+03:00"), isoparse("2022-03-15T24:00+03:00"), "E01 Tue, Radio & Ad"),
+            # --------------------------------------- 16 March ------------------------------------------------------------------
+            TrafficLabel(isoparse("2022-03-16T00:00+03:00"), isoparse("2022-03-16T24:00+03:00"), "E01 Wed, None"),
+            # --------------------------------------- 17 March ---------------------------------------------------
+            TrafficLabel(isoparse("2022-03-17T00:00+03:00"), isoparse("2022-03-17T16:30+03:00"), "E01 Thu, None"),
+            TrafficLabel(isoparse("2022-03-17T16:30+03:00"), isoparse("2022-03-17T24:00+03:00"), "E01 Thu, Ad, Group B (8,397)"),
+            # --------------------------------------- 18 March ------------------------------------------------------------------ 
+            TrafficLabel(isoparse("2022-03-18T00:00+03:00"), isoparse("2022-03-18T24:00+03:00"), "E01 Fri, None"),
+
+            # S01E02
+            # --------------------------------------- 19 - 20 March -----------------------------------------------
+            TrafficLabel(isoparse("2022-03-19T00:00+03:00"), isoparse("2022-03-19T24:00+03:00"), "E02 Sat, Promo"),
+            TrafficLabel(isoparse("2022-03-20T00:00+03:00"), isoparse("2022-03-20T24:00+03:00"), "E02 Sun, Promo"),
+            # --------------------------------------- 21 March ---------------------------------------------------
+            TrafficLabel(isoparse("2022-03-21T00:00+03:00"), isoparse("2022-03-21T17:40+03:00"), "E02 Mon, None"),
+            TrafficLabel(isoparse("2022-03-21T17:40+03:00"), isoparse("2022-03-21T24:00+03:00"), "E02 Mon, Ad (13,672)"),
+            # --------------------------------------- 22 March ----------------------------------------------------------
+            TrafficLabel(isoparse("2022-03-22T00:00+03:00"), isoparse("2022-03-22T11:00+03:00"), "E02 Tue, None"),
+            TrafficLabel(isoparse("2022-03-22T11:00+03:00"), isoparse("2022-03-22T24:00+03:00"), "E02 Tue, Radio"),
+            # --------------------------------------- 23 - 25 March ----------------------------------------------
+            TrafficLabel(isoparse("2022-03-23T00:00+03:00"), isoparse("2022-03-23T24:00+03:00"), "E02 Wed, None"),
+            TrafficLabel(isoparse("2022-03-24T00:00+03:00"), isoparse("2022-03-24T24:00+03:00"), "E02 Thu, None"),
+            TrafficLabel(isoparse("2022-03-25T00:00+03:00"), isoparse("2022-03-25T24:00+03:00"), "E02 Fri, None"),
+
+            # S01E03
+            # --------------------------------------- 26 - 27 March -----------------------------------------------
+            TrafficLabel(isoparse("2022-03-26T00:00+03:00"), isoparse("2022-03-26T24:00+03:00"), "E03 Sat, Promo"),
+            TrafficLabel(isoparse("2022-03-27T00:00+03:00"), isoparse("2022-03-27T24:00+03:00"), "E03 Sun, Promo"),
+            # --------------------------------------- 28 March ---------------------------------------------------
+            TrafficLabel(isoparse("2022-03-28T00:00+03:00"), isoparse("2022-03-28T17:30+03:00"), "E03 Mon, None"),
+            TrafficLabel(isoparse("2022-03-28T17:30+03:00"), isoparse("2022-03-28T24:00+03:00"), "E03 Mon, Ad (5,401)"),
+            # --------------------------------------- 29 March ---------------------------------------------------------
+            TrafficLabel(isoparse("2022-03-29T00:00+03:00"), isoparse("2022-03-29T11:00+03:00"), "E03 Tue, None"),
+            TrafficLabel(isoparse("2022-03-29T11:00+03:00"), isoparse("2022-03-29T24:00+03:00"), "E03 Tue, Radio"),
+            # --------------------------------------- 30 - 01 April ----------------------------------------------
+            TrafficLabel(isoparse("2022-03-30T00:00+03:00"), isoparse("2022-03-30T24:00+03:00"), "E03 Wed, None"),
+            TrafficLabel(isoparse("2022-03-31T00:00+03:00"), isoparse("2022-03-31T24:00+03:00"), "E03 Thur, None"),
+            TrafficLabel(isoparse("2022-04-01T00:00+03:00"), isoparse("2022-04-01T24:00+03:00"), "E03 Fri, None"),
+
+            # S01E04
+            # --------------------------------------- 02 - 03 April ----------------------------------------------- 
+            TrafficLabel(isoparse("2022-04-02T00:00+03:00"), isoparse("2022-04-02T24:00+03:00"), "E04 Sat, Promo"),
+            TrafficLabel(isoparse("2022-04-03T00:00+03:00"), isoparse("2022-04-03T24:00+03:00"), "E04 Sun, Promo"),
+            # --------------------------------------- 04 April ---------------------------------------------------
+            TrafficLabel(isoparse("2022-04-04T00:00+03:00"), isoparse("2022-04-04T17:20+03:00"), "E04 Mon, None"),
+            TrafficLabel(isoparse("2022-04-04T17:20+03:00"), isoparse("2022-04-04T24:00+03:00"), "E04 Mon, Ad (7,210)"),
+            # --------------------------------------- 05 April ---------------------------------------------------------
+            TrafficLabel(isoparse("2022-04-05T00:00+03:00"), isoparse("2022-04-05T11:00+03:00"), "E04 Tue, None"),
+            TrafficLabel(isoparse("2022-04-05T11:00+03:00"), isoparse("2022-04-05T24:00+03:00"), "E04 Tue, Radio"),
+            # --------------------------------------- 06 - 08 April ----------------------------------------------
+            TrafficLabel(isoparse("2022-04-06T00:00+03:00"), isoparse("2022-04-06T24:00+03:00"), "E04 Wed, None"),
+            TrafficLabel(isoparse("2022-04-07T00:00+03:00"), isoparse("2022-04-07T24:00+03:00"), "E04 Thu, None"),
+            TrafficLabel(isoparse("2022-04-08T00:00+03:00"), isoparse("2022-04-08T24:00+03:00"), "E04 Fri, None"),
+
+            # S01E05
+            # --------------------------------------- 09 - 10 April -----------------------------------------------
+            TrafficLabel(isoparse("2022-04-09T00:00+03:00"), isoparse("2022-04-09T24:00+03:00"), "E05 Sat, Promo"),
+            TrafficLabel(isoparse("2022-04-10T00:00+03:00"), isoparse("2022-04-10T24:00+03:00"), "E05 Sun, Promo"),
+            # --------------------------------------- 11 April ---------------------------------------------------
+            TrafficLabel(isoparse("2022-04-11T00:00+03:00"), isoparse("2022-04-11T17:30+03:00"), "E05 Mon, None"),
+            TrafficLabel(isoparse("2022-04-11T17:30+03:00"), isoparse("2022-04-11T24:00+03:00"), "E05 Mon, Ad (8,889)"),
+            # --------------------------------------- 12 April ---------------------------------------------------------
+            TrafficLabel(isoparse("2022-04-12T00:00+03:00"), isoparse("2022-04-12T11:00+03:00"), "E05 Tue, None"),
+            TrafficLabel(isoparse("2022-04-12T11:00+03:00"), isoparse("2022-04-12T24:00+03:00"), "E05 Tue, Radio"),
+            # --------------------------------------- 13 - 15 April ----------------------------------------------
+            TrafficLabel(isoparse("2022-04-13T00:00+03:00"), isoparse("2022-04-13T24:00+03:00"), "E05 Wed, None"),
+            TrafficLabel(isoparse("2022-04-14T00:00+03:00"), isoparse("2022-04-14T24:00+03:00"), "E05 Thu, None"),
+            TrafficLabel(isoparse("2022-04-15T00:00+03:00"), isoparse("2022-04-15T24:00+03:00"), "E05 Fri, None"),
+
+            # S01E06
+            # --------------------------------------- 16 - 17 April -----------------------------------------------
+            TrafficLabel(isoparse("2022-04-16T00:00+03:00"), isoparse("2022-04-16T24:00+03:00"), "E06 Sat, Promo"),
+            TrafficLabel(isoparse("2022-04-17T00:00+03:00"), isoparse("2022-04-17T24:00+03:00"), "E06 Sun, Promo"),
+            # --------------------------------------- 18 April ---------------------------------------------------
+            TrafficLabel(isoparse("2022-04-18T00:00+03:00"), isoparse("2022-04-18T24:00+03:00"), "E06 Mon, None"),
+            # --------------------------------------- 19 April ---------------------------------------------------
+            TrafficLabel(isoparse("2022-04-19T00:00+03:00"), isoparse("2022-04-19T11:00+03:00"), "E06 Tue, None"),
+            TrafficLabel(isoparse("2022-04-19T11:00+03:00"), isoparse("2022-04-19T24:00+03:00"), "E06 Tue, Radio"),
+            # --------------------------------------- 20 April ----------------------------------------------------
+            TrafficLabel(isoparse("2022-04-20T00:00+03:00"), isoparse("2022-04-20T17:30+03:00"), "E06 Wed, None"),
+            TrafficLabel(isoparse("2022-04-20T17:30+03:00"), isoparse("2022-04-20T24:00+03:00"), "E06 Wed, Ad"),
+            # --------------------------------------- 21 - 22 April ----------------------------------------------
+            TrafficLabel(isoparse("2022-04-21T00:00+03:00"), isoparse("2022-04-21T24:00+03:00"), "E06 Thu, None"),
+            TrafficLabel(isoparse("2022-04-22T00:00+03:00"), isoparse("2022-04-22T24:00+03:00"), "E06 Fri, None"),
+        ]
     )
 )
