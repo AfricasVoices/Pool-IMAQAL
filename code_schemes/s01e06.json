@@ -6,105 +6,105 @@
         {
             "CodeID": "code-ce93da6c",
             "CodeType": "Normal",
-            "DisplayText": "Yes, Without reason",
+            "DisplayText": "yes, without reason",
             "NumericValue": 1,
-            "StringValue": "Yes, Without reason",
+            "StringValue": "yes_without_reason",
             "VisibleInCoda": true
         },
         {
             "CodeID": "code-07169e70",
             "CodeType": "Normal",
-            "DisplayText": "No, Without reason",
+            "DisplayText": "no, without reason",
             "NumericValue": 2,
-            "StringValue": "No, Without reason",
+            "StringValue": "no_without_reason",
             "VisibleInCoda": true
         },
         {
             "CodeID": "code-af3f67ba",
             "CodeType": "Normal",
-            "DisplayText": "Yes, It will stop clannism",
+            "DisplayText": "yes, it will stop clannism",
             "NumericValue": 3,
-            "StringValue": "Yes, It will stop clannism",
+            "StringValue": "yes_it_will_stop_clannism",
             "VisibleInCoda": true
         },
         {
             "CodeID": "code-b27b9c9c",
             "CodeType": "Normal",
-            "DisplayText": "Yes, Opportunity to elect good leader",
+            "DisplayText": "yes, opportunity to elect good leader",
             "NumericValue": 4,
-            "StringValue": "Yes, Opportunity to elect good leader",
+            "StringValue": "yes_opportunity_to_elect_good_leader",
             "VisibleInCoda": true
         },
         {
             "CodeID": "code-1a15b71c",
             "CodeType": "Normal",
-            "DisplayText": "Yes, It will replace the indirect election",
+            "DisplayText": "yes, it will replace the indirect election",
             "NumericValue": 5,
-            "StringValue": "Yes, It will replace the indirect election",
+            "StringValue": "yes_it_will_replace_the_indirect_election",
             "VisibleInCoda": true
         },
         {
             "CodeID": "code-8236aed0",
             "CodeType": "Normal",
-            "DisplayText": "Yes, Free & fair elections",
+            "DisplayText": "yes, free and fair elections",
             "NumericValue": 6,
-            "StringValue": "Yes, Free & fair elections",
+            "StringValue": "yes_free_and_fair_elections",
             "VisibleInCoda": true
         },
         {
             "CodeID": "code-5191dea9",
             "CodeType": "Normal",
-            "DisplayText": "No, It will result in delayed election",
+            "DisplayText": "no, it will result in delayed election",
             "NumericValue": 7,
-            "StringValue": "No, It will result in delayed election",
+            "StringValue": "no_it_will_result_in_delayed_election",
             "VisibleInCoda": true
         },
         {
             "CodeID": "code-3036da2b",
             "CodeType": "Normal",
-            "DisplayText": "No, Lack of justice & freeness",
+            "DisplayText": "no, lack of justice and freeness",
             "NumericValue": 8,
-            "StringValue": "No, Lack of justice & freeness",
+            "StringValue": "no_lack_of_justice_and_freeness",
             "VisibleInCoda": true
         },
         {
             "CodeID": "code-c6b0f3e2",
             "CodeType": "Normal",
-            "DisplayText": "No, There is clannism",
+            "DisplayText": "no, there is clannism",
             "NumericValue": 9,
-            "StringValue": "No, There is clannism",
+            "StringValue": "no_there_is_clannism",
             "VisibleInCoda": true
         },
         {
             "CodeID": "code-ddc57e7a",
             "CodeType": "Normal",
-            "DisplayText": "No, Insecurity",
+            "DisplayText": "no, insecurity",
             "NumericValue": 10,
-            "StringValue": "No, Insecurity",
+            "StringValue": "no_insecurity",
             "VisibleInCoda": true
         },
         {
             "CodeID": "code-03eb86e7",
             "CodeType": "Normal",
-            "DisplayText": "No, Lack of consensus",
+            "DisplayText": "no, lack of consensus",
             "NumericValue": 11,
-            "StringValue": "No, Lack of consensus",
+            "StringValue": "no_lack_of_consensus",
             "VisibleInCoda": true
         },
         {
             "CodeID": "code-921bdf58",
             "CodeType": "Normal",
-            "DisplayText": "Views on the current election",
+            "DisplayText": "views on the current election",
             "NumericValue": 12,
-            "StringValue": "Views on the current election",
+            "StringValue": "views_on_the_current_election",
             "VisibleInCoda": true
         },
         {
             "CodeID": "code-fc842885",
             "CodeType": "Normal",
-            "DisplayText": "Religious hope",
+            "DisplayText": "religious hope",
             "NumericValue": 13,
-            "StringValue": "Religious hope",
+            "StringValue": "religious_hope",
             "VisibleInCoda": true
         },
         {
