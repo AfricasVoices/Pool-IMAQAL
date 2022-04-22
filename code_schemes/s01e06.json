@@ -4,6 +4,118 @@
     "Version": "0.0.0.1",
     "Codes": [
         {
+            "CodeID": "code-ce93da6c",
+            "CodeType": "Normal",
+            "DisplayText": "Yes, Without reason",
+            "NumericValue": 1,
+            "StringValue": "Yes, Without reason",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-07169e70",
+            "CodeType": "Normal",
+            "DisplayText": "No, Without reason",
+            "NumericValue": 2,
+            "StringValue": "No, Without reason",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-af3f67ba",
+            "CodeType": "Normal",
+            "DisplayText": "Yes, It will stop clannism",
+            "NumericValue": 3,
+            "StringValue": "Yes, It will stop clannism",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-b27b9c9c",
+            "CodeType": "Normal",
+            "DisplayText": "Yes, Opportunity to elect good leader",
+            "NumericValue": 4,
+            "StringValue": "Yes, Opportunity to elect good leader",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-1a15b71c",
+            "CodeType": "Normal",
+            "DisplayText": "Yes, It will replace the indirect election",
+            "NumericValue": 5,
+            "StringValue": "Yes, It will replace the indirect election",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-8236aed0",
+            "CodeType": "Normal",
+            "DisplayText": "Yes, Free & fair elections",
+            "NumericValue": 6,
+            "StringValue": "Yes, Free & fair elections",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-5191dea9",
+            "CodeType": "Normal",
+            "DisplayText": "No, It will result in delayed election",
+            "NumericValue": 7,
+            "StringValue": "No, It will result in delayed election",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-3036da2b",
+            "CodeType": "Normal",
+            "DisplayText": "No, Lack of justice & freeness",
+            "NumericValue": 8,
+            "StringValue": "No, Lack of justice & freeness",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-c6b0f3e2",
+            "CodeType": "Normal",
+            "DisplayText": "No, There is clannism",
+            "NumericValue": 9,
+            "StringValue": "No, There is clannism",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-ddc57e7a",
+            "CodeType": "Normal",
+            "DisplayText": "No, Insecurity",
+            "NumericValue": 10,
+            "StringValue": "No, Insecurity",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-03eb86e7",
+            "CodeType": "Normal",
+            "DisplayText": "No, Lack of consensus",
+            "NumericValue": 11,
+            "StringValue": "No, Lack of consensus",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-921bdf58",
+            "CodeType": "Normal",
+            "DisplayText": "Views on the current election",
+            "NumericValue": 12,
+            "StringValue": "Views on the current election",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-fc842885",
+            "CodeType": "Normal",
+            "DisplayText": "Religious hope",
+            "NumericValue": 13,
+            "StringValue": "Religious hope",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-cf23c7ea",
+            "CodeType": "Normal",
+            "DisplayText": "other theme",
+            "NumericValue": 14,
+            "StringValue": "other_theme",
+            "VisibleInCoda": true
+        },
+        {
             "CodeID": "code-NA-f93d3eb7",
             "CodeType": "Control",
             "ControlCode": "NA",
