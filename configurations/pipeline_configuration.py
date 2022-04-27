@@ -126,6 +126,16 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
             ) +
             [
                 CodaDatasetConfiguration(
+                    coda_dataset_id="RVI_ELECTIONS_s01_closeout",
+                    engagement_db_dataset="rvi_elections_s01_closeout",
+                    code_scheme_configurations=[
+                        CodeSchemeConfiguration(
+                            code_scheme=load_code_scheme("s01_closeout"), 
+                            auto_coder=None, coda_code_schemes_count=3)
+                    ],
+                    ws_code_match_value="rvi_elections_s01_closeout"
+                ),
+                CodaDatasetConfiguration(
                     coda_dataset_id="IMAQAL_age",
                     engagement_db_dataset="age",
                     code_scheme_configurations=[
