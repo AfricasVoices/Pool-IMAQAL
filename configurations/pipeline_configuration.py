@@ -213,6 +213,17 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
         ) +
         [
             AnalysisDatasetConfiguration(
+                engagement_db_datasets=["rvi_elections_s01_closeout"],
+                dataset_type=DatasetTypes.RESEARCH_QUESTION_ANSWER,
+                raw_dataset="rvi_elections_s01_closeout_raw",
+                coding_configs=[
+                    CodingConfiguration(
+                        code_scheme=load_code_scheme("s01_closeout"),
+                        analysis_dataset="s01_closeout"
+                    )
+                ]
+            ),
+            AnalysisDatasetConfiguration(
                 engagement_db_datasets=["age"],
                 dataset_type=DatasetTypes.DEMOGRAPHIC,
                 raw_dataset="age_raw",
