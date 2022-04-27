@@ -125,6 +125,17 @@
             ]
         },
         {
+            "CodeID": "code-eaf992f8",
+            "CodeType": "Normal",
+            "DisplayText": "rvi elections s01 closeout",
+            "StringValue": "rvi_elections_s01_closeout",
+            "NumericValue": 128,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "rvi_elections_s01_closeout"
+            ]
+        },
+        {
             "CodeID": "code-4207270e",
             "CodeType": "Normal",
             "DisplayText": "ssf ppe s01e01",
