@@ -46,6 +46,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     FlowResultConfiguration("RVI_elections_s01e04_activation", "rqa_rvi_elections_s01e04", "rvi_elections_s01e04"),
                     FlowResultConfiguration("RVI_elections_s01e05_activation", "rqa_rvi_elections_s01e05", "rvi_elections_s01e05"),
                     FlowResultConfiguration("RVI_elections_s01e06_activation", "rqa_rvi_elections_s01e06", "rvi_elections_s01e06"),
+                    FlowResultConfiguration("RVI_elections_s01_closeout_activation", "rqa_rvi_elections_s01_closeout", "rvi_elections_s01_closeout")
                 ]
             )
         )
@@ -125,6 +126,16 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
             ) +
             [
                 CodaDatasetConfiguration(
+                    coda_dataset_id="RVI_ELECTIONS_s01_closeout",
+                    engagement_db_dataset="rvi_elections_s01_closeout",
+                    code_scheme_configurations=[
+                        CodeSchemeConfiguration(
+                            code_scheme=load_code_scheme("s01_closeout"), 
+                            auto_coder=None, coda_code_schemes_count=3)
+                    ],
+                    ws_code_match_value="rvi_elections_s01_closeout"
+                ),
+                CodaDatasetConfiguration(
                     coda_dataset_id="IMAQAL_age",
                     engagement_db_dataset="age",
                     code_scheme_configurations=[
@@ -201,6 +212,17 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                 number_of_datasets=6
         ) +
         [
+            AnalysisDatasetConfiguration(
+                engagement_db_datasets=["rvi_elections_s01_closeout"],
+                dataset_type=DatasetTypes.RESEARCH_QUESTION_ANSWER,
+                raw_dataset="rvi_elections_s01_closeout_raw",
+                coding_configs=[
+                    CodingConfiguration(
+                        code_scheme=load_code_scheme("s01_closeout"),
+                        analysis_dataset="s01_closeout"
+                    )
+                ]
+            ),
             AnalysisDatasetConfiguration(
                 engagement_db_datasets=["age"],
                 dataset_type=DatasetTypes.DEMOGRAPHIC,
