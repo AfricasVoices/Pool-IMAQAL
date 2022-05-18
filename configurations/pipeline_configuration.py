@@ -118,13 +118,73 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
     coda_sync=CodaConfiguration(
         coda=CodaClientConfiguration(credentials_file_url="gs://avf-credentials/coda-production.json"),
         sync_config=CodaSyncConfiguration(
-            dataset_configurations=make_rqa_coda_dataset_configs(
-                coda_dataset_id_prefix="RVI_ELECTIONS_s01e0",
-                dataset_name_prefix="rvi_elections_s01e0",
-                code_scheme_prefix="s01e0",
-                number_of_datasets=6
-            ) +
-            [
+            dataset_configurations=[
+                CodaDatasetConfiguration(
+                    coda_dataset_id="RVI_ELECTIONS_s01e01",
+                    engagement_db_dataset="rvi_elections_s01e01",
+                    code_scheme_configurations=[
+                        CodeSchemeConfiguration(
+                            code_scheme=load_code_scheme("s01e01"),
+                            auto_coder=None
+                        )
+                    ],
+                    ws_code_match_value="rvi_elections_s01e01",
+                ),
+                CodaDatasetConfiguration(
+                    coda_dataset_id="RVI_ELECTIONS_s01e02",
+                    engagement_db_dataset="rvi_elections_s01e02",
+                    code_scheme_configurations=[
+                        CodeSchemeConfiguration(
+                            code_scheme=load_code_scheme("s01e02"),
+                            auto_coder=None
+                        )
+                    ],
+                    ws_code_match_value="rvi_elections_s01e02",
+                ),
+                CodaDatasetConfiguration(
+                    coda_dataset_id="RVI_ELECTIONS_s01e03",
+                    engagement_db_dataset="rvi_elections_s01e03",
+                    code_scheme_configurations=[
+                        CodeSchemeConfiguration(
+                            code_scheme=load_code_scheme("s01e03"),
+                            auto_coder=None
+                        )
+                    ],
+                    ws_code_match_value="rvi_elections_s01e03",
+                ),
+                CodaDatasetConfiguration(
+                    coda_dataset_id="RVI_ELECTIONS_s01e04",
+                    engagement_db_dataset="rvi_elections_s01e04",
+                    code_scheme_configurations=[
+                        CodeSchemeConfiguration(
+                            code_scheme=load_code_scheme("s01e04"),
+                            auto_coder=None
+                        )
+                    ],
+                    ws_code_match_value="rvi_elections_s01e04",
+                ),
+                CodaDatasetConfiguration(
+                    coda_dataset_id="RVI_ELECTIONS_s01e05",
+                    engagement_db_dataset="rvi_elections_s01e05",
+                    code_scheme_configurations=[
+                        CodeSchemeConfiguration(
+                            code_scheme=load_code_scheme("s01e05"),
+                            auto_coder=None
+                        )
+                    ],
+                    ws_code_match_value="rvi_elections_s01e05",
+                ),
+                CodaDatasetConfiguration(
+                    coda_dataset_id="RVI_ELECTIONS_s01e06",
+                    engagement_db_dataset="rvi_elections_s01e06",
+                    code_scheme_configurations=[
+                        CodeSchemeConfiguration(
+                            code_scheme=load_code_scheme("s01e06"),
+                            auto_coder=None
+                        )
+                    ],
+                    ws_code_match_value="rvi_elections_s01e06",
+                ),
                 CodaDatasetConfiguration(
                     coda_dataset_id="RVI_ELECTIONS_s01_closeout",
                     engagement_db_dataset="rvi_elections_s01_closeout",
@@ -206,12 +266,73 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
             credentials_file_url="gs://avf-credentials/pipeline-runner-service-acct-avf-data-core-64cc71459fe7.json",
             drive_dir="rvi_elections_analysis_outputs"
         ),
-        dataset_configurations=make_rqa_analysis_dataset_configs(
-                dataset_name_prefix="rvi_elections_s01e0",
-                code_scheme_prefix="s01e0",
-                number_of_datasets=6
-        ) +
-        [
+        dataset_configurations=[   
+            AnalysisDatasetConfiguration(
+                engagement_db_datasets=["rvi_elections_s01e01"],
+                dataset_type=DatasetTypes.RESEARCH_QUESTION_ANSWER,
+                raw_dataset="rvi_elections_s01e01_raw",
+                coding_configs=[
+                    CodingConfiguration(
+                        code_scheme=load_code_scheme("s01e01"),
+                        analysis_dataset="s01e01"
+                    )
+                ]
+            ),
+            AnalysisDatasetConfiguration(
+                engagement_db_datasets=["rvi_elections_s01e02"],
+                dataset_type=DatasetTypes.RESEARCH_QUESTION_ANSWER,
+                raw_dataset="rvi_elections_s01e02_raw",
+                coding_configs=[
+                    CodingConfiguration(
+                        code_scheme=load_code_scheme("s01e02"),
+                        analysis_dataset="s01e02"
+                    )
+                ]
+            ),
+            AnalysisDatasetConfiguration(
+                engagement_db_datasets=["rvi_elections_s01e03"],
+                dataset_type=DatasetTypes.RESEARCH_QUESTION_ANSWER,
+                raw_dataset="rvi_elections_s01e03_raw",
+                coding_configs=[
+                    CodingConfiguration(
+                        code_scheme=load_code_scheme("s01e03"),
+                        analysis_dataset="s01e03"
+                    )
+                ]
+            ),
+            AnalysisDatasetConfiguration(
+                engagement_db_datasets=["rvi_elections_s01e04"],
+                dataset_type=DatasetTypes.RESEARCH_QUESTION_ANSWER,
+                raw_dataset="rvi_elections_s01e04_raw",
+                coding_configs=[
+                    CodingConfiguration(
+                        code_scheme=load_code_scheme("s01e04"),
+                        analysis_dataset="s01e04"
+                    )
+                ]
+            ),
+            AnalysisDatasetConfiguration(
+                engagement_db_datasets=["rvi_elections_s01e05"],
+                dataset_type=DatasetTypes.RESEARCH_QUESTION_ANSWER,
+                raw_dataset="rvi_elections_s01e05_raw",
+                coding_configs=[
+                    CodingConfiguration(
+                        code_scheme=load_code_scheme("s01e05"),
+                        analysis_dataset="s01e05"
+                    )
+                ]
+            ),
+            AnalysisDatasetConfiguration(
+                engagement_db_datasets=["rvi_elections_s01e06"],
+                dataset_type=DatasetTypes.RESEARCH_QUESTION_ANSWER,
+                raw_dataset="rvi_elections_s01e06_raw",
+                coding_configs=[
+                    CodingConfiguration(
+                        code_scheme=load_code_scheme("s01e06"),
+                        analysis_dataset="s01e06"
+                    )
+                ]
+            ),
             AnalysisDatasetConfiguration(
                 engagement_db_datasets=["rvi_elections_s01_closeout"],
                 dataset_type=DatasetTypes.RESEARCH_QUESTION_ANSWER,
