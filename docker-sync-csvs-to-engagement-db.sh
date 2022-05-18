@@ -2,8 +2,7 @@
 
 set -e
 
-PROJECT_NAME="$(<configurations/docker_image_project_name.txt)"
-IMAGE_NAME=$PROJECT_NAME-sync-csvs-to-engagement-db
+IMAGE_NAME="$(<configurations/docker_image_name.txt)"
 
 while [[ $# -gt 0 ]]; do
     case "$1" in
@@ -36,9 +35,6 @@ GOOGLE_CLOUD_CREDENTIALS_PATH=$2
 CONFIGURATION_FILE=$3
 CODE_SCHEMES_DIR=$4
 DATA_DIR=$5
-
-# Build an image for this pipeline stage.
-docker build -t "$IMAGE_NAME" .
 
 # Create a container from the image that was just built.
 CMD="pipenv run python -u sync_csvs_to_engagement_db.py ${DRY_RUN} ${INCREMENTAL_ARG} \
