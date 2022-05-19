@@ -58,7 +58,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
             engagement_db_datasets=[
                 # This contains data from 12th March, until 18th March.
                 CSVDatasetConfiguration("rvi_elections_s01e01",
-                                        start_date=isoparse("2022-03-12T00:00:00+03:00"), 
+                                        start_date=isoparse("2022-03-12T00:00:00+03:00"),
                                         end_date=isoparse("2022-03-19T00:00:00+03:00"))
             ],
             timezone="Africa/Mogadishu"
@@ -190,7 +190,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     engagement_db_dataset="rvi_elections_s01_closeout",
                     code_scheme_configurations=[
                         CodeSchemeConfiguration(
-                            code_scheme=load_code_scheme("s01_closeout"), 
+                            code_scheme=load_code_scheme("s01_closeout"),
                             auto_coder=None, coda_code_schemes_count=3)
                     ],
                     ws_code_match_value="rvi_elections_s01_closeout"
@@ -202,7 +202,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                         CodeSchemeConfiguration(code_scheme=load_code_scheme("age"),
                                                 auto_coder=lambda text: str(
                                                     somali.DemographicCleaner.clean_age_within_range(text)
-                                                ), coda_code_schemes_count=3),
+                        ), coda_code_schemes_count=3),
                     ],
                     ws_code_match_value="age",
                     dataset_users_file_url="gs://avf-project-datasets/2022/IMAQAL-POOL/coda_users.json"
@@ -222,7 +222,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     coda_dataset_id="IMAQAL_household_language",
                     engagement_db_dataset="household_language",
                     code_scheme_configurations=[
-                        CodeSchemeConfiguration(code_scheme=load_code_scheme("household_language"), 
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("household_language"),
                                                 auto_coder=None, coda_code_schemes_count=3)
                     ],
                     ws_code_match_value="household_language",
@@ -239,9 +239,12 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                                                 somali.DemographicCleaner.clean_somalia_district(text)
                                                 if somali.DemographicCleaner.clean_mogadishu_sub_district == Codes.NOT_CODED else Codes.NOT_CODED,
                                                 coda_code_schemes_count=1),
-                        CodeSchemeConfiguration(code_scheme=load_code_scheme("somalia_region"), auto_coder=None, coda_code_schemes_count=1),
-                        CodeSchemeConfiguration(code_scheme=load_code_scheme("somalia_state"), auto_coder=None, coda_code_schemes_count=1),
-                        CodeSchemeConfiguration(code_scheme=load_code_scheme("somalia_zone"), auto_coder=None, coda_code_schemes_count=1),
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("somalia_region"),
+                                                auto_coder=None, coda_code_schemes_count=1),
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("somalia_state"),
+                                                auto_coder=None, coda_code_schemes_count=1),
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("somalia_zone"),
+                                                auto_coder=None, coda_code_schemes_count=1),
                     ],
                     ws_code_match_value="location",
                     dataset_users_file_url="gs://avf-project-datasets/2022/IMAQAL-POOL/coda_users.json"
@@ -271,7 +274,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
             credentials_file_url="gs://avf-credentials/pipeline-runner-service-acct-avf-data-core-64cc71459fe7.json",
             drive_dir="rvi_elections_analysis_outputs"
         ),
-        dataset_configurations=[   
+        dataset_configurations=[
             AnalysisDatasetConfiguration(
                 engagement_db_datasets=["rvi_elections_s01e01"],
                 dataset_type=DatasetTypes.RESEARCH_QUESTION_ANSWER,
@@ -432,7 +435,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
         ws_correct_dataset_code_scheme=load_code_scheme("ws_correct_dataset"),
         traffic_labels=[
             # S01E01
-            # --------------------------------------- 12 - 13 March -----------------------------------------------                                       
+            # --------------------------------------- 12 - 13 March -----------------------------------------------
             TrafficLabel(isoparse("2022-03-12T00:00+03:00"), isoparse("2022-03-12T24:00+03:00"), "E01 Sat, Promo"),
             TrafficLabel(isoparse("2022-03-13T00:00+03:00"), isoparse("2022-03-13T24:00+03:00"), "E01 Sun, Promo"),
             # --------------------------------------- 14 March ---------------------------------------------------
@@ -480,7 +483,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
             TrafficLabel(isoparse("2022-04-01T00:00+03:00"), isoparse("2022-04-01T24:00+03:00"), "E03 Fri, None"),
 
             # S01E04
-            # --------------------------------------- 02 - 03 April ----------------------------------------------- 
+            # --------------------------------------- 02 - 03 April -----------------------------------------------
             TrafficLabel(isoparse("2022-04-02T00:00+03:00"), isoparse("2022-04-02T24:00+03:00"), "E04 Sat, Promo"),
             TrafficLabel(isoparse("2022-04-03T00:00+03:00"), isoparse("2022-04-03T24:00+03:00"), "E04 Sun, Promo"),
             # --------------------------------------- 04 April ---------------------------------------------------
