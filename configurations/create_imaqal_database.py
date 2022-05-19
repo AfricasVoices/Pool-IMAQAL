@@ -2,6 +2,7 @@ from core_data_modules.cleaners import Codes, somali
 from dateutil.parser import isoparse
 from src.pipeline_configuration_spec import *
 
+
 def make_rqa_coda_dataset_configs(dataset_name_prefix, coda_dataset_id_prefix, code_scheme_prefix, number_of_datasets, update_users_and_code_schemes=True):
     """
     Creates a list of n rqa coda dataset configs, indexed from 1 to `number_of_datasets`.
