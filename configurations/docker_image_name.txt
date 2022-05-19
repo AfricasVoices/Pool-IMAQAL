@@ -1,1 +1,1 @@
-engagement-data-pipeline:dev
+ghcr.io/africasvoices/engagement-data-pipeline:match-values-in-coda-sync
