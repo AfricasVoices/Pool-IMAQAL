@@ -270,10 +270,10 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
         bucket_dir_path="2022/RVI-ELECTIONS"
     ),
     analysis=AnalysisConfiguration(
-        google_drive_upload=GoogleDriveUploadConfiguration(
-            credentials_file_url="gs://avf-credentials/pipeline-runner-service-acct-avf-data-core-64cc71459fe7.json",
-            drive_dir="rvi_elections_analysis_outputs"
-        ),
+        # google_drive_upload=GoogleDriveUploadConfiguration(
+        #     credentials_file_url="gs://avf-credentials/pipeline-runner-service-acct-avf-data-core-64cc71459fe7.json",
+        #     drive_dir="rvi_elections_analysis_outputs"
+        # ),
         dataset_configurations=[
             AnalysisDatasetConfiguration(
                 engagement_db_datasets=["rvi_elections_s01e01"],
