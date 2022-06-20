@@ -29,11 +29,11 @@ echo "Starting a new pipeline run with id ${RUN_ID}"
     "$CONFIGURATION_FILE" "$CODE_SCHEMES_DIR" "$GOOGLE_CLOUD_CREDENTIALS_PATH" "$RUN_ID" "PipelineRunStart"
 
 ./docker-sync-rapid-pro-to-engagement-db.sh \
-    --incremental-cache-volume "$PIPELINE_NAME-rapid-pro-to-engagement-db-cache"  \
+    --incremental-cache-volume "$PIPELINE_NAME-rapid-pro-to-engagement-db-cache" \
     "$USER" "$GOOGLE_CLOUD_CREDENTIALS_PATH" "$CONFIGURATION_FILE" "$CODE_SCHEMES_DIR" "$DATA_DIR"
 
 ./docker-sync-csvs-to-engagement-db.sh \
-    --incremental-cache-volume "$PIPELINE_NAME-csv-to-engagement-db-cache"  \
+    --incremental-cache-volume "$PIPELINE_NAME-csv-to-engagement-db-cache" \
     "$USER" "$GOOGLE_CLOUD_CREDENTIALS_PATH" "$CONFIGURATION_FILE" "$CODE_SCHEMES_DIR" "$DATA_DIR"
 
 ./docker-sync-engagement-db-to-coda.sh \
@@ -45,7 +45,7 @@ echo "Starting a new pipeline run with id ${RUN_ID}"
     "$USER" "$GOOGLE_CLOUD_CREDENTIALS_PATH" "$CONFIGURATION_FILE" "$CODE_SCHEMES_DIR" "$DATA_DIR"
 
 ./docker-sync-engagement-db-to-rapid-pro.sh \
-    --incremental-cache-volume "$PIPELINE_NAME-engagement-db-to-rapid-pro-cache"  \
+    --incremental-cache-volume "$PIPELINE_NAME-engagement-db-to-rapid-pro-cache" \
     "$USER" "$GOOGLE_CLOUD_CREDENTIALS_PATH" "$CONFIGURATION_FILE" "$CODE_SCHEMES_DIR"
 
 ./docker-run-engagement-db-to-analysis.sh \
