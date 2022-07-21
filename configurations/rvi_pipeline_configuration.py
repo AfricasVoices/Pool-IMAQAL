@@ -58,7 +58,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
             engagement_db_datasets=[
                 # This contains data from 12th March, until 18th March.
                 CSVDatasetConfiguration("rvi_elections_s01e01",
-                                        start_date=isoparse("2022-03-12T00:00:00+03:00"), 
+                                        start_date=isoparse("2022-03-12T00:00:00+03:00"),
                                         end_date=isoparse("2022-03-19T00:00:00+03:00"))
             ],
             timezone="Africa/Mogadishu"
@@ -118,19 +118,79 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
     coda_sync=CodaConfiguration(
         coda=CodaClientConfiguration(credentials_file_url="gs://avf-credentials/coda-production.json"),
         sync_config=CodaSyncConfiguration(
-            dataset_configurations=make_rqa_coda_dataset_configs(
-                coda_dataset_id_prefix="RVI_ELECTIONS_s01e0",
-                dataset_name_prefix="rvi_elections_s01e0",
-                code_scheme_prefix="s01e0",
-                number_of_datasets=6
-            ) +
-            [
+            dataset_configurations=[
+                CodaDatasetConfiguration(
+                    coda_dataset_id="RVI_ELECTIONS_s01e01",
+                    engagement_db_dataset="rvi_elections_s01e01",
+                    code_scheme_configurations=[
+                        CodeSchemeConfiguration(
+                            code_scheme=load_code_scheme("s01e01"),
+                            auto_coder=None, coda_code_schemes_count=3
+                        )
+                    ],
+                    ws_code_match_value="rvi_elections_s01e01",
+                ),
+                CodaDatasetConfiguration(
+                    coda_dataset_id="RVI_ELECTIONS_s01e02",
+                    engagement_db_dataset="rvi_elections_s01e02",
+                    code_scheme_configurations=[
+                        CodeSchemeConfiguration(
+                            code_scheme=load_code_scheme("s01e02"),
+                            auto_coder=None, coda_code_schemes_count=3
+                        )
+                    ],
+                    ws_code_match_value="rvi_elections_s01e02",
+                ),
+                CodaDatasetConfiguration(
+                    coda_dataset_id="RVI_ELECTIONS_s01e03",
+                    engagement_db_dataset="rvi_elections_s01e03",
+                    code_scheme_configurations=[
+                        CodeSchemeConfiguration(
+                            code_scheme=load_code_scheme("s01e03"),
+                            auto_coder=None, coda_code_schemes_count=3
+                        )
+                    ],
+                    ws_code_match_value="rvi_elections_s01e03",
+                ),
+                CodaDatasetConfiguration(
+                    coda_dataset_id="RVI_ELECTIONS_s01e04",
+                    engagement_db_dataset="rvi_elections_s01e04",
+                    code_scheme_configurations=[
+                        CodeSchemeConfiguration(
+                            code_scheme=load_code_scheme("s01e04"),
+                            auto_coder=None, coda_code_schemes_count=3
+                        )
+                    ],
+                    ws_code_match_value="rvi_elections_s01e04",
+                ),
+                CodaDatasetConfiguration(
+                    coda_dataset_id="RVI_ELECTIONS_s01e05",
+                    engagement_db_dataset="rvi_elections_s01e05",
+                    code_scheme_configurations=[
+                        CodeSchemeConfiguration(
+                            code_scheme=load_code_scheme("s01e05"),
+                            auto_coder=None, coda_code_schemes_count=3
+                        )
+                    ],
+                    ws_code_match_value="rvi_elections_s01e05",
+                ),
+                CodaDatasetConfiguration(
+                    coda_dataset_id="RVI_ELECTIONS_s01e06",
+                    engagement_db_dataset="rvi_elections_s01e06",
+                    code_scheme_configurations=[
+                        CodeSchemeConfiguration(
+                            code_scheme=load_code_scheme("s01e06"),
+                            auto_coder=None, coda_code_schemes_count=3
+                        )
+                    ],
+                    ws_code_match_value="rvi_elections_s01e06",
+                ),
                 CodaDatasetConfiguration(
                     coda_dataset_id="RVI_ELECTIONS_s01_closeout",
                     engagement_db_dataset="rvi_elections_s01_closeout",
                     code_scheme_configurations=[
                         CodeSchemeConfiguration(
-                            code_scheme=load_code_scheme("s01_closeout"), 
+                            code_scheme=load_code_scheme("s01_closeout"),
                             auto_coder=None, coda_code_schemes_count=3)
                     ],
                     ws_code_match_value="rvi_elections_s01_closeout"
@@ -141,8 +201,8 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     code_scheme_configurations=[
                         CodeSchemeConfiguration(code_scheme=load_code_scheme("age"),
                                                 auto_coder=lambda text: str(
-                                                    somali.DemographicCleaner.clean_age_within_range(text))
-                                                ),
+                                                    somali.DemographicCleaner.clean_age_within_range(text)
+                        ), coda_code_schemes_count=3),
                     ],
                     ws_code_match_value="age",
                     dataset_users_file_url="gs://avf-project-datasets/2022/IMAQAL-POOL/coda_users.json"
@@ -152,7 +212,8 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     engagement_db_dataset="gender",
                     code_scheme_configurations=[
                         CodeSchemeConfiguration(code_scheme=load_code_scheme("gender"),
-                                                auto_coder=somali.DemographicCleaner.clean_gender)
+                                                auto_coder=somali.DemographicCleaner.clean_gender,
+                                                coda_code_schemes_count=3)
                     ],
                     ws_code_match_value="gender",
                     dataset_users_file_url="gs://avf-project-datasets/2022/IMAQAL-POOL/coda_users.json"
@@ -161,7 +222,8 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     coda_dataset_id="IMAQAL_household_language",
                     engagement_db_dataset="household_language",
                     code_scheme_configurations=[
-                        CodeSchemeConfiguration(code_scheme=load_code_scheme("household_language"), auto_coder=None)
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("household_language"),
+                                                auto_coder=None, coda_code_schemes_count=3)
                     ],
                     ws_code_match_value="household_language",
                     dataset_users_file_url="gs://avf-project-datasets/2022/IMAQAL-POOL/coda_users.json"
@@ -171,13 +233,18 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     engagement_db_dataset="location",
                     code_scheme_configurations=[
                         CodeSchemeConfiguration(code_scheme=load_code_scheme("mogadishu_sub_district"),
-                                                auto_coder=somali.DemographicCleaner.clean_mogadishu_sub_district),
+                                                auto_coder=somali.DemographicCleaner.clean_mogadishu_sub_district,
+                                                coda_code_schemes_count=1),
                         CodeSchemeConfiguration(code_scheme=load_code_scheme("somalia_district"), auto_coder=lambda text:
                                                 somali.DemographicCleaner.clean_somalia_district(text)
-                                                if somali.DemographicCleaner.clean_mogadishu_sub_district == Codes.NOT_CODED else Codes.NOT_CODED),
-                        CodeSchemeConfiguration(code_scheme=load_code_scheme("somalia_region"), auto_coder=None),
-                        CodeSchemeConfiguration(code_scheme=load_code_scheme("somalia_state"), auto_coder=None),
-                        CodeSchemeConfiguration(code_scheme=load_code_scheme("somalia_zone"), auto_coder=None),
+                                                if somali.DemographicCleaner.clean_mogadishu_sub_district == Codes.NOT_CODED else Codes.NOT_CODED,
+                                                coda_code_schemes_count=1),
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("somalia_region"),
+                                                auto_coder=None, coda_code_schemes_count=1),
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("somalia_state"),
+                                                auto_coder=None, coda_code_schemes_count=1),
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("somalia_zone"),
+                                                auto_coder=None, coda_code_schemes_count=1),
                     ],
                     ws_code_match_value="location",
                     dataset_users_file_url="gs://avf-project-datasets/2022/IMAQAL-POOL/coda_users.json"
@@ -187,7 +254,8 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     engagement_db_dataset="recently_displaced",
                     code_scheme_configurations=[
                         CodeSchemeConfiguration(code_scheme=load_code_scheme("recently_displaced"),
-                                                auto_coder=somali.DemographicCleaner.clean_yes_no)
+                                                auto_coder=somali.DemographicCleaner.clean_yes_no,
+                                                coda_code_schemes_count=3)
                     ],
                     ws_code_match_value="recently_displaced",
                     dataset_users_file_url="gs://avf-project-datasets/2022/IMAQAL-POOL/coda_users.json"
@@ -202,16 +270,77 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
         bucket_dir_path="2022/RVI-ELECTIONS"
     ),
     analysis=AnalysisConfiguration(
-        google_drive_upload=GoogleDriveUploadConfiguration(
-            credentials_file_url="gs://avf-credentials/pipeline-runner-service-acct-avf-data-core-64cc71459fe7.json",
-            drive_dir="rvi_elections_analysis_outputs"
-        ),
-        dataset_configurations=make_rqa_analysis_dataset_configs(
-                dataset_name_prefix="rvi_elections_s01e0",
-                code_scheme_prefix="s01e0",
-                number_of_datasets=6
-        ) +
-        [
+        # google_drive_upload=GoogleDriveUploadConfiguration(
+        #     credentials_file_url="gs://avf-credentials/pipeline-runner-service-acct-avf-data-core-64cc71459fe7.json",
+        #     drive_dir="rvi_elections_analysis_outputs"
+        # ),
+        dataset_configurations=[
+            AnalysisDatasetConfiguration(
+                engagement_db_datasets=["rvi_elections_s01e01"],
+                dataset_type=DatasetTypes.RESEARCH_QUESTION_ANSWER,
+                raw_dataset="rvi_elections_s01e01_raw",
+                coding_configs=[
+                    CodingConfiguration(
+                        code_scheme=load_code_scheme("s01e01"),
+                        analysis_dataset="s01e01"
+                    )
+                ]
+            ),
+            AnalysisDatasetConfiguration(
+                engagement_db_datasets=["rvi_elections_s01e02"],
+                dataset_type=DatasetTypes.RESEARCH_QUESTION_ANSWER,
+                raw_dataset="rvi_elections_s01e02_raw",
+                coding_configs=[
+                    CodingConfiguration(
+                        code_scheme=load_code_scheme("s01e02"),
+                        analysis_dataset="s01e02"
+                    )
+                ]
+            ),
+            AnalysisDatasetConfiguration(
+                engagement_db_datasets=["rvi_elections_s01e03"],
+                dataset_type=DatasetTypes.RESEARCH_QUESTION_ANSWER,
+                raw_dataset="rvi_elections_s01e03_raw",
+                coding_configs=[
+                    CodingConfiguration(
+                        code_scheme=load_code_scheme("s01e03"),
+                        analysis_dataset="s01e03"
+                    )
+                ]
+            ),
+            AnalysisDatasetConfiguration(
+                engagement_db_datasets=["rvi_elections_s01e04"],
+                dataset_type=DatasetTypes.RESEARCH_QUESTION_ANSWER,
+                raw_dataset="rvi_elections_s01e04_raw",
+                coding_configs=[
+                    CodingConfiguration(
+                        code_scheme=load_code_scheme("s01e04"),
+                        analysis_dataset="s01e04"
+                    )
+                ]
+            ),
+            AnalysisDatasetConfiguration(
+                engagement_db_datasets=["rvi_elections_s01e05"],
+                dataset_type=DatasetTypes.RESEARCH_QUESTION_ANSWER,
+                raw_dataset="rvi_elections_s01e05_raw",
+                coding_configs=[
+                    CodingConfiguration(
+                        code_scheme=load_code_scheme("s01e05"),
+                        analysis_dataset="s01e05"
+                    )
+                ]
+            ),
+            AnalysisDatasetConfiguration(
+                engagement_db_datasets=["rvi_elections_s01e06"],
+                dataset_type=DatasetTypes.RESEARCH_QUESTION_ANSWER,
+                raw_dataset="rvi_elections_s01e06_raw",
+                coding_configs=[
+                    CodingConfiguration(
+                        code_scheme=load_code_scheme("s01e06"),
+                        analysis_dataset="s01e06"
+                    )
+                ]
+            ),
             AnalysisDatasetConfiguration(
                 engagement_db_datasets=["rvi_elections_s01_closeout"],
                 dataset_type=DatasetTypes.RESEARCH_QUESTION_ANSWER,
@@ -306,7 +435,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
         ws_correct_dataset_code_scheme=load_code_scheme("ws_correct_dataset"),
         traffic_labels=[
             # S01E01
-            # --------------------------------------- 12 - 13 March -----------------------------------------------                                       
+            # --------------------------------------- 12 - 13 March -----------------------------------------------
             TrafficLabel(isoparse("2022-03-12T00:00+03:00"), isoparse("2022-03-12T24:00+03:00"), "E01 Sat, Promo"),
             TrafficLabel(isoparse("2022-03-13T00:00+03:00"), isoparse("2022-03-13T24:00+03:00"), "E01 Sun, Promo"),
             # --------------------------------------- 14 March ---------------------------------------------------
@@ -354,7 +483,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
             TrafficLabel(isoparse("2022-04-01T00:00+03:00"), isoparse("2022-04-01T24:00+03:00"), "E03 Fri, None"),
 
             # S01E04
-            # --------------------------------------- 02 - 03 April ----------------------------------------------- 
+            # --------------------------------------- 02 - 03 April -----------------------------------------------
             TrafficLabel(isoparse("2022-04-02T00:00+03:00"), isoparse("2022-04-02T24:00+03:00"), "E04 Sat, Promo"),
             TrafficLabel(isoparse("2022-04-03T00:00+03:00"), isoparse("2022-04-03T24:00+03:00"), "E04 Sun, Promo"),
             # --------------------------------------- 04 April ---------------------------------------------------

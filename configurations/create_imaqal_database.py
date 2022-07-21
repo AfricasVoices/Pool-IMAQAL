@@ -3,6 +3,30 @@ from dateutil.parser import isoparse
 from src.pipeline_configuration_spec import *
 
 
+def make_rqa_coda_dataset_configs(dataset_name_prefix, coda_dataset_id_prefix, code_scheme_prefix, number_of_datasets, update_users_and_code_schemes=True):
+    """
+    Creates a list of n rqa coda dataset configs, indexed from 1 to `number_of_datasets`.
+    This allows us to configure the highly repetitive rqa configurations very succinctly.
+    Note handles rqas less than 10
+    """
+    dataset_configs = []
+    for i in range(1, number_of_datasets + 1):
+        dataset_configs.append(
+            CodaDatasetConfiguration(
+                coda_dataset_id=f"{coda_dataset_id_prefix}{i}",
+                engagement_db_dataset=f"{dataset_name_prefix}{i}",
+                code_scheme_configurations=[
+                    CodeSchemeConfiguration(
+                        code_scheme=load_code_scheme(f"{code_scheme_prefix}{i}"),
+                        auto_coder=None, coda_code_schemes_count=3)
+                ],
+                ws_code_match_value=f"{dataset_name_prefix}{i}",
+                update_users_and_code_schemes=update_users_and_code_schemes
+            )
+        )
+    return dataset_configs
+
+
 PIPELINE_CONFIGURATION = PipelineConfiguration(
     pipeline_name="CREATE-IMAQAL-POOL",
     description="Creates the initial Imaqal Pool from demographics responses to IMAQAL, IMAQAL_COVID19, "
@@ -222,7 +246,8 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     engagement_db_dataset="age",
                     code_scheme_configurations=[
                         CodeSchemeConfiguration(code_scheme=load_code_scheme("age"), 
-                            auto_coder=lambda text: str(somali.DemographicCleaner.clean_age_within_range(text))
+                            auto_coder=lambda text: str(somali.DemographicCleaner.clean_age_within_range(text),
+                            coda_code_schemes_count=3)
                         ),
                     ],
                     ws_code_match_value="age"
@@ -231,7 +256,9 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     coda_dataset_id="IMAQAL_gender",
                     engagement_db_dataset="gender",
                     code_scheme_configurations=[
-                        CodeSchemeConfiguration(code_scheme=load_code_scheme("gender"), auto_coder=somali.DemographicCleaner.clean_gender)
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("gender"), 
+                                                auto_coder=somali.DemographicCleaner.clean_gender, 
+                                                coda_code_schemes_count=3)
                     ],
                     ws_code_match_value="gender"
                 ),
@@ -239,7 +266,8 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     coda_dataset_id="IMAQAL_household_language",
                     engagement_db_dataset="household_language",
                     code_scheme_configurations=[
-                        CodeSchemeConfiguration(code_scheme=load_code_scheme("household_language"), auto_coder=None)
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("household_language"), 
+                                                auto_coder=None, coda_code_schemes_count=3)
                     ],
                     ws_code_match_value="household_language"
                 ),
@@ -248,13 +276,15 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     engagement_db_dataset="location",
                     code_scheme_configurations=[
                         CodeSchemeConfiguration(code_scheme=load_code_scheme("mogadishu_sub_district"),
-                                                auto_coder=somali.DemographicCleaner.clean_mogadishu_sub_district),
+                                                auto_coder=somali.DemographicCleaner.clean_mogadishu_sub_district,
+                                                coda_code_schemes_count=1),
                         CodeSchemeConfiguration(code_scheme=load_code_scheme("somalia_district"), auto_coder=lambda text:
                                                 somali.DemographicCleaner.clean_somalia_district(text)
-                                                if somali.DemographicCleaner.clean_mogadishu_sub_district == Codes.NOT_CODED else Codes.NOT_CODED),
-                        CodeSchemeConfiguration(code_scheme=load_code_scheme("somalia_region"), auto_coder=None),
-                        CodeSchemeConfiguration(code_scheme=load_code_scheme("somalia_state"), auto_coder=None),
-                        CodeSchemeConfiguration(code_scheme=load_code_scheme("somalia_zone"), auto_coder=None),
+                                                if somali.DemographicCleaner.clean_mogadishu_sub_district == Codes.NOT_CODED else Codes.NOT_CODED,
+                                                coda_code_schemes_count=1),
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("somalia_region"), auto_coder=None, coda_code_schemes_count=1),
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("somalia_state"), auto_coder=None, coda_code_schemes_count=1),
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("somalia_zone"), auto_coder=None, coda_code_schemes_count=1),
                     ],
                     ws_code_match_value="location"
                 ),
@@ -262,7 +292,9 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     coda_dataset_id="IMAQAL_recently_displaced",
                     engagement_db_dataset="recently_displaced",
                     code_scheme_configurations=[
-                        CodeSchemeConfiguration(code_scheme=load_code_scheme("recently_displaced"), auto_coder=somali.DemographicCleaner.clean_yes_no)
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("recently_displaced"), 
+                                                auto_coder=somali.DemographicCleaner.clean_yes_no,
+                                                coda_code_schemes_count=3)
                     ],
                     ws_code_match_value="recently_displaced"
                 ),

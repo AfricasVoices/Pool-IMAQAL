@@ -136,3 +136,5 @@ dmypy.json
 data/
 
 .idea/
+
+run_rvi_elections_pipeline.sh
