@@ -33,7 +33,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                 "SSF-ELECTIONS, SSF-DCF, SSF-SLD, SSF-REC, and SSF-PPE.",
     engagement_database=EngagementDatabaseClientConfiguration(
         credentials_file_url="gs://avf-credentials/avf-engagement-databases-firebase-credentials-file.json",
-        database_path="engagement_databases/IMAQAL"
+        database_path="engagement_databases/IMAQAL-2"
     ),
     uuid_table=UUIDTableClientConfiguration(
         credentials_file_url="gs://avf-credentials/avf-id-infrastructure-firebase-adminsdk-6xps8-b9173f2bfd.json",
@@ -303,41 +303,41 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
             project_users_file_url="gs://avf-project-datasets/2022/IMAQAL-POOL/coda_users.json"
         )
     ),
-    rapid_pro_target=RapidProTarget(
-        rapid_pro=RapidProClientConfiguration(
-            domain="textit.com",
-            token_file_url="gs://avf-credentials/imaqal-text-it-token.txt"
-        ),
-        sync_config=EngagementDBToRapidProConfiguration(
-            normal_datasets=[
-                DatasetConfiguration(
-                    engagement_db_datasets=["age"], 
-                    rapid_pro_contact_field=ContactField(key="imaqal_pool_age", label="imaqal pool age")
-                ),
-                DatasetConfiguration(
-                    engagement_db_datasets=["gender"], 
-                    rapid_pro_contact_field=ContactField(key="imaqal_pool_gender", label="imaqal pool gender")
-                ),
-                DatasetConfiguration(
-                    engagement_db_datasets=["household_language"], 
-                    rapid_pro_contact_field=ContactField(key="imaqal_pool_household_language", label="imaqal pool household language")
-                ),
-                DatasetConfiguration(
-                    engagement_db_datasets=["location"], 
-                    rapid_pro_contact_field=ContactField(key="imaqal_pool_district", label="imaqal pool district")
-                ),
-                DatasetConfiguration(
-                    engagement_db_datasets=["recently_displaced"], 
-                    rapid_pro_contact_field=ContactField(key="imaqal_pool_recently_displaced", label="imaqal pool recently displaced")
-                ),
-            ],
-            consent_withdrawn_dataset=DatasetConfiguration(
-                engagement_db_datasets=["age", "gender", "household_language", "location", "recently_displaced"],
-                rapid_pro_contact_field=ContactField(key="imaqal_pool_consent_withdrawn", label="imaqal pool consent withdrawn")
-            ),
-            write_mode=WriteModes.CONCATENATE_TEXTS
-        )
-    ),
+    # rapid_pro_target=RapidProTarget(
+    #     rapid_pro=RapidProClientConfiguration(
+    #         domain="textit.com",
+    #         token_file_url="gs://avf-credentials/imaqal-text-it-token.txt"
+    #     ),
+    #     sync_config=EngagementDBToRapidProConfiguration(
+    #         normal_datasets=[
+    #             DatasetConfiguration(
+    #                 engagement_db_datasets=["age"],
+    #                 rapid_pro_contact_field=ContactField(key="imaqal_pool_age", label="imaqal pool age")
+    #             ),
+    #             DatasetConfiguration(
+    #                 engagement_db_datasets=["gender"],
+    #                 rapid_pro_contact_field=ContactField(key="imaqal_pool_gender", label="imaqal pool gender")
+    #             ),
+    #             DatasetConfiguration(
+    #                 engagement_db_datasets=["household_language"],
+    #                 rapid_pro_contact_field=ContactField(key="imaqal_pool_household_language", label="imaqal pool household language")
+    #             ),
+    #             DatasetConfiguration(
+    #                 engagement_db_datasets=["location"],
+    #                 rapid_pro_contact_field=ContactField(key="imaqal_pool_district", label="imaqal pool district")
+    #             ),
+    #             DatasetConfiguration(
+    #                 engagement_db_datasets=["recently_displaced"],
+    #                 rapid_pro_contact_field=ContactField(key="imaqal_pool_recently_displaced", label="imaqal pool recently displaced")
+    #             ),
+    #         ],
+    #         consent_withdrawn_dataset=DatasetConfiguration(
+    #             engagement_db_datasets=["age", "gender", "household_language", "location", "recently_displaced"],
+    #             rapid_pro_contact_field=ContactField(key="imaqal_pool_consent_withdrawn", label="imaqal pool consent withdrawn")
+    #         ),
+    #         write_mode=WriteModes.CONCATENATE_TEXTS
+    #     )
+    # ),
     archive_configuration=ArchiveConfiguration(
         archive_upload_bucket="gs://pipeline-execution-backup-archive",
         bucket_dir_path="2022/CREATE-IMAQAL-POOL"
