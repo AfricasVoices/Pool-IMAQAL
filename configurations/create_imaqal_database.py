@@ -299,6 +299,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     ws_code_match_value="recently_displaced"
                 ),
             ],
+            set_dataset_from_ws_string_value=True,
             ws_correct_dataset_code_scheme=load_code_scheme("ws_correct_dataset"),
             project_users_file_url="gs://avf-project-datasets/2022/IMAQAL-POOL/coda_users.json"
         )
