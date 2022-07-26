@@ -261,6 +261,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     dataset_users_file_url="gs://avf-project-datasets/2022/IMAQAL-POOL/coda_users.json"
                 ),
             ],
+            set_dataset_from_ws_string_value=True,
             ws_correct_dataset_code_scheme=load_code_scheme("ws_correct_dataset"),
             project_users_file_url="gs://avf-project-datasets/2022/RVI-ELECTIONS/coda_users.json"
         )
