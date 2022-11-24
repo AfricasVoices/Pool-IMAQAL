@@ -9,9 +9,6 @@ def make_rqa_coda_dataset_configs(dataset_name_prefix, coda_dataset_id_prefix, c
     This allows us to configure the highly repetitive rqa configurations very succinctly.
     Note handles rqas less than 10
     """
-    assert number_of_datasets < 10, f"`make_rqa_coda_dataset_configs` currently only supports 9 or fewer datasets " \
-                                    f"but {number_of_datasets} were requested"
-
     dataset_configs = []
     for i in range(1, number_of_datasets + 1):
         dataset_configs.append(
