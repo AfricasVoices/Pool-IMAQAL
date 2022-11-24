@@ -24,7 +24,7 @@ done
 # Check that the correct number of arguments were provided.
 if [[ $# -ne 5 ]]; then
     echo "Usage: $0 
-    [--incremental-cache-volume <incremental-cache-volume>] 
+    [--dry-run] [--incremental-cache-volume <incremental-cache-volume>]
     <user> <google-cloud-credentials-file-path> <configuration-file> <code-schemes-dir> <data-dir>"
     exit
 fi
