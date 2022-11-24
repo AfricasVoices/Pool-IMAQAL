@@ -124,7 +124,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     engagement_db_dataset="rvi_elections_s01e01",
                     code_scheme_configurations=[
                         CodeSchemeConfiguration(
-                            code_scheme=load_code_scheme("s01e01"),
+                            code_scheme=load_code_scheme("rqas/rvi/s01e01"),
                             auto_coder=None, coda_code_schemes_count=3
                         )
                     ],
@@ -135,7 +135,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     engagement_db_dataset="rvi_elections_s01e02",
                     code_scheme_configurations=[
                         CodeSchemeConfiguration(
-                            code_scheme=load_code_scheme("s01e02"),
+                            code_scheme=load_code_scheme("rqas/rvi/s01e02"),
                             auto_coder=None, coda_code_schemes_count=3
                         )
                     ],
@@ -146,7 +146,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     engagement_db_dataset="rvi_elections_s01e03",
                     code_scheme_configurations=[
                         CodeSchemeConfiguration(
-                            code_scheme=load_code_scheme("s01e03"),
+                            code_scheme=load_code_scheme("rqas/rvi/s01e03"),
                             auto_coder=None, coda_code_schemes_count=3
                         )
                     ],
@@ -157,7 +157,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     engagement_db_dataset="rvi_elections_s01e04",
                     code_scheme_configurations=[
                         CodeSchemeConfiguration(
-                            code_scheme=load_code_scheme("s01e04"),
+                            code_scheme=load_code_scheme("rqas/rvi/s01e04"),
                             auto_coder=None, coda_code_schemes_count=3
                         )
                     ],
@@ -168,7 +168,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     engagement_db_dataset="rvi_elections_s01e05",
                     code_scheme_configurations=[
                         CodeSchemeConfiguration(
-                            code_scheme=load_code_scheme("s01e05"),
+                            code_scheme=load_code_scheme("rqas/rvi/s01e05"),
                             auto_coder=None, coda_code_schemes_count=3
                         )
                     ],
@@ -179,7 +179,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     engagement_db_dataset="rvi_elections_s01e06",
                     code_scheme_configurations=[
                         CodeSchemeConfiguration(
-                            code_scheme=load_code_scheme("s01e06"),
+                            code_scheme=load_code_scheme("rqas/rvi/s01e06"),
                             auto_coder=None, coda_code_schemes_count=3
                         )
                     ],
@@ -190,7 +190,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     engagement_db_dataset="rvi_elections_s01_closeout",
                     code_scheme_configurations=[
                         CodeSchemeConfiguration(
-                            code_scheme=load_code_scheme("s01_closeout"),
+                            code_scheme=load_code_scheme("rqas/rvi/s01_closeout"),
                             auto_coder=None, coda_code_schemes_count=3)
                     ],
                     ws_code_match_value="rvi_elections_s01_closeout"
@@ -199,7 +199,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     coda_dataset_id="IMAQAL_age",
                     engagement_db_dataset="age",
                     code_scheme_configurations=[
-                        CodeSchemeConfiguration(code_scheme=load_code_scheme("age"),
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("demographics/age"),
                                                 auto_coder=lambda text: str(
                                                     somali.DemographicCleaner.clean_age_within_range(text)
                         ), coda_code_schemes_count=3),
@@ -211,7 +211,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     coda_dataset_id="IMAQAL_gender",
                     engagement_db_dataset="gender",
                     code_scheme_configurations=[
-                        CodeSchemeConfiguration(code_scheme=load_code_scheme("gender"),
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("demographics/gender"),
                                                 auto_coder=somali.DemographicCleaner.clean_gender,
                                                 coda_code_schemes_count=3)
                     ],
@@ -222,7 +222,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     coda_dataset_id="IMAQAL_household_language",
                     engagement_db_dataset="household_language",
                     code_scheme_configurations=[
-                        CodeSchemeConfiguration(code_scheme=load_code_scheme("household_language"),
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("demographics/household_language"),
                                                 auto_coder=None, coda_code_schemes_count=3)
                     ],
                     ws_code_match_value="household_language",
@@ -232,18 +232,18 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     coda_dataset_id="IMAQAL_location",
                     engagement_db_dataset="location",
                     code_scheme_configurations=[
-                        CodeSchemeConfiguration(code_scheme=load_code_scheme("mogadishu_sub_district"),
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("demographics/mogadishu_sub_district"),
                                                 auto_coder=somali.DemographicCleaner.clean_mogadishu_sub_district,
                                                 coda_code_schemes_count=1),
-                        CodeSchemeConfiguration(code_scheme=load_code_scheme("somalia_district"), auto_coder=lambda text:
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("demographics/somalia_district"), auto_coder=lambda text:
                                                 somali.DemographicCleaner.clean_somalia_district(text)
                                                 if somali.DemographicCleaner.clean_mogadishu_sub_district == Codes.NOT_CODED else Codes.NOT_CODED,
                                                 coda_code_schemes_count=1),
-                        CodeSchemeConfiguration(code_scheme=load_code_scheme("somalia_region"),
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("demographics/somalia_region"),
                                                 auto_coder=None, coda_code_schemes_count=1),
-                        CodeSchemeConfiguration(code_scheme=load_code_scheme("somalia_state"),
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("demographics/somalia_state"),
                                                 auto_coder=None, coda_code_schemes_count=1),
-                        CodeSchemeConfiguration(code_scheme=load_code_scheme("somalia_zone"),
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("demographics/somalia_zone"),
                                                 auto_coder=None, coda_code_schemes_count=1),
                     ],
                     ws_code_match_value="location",
@@ -253,7 +253,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     coda_dataset_id="IMAQAL_recently_displaced",
                     engagement_db_dataset="recently_displaced",
                     code_scheme_configurations=[
-                        CodeSchemeConfiguration(code_scheme=load_code_scheme("recently_displaced"),
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("demographics/recently_displaced"),
                                                 auto_coder=somali.DemographicCleaner.clean_yes_no,
                                                 coda_code_schemes_count=3)
                     ],
@@ -281,7 +281,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                 raw_dataset="rvi_elections_s01e01_raw",
                 coding_configs=[
                     CodingConfiguration(
-                        code_scheme=load_code_scheme("s01e01"),
+                        code_scheme=load_code_scheme("rqas/rvi/s01e01"),
                         analysis_dataset="s01e01"
                     )
                 ]
@@ -292,7 +292,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                 raw_dataset="rvi_elections_s01e02_raw",
                 coding_configs=[
                     CodingConfiguration(
-                        code_scheme=load_code_scheme("s01e02"),
+                        code_scheme=load_code_scheme("rqas/rvi/s01e02"),
                         analysis_dataset="s01e02"
                     )
                 ]
@@ -303,7 +303,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                 raw_dataset="rvi_elections_s01e03_raw",
                 coding_configs=[
                     CodingConfiguration(
-                        code_scheme=load_code_scheme("s01e03"),
+                        code_scheme=load_code_scheme("rqas/rvi/s01e03"),
                         analysis_dataset="s01e03"
                     )
                 ]
@@ -314,7 +314,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                 raw_dataset="rvi_elections_s01e04_raw",
                 coding_configs=[
                     CodingConfiguration(
-                        code_scheme=load_code_scheme("s01e04"),
+                        code_scheme=load_code_scheme("rqas/rvi/s01e04"),
                         analysis_dataset="s01e04"
                     )
                 ]
@@ -325,7 +325,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                 raw_dataset="rvi_elections_s01e05_raw",
                 coding_configs=[
                     CodingConfiguration(
-                        code_scheme=load_code_scheme("s01e05"),
+                        code_scheme=load_code_scheme("rqas/rvi/s01e05"),
                         analysis_dataset="s01e05"
                     )
                 ]
@@ -336,7 +336,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                 raw_dataset="rvi_elections_s01e06_raw",
                 coding_configs=[
                     CodingConfiguration(
-                        code_scheme=load_code_scheme("s01e06"),
+                        code_scheme=load_code_scheme("rqas/rvi/s01e06"),
                         analysis_dataset="s01e06"
                     )
                 ]
@@ -347,7 +347,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                 raw_dataset="rvi_elections_s01_closeout_raw",
                 coding_configs=[
                     CodingConfiguration(
-                        code_scheme=load_code_scheme("s01_closeout"),
+                        code_scheme=load_code_scheme("rqas/rvi/s01_closeout"),
                         analysis_dataset="s01_closeout"
                     )
                 ]
@@ -358,11 +358,11 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                 raw_dataset="age_raw",
                 coding_configs=[
                     CodingConfiguration(
-                        code_scheme=load_code_scheme("age"),
+                        code_scheme=load_code_scheme("demographics/age"),
                         analysis_dataset="age"
                     ),
                     CodingConfiguration(
-                        code_scheme=load_code_scheme("age_category"),
+                        code_scheme=load_code_scheme("demographics/age_category"),
                         analysis_dataset="age_category",
                         age_category_config=AgeCategoryConfiguration(
                             age_analysis_dataset="age",
@@ -383,7 +383,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                 raw_dataset="gender_raw",
                 coding_configs=[
                     CodingConfiguration(
-                        code_scheme=load_code_scheme("gender"),
+                        code_scheme=load_code_scheme("demographics/gender"),
                         analysis_dataset="gender"
                     )
                 ]
@@ -394,27 +394,27 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                 raw_dataset="location_raw",
                 coding_configs=[
                     CodingConfiguration(
-                        code_scheme=load_code_scheme("mogadishu_sub_district"),
+                        code_scheme=load_code_scheme("demographics/mogadishu_sub_district"),
                         analysis_dataset="mogadishu_sub_district",
                         analysis_location=AnalysisLocations.MOGADISHU_SUB_DISTRICT
                     ),
                     CodingConfiguration(
-                        code_scheme=load_code_scheme("somalia_district"),
+                        code_scheme=load_code_scheme("demographics/somalia_district"),
                         analysis_dataset="district",
                         analysis_location=AnalysisLocations.SOMALIA_DISTRICT
                     ),
                     CodingConfiguration(
-                        code_scheme=load_code_scheme("somalia_region"),
+                        code_scheme=load_code_scheme("demographics/somalia_region"),
                         analysis_dataset="region",
                         analysis_location=AnalysisLocations.SOMALIA_REGION
                     ),
                     CodingConfiguration(
-                        code_scheme=load_code_scheme("somalia_state"),
+                        code_scheme=load_code_scheme("demographics/somalia_state"),
                         analysis_dataset="state",
                         analysis_location=AnalysisLocations.SOMALIA_STATE
                     ),
                     CodingConfiguration(
-                        code_scheme=load_code_scheme("somalia_zone"),
+                        code_scheme=load_code_scheme("demographics/somalia_zone"),
                         analysis_dataset="zone",
                         analysis_location=AnalysisLocations.SOMALIA_ZONE
                     )
@@ -426,7 +426,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                 raw_dataset="recently_displaced",
                 coding_configs=[
                     CodingConfiguration(
-                        code_scheme=load_code_scheme("recently_displaced"),
+                        code_scheme=load_code_scheme("demographics/recently_displaced"),
                         analysis_dataset="recently_displaced"
                     )
                 ]

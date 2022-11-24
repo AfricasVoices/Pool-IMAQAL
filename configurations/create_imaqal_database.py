@@ -9,6 +9,9 @@ def make_rqa_coda_dataset_configs(dataset_name_prefix, coda_dataset_id_prefix, c
     This allows us to configure the highly repetitive rqa configurations very succinctly.
     Note handles rqas less than 10
     """
+    assert number_of_datasets < 10, f"`make_rqa_coda_dataset_configs` currently only supports 9 or fewer datasets " \
+                                    f"but {number_of_datasets} were requested"
+
     dataset_configs = []
     for i in range(1, number_of_datasets + 1):
         dataset_configs.append(
@@ -245,7 +248,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     coda_dataset_id="IMAQAL_age",
                     engagement_db_dataset="age",
                     code_scheme_configurations=[
-                        CodeSchemeConfiguration(code_scheme=load_code_scheme("age"), 
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("demographics/age"),
                             auto_coder=lambda text: str(somali.DemographicCleaner.clean_age_within_range(text),
                             coda_code_schemes_count=3)
                         ),
@@ -256,7 +259,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     coda_dataset_id="IMAQAL_gender",
                     engagement_db_dataset="gender",
                     code_scheme_configurations=[
-                        CodeSchemeConfiguration(code_scheme=load_code_scheme("gender"), 
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("demographics/gender"),
                                                 auto_coder=somali.DemographicCleaner.clean_gender, 
                                                 coda_code_schemes_count=3)
                     ],
@@ -266,7 +269,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     coda_dataset_id="IMAQAL_household_language",
                     engagement_db_dataset="household_language",
                     code_scheme_configurations=[
-                        CodeSchemeConfiguration(code_scheme=load_code_scheme("household_language"), 
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("demographics/household_language"),
                                                 auto_coder=None, coda_code_schemes_count=3)
                     ],
                     ws_code_match_value="household_language"
@@ -275,16 +278,16 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     coda_dataset_id="IMAQAL_location",
                     engagement_db_dataset="location",
                     code_scheme_configurations=[
-                        CodeSchemeConfiguration(code_scheme=load_code_scheme("mogadishu_sub_district"),
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("demographics/mogadishu_sub_district"),
                                                 auto_coder=somali.DemographicCleaner.clean_mogadishu_sub_district,
                                                 coda_code_schemes_count=1),
-                        CodeSchemeConfiguration(code_scheme=load_code_scheme("somalia_district"), auto_coder=lambda text:
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("demographics/somalia_district"), auto_coder=lambda text:
                                                 somali.DemographicCleaner.clean_somalia_district(text)
                                                 if somali.DemographicCleaner.clean_mogadishu_sub_district == Codes.NOT_CODED else Codes.NOT_CODED,
                                                 coda_code_schemes_count=1),
-                        CodeSchemeConfiguration(code_scheme=load_code_scheme("somalia_region"), auto_coder=None, coda_code_schemes_count=1),
-                        CodeSchemeConfiguration(code_scheme=load_code_scheme("somalia_state"), auto_coder=None, coda_code_schemes_count=1),
-                        CodeSchemeConfiguration(code_scheme=load_code_scheme("somalia_zone"), auto_coder=None, coda_code_schemes_count=1),
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("demographics/somalia_region"), auto_coder=None, coda_code_schemes_count=1),
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("demographics/somalia_state"), auto_coder=None, coda_code_schemes_count=1),
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("demographics/somalia_zone"), auto_coder=None, coda_code_schemes_count=1),
                     ],
                     ws_code_match_value="location"
                 ),
@@ -292,7 +295,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     coda_dataset_id="IMAQAL_recently_displaced",
                     engagement_db_dataset="recently_displaced",
                     code_scheme_configurations=[
-                        CodeSchemeConfiguration(code_scheme=load_code_scheme("recently_displaced"), 
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("demographics/recently_displaced"),
                                                 auto_coder=somali.DemographicCleaner.clean_yes_no,
                                                 coda_code_schemes_count=3)
                     ],
