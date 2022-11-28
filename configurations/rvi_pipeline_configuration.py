@@ -124,7 +124,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     engagement_db_dataset="rvi_elections_s01e01",
                     code_scheme_configurations=[
                         CodeSchemeConfiguration(
-                            code_scheme=load_code_scheme("rqas/rvi/s01e01"),
+                            code_scheme=load_code_scheme("rqas/rvi_elections/s01e01"),
                             auto_coder=None, coda_code_schemes_count=3
                         )
                     ],
@@ -135,7 +135,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     engagement_db_dataset="rvi_elections_s01e02",
                     code_scheme_configurations=[
                         CodeSchemeConfiguration(
-                            code_scheme=load_code_scheme("rqas/rvi/s01e02"),
+                            code_scheme=load_code_scheme("rqas/rvi_elections/s01e02"),
                             auto_coder=None, coda_code_schemes_count=3
                         )
                     ],
@@ -146,7 +146,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     engagement_db_dataset="rvi_elections_s01e03",
                     code_scheme_configurations=[
                         CodeSchemeConfiguration(
-                            code_scheme=load_code_scheme("rqas/rvi/s01e03"),
+                            code_scheme=load_code_scheme("rqas/rvi_elections/s01e03"),
                             auto_coder=None, coda_code_schemes_count=3
                         )
                     ],
@@ -157,7 +157,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     engagement_db_dataset="rvi_elections_s01e04",
                     code_scheme_configurations=[
                         CodeSchemeConfiguration(
-                            code_scheme=load_code_scheme("rqas/rvi/s01e04"),
+                            code_scheme=load_code_scheme("rqas/rvi_elections/s01e04"),
                             auto_coder=None, coda_code_schemes_count=3
                         )
                     ],
@@ -168,7 +168,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     engagement_db_dataset="rvi_elections_s01e05",
                     code_scheme_configurations=[
                         CodeSchemeConfiguration(
-                            code_scheme=load_code_scheme("rqas/rvi/s01e05"),
+                            code_scheme=load_code_scheme("rqas/rvi_elections/s01e05"),
                             auto_coder=None, coda_code_schemes_count=3
                         )
                     ],
@@ -179,7 +179,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     engagement_db_dataset="rvi_elections_s01e06",
                     code_scheme_configurations=[
                         CodeSchemeConfiguration(
-                            code_scheme=load_code_scheme("rqas/rvi/s01e06"),
+                            code_scheme=load_code_scheme("rqas/rvi_elections/s01e06"),
                             auto_coder=None, coda_code_schemes_count=3
                         )
                     ],
@@ -190,7 +190,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     engagement_db_dataset="rvi_elections_s01_closeout",
                     code_scheme_configurations=[
                         CodeSchemeConfiguration(
-                            code_scheme=load_code_scheme("rqas/rvi/s01_closeout"),
+                            code_scheme=load_code_scheme("rqas/rvi_elections/s01_closeout"),
                             auto_coder=None, coda_code_schemes_count=3)
                     ],
                     ws_code_match_value="rvi_elections_s01_closeout"
@@ -281,7 +281,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                 raw_dataset="rvi_elections_s01e01_raw",
                 coding_configs=[
                     CodingConfiguration(
-                        code_scheme=load_code_scheme("rqas/rvi/s01e01"),
+                        code_scheme=load_code_scheme("rqas/rvi_elections/s01e01"),
                         analysis_dataset="s01e01"
                     )
                 ]
@@ -292,7 +292,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                 raw_dataset="rvi_elections_s01e02_raw",
                 coding_configs=[
                     CodingConfiguration(
-                        code_scheme=load_code_scheme("rqas/rvi/s01e02"),
+                        code_scheme=load_code_scheme("rqas/rvi_elections/s01e02"),
                         analysis_dataset="s01e02"
                     )
                 ]
@@ -303,7 +303,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                 raw_dataset="rvi_elections_s01e03_raw",
                 coding_configs=[
                     CodingConfiguration(
-                        code_scheme=load_code_scheme("rqas/rvi/s01e03"),
+                        code_scheme=load_code_scheme("rqas/rvi_elections/s01e03"),
                         analysis_dataset="s01e03"
                     )
                 ]
@@ -314,7 +314,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                 raw_dataset="rvi_elections_s01e04_raw",
                 coding_configs=[
                     CodingConfiguration(
-                        code_scheme=load_code_scheme("rqas/rvi/s01e04"),
+                        code_scheme=load_code_scheme("rqas/rvi_elections/s01e04"),
                         analysis_dataset="s01e04"
                     )
                 ]
@@ -325,7 +325,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                 raw_dataset="rvi_elections_s01e05_raw",
                 coding_configs=[
                     CodingConfiguration(
-                        code_scheme=load_code_scheme("rqas/rvi/s01e05"),
+                        code_scheme=load_code_scheme("rqas/rvi_elections/s01e05"),
                         analysis_dataset="s01e05"
                     )
                 ]
@@ -336,7 +336,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                 raw_dataset="rvi_elections_s01e06_raw",
                 coding_configs=[
                     CodingConfiguration(
-                        code_scheme=load_code_scheme("rqas/rvi/s01e06"),
+                        code_scheme=load_code_scheme("rqas/rvi_elections/s01e06"),
                         analysis_dataset="s01e06"
                     )
                 ]
@@ -347,7 +347,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                 raw_dataset="rvi_elections_s01_closeout_raw",
                 coding_configs=[
                     CodingConfiguration(
-                        code_scheme=load_code_scheme("rqas/rvi/s01_closeout"),
+                        code_scheme=load_code_scheme("rqas/rvi_elections/s01_closeout"),
                         analysis_dataset="s01_closeout"
                     )
                 ]
