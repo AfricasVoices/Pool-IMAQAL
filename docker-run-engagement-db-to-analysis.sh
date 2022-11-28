@@ -6,6 +6,9 @@ IMAGE_NAME="$(<configurations/docker_image_name.txt)"
 
 while [[ $# -gt 0 ]]; do
     case "$1" in
+        --dry-run)
+            DRY_RUN="--dry-run"
+            shift;;
         --incremental-cache-volume)
             INCREMENTAL_ARG="--incremental-cache-path /cache"
             INCREMENTAL_CACHE_VOLUME_NAME="$2"
@@ -21,7 +24,7 @@ done
 # Check that the correct number of arguments were provided.
 if [[ $# -ne 5 ]]; then
     echo "Usage: $0 
-    [--incremental-cache-volume <incremental-cache-volume>] 
+    [--dry-run] [--incremental-cache-volume <incremental-cache-volume>]
     <user> <google-cloud-credentials-file-path> <configuration-file> <code-schemes-dir> <data-dir>"
     exit
 fi
@@ -33,7 +36,7 @@ CONFIGURATION_FILE=$3
 CODE_SCHEMES_DIR=$4
 DATA_DIR=$5
 
-CMD="pipenv run python -u engagement_db_to_analysis.py ${INCREMENTAL_ARG} ${USER} \
+CMD="pipenv run python -u engagement_db_to_analysis.py ${DRY_RUN} ${INCREMENTAL_ARG} ${USER} \
     /credentials/google-cloud-credentials.json configuration /data/membership-groups /data/analysis-outputs"
 
 if [[ "$INCREMENTAL_ARG" ]]; then
