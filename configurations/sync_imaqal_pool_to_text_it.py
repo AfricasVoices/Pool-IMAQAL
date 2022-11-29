@@ -2,8 +2,8 @@ from src.pipeline_configuration_spec import *
 
 
 PIPELINE_CONFIGURATION = PipelineConfiguration(
-    pipeline_name="IMAQAL-Demographics-To-TextIt",
-    description="Syncs the latest demographics and consent data from the IMAQAL pool to TextIt",
+    pipeline_name="IMAQAL-Pool-To-Text-It",
+    description="Syncs the latest demographics and consent data from the IMAQAL pool to Text It",
     engagement_database=EngagementDatabaseClientConfiguration(
         credentials_file_url="gs://avf-credentials/avf-engagement-databases-firebase-credentials-file.json",
         # Sync back to IMAQAL-2 for now because the current IMAQAL pool has duplicated CSV messages that need
