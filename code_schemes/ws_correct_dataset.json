@@ -4,6 +4,17 @@
     "Version": "0.0.0.2",
     "Codes": [
         {
+            "CodeID": "code-75919a37",
+            "CodeType": "Normal",
+            "DisplayText": "worldbank-scd s01e01",
+            "StringValue": "worldbank_scd_s01e01",
+            "NumericValue": 129,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "worldbank_scd_s01e01"
+            ]
+        },
+        {
             "CodeID": "code-70ac05ab",
             "CodeType": "Normal",
             "DisplayText": "age",
@@ -56,6 +67,17 @@
             "VisibleInCoda": true,
             "MatchValues": [
                 "household_language"
+            ]
+        },
+        {
+            "CodeID": "code-c4a296a9",
+            "CodeType": "Normal",
+            "DisplayText": "disability",
+            "StringValue": "disability",
+            "NumericValue": 130,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "disability"
             ]
         },
         {
