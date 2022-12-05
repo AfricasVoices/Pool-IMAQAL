@@ -58,8 +58,6 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     engagement_db_dataset="worldbank_scd_s01e01",
                     code_scheme_configurations=[
                         CodeSchemeConfiguration(code_scheme=load_code_scheme("rqas/worldbank_scd/s01e01"),
-                                                auto_coder=lambda text: str(
-                                                    somali.DemographicCleaner.clean_age_within_range(text)),
                                                 coda_code_schemes_count=3
                                                 ),
                     ],
