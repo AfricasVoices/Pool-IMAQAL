@@ -1,1 +1,1 @@
-ghcr.io/africasvoices/engagement-data-pipeline:handle-duplicate-scheme-ids
+ghcr.io/africasvoices/engagement-data-pipeline:v3.1.0
