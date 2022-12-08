@@ -3,7 +3,142 @@
     "Name": "WorldBank-SCD S01E01",
     "Version": "0.0.0.1",
     "Codes": [
-
+        {
+          "CodeID": "code-efcbd99d",
+          "CodeType": "Normal",
+          "DisplayText": "education",
+          "NumericValue": 1,
+          "StringValue": "education",
+          "VisibleInCoda": true
+        },
+        {
+          "CodeID": "code-6c8a9024",
+          "CodeType": "Normal",
+          "DisplayText": "peace & security",
+          "NumericValue": 2,
+          "StringValue": "peace_and_security",
+          "VisibleInCoda": true
+        },
+        {
+          "CodeID": "code-520f00b8",
+          "CodeType": "Normal",
+          "DisplayText": "support for agriculture",
+          "NumericValue": 3,
+          "StringValue": "support_for_agriculture",
+          "VisibleInCoda": true
+        },
+        {
+          "CodeID": "code-9abb1362",
+          "CodeType": "Normal",
+          "DisplayText": "health",
+          "NumericValue": 4,
+          "StringValue": "health",
+          "VisibleInCoda": true
+        },
+        {
+          "CodeID": "code-3951d9fc",
+          "CodeType": "Normal",
+          "DisplayText": "job creation",
+          "NumericValue": 5,
+          "StringValue": "job_creation",
+          "VisibleInCoda": true
+        },
+        {
+          "CodeID": "code-9ee7f7f2",
+          "CodeType": "Normal",
+          "DisplayText": "justice",
+          "NumericValue": 6,
+          "StringValue": "justice",
+          "VisibleInCoda": true
+        },
+        {
+          "CodeID": "code-8e9ecf5b",
+          "CodeType": "Normal",
+          "DisplayText": "boost economic growth",
+          "NumericValue": 7,
+          "StringValue": "boost_economic_growth",
+          "VisibleInCoda": true
+        },
+        {
+          "CodeID": "code-de32f663",
+          "CodeType": "Normal",
+          "DisplayText": "eradicating corruption",
+          "NumericValue": 8,
+          "StringValue": "eradicating_corruption",
+          "VisibleInCoda": true
+        },
+        {
+          "CodeID": "code-b4c59d29",
+          "CodeType": "Normal",
+          "DisplayText": "eliminate clannism",
+          "NumericValue": 9,
+          "StringValue": "eliminate_clannism",
+          "VisibleInCoda": true
+        },
+        {
+          "CodeID": "code-0f95744d",
+          "CodeType": "Normal",
+          "DisplayText": "building resilience against droughts",
+          "NumericValue": 10,
+          "StringValue": "building_resilience_against_droughts",
+          "VisibleInCoda": true
+        },
+        {
+          "CodeID": "code-2d9ba4d9",
+          "CodeType": "Normal",
+          "DisplayText": "community collaboration",
+          "NumericValue": 11,
+          "StringValue": "community_collaboration",
+          "VisibleInCoda": true
+        },
+        {
+          "CodeID": "code-d48625d0",
+          "CodeType": "Normal",
+          "DisplayText": "adherence to religion",
+          "NumericValue": 12,
+          "StringValue": "adherence_to_religion",
+          "VisibleInCoda": true
+        },
+        {
+          "CodeID": "code-76cf450d",
+          "CodeType": "Normal",
+          "DisplayText": "better governance",
+          "NumericValue": 13,
+          "StringValue": "better_governance",
+          "VisibleInCoda": true
+        },
+        {
+          "CodeID": "code-65543bb4",
+          "CodeType": "Normal",
+          "DisplayText": "hygiene",
+          "NumericValue": 14,
+          "StringValue": "hygiene",
+          "VisibleInCoda": true
+        },
+        {
+          "CodeID": "code-b159f8ef",
+          "CodeType": "Normal",
+          "DisplayText": "food & water",
+          "NumericValue": 15,
+          "StringValue": "food_and_water",
+          "VisibleInCoda": true
+        },
+        {
+          "CodeID": "code-c2f5bebb",
+          "CodeType": "Normal",
+          "DisplayText": "genuine accountability",
+          "NumericValue": 16,
+          "StringValue": "genuine_accountability",
+          "VisibleInCoda": true
+        },
+        {
+          "CodeID": "code-3c54af60",
+          "CodeType": "Normal",
+          "DisplayText": "other theme",
+          "NumericValue": 17,
+          "StringValue": "other_theme",
+          "VisibleInCoda": true
+        },
         {
             "CodeID": "code-NA-f93d3eb7",
             "CodeType": "Control",
