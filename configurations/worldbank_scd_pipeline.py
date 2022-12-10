@@ -14,7 +14,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
         "avf-participant-uuid-96ff0ba1-a7df-4715-84c5-9c90e9093eb4"
     ],
     engagement_database=EngagementDatabaseClientConfiguration(
-        credentials_file_url="gs://avf-credentials/firebase-test.json",
+        credentials_file_url="gs://avf-credentials/avf-engagement-databases-firebase-credentials-file.json",
         # Sync back to IMAQAL-2 for now because the current IMAQAL pool has duplicated CSV messages that need
         # understanding.
         # TODO: Overwrite the IMAQAL pool with the current IMAQAL-2 pool and change this ref to use that IMAQAL
@@ -51,8 +51,8 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     FlowResultConfiguration("worldbank_scd_s01e01_follow_up_1_ad", "worldbank_scd_s01e01_follow_up_1", "worldbank_scd_s01e01_follow_up_1"),
                     FlowResultConfiguration("worldbank_scd_s01e01_follow_up_1_activation", "worldbank_scd_s01e01_follow_up_1", "worldbank_scd_s01e01_follow_up_1"),
 
-                    FlowResultConfiguration("worldbank_scd_s01e01_follow_up_2_ad", "worldbank_scd_s01e01_follow_up_2", "worldbank_scd_s01e01_follow_up_2"),
-                    FlowResultConfiguration("worldbank_scd_s01e01_follow_up_2_activation", "worldbank_scd_s01e01_follow_up_2", "worldbank_scd_s01e01_follow_up_2"),
+                    # FlowResultConfiguration("worldbank_scd_s01e01_follow_up_2_ad", "worldbank_scd_s01e01_follow_up_2", "worldbank_scd_s01e01_follow_up_2"),
+                    # FlowResultConfiguration("worldbank_scd_s01e01_follow_up_2_activation", "worldbank_scd_s01e01_follow_up_2", "worldbank_scd_s01e01_follow_up_2"),
                 ]
             )
         )
