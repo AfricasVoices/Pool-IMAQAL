@@ -14,7 +14,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
         "avf-participant-uuid-96ff0ba1-a7df-4715-84c5-9c90e9093eb4"
     ],
     engagement_database=EngagementDatabaseClientConfiguration(
-        credentials_file_url="gs://avf-credentials/avf-engagement-databases-firebase-credentials-file.json",
+        credentials_file_url="gs://avf-credentials/firebase-test.json",
         # Sync back to IMAQAL-2 for now because the current IMAQAL pool has duplicated CSV messages that need
         # understanding.
         # TODO: Overwrite the IMAQAL pool with the current IMAQAL-2 pool and change this ref to use that IMAQAL
@@ -45,6 +45,14 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     FlowResultConfiguration("worldbank_scd_demog", "imaqal_pool_disability", "disability"),
 
                     FlowResultConfiguration("worldbank_scd_s01e01_activation", "worldbank_scd_s01e01", "worldbank_scd_s01e01"),
+
+                    # We captured the follow-up in 2 places, so we can send a thank-you reply the first time we hear
+                    # from someone, while silently collecting any future messages we get later.
+                    FlowResultConfiguration("worldbank_scd_s01e01_follow_up_1_ad", "worldbank_scd_s01e01_follow_up_1", "worldbank_scd_s01e01_follow_up_1"),
+                    FlowResultConfiguration("worldbank_scd_s01e01_follow_up_1_activation", "worldbank_scd_s01e01_follow_up_1", "worldbank_scd_s01e01_follow_up_1"),
+
+                    FlowResultConfiguration("worldbank_scd_s01e01_follow_up_2_ad", "worldbank_scd_s01e01_follow_up_2", "worldbank_scd_s01e01_follow_up_2"),
+                    FlowResultConfiguration("worldbank_scd_s01e01_follow_up_2_activation", "worldbank_scd_s01e01_follow_up_2", "worldbank_scd_s01e01_follow_up_2"),
                 ]
             )
         )
@@ -62,6 +70,26 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                                                 ),
                     ],
                     ws_code_match_value="worldbank_scd_s01e01"
+                ),
+                CodaDatasetConfiguration(
+                    coda_dataset_id="WorldBank_SCD_s01e01_follow_up_1",
+                    engagement_db_dataset="worldbank_scd_s01e01_follow_up_1",
+                    code_scheme_configurations=[
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("rqas/worldbank_scd/s01e01_follow_up_1"),
+                                                coda_code_schemes_count=3
+                                                ),
+                    ],
+                    ws_code_match_value="worldbank_scd_s01e01_follow_up_1"
+                ),
+                CodaDatasetConfiguration(
+                    coda_dataset_id="WorldBank_SCD_s01e01_follow_up_2",
+                    engagement_db_dataset="worldbank_scd_s01e01_follow_up_2",
+                    code_scheme_configurations=[
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("rqas/worldbank_scd/s01e01_follow_up_2"),
+                                                coda_code_schemes_count=3
+                                                ),
+                    ],
+                    ws_code_match_value="worldbank_scd_s01e01_follow_up_2"
                 ),
                 CodaDatasetConfiguration(
                     coda_dataset_id="IMAQAL_age",
@@ -148,11 +176,33 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
             AnalysisDatasetConfiguration(
                 engagement_db_datasets=["worldbank_scd_s01e01"],
                 dataset_type=DatasetTypes.RESEARCH_QUESTION_ANSWER,
-                raw_dataset="worldbank_scd_s01e01_raw",
+                raw_dataset="s01e01_raw",
                 coding_configs=[
                     CodingConfiguration(
                         code_scheme=load_code_scheme("rqas/worldbank_scd/s01e01"),
                         analysis_dataset="s01e01"
+                    )
+                ]
+            ),
+            AnalysisDatasetConfiguration(
+                engagement_db_datasets=["worldbank_scd_s01e01_follow_up_1"],
+                dataset_type=DatasetTypes.RESEARCH_QUESTION_ANSWER,
+                raw_dataset="s01e01_follow_up_1_raw",
+                coding_configs=[
+                    CodingConfiguration(
+                        code_scheme=load_code_scheme("rqas/worldbank_scd/s01e01_follow_up_1"),
+                        analysis_dataset="s01e01_follow_up_1"
+                    )
+                ]
+            ),
+            AnalysisDatasetConfiguration(
+                engagement_db_datasets=["worldbank_scd_s01e01_follow_up_2"],
+                dataset_type=DatasetTypes.RESEARCH_QUESTION_ANSWER,
+                raw_dataset="s01e01_follow_up_2_raw",
+                coding_configs=[
+                    CodingConfiguration(
+                        code_scheme=load_code_scheme("rqas/worldbank_scd/s01e01_follow_up_2"),
+                        analysis_dataset="s01e01_follow_up_2"
                     )
                 ]
             ),
