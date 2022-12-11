@@ -46,13 +46,13 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
 
                     FlowResultConfiguration("worldbank_scd_s01e01_activation", "worldbank_scd_s01e01", "worldbank_scd_s01e01"),
 
-                    # We captured the follow-up in 2 places, so we can send a thank-you reply the first time we hear
+                    # We captured the follow-ups in 2 places, so we can send a thank-you reply the first time we hear
                     # from someone, while silently collecting any future messages we get later.
                     FlowResultConfiguration("worldbank_scd_s01e01_follow_up_1_ad", "worldbank_scd_s01e01_follow_up_1", "worldbank_scd_s01e01_follow_up_1"),
                     FlowResultConfiguration("worldbank_scd_s01e01_follow_up_1_activation", "worldbank_scd_s01e01_follow_up_1", "worldbank_scd_s01e01_follow_up_1"),
 
-                    # FlowResultConfiguration("worldbank_scd_s01e01_follow_up_2_ad", "worldbank_scd_s01e01_follow_up_2", "worldbank_scd_s01e01_follow_up_2"),
-                    # FlowResultConfiguration("worldbank_scd_s01e01_follow_up_2_activation", "worldbank_scd_s01e01_follow_up_2", "worldbank_scd_s01e01_follow_up_2"),
+                    FlowResultConfiguration("worldbank_scd_s01e01_follow_up_2_ad", "worldbank_scd_s01e01_follow_up_2", "worldbank_scd_s01e01_follow_up_2"),
+                    FlowResultConfiguration("worldbank_scd_s01e01_follow_up_2_activation", "worldbank_scd_s01e01_follow_up_2", "worldbank_scd_s01e01_follow_up_2"),
                 ]
             )
         )
