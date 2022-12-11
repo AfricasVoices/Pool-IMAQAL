@@ -4,100 +4,100 @@
     "Version": "0.0.0.1",
     "Codes": [
         {
-          "CodeID": "code-a29899b5",
-          "CodeType": "Normal",
-          "DisplayText": "insecurity & civil conflict",
-          "NumericValue": 1,
-          "StringValue": "insecurity_and_civil_conflict",
-          "VisibleInCoda": true
+            "CodeID": "code-a29899b5",
+            "CodeType": "Normal",
+            "DisplayText": "insecurity & civil conflict",
+            "NumericValue": 1,
+            "StringValue": "insecurity_and_civil_conflict",
+            "VisibleInCoda": true
         },
         {
-          "CodeID": "code-6dae871e",
-          "CodeType": "Normal",
-          "DisplayText": "bad governance",
-          "NumericValue": 2,
-          "StringValue": "bad_governance",
-          "VisibleInCoda": true
+            "CodeID": "code-6dae871e",
+            "CodeType": "Normal",
+            "DisplayText": "bad governance",
+            "NumericValue": 2,
+            "StringValue": "bad_governance",
+            "VisibleInCoda": true
         },
         {
-          "CodeID": "code-6440281d",
-          "CodeType": "Normal",
-          "DisplayText": "droughts",
-          "NumericValue": 3,
-          "StringValue": "droughts",
-          "VisibleInCoda": true
+            "CodeID": "code-6440281d",
+            "CodeType": "Normal",
+            "DisplayText": "droughts",
+            "NumericValue": 3,
+            "StringValue": "droughts",
+            "VisibleInCoda": true
         },
         {
-          "CodeID": "code-47b1b27d",
-          "CodeType": "Normal",
-          "DisplayText": "corruption",
-          "NumericValue": 4,
-          "StringValue": "corruption",
-          "VisibleInCoda": true
+            "CodeID": "code-47b1b27d",
+            "CodeType": "Normal",
+            "DisplayText": "corruption",
+            "NumericValue": 4,
+            "StringValue": "corruption",
+            "VisibleInCoda": true
         },
         {
-          "CodeID": "code-beb1a71c",
-          "CodeType": "Normal",
-          "DisplayText": "lack of accountability",
-          "NumericValue": 5,
-          "StringValue": "lack_of_accountability",
-          "VisibleInCoda": true
+            "CodeID": "code-beb1a71c",
+            "CodeType": "Normal",
+            "DisplayText": "lack of accountability",
+            "NumericValue": 5,
+            "StringValue": "lack_of_accountability",
+            "VisibleInCoda": true
         },
         {
-          "CodeID": "code-069f97dc",
-          "CodeType": "Normal",
-          "DisplayText": "lack of education",
-          "NumericValue": 6,
-          "StringValue": "lack_of_education",
-          "VisibleInCoda": true
+            "CodeID": "code-069f97dc",
+            "CodeType": "Normal",
+            "DisplayText": "lack of education",
+            "NumericValue": 6,
+            "StringValue": "lack_of_education",
+            "VisibleInCoda": true
         },
         {
-          "CodeID": "code-bf4a04c7",
-          "CodeType": "Normal",
-          "DisplayText": "clannism",
-          "NumericValue": 7,
-          "StringValue": "clannism",
-          "VisibleInCoda": true
+            "CodeID": "code-bf4a04c7",
+            "CodeType": "Normal",
+            "DisplayText": "clannism",
+            "NumericValue": 7,
+            "StringValue": "clannism",
+            "VisibleInCoda": true
         },
         {
-          "CodeID": "code-b9932462",
-          "CodeType": "Normal",
-          "DisplayText": "poor economic conditions",
-          "NumericValue": 8,
-          "StringValue": "poor_economic_conditions",
-          "VisibleInCoda": true
+            "CodeID": "code-b9932462",
+            "CodeType": "Normal",
+            "DisplayText": "poor economic conditions",
+            "NumericValue": 8,
+            "StringValue": "poor_economic_conditions",
+            "VisibleInCoda": true
         },
         {
-          "CodeID": "code-d9c6a6d0",
-          "CodeType": "Normal",
-          "DisplayText": "foreign aid & interference",
-          "NumericValue": 9,
-          "StringValue": "foreign_aid_and_interference",
-          "VisibleInCoda": true
+            "CodeID": "code-d9c6a6d0",
+            "CodeType": "Normal",
+            "DisplayText": "foreign aid & interference",
+            "NumericValue": 9,
+            "StringValue": "foreign_aid_and_interference",
+            "VisibleInCoda": true
         },
         {
-          "CodeID": "code-2f6f7efd",
-          "CodeType": "Normal",
-          "DisplayText": "unemployment",
-          "NumericValue": 10,
-          "StringValue": "unemployment",
-          "VisibleInCoda": true
+            "CodeID": "code-2f6f7efd",
+            "CodeType": "Normal",
+            "DisplayText": "unemployment",
+            "NumericValue": 10,
+            "StringValue": "unemployment",
+            "VisibleInCoda": true
         },
         {
-          "CodeID": "code-72638344",
-          "CodeType": "Normal",
-          "DisplayText": "lack of justice",
-          "NumericValue": 11,
-          "StringValue": "lack_of_justice",
-          "VisibleInCoda": true
+            "CodeID": "code-72638344",
+            "CodeType": "Normal",
+            "DisplayText": "lack of justice",
+            "NumericValue": 11,
+            "StringValue": "lack_of_justice",
+            "VisibleInCoda": true
         },
         {
-          "CodeID": "code-0a0a1517",
-          "CodeType": "Normal",
-          "DisplayText": "other theme",
-          "NumericValue": 12,
-          "StringValue": "other_theme",
-          "VisibleInCoda": true
+            "CodeID": "code-0a0a1517",
+            "CodeType": "Normal",
+            "DisplayText": "other theme",
+            "NumericValue": 12,
+            "StringValue": "other_theme",
+            "VisibleInCoda": true
         },
         {
             "CodeID": "code-NA-f93d3eb7",
