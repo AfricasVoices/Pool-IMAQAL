@@ -37,6 +37,40 @@
             ]
         },
         {
+            "CodeID": "code-3f0e4b3d",
+            "CodeType": "Normal",
+            "DisplayText": "worldbank-scd s01 have voice",
+            "StringValue": "worldbank_scd_s01_have_voice",
+            "NumericValue": 133,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "worldbank_scd_s01_have_voice"
+            ]
+        },
+        {
+            "CodeID": "code-3d391d66",
+            "CodeType": "Normal",
+            "DisplayText": "worldbank-scd s01 suggestions",
+            "StringValue": "worldbank_scd_s01_suggestions",
+            "NumericValue": 134,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "worldbank_scd_s01_suggestions"
+            ]
+        },
+        {
+            "CodeID": "code-5b225c6d",
+            "CodeType": "Normal",
+            "DisplayText": "worldbank-scd s01 evaluation",
+            "StringValue": "worldbank_scd_s01_evaluation",
+            "NumericValue": 135,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "worldbank_scd_s01_evaluation"
+            ]
+        },
+
+        {
             "CodeID": "code-70ac05ab",
             "CodeType": "Normal",
             "DisplayText": "age",
