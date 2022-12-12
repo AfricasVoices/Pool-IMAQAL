@@ -102,7 +102,8 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     engagement_db_dataset="worldbank_scd_s01_have_voice",
                     code_scheme_configurations=[
                         CodeSchemeConfiguration(code_scheme=load_code_scheme("rqas/worldbank_scd/s01_have_voice"),
-                                                coda_code_schemes_count=3
+                                                coda_code_schemes_count=3,
+                                                auto_coder=somali.DemographicCleaner.clean_yes_no
                                                 ),
                     ],
                     ws_code_match_value="worldbank_scd_s01_have_voice"
