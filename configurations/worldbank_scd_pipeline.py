@@ -53,6 +53,10 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
 
                     FlowResultConfiguration("worldbank_scd_s01e01_follow_up_2_ad", "worldbank_scd_s01e01_follow_up_2", "worldbank_scd_s01e01_follow_up_2"),
                     FlowResultConfiguration("worldbank_scd_s01e01_follow_up_2_activation", "worldbank_scd_s01e01_follow_up_2", "worldbank_scd_s01e01_follow_up_2"),
+
+                    FlowResultConfiguration("worldbank_scd_s01_evaluation", "worldbank_scd_s01_have_voice", "worldbank_scd_s01_have_voice"),
+                    FlowResultConfiguration("worldbank_scd_s01_evaluation", "worldbank_scd_s01_suggestions", "worldbank_scd_s01_suggestions"),
+                    FlowResultConfiguration("worldbank_scd_s01_evaluation_activation", "worldbank_scd_s01_evaluation", "worldbank_scd_s01_evaluation"),
                 ]
             )
         )
