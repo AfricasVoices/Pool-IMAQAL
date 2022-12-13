@@ -54,6 +54,8 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     FlowResultConfiguration("worldbank_scd_s01e01_follow_up_2_ad", "worldbank_scd_s01e01_follow_up_2", "worldbank_scd_s01e01_follow_up_2"),
                     FlowResultConfiguration("worldbank_scd_s01e01_follow_up_2_activation", "worldbank_scd_s01e01_follow_up_2", "worldbank_scd_s01e01_follow_up_2"),
 
+                    # Evaluation asked and captured 2 questions (have voice & suggestions).
+                    # We captured any other messages sent during this period into the evaluation_activation flow.
                     FlowResultConfiguration("worldbank_scd_s01_evaluation", "worldbank_scd_s01_have_voice", "worldbank_scd_s01_have_voice"),
                     FlowResultConfiguration("worldbank_scd_s01_evaluation", "worldbank_scd_s01_suggestions", "worldbank_scd_s01_suggestions"),
                     FlowResultConfiguration("worldbank_scd_s01_evaluation_activation", "worldbank_scd_s01_evaluation", "worldbank_scd_s01_evaluation"),
@@ -94,6 +96,37 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                                                 ),
                     ],
                     ws_code_match_value="worldbank_scd_s01e01_follow_up_2"
+                ),
+                CodaDatasetConfiguration(
+                    coda_dataset_id="WorldBank_SCD_s01_have_voice",
+                    engagement_db_dataset="worldbank_scd_s01_have_voice",
+                    code_scheme_configurations=[
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("rqas/worldbank_scd/s01_have_voice"),
+                                                coda_code_schemes_count=3,
+                                                auto_coder=somali.DemographicCleaner.clean_yes_no
+                                                ),
+                    ],
+                    ws_code_match_value="worldbank_scd_s01_have_voice"
+                ),
+                CodaDatasetConfiguration(
+                    coda_dataset_id="WorldBank_SCD_s01_suggestions",
+                    engagement_db_dataset="worldbank_scd_s01_suggestions",
+                    code_scheme_configurations=[
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("rqas/worldbank_scd/s01_suggestions"),
+                                                coda_code_schemes_count=3
+                                                ),
+                    ],
+                    ws_code_match_value="worldbank_scd_s01_suggestions"
+                ),
+                CodaDatasetConfiguration(
+                    coda_dataset_id="WorldBank_SCD_s01_evaluation",
+                    engagement_db_dataset="worldbank_scd_s01_evaluation",
+                    code_scheme_configurations=[
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("rqas/worldbank_scd/s01_evaluation"),
+                                                coda_code_schemes_count=3
+                                                ),
+                    ],
+                    ws_code_match_value="worldbank_scd_s01_evaluation"
                 ),
                 CodaDatasetConfiguration(
                     coda_dataset_id="IMAQAL_age",
@@ -207,6 +240,39 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     CodingConfiguration(
                         code_scheme=load_code_scheme("rqas/worldbank_scd/s01e01_follow_up_2"),
                         analysis_dataset="s01e01_follow_up_2"
+                    )
+                ]
+            ),
+            AnalysisDatasetConfiguration(
+                engagement_db_datasets=["worldbank_scd_s01_have_voice"],
+                dataset_type=DatasetTypes.RESEARCH_QUESTION_ANSWER,
+                raw_dataset="s01_have_voice_raw",
+                coding_configs=[
+                    CodingConfiguration(
+                        code_scheme=load_code_scheme("rqas/worldbank_scd/s01_have_voice"),
+                        analysis_dataset="s01_have_voice"
+                    )
+                ]
+            ),
+            AnalysisDatasetConfiguration(
+                engagement_db_datasets=["worldbank_scd_s01_suggestions"],
+                dataset_type=DatasetTypes.RESEARCH_QUESTION_ANSWER,
+                raw_dataset="s01_suggestions_raw",
+                coding_configs=[
+                    CodingConfiguration(
+                        code_scheme=load_code_scheme("rqas/worldbank_scd/s01_suggestions"),
+                        analysis_dataset="s01_suggestions"
+                    )
+                ]
+            ),
+            AnalysisDatasetConfiguration(
+                engagement_db_datasets=["worldbank_scd_s01_evaluation"],
+                dataset_type=DatasetTypes.RESEARCH_QUESTION_ANSWER,
+                raw_dataset="s01_evaluation_raw",
+                coding_configs=[
+                    CodingConfiguration(
+                        code_scheme=load_code_scheme("rqas/worldbank_scd/s01_evaluation"),
+                        analysis_dataset="s01_evaluation"
                     )
                 ]
             ),
