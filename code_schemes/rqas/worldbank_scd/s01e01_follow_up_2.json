@@ -3,7 +3,86 @@
     "Name": "WorldBank-SCD S01E01 Follow-Up 2",
     "Version": "0.0.0.1",
     "Codes": [
-
+        {
+            "CodeID": "code-9187a2dd",
+            "CodeType": "Normal",
+            "DisplayText": "national government",
+            "NumericValue": 1,
+            "StringValue": "national_government",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-ea31e8d0",
+            "CodeType": "Normal",
+            "DisplayText": "the president",
+            "NumericValue": 2,
+            "StringValue": "the_president",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-318e7483",
+            "CodeType": "Normal",
+            "DisplayText": "religious leaders",
+            "NumericValue": 3,
+            "StringValue": "religious_leaders",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-65c1209a",
+            "CodeType": "Normal",
+            "DisplayText": "traditional leaders",
+            "NumericValue": 4,
+            "StringValue": "traditional_leaders",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-ddba7003",
+            "CodeType": "Normal",
+            "DisplayText": "the community",
+            "NumericValue": 5,
+            "StringValue": "the_community",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-f896d775",
+            "CodeType": "Normal",
+            "DisplayText": "educated people",
+            "NumericValue": 6,
+            "StringValue": "educated_people",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-2fea587f",
+            "CodeType": "Normal",
+            "DisplayText": "civil society organisations",
+            "NumericValue": 7,
+            "StringValue": "civil_society_organisations",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-7e0203a3",
+            "CodeType": "Normal",
+            "DisplayText": "youth",
+            "NumericValue": 8,
+            "StringValue": "youth",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-9c4b6495",
+            "CodeType": "Normal",
+            "DisplayText": "the parliament",
+            "NumericValue": 9,
+            "StringValue": "the_parliament",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-33eea878",
+            "CodeType": "Normal",
+            "DisplayText": "other theme",
+            "NumericValue": 10,
+            "StringValue": "other_theme",
+            "VisibleInCoda": true
+        },
         {
             "CodeID": "code-NA-f93d3eb7",
             "CodeType": "Control",
