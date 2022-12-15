@@ -202,6 +202,71 @@
       "NumericValue": -100070,
       "StringValue": "exclusion_complaint",
       "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-E-720cdb66",
+      "CodeType": "Meta",
+      "MetaCode": "escalate",
+      "DisplayText": "meta: ESCALATE",
+      "NumericValue": -100080,
+      "StringValue": "escalate",
+      "VisibleInCoda": true,
+      "Shortcut": "e"
+    },
+    {
+      "CodeID": "code-S-461bfcdf",
+      "CodeType": "Meta",
+      "MetaCode": "statement",
+      "DisplayText": "meta: statement",
+      "NumericValue": -100090,
+      "StringValue": "statement",
+      "VisibleInCoda": true,
+      "Shortcut": "s"
+    },
+    {
+      "MetaCode": "other",
+      "StringValue": "other",
+      "DisplayText": "meta: other",
+      "VisibleInCoda": true,
+      "NumericValue": -100110,
+      "CodeID": "code-O-7ce0d2a7",
+      "CodeType": "Meta"
+    },
+    {
+      "DisplayText": "meta: gratitude",
+      "VisibleInCoda": true,
+      "NumericValue": -100100,
+      "CodeID": "code-GR-e6de1b7e",
+      "CodeType": "Meta",
+      "MetaCode": "gratitude",
+      "StringValue": "gratitude"
+    },
+    {
+      "DisplayText": "meta: about conversation",
+      "VisibleInCoda": true,
+      "CodeID": "code-AC-9ed22631",
+      "NumericValue": -100120,
+      "CodeType": "Meta",
+      "MetaCode": "about_conversation",
+      "StringValue": "about_conversation"
+    },
+    {
+      "NumericValue": -100130,
+      "CodeID": "code-CR-8e99616b",
+      "CodeType": "Meta",
+      "MetaCode": "chasing_reply",
+      "StringValue": "chasing_reply",
+      "DisplayText": "meta: chasing reply",
+      "VisibleInCoda": true
+    },
+    {
+      "NumericValue": -100140,
+      "CodeID": "code-I-b13a41f6",
+      "CodeType": "Meta",
+      "MetaCode": "impact",
+      "StringValue": "impact",
+      "DisplayText": "meta: impact",
+      "VisibleInCoda": true
     }
   ]
 }
