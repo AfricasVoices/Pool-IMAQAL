@@ -66,9 +66,14 @@ def get_incoming_hormuud_messages_from_recovery_csv(csv_path,
                 datetime.strptime(msg["ReceivedOn"], "%d/%m/%Y %H:%M:%S.%f")
             )
         except ValueError:
-            msg["timestamp"] = pytz.timezone("Africa/Mogadishu").localize(
-                datetime.strptime(msg["ReceivedOn"], "%d/%m/%Y %H:%M:%S")
-            )
+            try:
+                msg["timestamp"] = pytz.timezone("Africa/Mogadishu").localize(
+                    datetime.strptime(msg["ReceivedOn"], "%d/%m/%Y %H:%M:%S")
+                )
+            except ValueError:
+                msg["timestamp"] = pytz.timezone("Africa/Mogadishu").localize(
+                    datetime.strptime(msg["ReceivedOn"], "%Y-%m-%d %H:%M:%S")
+                )
 
     if received_after_inclusive is not None:
         log.info(f"Filtering out messages sent before {received_after_inclusive}...")
@@ -110,6 +115,8 @@ if __name__ == "__main__":
     parser.add_argument("timestamp_matches_log_output_csv_path", metavar="timestamp-matches-log-output-csv-path",
                         help="File to log the matches made between the Rapid Pro and recovery datasets by timestamp, "
                              "for manual review and approval")
+    parser.add_argument("duplicates_output_csv_path", metavar="duplicates-output-csv-path",
+                        help="File to log the messages identified as duplicates to")
     parser.add_argument("output_csv_path", metavar="output-csv-path",
                         help="File to write the filtered, recovered data to, in a format ready for de-identification "
                              "and integration into the pipeline")
@@ -123,7 +130,29 @@ if __name__ == "__main__":
     end_date = isoparse(args.end_date)
     hormuud_csv_input_path = args.hormuud_csv_input_path
     timestamp_matches_log_output_csv_path = args.timestamp_matches_log_output_csv_path
+    duplicates_output_csv_path = args.duplicates_output_csv_path
     output_csv_path = args.output_csv_path
+
+    # Define the maximum time difference we can observe between a message in rapid pro and in the recovery csv for it
+    # to count as a match.
+    if end_date < isoparse("2022-04-03T00:00+03:00"):
+        # During Pool-CSAP-Somalia projects that took place before April 3rd, the realtime connection was extremely
+        # unreliable (typical message loss rate was 50%), but the delay was typically about 4 minutes, and all
+        # less than 5.
+        max_time_delta = timedelta(minutes=5)
+    elif start_date >= isoparse("2022-04-03T00:00+03:00") and end_date < isoparse("2022-09-01T00:00+03:00"):
+        # When the realtime connection was improved from April 3rd 2022, message loss rate decreased to 1-2% but
+        # the maximum delay slightly increased. Use 7 minutes for messages received since that date.
+        max_time_delta = timedelta(minutes=7)
+    elif start_date >= isoparse("2022-09-01T00:00+03:00"):
+        # Since at least September 1st 2022 (and possibly earlier, when there were no projects running on the short
+        # code), loss-rate remains at ~2% but the maximum delay has increased significantly in a small number of cases.
+        max_time_delta = timedelta(minutes=110)
+    else:
+        assert False, "Unsupported data-range due to data crossing a max_time_delta definition boundary. " \
+                      "Either check the dates, update the date-ranges in the source code, or break the recovery " \
+                      "dataset into a chunks for each supported time range."
+    log.info(f"Using maximum message time delta of {max_time_delta}")
 
     # Get messages from Rapid Pro and from the recovery csv
     rapid_pro_messages = get_incoming_hormuud_messages_from_rapid_pro(
@@ -160,6 +189,7 @@ if __name__ == "__main__":
     rapid_pro_messages.sort(key=lambda msg: msg.sent_on)
     unmatched_messages = []
     skipped_messages = []
+    matched_messages = []
     for rapid_pro_msg in rapid_pro_messages:
         rapid_pro_text = rapid_pro_msg.text
 
@@ -171,8 +201,9 @@ if __name__ == "__main__":
         for recovery_item in recovered_lut[rapid_pro_msg.urn]:
             if recovery_item["rapid_pro_message"] is None and \
                     recovery_item["recovered_message"]["Message"] == rapid_pro_text and \
-                    rapid_pro_msg.sent_on - recovery_item["recovered_message"]["timestamp"] < timedelta(minutes=5):
+                    rapid_pro_msg.sent_on - recovery_item["recovered_message"]["timestamp"] < max_time_delta:
                 recovery_item["rapid_pro_message"] = rapid_pro_msg
+                matched_messages.append(rapid_pro_msg)
                 break
         else:
             unmatched_messages.append(rapid_pro_msg)
@@ -187,7 +218,8 @@ if __name__ == "__main__":
     for rapid_pro_msg in rapid_pro_messages:
         rapid_pro_text = rapid_pro_msg.text
         rapid_pro_text = rapid_pro_text.replace("\n", " ")  # newlines -> spaces
-        if re.compile("^\\s*[0-9][0-9]*\\s*$").match(rapid_pro_text):
+        # Match numbers in whitespace, unless the number is zero.
+        if re.compile("^\\s*[0-9]+\\s*$").match(rapid_pro_text) and not re.compile("\\s*0+\\s*").match(rapid_pro_text):
             rapid_pro_text = rapid_pro_text.strip()  # numbers with whitespace -> just the number
             if rapid_pro_text.startswith("0"):
                 rapid_pro_text = rapid_pro_text[1:]  # replace leading 0
@@ -196,18 +228,50 @@ if __name__ == "__main__":
         if re.compile("^\".*\"$").match(rapid_pro_text):
             rapid_pro_text = rapid_pro_text.replace("\"", "")  # strictly quoted text -> just the text
         rapid_pro_text = rapid_pro_text.encode("ascii", "replace").decode("ascii")  # non-ascii characters -> '?'
+        rapid_pro_text = rapid_pro_text.strip()
 
         for recovery_item in recovered_lut[rapid_pro_msg.urn]:
             if recovery_item["rapid_pro_message"] is None and \
                     recovery_item["recovered_message"]["Message"] == rapid_pro_text and \
-                    rapid_pro_msg.sent_on - recovery_item["recovered_message"]["timestamp"] < timedelta(minutes=5):
+                    rapid_pro_msg.sent_on - recovery_item["recovered_message"]["timestamp"] < max_time_delta:
                 recovery_item["rapid_pro_message"] = rapid_pro_msg
+                matched_messages.append(rapid_pro_msg)
                 break
         else:
             unmatched_messages.append(rapid_pro_msg)
     log.info(f"Attempted to perform Excel-mangled matches for {len(rapid_pro_messages)} Rapid Pro messages: "
              f"{len(rapid_pro_messages) - len(unmatched_messages)} matched successfully, "
              f"{len(unmatched_messages)} unmatched messages remain")
+
+    # Scan remaining messages for possible duplicates
+    log.info(f"Searching remaining {len(unmatched_messages)} unmatched messages for duplicates...")
+    matched_messages_lut = {(msg.urn, msg.text): msg for msg in matched_messages}
+    rapid_pro_messages = unmatched_messages
+    duplicate_messages = []
+    unmatched_messages = []
+    for msg in rapid_pro_messages:
+        if (msg.urn, msg.text) in matched_messages_lut:
+            log.info(f"Found a message urn and text sent at {msg.sent_on}, that was already seen in a message sent "
+                     f"at {matched_messages_lut[(msg.urn, msg.text)].sent_on}")
+            duplicate_messages.append(msg)
+            skipped_messages.append(msg)
+        else:
+            unmatched_messages.append(msg)
+    log.info(f"Attempted to find duplicates in unmatched messages: "
+             f"Found {len(rapid_pro_messages) - len(unmatched_messages)} messages that were duplicates, "
+             f"{len(unmatched_messages)} unmatched messages remain")
+
+    # Write the duplicated messages to disk so we can use them to de-duplicate the data in the engagement db.
+    log.info(f"Exporting {len(duplicate_messages)} duplicate messages to {duplicates_output_csv_path}...")
+    with open(duplicates_output_csv_path, "w") as f:
+        writer = csv.DictWriter(f, fieldnames=["avf-participant-uuid", "text", "timestamp"])
+        writer.writeheader()
+        for msg in duplicate_messages:
+            writer.writerow({
+                "avf-participant-uuid": msg.urn,
+                "text": msg.text,
+                "timestamp": msg.sent_on
+            })
 
     # Finally, search by timestamp, and export these to a log file for manual review.
     # This covers all sorts of weird edge cases, mostly around Hormuud/Excel's handling of special characters.
@@ -220,13 +284,14 @@ if __name__ == "__main__":
         for rapid_pro_msg in rapid_pro_messages:
             for recovery_item in recovered_lut[rapid_pro_msg.urn]:
                 if recovery_item["rapid_pro_message"] is None and \
-                        rapid_pro_msg.sent_on - recovery_item["recovered_message"]["timestamp"] < timedelta(minutes=5):
+                        rapid_pro_msg.sent_on - recovery_item["recovered_message"]["timestamp"] < max_time_delta:
                     writer.writerow({
                         "Rapid Pro": rapid_pro_msg.text,
                         "Hormuud Recovery": recovery_item["recovered_message"]["Message"]
                     })
 
                     recovery_item["rapid_pro_message"] = rapid_pro_msg
+                    matched_messages.append(rapid_pro_msg)
                     break
             else:
                 unmatched_messages.append(rapid_pro_msg)
