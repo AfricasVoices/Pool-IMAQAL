@@ -47,6 +47,10 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     engagement_db_datasets=["recently_displaced"], 
                     rapid_pro_contact_field=ContactField(key="imaqal_pool_recently_displaced", label="imaqal pool recently displaced")
                 ),
+                DatasetConfiguration(
+                    engagement_db_datasets=["disability"],
+                    rapid_pro_contact_field=ContactField(key="imaqal_pool_disability", label="imaqal pool disability")
+                ),
             ],
             consent_withdrawn_dataset=DatasetConfiguration(
                 engagement_db_datasets=[
@@ -66,7 +70,10 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     "rvi_elections_s01e04", "rvi_elections_s01e05", "rvi_elections_s01e06",
                     "rvi_elections_s01_closeout",
 
-                    "age", "gender", "household_language", "location", "recently_displaced"
+                    "worldbank_scd_s01e01", "worldbank_scd_s01e01_follow_up_1", "worldbank_scd_s01e01_follow_up_2",
+                    "worldbank_scd_s01_have_voice", "worldbank_scd_s01_suggestions", "worldbank_scd_s01_evaluation",
+
+                    "age", "gender", "household_language", "location", "recently_displaced", "disability"
                 ],
                 rapid_pro_contact_field=ContactField(
                     key="imaqal_pool_consent_withdrawn",
