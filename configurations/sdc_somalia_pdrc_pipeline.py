@@ -42,7 +42,6 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     FlowResultConfiguration("sdc_somalia_demog", "imaqal_pool_gender", "gender"),
                     FlowResultConfiguration("sdc_somalia_demog", "imaqal_pool_age", "age"),
                     FlowResultConfiguration("sdc_somalia_demog", "imaqal_pool_recently_displaced", "recently_displaced"),
-                    FlowResultConfiguration("sdc_somalia_demog", "imaqal_pool_household_language", "household_language"),
                     FlowResultConfiguration("sdc_somalia_demog", "imaqal_pool_disability", "disability"),
 
                     FlowResultConfiguration("sdc_somalia_pdrc_s01e01_activation", "rqa_sdc_somalia_pdrc_s01e01", "sdc_somalia_pdrc_s01e01"),
@@ -233,17 +232,6 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     CodingConfiguration(
                         code_scheme=load_code_scheme("demographics/recently_displaced"),
                         analysis_dataset="recently_displaced"
-                    )
-                ]
-            ),
-            AnalysisDatasetConfiguration(
-                engagement_db_datasets=["household_language"],
-                dataset_type=DatasetTypes.DEMOGRAPHIC,
-                raw_dataset="household_language",
-                coding_configs=[
-                    CodingConfiguration(
-                        code_scheme=load_code_scheme("demographics/household_language"),
-                        analysis_dataset="household_language"
                     )
                 ]
             ),
