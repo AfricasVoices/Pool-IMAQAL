@@ -1,1 +1,1 @@
-avf-pipeline:dev
+ghcr.io/africasvoices/engagement-data-pipeline:v3.1.0
