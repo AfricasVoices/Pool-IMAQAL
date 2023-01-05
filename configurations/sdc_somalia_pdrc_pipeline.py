@@ -130,6 +130,71 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     ws_code_match_value="disability",
                     dataset_users_file_url="gs://avf-project-datasets/2022/IMAQAL-POOL/coda_users.json"
                 ),
+
+                # This project followed WorldBank-SCD with a gap of only 3 weeks, and therefore contains a few late
+                # messages that belonged to WorldBank-SCD. The RQA configurations from WorldBank-SCD are therefore
+                # included here, so we can WS-correct from SDC-Somalia-PDRC to WorldBank-SDC.
+                CodaDatasetConfiguration(
+                    coda_dataset_id="WorldBank_SCD_s01e01",
+                    engagement_db_dataset="worldbank_scd_s01e01",
+                    code_scheme_configurations=[
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("rqas/worldbank_scd/s01e01"),
+                                                coda_code_schemes_count=3
+                                                ),
+                    ],
+                    ws_code_match_value="worldbank_scd_s01e01"
+                ),
+                CodaDatasetConfiguration(
+                    coda_dataset_id="WorldBank_SCD_s01e01_follow_up_1",
+                    engagement_db_dataset="worldbank_scd_s01e01_follow_up_1",
+                    code_scheme_configurations=[
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("rqas/worldbank_scd/s01e01_follow_up_1"),
+                                                coda_code_schemes_count=3
+                                                ),
+                    ],
+                    ws_code_match_value="worldbank_scd_s01e01_follow_up_1"
+                ),
+                CodaDatasetConfiguration(
+                    coda_dataset_id="WorldBank_SCD_s01e01_follow_up_2",
+                    engagement_db_dataset="worldbank_scd_s01e01_follow_up_2",
+                    code_scheme_configurations=[
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("rqas/worldbank_scd/s01e01_follow_up_2"),
+                                                coda_code_schemes_count=3
+                                                ),
+                    ],
+                    ws_code_match_value="worldbank_scd_s01e01_follow_up_2"
+                ),
+                CodaDatasetConfiguration(
+                    coda_dataset_id="WorldBank_SCD_s01_have_voice",
+                    engagement_db_dataset="worldbank_scd_s01_have_voice",
+                    code_scheme_configurations=[
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("rqas/worldbank_scd/s01_have_voice"),
+                                                coda_code_schemes_count=3,
+                                                auto_coder=somali.DemographicCleaner.clean_yes_no
+                                                ),
+                    ],
+                    ws_code_match_value="worldbank_scd_s01_have_voice"
+                ),
+                CodaDatasetConfiguration(
+                    coda_dataset_id="WorldBank_SCD_s01_suggestions",
+                    engagement_db_dataset="worldbank_scd_s01_suggestions",
+                    code_scheme_configurations=[
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("rqas/worldbank_scd/s01_suggestions"),
+                                                coda_code_schemes_count=3
+                                                ),
+                    ],
+                    ws_code_match_value="worldbank_scd_s01_suggestions"
+                ),
+                CodaDatasetConfiguration(
+                    coda_dataset_id="WorldBank_SCD_s01_evaluation",
+                    engagement_db_dataset="worldbank_scd_s01_evaluation",
+                    code_scheme_configurations=[
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("rqas/worldbank_scd/s01_evaluation"),
+                                                coda_code_schemes_count=3
+                                                ),
+                    ],
+                    ws_code_match_value="worldbank_scd_s01_evaluation"
+                )
             ],
             ws_correct_dataset_code_scheme=load_code_scheme("ws_correct_dataset"),
             project_users_file_url="gs://avf-project-datasets/2022/SDC-Somalia-PDRC/coda_users.json"
