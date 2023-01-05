@@ -156,6 +156,16 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     )
                 ]
             ),
+            OperatorDatasetConfiguration(
+                raw_dataset="operator_raw",
+                coding_configs=[
+                    CodingConfiguration(
+                        code_scheme=load_code_scheme("demographics/imaqal_operator"),
+                        analysis_dataset="operator",
+                        analysis_location=AnalysisLocations.SOMALIA_OPERATOR
+                    )
+                ]
+            ),
             AnalysisDatasetConfiguration(
                 engagement_db_datasets=["age"],
                 dataset_type=DatasetTypes.DEMOGRAPHIC,
