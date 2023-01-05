@@ -16,9 +16,9 @@ sys.setrecursionlimit(50000)
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Exports weekly ad contacts from analysis Traced Data")
 
-    parser.add_argument("--mno-filter", nargs="?", action="store",
+    parser.add_argument("--target-mnos", nargs="?", action="store",
                         help="Comma-separated list of mobile network operators to filter for. "
-                             "For example, to export Golis/Hormuud urns only, use '--mno-filter=golis,hormud'")
+                             "For example, to export Golis/Hormuud urns only, use '--target-mnos=golis,hormud'")
     parser.add_argument("google_cloud_credentials_file_path", metavar="google-cloud-credentials-file-path",
                         help="Path to a Google Cloud service account credentials file to use to access the "
                              "credentials bucket"),
@@ -35,7 +35,7 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
-    mno_filter = None if args.mno_filter is None else args.mno_filter.split(",")
+    target_mnos = None if args.target_mnos is None else args.target_mnos.split(",")
     google_cloud_credentials_file_path = args.google_cloud_credentials_file_path
     uuid_table_credentials_file_url = args.uuid_table_credentials_file_url
     uuid_table_name = args.uuid_table_name
@@ -78,14 +78,14 @@ if __name__ == "__main__":
     urns = {urn_lut[uuid] for uuid in uuids}
     log.info(f"Converted {len(uuids)} uuids to {len(urns)} urns")
 
-    if mno_filter is not None:
-        log.info(f"Filtering {len(urns)} urns for those from operators {mno_filter}...")
+    if target_mnos is not None:
+        log.info(f"Filtering {len(urns)} urns for those from operators {target_mnos}...")
         filtered_urns = set()
         for urn in urns:
             operator = PhoneCleaner.clean_operator(urn)
-            if operator in mno_filter:
+            if operator in target_mnos:
                 filtered_urns.add(urn)
-        log.info(f"Filtered urns for those from operators {mno_filter}. {len(filtered_urns)}/{len(urns)} urns remain")
+        log.info(f"Filtered urns for those from operators {target_mnos}. {len(filtered_urns)}/{len(urns)} urns remain")
         urns = filtered_urns
 
     # Export contacts CSV
