@@ -230,16 +230,6 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     )
                 ]
             ),
-            OperatorDatasetConfiguration(
-                raw_dataset="operator_raw",
-                coding_configs=[
-                    CodingConfiguration(
-                        code_scheme=load_code_scheme("demographics/imaqal_operator"),
-                        analysis_dataset="operator",
-                        analysis_location=AnalysisLocations.SOMALIA_OPERATOR
-                    )
-                ]
-            ),
             AnalysisDatasetConfiguration(
                 engagement_db_datasets=["sdc_somalia_pdrc_s01e02"],
                 dataset_type=DatasetTypes.RESEARCH_QUESTION_ANSWER,
@@ -248,6 +238,16 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     CodingConfiguration(
                         code_scheme=load_code_scheme("rqas/sdc_somalia/pdrc_s01e02"),
                         analysis_dataset="pdrc_s01e02"
+                    )
+                ]
+            ),
+            OperatorDatasetConfiguration(
+                raw_dataset="operator_raw",
+                coding_configs=[
+                    CodingConfiguration(
+                        code_scheme=load_code_scheme("demographics/imaqal_operator"),
+                        analysis_dataset="operator",
+                        analysis_location=AnalysisLocations.SOMALIA_OPERATOR
                     )
                 ]
             ),
