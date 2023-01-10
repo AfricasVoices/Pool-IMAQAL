@@ -1,6 +1,5 @@
 import argparse
 import csv
-import json
 import re
 from collections import defaultdict
 import uuid
@@ -438,29 +437,20 @@ if __name__ == "__main__":
     log.info(f"Using maximum message time delta of {max_time_delta}")
 
     # Get messages from Rapid Pro and from the recovery csv
-    # rapid_pro_messages = get_incoming_hormuud_messages_from_rapid_pro(
-    #     google_cloud_credentials_file_path, rapid_pro_domain, rapid_pro_token_file_url,
-    #     created_after_inclusive=start_date,
-    #     created_before_exclusive=end_date,
-    # )
-    # all_rapid_pro_messages = rapid_pro_messages
-    #
-    # with open("cache.json", "w") as f:
-    #     json.dump([msg.serialize() for msg in rapid_pro_messages], f)
-
-    with open("cache.json") as f:
-        rapid_pro_messages = [RapidProMessage.deserialize(d) for d in json.load(f)]
-        rapid_pro_messages = [msg for msg in rapid_pro_messages if msg.sent_on < isoparse("2022-12-15 16:16:56.873+03:00")]
-        all_rapid_pro_messages = rapid_pro_messages
+    rapid_pro_messages = get_incoming_hormuud_messages_from_rapid_pro(
+        google_cloud_credentials_file_path, rapid_pro_domain, rapid_pro_token_file_url,
+        created_after_inclusive=start_date,
+        created_before_exclusive=end_date,
+    )
+    all_rapid_pro_messages = rapid_pro_messages
 
     recovered_messages = get_incoming_hormuud_messages_from_recovery_csv(
         hormuud_csv_input_path, received_after_inclusive=start_date, received_before_exclusive=end_date
     )
+    all_recovered_messages = recovered_messages
 
     rapid_pro_messages.sort(key=lambda msg: msg.sent_on)
     recovered_messages.sort(key=lambda msg: msg.timestamp)
-
-    all_recovered_messages = recovered_messages
 
     # Group the messages by the sender's urn
     urn_to_recovered_messages = group_recovered_messages_by_urn(recovered_messages)
