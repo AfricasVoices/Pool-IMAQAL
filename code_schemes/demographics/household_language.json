@@ -62,9 +62,9 @@
     {
       "CodeID": "code-49087f30",
       "CodeType": "Normal",
-      "DisplayText": "other",
+      "DisplayText": "other theme",
       "NumericValue": 8,
-      "StringValue": "other",
+      "StringValue": "other_theme",
       "VisibleInCoda": true
     },
     {
@@ -217,6 +217,42 @@
       "DisplayText": "meta: exclusion complaint",
       "NumericValue": -100070,
       "StringValue": "exclusion_complaint",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-GR-e6de1b7e",
+      "CodeType": "Meta",
+      "MetaCode": "gratitude",
+      "DisplayText": "meta: gratitude",
+      "NumericValue": -100100,
+      "StringValue": "gratitude",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-CR-8e99616b",
+      "CodeType": "Meta",
+      "MetaCode": "chasing_reply",
+      "DisplayText": "meta: chasing reply",
+      "NumericValue": -100130,
+      "StringValue": "chasing_reply",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-I-b13a41f6",
+      "CodeType": "Meta",
+      "MetaCode": "impact",
+      "DisplayText": "meta: impact",
+      "NumericValue": -100140,
+      "StringValue": "impact",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-O-7ce0d2a7",
+      "CodeType": "Meta",
+      "MetaCode": "other",
+      "DisplayText": "meta: other",
+      "NumericValue": -100110,
+      "StringValue": "other",
       "VisibleInCoda": true
     },
     {
