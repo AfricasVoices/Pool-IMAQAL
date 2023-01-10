@@ -22,10 +22,10 @@ TARGET_SHORTCODE = "378"
 class MatchedMessage:
     def __init__(self, rapid_pro_message, recovered_message):
         """
-        Represents two messages, one from Rapid Pro, and one from a recovery CSV, that have been identified as
-        being the same message.
+        Represents two message objects, one from Rapid Pro, and one from a recovery CSV, that have been identified as
+        being the same message in each source.
 
-        One or both arguments may be None, representing a message that is not currently paired.
+        One or both arguments may be None, representing a message that is not currently matched.
 
         :param rapid_pro_message:
         :type rapid_pro_message: temba_client.v2.Message | None
@@ -154,18 +154,45 @@ def group_recovered_messages_by_urn(recovered_messages):
 
 class MatchStrategy:
     def __init__(self, name, csv_log_file_path=None):
+        """
+        :param name: Name of this strategy, for console logs.
+        :type name: str
+        :param csv_log_file_path: Path to write a CSV log to. This CSV will contain the pairs of messages matched by
+                                  this strategy.
+                                  If None, no log file will be written for this strategy.
+        :type csv_log_file_path: str | None
+        """
         self.name = name
         self.csv_log_file_path = csv_log_file_path
 
     def messages_match(self, rapid_pro_message, recovered_message):
+        """
+        Whether the two given messages can be considered a match under this strategy.
+
+        :type rapid_pro_message: RapidProMessage
+        :type recovered_message: RecoveredMessage
+        :rtype: boolean
+        """
         return False
 
-    def skip_message(self, rapid_pro_messages, matched_messages):
+    def skip_message(self, rapid_pro_message, matched_messages):
+        """
+        Whether the given Rapid Pro message should be skipped without looking for a match e.g. because it is a duplicate
+
+        :param rapid_pro_message: Rapid Pro message to test whether it should be skipped.
+        :type rapid_pro_message: RapidProMessage
+        :param matched_messages: Messages that have been matched so far.
+        :type matched_messages: list of MatchedMessage
+        """
         return False
 
 
 class ExactMatch(MatchStrategy):
     def __init__(self, max_time_delta, csv_log_file_path=None):
+        """
+        Matches messages only if they have the same text and sender, and their timestamps differ by less than the
+        `max_time_delta`.
+        """
         super().__init__("Exact Match", csv_log_file_path)
         self.max_time_delta = max_time_delta
 
@@ -184,16 +211,18 @@ class ExactMatch(MatchStrategy):
 
 class ExcelMangledMatch(MatchStrategy):
     def __init__(self, max_time_delta, csv_log_file_path=None):
+        """
+        Matches messages if they have the same sender, the texts match after applying some common Excel-manipulations,
+        and their timestamps differ by less than the `max_time_delta`
+        """
         super().__init__("Excel-Mangled Match", csv_log_file_path)
         self.max_time_delta = max_time_delta
 
     def messages_match(self, rapid_pro_message, recovered_message):
         if rapid_pro_message.urn != recovered_message.sender:
-            print("wrong urn")
             return False
 
         if recovered_message.timestamp - rapid_pro_message.sent_on > self.max_time_delta:
-            print("too long", recovered_message.timestamp, rapid_pro_message.sent_on)
             return False
 
         rapid_pro_text = rapid_pro_message.text
@@ -212,8 +241,6 @@ class ExcelMangledMatch(MatchStrategy):
 
         recovered_text = recovered_message.text.encode("ascii", "replace").decode("ascii")  # non-ascii characters -> '?'
 
-        print("compare", repr(rapid_pro_message.text), repr(rapid_pro_text), repr(recovered_text))
-
         # Match messages erroneously interpreted as a formula
         if rapid_pro_text.startswith("=") and recovered_text == "#NAME?":
             return True
@@ -226,6 +253,9 @@ class ExcelMangledMatch(MatchStrategy):
 
 class Duplicates(MatchStrategy):
     def __init__(self, csv_log_file_path=None):
+        """
+        Skips messages if they have the same text and sender as a message that has already been matched.
+        """
         super().__init__("Duplicates", csv_log_file_path)
 
     def skip_message(self, rapid_pro_message, matched_messages):
@@ -243,6 +273,11 @@ class Duplicates(MatchStrategy):
 
 class ClippedMatch(MatchStrategy):
     def __init__(self, max_time_delta, csv_log_file_path=None):
+        """
+        Matches messages only if they have the same sender, the text of the Rapid Pro message starts with the text of
+        the recovered message, and their timestamps differ by less than the `max_time_delta`. This handles messages that
+        have been clipped in the recovery dataset.
+        """
         self.max_time_delta = max_time_delta
         super().__init__("Clipped", csv_log_file_path)
 
@@ -264,6 +299,10 @@ class ClippedMatch(MatchStrategy):
 
 class TimestampMatch(MatchStrategy):
     def __init__(self, max_time_delta, csv_log_file_path=None):
+        """
+        Matches messages only if they have the same sender and their timestamps differ by less than the
+        `max_time_delta`. Message texts are not considered here.
+        """
         super().__init__("Timestamp Match", csv_log_file_path)
         self.max_time_delta = max_time_delta
 
@@ -279,29 +318,37 @@ class TimestampMatch(MatchStrategy):
 
 def apply_match_strategy(match_strategy, rapid_pro_messages_to_match, urn_to_recovered_messages,
                          previously_matched_messages):
+    """
+    Applies a match strategy to find all the matches between sets of Rapid Pro messages and recovery messages.
+
+    :param match_strategy: Match strategy to use to decide if pairs of messages match or not.
+    :type match_strategy: MatchStrategy
+    :param rapid_pro_messages_to_match: Rapid Pro messages to try to match using this strategy.
+    :type rapid_pro_messages_to_match: list of RapidProMessage
+    :param urn_to_recovered_messages: Recovery messages to try to match using this strategy, grouped by urn of the
+                                      message sender.
+    :type urn_to_recovered_messages: dict of str -> (list of RecoveredMessage)
+    :param previously_matched_messages: Messages that were matched by previous match strategies.
+    :type previously_matched_messages: list of MatchedMessage
+    :return: Tuple of (messages that were matched, messages that were skipped, messages that were not matched).
+    :rtype: (list of MatchedMessage, list of RapidProMessage, list of RapidProMessage)
+    """
     matched_message_ids = set()  # of str
     matched_messages = []  # of MatchedMessage
     unmatched_rapid_pro_messages = []  # of RapidProMessage
     skipped_messages = []  # of RapidProMessage
+
+    # For each Rapid Pro message to be matched:
+    # Search all the recovered messages from the same urn for a message that matches, or check if this message should
+    # be skipped
     for rapid_pro_msg in rapid_pro_messages_to_match:
         recovered_messages = urn_to_recovered_messages[rapid_pro_msg.urn]
 
-        print("\nStrategy", match_strategy.name, "Candidates for", rapid_pro_msg.urn, repr(rapid_pro_msg.text),
-              match_strategy.csv_log_file_path)
         for recovered_msg in recovered_messages:
             if recovered_msg.message_id in matched_message_ids:
                 continue
-            print(repr(recovered_msg.text))
-
-        for recovered_msg in recovered_messages:
-            if recovered_msg.message_id in matched_message_ids:
-                continue
-
-            print("testing", repr(recovered_msg.text))
 
             if match_strategy.messages_match(rapid_pro_msg, recovered_msg):
-                print("match", repr(rapid_pro_msg.text), repr(recovered_msg.text))
-
                 matched_message_ids.add(recovered_msg.message_id)
                 matched_messages.append(MatchedMessage(
                     rapid_pro_message=rapid_pro_msg,
@@ -415,28 +462,18 @@ if __name__ == "__main__":
 
     all_recovered_messages = recovered_messages
 
-    # Group the messages by the sender's urn, and store in container dicts where we can write the best matching Rapid
-    # Pro message to when we find it.
+    # Group the messages by the sender's urn
     urn_to_recovered_messages = group_recovered_messages_by_urn(recovered_messages)
 
-    short_time_delta = timedelta(minutes=3)
-    long_time_delta = timedelta(days=30)
-
     match_strategies = [
-        # ExactMatch(short_time_delta, csv_log_file_path="exact-match-short.csv"),
-        # ExcelMangledMatch(short_time_delta, csv_log_file_path="excel-mangled-short.csv"),
-        # Duplicates(csv_log_file_path="duplicates-short.csv"),
-        # ClippedMatch(short_time_delta, csv_log_file_path="clipped-short.csv"),
-
-        ExactMatch(long_time_delta, csv_log_file_path=f"{log_dir_path}/exact-match-long.csv"),
-        ExcelMangledMatch(long_time_delta, csv_log_file_path=f"{log_dir_path}/excel-mangled-long.csv"),
+        ExactMatch(max_time_delta, csv_log_file_path=f"{log_dir_path}/exact-match-long.csv"),
+        ExcelMangledMatch(max_time_delta, csv_log_file_path=f"{log_dir_path}/excel-mangled-long.csv"),
         Duplicates(csv_log_file_path=f"{log_dir_path}/duplicates-long.csv"),
-        ClippedMatch(long_time_delta, csv_log_file_path=f"{log_dir_path}/clipped-long.csv"),
-
-        # TimestampMatch(short_time_delta, csv_log_file_path="timestamp-short.csv"),
-        TimestampMatch(long_time_delta, csv_log_file_path=f"{log_dir_path}/timestamp-long.csv")
+        ClippedMatch(max_time_delta, csv_log_file_path=f"{log_dir_path}/clipped-long.csv"),
+        TimestampMatch(max_time_delta, csv_log_file_path=f"{log_dir_path}/timestamp-long.csv")
     ]
 
+    # Apply all the match strategies in sequence
     all_matched_messages = []  # of MatchedMessage
     all_skipped_rapid_pro_messages = []  # of RapidProMessage
     for i, strategy in enumerate(match_strategies):
