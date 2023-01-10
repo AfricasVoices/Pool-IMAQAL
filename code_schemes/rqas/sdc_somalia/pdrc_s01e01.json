@@ -4,6 +4,78 @@
     "Version": "0.0.0.1",
     "Codes": [
         {
+            "CodeID": "code-abb0593c",
+            "CodeType": "Normal",
+            "DisplayText": "elections welcomed",
+            "NumericValue": 1,
+            "StringValue": "elections_welcomed",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-e45224f1",
+            "CodeType": "Normal",
+            "DisplayText": "process delayed",
+            "NumericValue": 2,
+            "StringValue": "process_delayed",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-8cf914ed",
+            "CodeType": "Normal",
+            "DisplayText": "corruption",
+            "NumericValue": 3,
+            "StringValue": "corruption",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-a13bfdb6",
+            "CodeType": "Normal",
+            "DisplayText": "one person, one vote",
+            "NumericValue": 4,
+            "StringValue": "one_person_one_vote",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-e218ddc2",
+            "CodeType": "Normal",
+            "DisplayText": "desire for just and equal process",
+            "NumericValue": 5,
+            "StringValue": "desire_for_just_and_equal_process",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-38427158",
+            "CodeType": "Normal",
+            "DisplayText": "inquiring about process",
+            "NumericValue": 6,
+            "StringValue": "inquiring_about_process",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-a457c167",
+            "CodeType": "Normal",
+            "DisplayText": "know a lot",
+            "NumericValue": 7,
+            "StringValue": "know_a_lot",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-855d2400",
+            "CodeType": "Normal",
+            "DisplayText": "don't know anything",
+            "NumericValue": 8,
+            "StringValue": "do_not_know_anything",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-8a3e5a1c",
+            "CodeType": "Normal",
+            "DisplayText": "other theme",
+            "NumericValue": 9,
+            "StringValue": "other_theme",
+            "VisibleInCoda": true
+        },
+        {
             "CodeID": "code-NA-f93d3eb7",
             "CodeType": "Control",
             "ControlCode": "NA",
