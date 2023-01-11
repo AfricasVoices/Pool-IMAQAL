@@ -456,11 +456,11 @@ if __name__ == "__main__":
     urn_to_recovered_messages = group_recovered_messages_by_urn(recovered_messages)
 
     match_strategies = [
-        ExactMatch(max_time_delta, csv_log_file_path=f"{log_dir_path}/exact-match-long.csv"),
-        ExcelMangledMatch(max_time_delta, csv_log_file_path=f"{log_dir_path}/excel-mangled-long.csv"),
-        Duplicates(csv_log_file_path=f"{log_dir_path}/duplicates-long.csv"),
-        ClippedMatch(max_time_delta, csv_log_file_path=f"{log_dir_path}/clipped-long.csv"),
-        TimestampMatch(max_time_delta, csv_log_file_path=f"{log_dir_path}/timestamp-long.csv")
+        ExactMatch(max_time_delta, csv_log_file_path=f"{log_dir_path}/exact-match-log.csv"),
+        ExcelMangledMatch(max_time_delta, csv_log_file_path=f"{log_dir_path}/excel-mangled-log.csv"),
+        Duplicates(csv_log_file_path=f"{log_dir_path}/duplicates-log.csv"),
+        ClippedMatch(max_time_delta, csv_log_file_path=f"{log_dir_path}/clipped-log.csv"),
+        TimestampMatch(max_time_delta, csv_log_file_path=f"{log_dir_path}/timestamp-log.csv")
     ]
 
     # Apply all the match strategies in sequence
