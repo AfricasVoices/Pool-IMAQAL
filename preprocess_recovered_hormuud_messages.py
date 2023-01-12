@@ -48,6 +48,15 @@ class RecoveredMessage:
 
     @classmethod
     def from_hormuud_csv_row(cls, row):
+        """
+        Creates a `RecoveredMessage` from a row in a Hormuud recovery CSV.
+
+        The row should contain the columns:
+          - "Sender": a number with country code but no leading '+' or 'tel:'
+          - "Receiver": short code to which the message was sent.
+          - "Message": raw message text
+          - "ReceivedOn": string representing the date in EAT.
+        """
         try:
             timestamp = pytz.timezone("Africa/Mogadishu").localize(
                 datetime.strptime(row["ReceivedOn"], "%d/%m/%Y %H:%M:%S.%f")
@@ -253,7 +262,7 @@ class ExcelMangledMatch(MatchStrategy):
 class Duplicates(MatchStrategy):
     def __init__(self, csv_log_file_path=None):
         """
-        Skips messages if they have the same text and sender as a message that has already been matched.
+        Skips messages if they have the same text and the same sender as a message that has already been matched.
         """
         super().__init__("Duplicates", csv_log_file_path)
 
