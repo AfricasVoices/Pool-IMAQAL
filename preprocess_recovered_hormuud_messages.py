@@ -36,7 +36,7 @@ class MatchedMessage:
 
 
 class RecoveredMessage:
-    def __init__(self, sender, receiver, text, timestamp, message_id=None):
+    def __init__(self, sender, receiver, text, timestamp, raw_timestamp, message_id=None):
         if message_id is None:
             message_id = uuid.uuid4()
 
@@ -45,6 +45,7 @@ class RecoveredMessage:
         self.receiver = receiver
         self.text = text
         self.timestamp = timestamp
+        self.raw_timestamp = raw_timestamp
 
     @classmethod
     def from_hormuud_csv_row(cls, row):
@@ -75,6 +76,7 @@ class RecoveredMessage:
             sender="tel:+" + row["Sender"],
             receiver=row["Receiver"],
             text=row["Message"],
+            raw_timestamp=row["ReceivedOn"],
             timestamp=timestamp
         )
 
@@ -522,5 +524,5 @@ if __name__ == "__main__":
                 "Sender": recovered_msg.sender,
                 "Receiver": recovered_msg.receiver,
                 "Message": recovered_msg.text,
-                "ReceivedOn": recovered_msg.timestamp.isoformat()
+                "ReceivedOn": recovered_msg.raw_timestamp
             })
