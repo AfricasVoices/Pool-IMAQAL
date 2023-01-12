@@ -262,7 +262,7 @@ class ExcelMangledMatch(MatchStrategy):
 class Duplicates(MatchStrategy):
     def __init__(self, csv_log_file_path=None):
         """
-        Skips messages if they have the same text and sender as a message that has already been matched.
+        Skips messages if they have the same text and the same sender as a message that has already been matched.
         """
         super().__init__("Duplicates", csv_log_file_path)
 
