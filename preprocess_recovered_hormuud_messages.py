@@ -48,6 +48,15 @@ class RecoveredMessage:
 
     @classmethod
     def from_hormuud_csv_row(cls, row):
+        """
+        Creates a `RecoveredMessage` from a row in a Hormuud recovery CSV.
+
+        The row should contain the columns:
+          - "Sender": a number with country code but no leading '+' or 'tel:'
+          - "Receiver": short code to which the message was sent.
+          - "Message": raw message text
+          - "ReceivedOn": string representing the date in EAT.
+        """
         try:
             timestamp = pytz.timezone("Africa/Mogadishu").localize(
                 datetime.strptime(row["ReceivedOn"], "%d/%m/%Y %H:%M:%S.%f")
