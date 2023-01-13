@@ -63,6 +63,17 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
             )
         )
     ],
+    csv_sources=[
+        CSVSource(
+            "gs://avf-project-datasets/2022/WorldBank-SCD/recovered_hormuud_2022_12_de_identified.csv",
+            engagement_db_datasets=[
+                # Recovered data is mainly from outages caused when running adverts, so add all recovered data to the
+                # e01 dataset.
+                CSVDatasetConfiguration("worldbank_scd_s01e01"),
+            ],
+            timezone="Africa/Mogadishu"
+        )
+    ],
     coda_sync=CodaConfiguration(
         coda=CodaClientConfiguration(credentials_file_url="gs://avf-credentials/coda-production.json"),
         sync_config=CodaSyncConfiguration(
