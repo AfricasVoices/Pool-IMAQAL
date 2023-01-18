@@ -4,6 +4,94 @@
     "Version": "0.0.0.1",
     "Codes": [
         {
+            "CodeID": "code-4722340c",
+            "CodeType": "Normal",
+            "DisplayText": "increasing opportunities to register and vote",
+            "NumericValue": 1,
+            "StringValue": "increasing_opportunities_to_register_and_vote",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-b3a82ff9",
+            "CodeType": "Normal",
+            "DisplayText": "speeding up the process",
+            "NumericValue": 2,
+            "StringValue": "speeding_up_the_process",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-687490bd",
+            "CodeType": "Normal",
+            "DisplayText": "awareness creation",
+            "NumericValue": 3,
+            "StringValue": "awareness_creation",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-b13efcd7",
+            "CodeType": "Normal",
+            "DisplayText": "inquiry on election process",
+            "NumericValue": 4,
+            "StringValue": "inquiry_on_election_process",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-0579d999",
+            "CodeType": "Normal",
+            "DisplayText": "desire for justice",
+            "NumericValue": 5,
+            "StringValue": "desire_for_justice",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-e33ea855",
+            "CodeType": "Normal",
+            "DisplayText": "proper procedure",
+            "NumericValue": 6,
+            "StringValue": "proper_procedure",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-e878d011",
+            "CodeType": "Normal",
+            "DisplayText": "one person, one vote",
+            "NumericValue": 7,
+            "StringValue": "one_person_one_vote",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-0f10227f",
+            "CodeType": "Normal",
+            "DisplayText": "unity and cooperation",
+            "NumericValue": 8,
+            "StringValue": "unity_and_cooperation",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-2bc15afe",
+            "CodeType": "Normal",
+            "DisplayText": "encourage citizens to register",
+            "NumericValue": 9,
+            "StringValue": "encourage_citizens_to_register",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-aba013b6",
+            "CodeType": "Normal",
+            "DisplayText": "ensure peace and security",
+            "NumericValue": 10,
+            "StringValue": "ensure_peace_and_security",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-03935210",
+            "CodeType": "Normal",
+            "DisplayText": "other theme",
+            "NumericValue": 11,
+            "StringValue": "other_theme",
+            "VisibleInCoda": true
+        },
+        {
             "CodeID": "code-NA-f93d3eb7",
             "CodeType": "Control",
             "ControlCode": "NA",
