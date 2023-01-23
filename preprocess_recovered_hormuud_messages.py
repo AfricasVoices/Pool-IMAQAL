@@ -411,6 +411,8 @@ if __name__ == "__main__":
                         help="Path to a CSV file issued by Hormuud to recover messages from")
     parser.add_argument("log_dir_path", metavar="log-dir-path",
                         help="Directory to log the matched messages to")
+    parser.add_argument("skipped_csv_path", metavar="skipped-csv-path",
+                        help="Path to CSV to write the skipped messages to")
     parser.add_argument("output_csv_path", metavar="output-csv-path",
                         help="File to write the filtered, recovered data to, in a format ready for de-identification "
                              "and integration into the pipeline")
@@ -424,6 +426,7 @@ if __name__ == "__main__":
     end_date = isoparse(args.end_date)
     hormuud_csv_input_path = args.hormuud_csv_input_path
     log_dir_path = args.log_dir_path
+    skipped_csv_path = args.skipped_csv_path
     output_csv_path = args.output_csv_path
 
     # Define the maximum time difference we can observe between a message in rapid pro and in the recovery csv for it
@@ -513,8 +516,23 @@ if __name__ == "__main__":
         log.error("Number of unmatched messages != expected number of unmatched messages")
         exit(1)
 
-    # Export to a csv that can be processed by de_identify_csv.py
-    log.info(f"Exporting unmatched recovered messages to {output_csv_path}")
+    # Export skipped messages to a csv that can be used for further processing of duplicates.
+    # The output is in the format used by tools/archive_matching_messages.py, as this is the most likely next step
+    # for these messages.
+    log.info(f"Exporting {len(all_skipped_rapid_pro_messages)} skipped messages to {skipped_csv_path}")
+    with open(skipped_csv_path, "w") as f:
+        writer = csv.DictWriter(f, fieldnames=["urn", "text", "timestamp"])
+        writer.writeheader()
+
+        for msg in all_skipped_rapid_pro_messages:
+            writer.writerow({
+                "urn": msg.urn,
+                "text": msg.text,
+                "timestamp": msg.sent_on.isoformat()
+            })
+
+    # Export recovered messages to a csv that can be processed by de_identify_csv.py
+    log.info(f"Exporting {len(unmatched_recovered_messages)} unmatched recovered messages to {output_csv_path}...")
     with open(output_csv_path, "w") as f:
         writer = csv.DictWriter(f, fieldnames=["Sender", "Receiver", "Message", "ReceivedOn"])
         writer.writeheader()
