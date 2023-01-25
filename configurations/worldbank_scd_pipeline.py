@@ -74,6 +74,22 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
             timezone="Africa/Mogadishu"
         )
     ],
+    google_form_sources=[
+        GoogleFormSource(
+            # https://docs.google.com/forms/d/e/1FAIpQLSd0draFECQ6qfHx3fNoGJzcEEPa_RtPdYY-Gf6Nmwn9VJrJxA/viewform
+            google_form_client=GoogleFormsClientConfiguration(
+                credentials_file_url="gs://avf-credentials/pipeline-runner-service-acct-avf-data-core-64cc71459fe7.json"
+            ),
+            sync_config=GoogleFormToEngagementDBConfiguration(
+                form_id="1bcXYzzvLK4zboc6BFISswRe2Gv4QtsshdE3Y0riXztM",
+                question_configurations=[
+                    QuestionConfiguration(engagement_db_dataset="worldbank_scd_s01e01", question_titles=["Maxay yihiin labada sheey ee ay tahay mudnaanta in lasiiyo si loo hormariyo daryeelka bulshada sadexda sane ee soo socota?\nWhat are two priorities that would improve your community’s welfare in the next three years?"]),
+                    QuestionConfiguration(engagement_db_dataset="worldbank_scd_s01e01_follow_up_1", question_titles=["Aragtidaada, waa maxay caqabadaha ka hortaagan Soomaaliya inay cirib tirto saboolnimada?\nIn your opinion, what challenges are preventing Somalia from ending poverty?"]),
+                    QuestionConfiguration(engagement_db_dataset="worldbank_scd_s01e01_follow_up_2", question_titles=["Yaa ka mas`uul ah go`aan qaadashada muhiimka ah gudaha bulshadaada?\nWho is responsible for making important decisions in your community?"]),
+                ]
+            )
+        ),
+    ],
     coda_sync=CodaConfiguration(
         coda=CodaClientConfiguration(credentials_file_url="gs://avf-credentials/coda-production.json"),
         sync_config=CodaSyncConfiguration(
