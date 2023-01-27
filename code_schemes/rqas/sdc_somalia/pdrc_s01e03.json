@@ -4,6 +4,70 @@
     "Version": "0.0.0.1",
     "Codes": [
         {
+            "CodeID": "code-974df01f",
+            "CodeType": "Normal",
+            "DisplayText": "unity and cooperation",
+            "NumericValue": 1,
+            "StringValue": "unity_and_cooperation",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-ffab37c4",
+            "CodeType": "Normal",
+            "DisplayText": "justice",
+            "NumericValue": 2,
+            "StringValue": "justice",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-ce01ce7c",
+            "CodeType": "Normal",
+            "DisplayText": "inquiry on election process",
+            "NumericValue": 3,
+            "StringValue": "inquiry_on_election_process",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-43787e47",
+            "CodeType": "Normal",
+            "DisplayText": "honesty and trust",
+            "NumericValue": 4,
+            "StringValue": "honesty_and_trust",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-890eba75",
+            "CodeType": "Normal",
+            "DisplayText": "stop corruption",
+            "NumericValue": 5,
+            "StringValue": "stop_corruption",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-ebcbbc72",
+            "CodeType": "Normal",
+            "DisplayText": "ensure peace and security",
+            "NumericValue": 6,
+            "StringValue": "ensure_peace_and_security",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-2401fb79",
+            "CodeType": "Normal",
+            "DisplayText": "support one person, one vote",
+            "NumericValue": 7,
+            "StringValue": "support_one_person_one_vote",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-ad9a4513",
+            "CodeType": "Normal",
+            "DisplayText": "other theme",
+            "NumericValue": 8,
+            "StringValue": "other_theme",
+            "VisibleInCoda": true
+        },
+        {
             "CodeID": "code-NA-f93d3eb7",
             "CodeType": "Control",
             "ControlCode": "NA",
