@@ -86,6 +86,13 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     QuestionConfiguration(engagement_db_dataset="worldbank_scd_s01e01", question_titles=["Maxay yihiin labada sheey ee ay tahay mudnaanta in lasiiyo si loo hormariyo daryeelka bulshada sadexda sane ee soo socota?\nWhat are two priorities that would improve your community’s welfare in the next three years?"]),
                     QuestionConfiguration(engagement_db_dataset="worldbank_scd_s01e01_follow_up_1", question_titles=["Aragtidaada, waa maxay caqabadaha ka hortaagan Soomaaliya inay cirib tirto saboolnimada?\nIn your opinion, what challenges are preventing Somalia from ending poverty?"]),
                     QuestionConfiguration(engagement_db_dataset="worldbank_scd_s01e01_follow_up_2", question_titles=["Yaa ka mas`uul ah go`aan qaadashada muhiimka ah gudaha bulshadaada?\nWho is responsible for making important decisions in your community?"]),
+
+                    QuestionConfiguration(engagement_db_dataset="location", question_titles=["Degmadee ayaad ku nooshahay?\nIn which district of Somalia do you currently live?"]),
+                    QuestionConfiguration(engagement_db_dataset="gender", question_titles=["Mahadsanid. Ma waxaad tahay Rag mise Dumar? Fadlan kaga jawaab Rag ama Dumar.\nWhat is your gender?"]),
+                    QuestionConfiguration(engagement_db_dataset="age", question_titles=["Da'daadu maxay tahay? Fadlan kaga jawaab tiro.\nHow old are you? Please answer with a number in years."]),
+                    QuestionConfiguration(engagement_db_dataset="recently_displaced", question_titles=["Ma waxaad tahay qof soo barakacay dhawaan? Hadii haa ay tahay jawaabtadu, Maxa kusoo barakiciyay?\nAre you currently displaced? If so, what made you leave your home?"]),
+                    QuestionConfiguration(engagement_db_dataset="disability", question_titles=["Wax naafo ah miyaad leedahay? Haa/Maya\nDo you have a disability? Yes/No"]),
+                    QuestionConfiguration(engagement_db_dataset="household_language", question_titles=["Luuqaddee ayaad caadi ahaan gurigiinna dhexdiisa uga hadashaan?\nWhat language do you usually speak in your household?"])
                 ]
             )
         ),
