@@ -83,6 +83,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
             sync_config=GoogleFormToEngagementDBConfiguration(
                 form_id="1bcXYzzvLK4zboc6BFISswRe2Gv4QtsshdE3Y0riXztM",
                 question_configurations=[
+                    QuestionConfiguration(engagement_db_dataset="worldbank_scd_s01e01_google_form_consent", question_titles=["Do you consent to participate in the survey?"]),
                     QuestionConfiguration(engagement_db_dataset="worldbank_scd_s01e01", question_titles=["Maxay yihiin labada sheey ee ay tahay mudnaanta in lasiiyo si loo hormariyo daryeelka bulshada sadexda sane ee soo socota?\nWhat are two priorities that would improve your community’s welfare in the next three years?"]),
                     QuestionConfiguration(engagement_db_dataset="worldbank_scd_s01e01_follow_up_1", question_titles=["Aragtidaada, waa maxay caqabadaha ka hortaagan Soomaaliya inay cirib tirto saboolnimada?\nIn your opinion, what challenges are preventing Somalia from ending poverty?"]),
                     QuestionConfiguration(engagement_db_dataset="worldbank_scd_s01e01_follow_up_2", question_titles=["Yaa ka mas`uul ah go`aan qaadashada muhiimka ah gudaha bulshadaada?\nWho is responsible for making important decisions in your community?"]),
@@ -161,6 +162,16 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                                                 ),
                     ],
                     ws_code_match_value="worldbank_scd_s01_evaluation"
+                ),
+                CodaDatasetConfiguration(
+                    coda_dataset_id="WorldBank_SCD_s01e01_google_form_consent",
+                    engagement_db_dataset="worldbank_scd_s01e01_google_form_consent",
+                    code_scheme_configurations=[
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("rqas/worldbank_scd/s01e01_google_form_consent"),
+                                                coda_code_schemes_count=3
+                                                ),
+                    ],
+                    ws_code_match_value="worldbank_scd_s01e01_google_form_consent"
                 ),
                 CodaDatasetConfiguration(
                     coda_dataset_id="IMAQAL_age",
@@ -252,6 +263,17 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     CodingConfiguration(
                         code_scheme=load_code_scheme("rqas/worldbank_scd/s01e01"),
                         analysis_dataset="s01e01"
+                    )
+                ]
+            ),
+            AnalysisDatasetConfiguration(
+                engagement_db_datasets=["worldbank_scd_s01e01_google_form_consent"],
+                dataset_type=DatasetTypes.RESEARCH_QUESTION_ANSWER,
+                raw_dataset="s01e01_google_form_consent_raw",
+                coding_configs=[
+                    CodingConfiguration(
+                        code_scheme=load_code_scheme("rqas/worldbank_scd/s01e01_google_form_consent"),
+                        analysis_dataset="s01e01_google_form_consent"
                     )
                 ]
             ),
