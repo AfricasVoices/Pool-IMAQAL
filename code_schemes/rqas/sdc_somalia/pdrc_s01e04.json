@@ -4,6 +4,62 @@
     "Version": "0.0.0.1",
     "Codes": [
         {
+            "CodeID": "code-c3d8e08e",
+            "CodeType": "Normal",
+            "DisplayText": "register to vote",
+            "NumericValue": 1,
+            "StringValue": "register_to_vote",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-be75db00",
+            "CodeType": "Normal",
+            "DisplayText": "participate",
+            "NumericValue": 2,
+            "StringValue": "participate",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-5bffddf1",
+            "CodeType": "Normal",
+            "DisplayText": "play important role",
+            "NumericValue": 3,
+            "StringValue": "play_important_role",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-c82fc394",
+            "CodeType": "Normal",
+            "DisplayText": "inquiry on election process",
+            "NumericValue": 4,
+            "StringValue": "inquiry_on_election_process",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-78009060",
+            "CodeType": "Normal",
+            "DisplayText": "we welcome it",
+            "NumericValue": 5,
+            "StringValue": "we_welcome_it",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-c57891f3",
+            "CodeType": "Normal",
+            "DisplayText": "free and fair elections",
+            "NumericValue": 6,
+            "StringValue": "free_and_fair_elections",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-fd4262aa",
+            "CodeType": "Normal",
+            "DisplayText": "other theme",
+            "NumericValue": 7,
+            "StringValue": "other_theme",
+            "VisibleInCoda": true
+        },
+        {
             "CodeID": "code-NA-f93d3eb7",
             "CodeType": "Control",
             "ControlCode": "NA",
