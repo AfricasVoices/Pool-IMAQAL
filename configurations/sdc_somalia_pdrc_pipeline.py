@@ -48,7 +48,9 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     FlowResultConfiguration("sdc_somalia_pdrc_s01e02_activation", "rqa_sdc_somalia_pdrc_s01e02", "sdc_somalia_pdrc_s01e02"),
                     FlowResultConfiguration("sdc_somalia_pdrc_s01e03_activation", "rqa_sdc_somalia_pdrc_s01e03", "sdc_somalia_pdrc_s01e03"),
                     FlowResultConfiguration("sdc_somalia_pdrc_s01e04_activation", "rqa_sdc_somalia_pdrc_s01e04", "sdc_somalia_pdrc_s01e04"),
-                    FlowResultConfiguration("sdc_somalia_pdrc_s01e05_activation", "rqa_sdc_somalia_pdrc_s01e05", "sdc_somalia_pdrc_s01e05")
+                    FlowResultConfiguration("sdc_somalia_pdrc_s01e05_activation", "rqa_sdc_somalia_pdrc_s01e05", "sdc_somalia_pdrc_s01e05"),
+
+                    FlowResultConfiguration("sdc_somalia_pdrc_s01_evaluation_1", "sdc_somlia_pdrc_s01_have_voice", "sdc_somalia_pdrc_s01_have_voice"),
                 ]
             )
         )
@@ -101,6 +103,15 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                                                 coda_code_schemes_count=3),
                     ],
                     ws_code_match_value="sdc_somalia_pdrc_s01e05"
+                ),
+                CodaDatasetConfiguration(
+                    coda_dataset_id="SDC_Somalia_PDRC_s01_have_voice",
+                    engagement_db_dataset="sdc_somalia_pdrc_s01_have_voice",
+                    code_scheme_configurations=[
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("rqas/sdc_somalia/pdrc_s01_have_voice"),
+                                                coda_code_schemes_count=3),
+                    ],
+                    ws_code_match_value="sdc_somalia_pdrc_s01_have_voice"
                 ),
                 CodaDatasetConfiguration(
                     coda_dataset_id="IMAQAL_age",
@@ -301,6 +312,17 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     CodingConfiguration(
                         code_scheme=load_code_scheme("rqas/sdc_somalia/pdrc_s01e05"),
                         analysis_dataset="pdrc_s01e05"
+                    )
+                ]
+            ),
+            AnalysisDatasetConfiguration(
+                engagement_db_datasets=["sdc_somalia_pdrc_s01_have_voice"],
+                dataset_type=DatasetTypes.RESEARCH_QUESTION_ANSWER,
+                raw_dataset="pdrc_s01_have_voice_raw",
+                coding_configs=[
+                    CodingConfiguration(
+                        code_scheme=load_code_scheme("rqas/sdc_somalia/pdrc_s01_have_voice"),
+                        analysis_dataset="pdrc_s01_have_voice"
                     )
                 ]
             ),
