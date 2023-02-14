@@ -4,6 +4,70 @@
     "Version": "0.0.0.1",
     "Codes": [
         {
+            "CodeID": "code-64c65766",
+            "CodeType": "Normal",
+            "DisplayText": "cooperation across community",
+            "NumericValue": 1,
+            "StringValue": "cooperation_across_community",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-364885d4",
+            "CodeType": "Normal",
+            "DisplayText": "they should register",
+            "NumericValue": 2,
+            "StringValue": "they_should_register",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-6dcfd88a",
+            "CodeType": "Normal",
+            "DisplayText": "conduct a census",
+            "NumericValue": 3,
+            "StringValue": "conduct_a_census",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-a2fad416",
+            "CodeType": "Normal",
+            "DisplayText": "they should participate",
+            "NumericValue": 4,
+            "StringValue": "they_should_participate",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-baf25730",
+            "CodeType": "Normal",
+            "DisplayText": "creating awareness",
+            "NumericValue": 5,
+            "StringValue": "creating_awareness",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-934e9bfa",
+            "CodeType": "Normal",
+            "DisplayText": "conduct one person one vote",
+            "NumericValue": 6,
+            "StringValue": "conduct_one_person_one_vote",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-fc0ec823",
+            "CodeType": "Normal",
+            "DisplayText": "inquiry on election process",
+            "NumericValue": 7,
+            "StringValue": "inquiry_on_election_process",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-d032bd9f",
+            "CodeType": "Normal",
+            "DisplayText": "other theme",
+            "NumericValue": 8,
+            "StringValue": "other_theme",
+            "VisibleInCoda": true
+        },
+        {
             "CodeID": "code-NA-f93d3eb7",
             "CodeType": "Control",
             "ControlCode": "NA",
