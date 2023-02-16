@@ -59,6 +59,39 @@
             ]
         },
         {
+            "CodeID": "code-84a73a85",
+            "CodeType": "Normal",
+            "DisplayText": "sdc-somalia-pdrc s01 have voice",
+            "StringValue": "sdc_somalia_pdrc_s01_have_voice",
+            "NumericValue": 142,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "sdc_somalia_pdrc_s01_have_voice"
+            ]
+        },
+         {
+            "CodeID": "code-67813512",
+            "CodeType": "Normal",
+            "DisplayText": "sdc-somalia-pdrc s01 suggestions",
+            "StringValue": "sdc_somalia_pdrc_s01_suggestions",
+            "NumericValue": 143,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "sdc_somalia_pdrc_s01_suggestions"
+            ]
+        },
+         {
+            "CodeID": "code-e7484ad5",
+            "CodeType": "Normal",
+            "DisplayText": "sdc-somalia-pdrc s01 evaluation other",
+            "StringValue": "sdc_somalia_pdrc_s01_evaluation_other",
+            "NumericValue": 144,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "sdc_somalia_pdrc_s01_evaluation_other"
+            ]
+        },
+        {
             "CodeID": "code-70ac05ab",
             "CodeType": "Normal",
             "DisplayText": "age",
