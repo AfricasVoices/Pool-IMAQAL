@@ -79,7 +79,7 @@
             "MatchValues": [
                 "sdc_somalia_pdrc_s01_suggestions"
             ]
-        },
+         },
          {
             "CodeID": "code-e7484ad5",
             "CodeType": "Normal",
@@ -89,6 +89,17 @@
             "VisibleInCoda": true,
             "MatchValues": [
                 "sdc_somalia_pdrc_s01_evaluation_other"
+            ]
+        },
+        {
+            "CodeID": "code-5458238f",
+            "CodeType": "Normal",
+            "DisplayText": "sdc-somalia-pdrc s01 closeout",
+            "StringValue": "sdc_somalia_pdrc_s01_closeout",
+            "NumericValue": 145,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "sdc_somalia_pdrc_s01_closeout"
             ]
         },
         {

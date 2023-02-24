@@ -48,6 +48,8 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     FlowResultConfiguration("sdc_somalia_pdrc_s01_evaluation", "sdc_somalia_pdrc_s01_have_voice", "sdc_somalia_pdrc_s01_have_voice"),
                     FlowResultConfiguration("sdc_somalia_pdrc_s01_evaluation", "sdc_somalia_pdrc_s01_suggestions", "sdc_somalia_pdrc_s01_suggestions"),
                     FlowResultConfiguration("sdc_somalia_pdrc_s01_evaluation_activation", "sdc_somalia_pdrc_s01_evaluation_other", "sdc_somalia_pdrc_s01_evaluation_other"),
+
+                    FlowResultConfiguration("sdc_somalia_pdrc_s01_closeout_activation", "rqa_sdc_somalia_pdrc_s01_closeout", "sdc_somalia_pdrc_s01_closeout")
                 ]
             )
         )
@@ -127,6 +129,15 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                                                 coda_code_schemes_count=3),
                     ],
                     ws_code_match_value="sdc_somalia_pdrc_s01_evaluation_other"
+                ),
+                CodaDatasetConfiguration(
+                    coda_dataset_id="SDC_Somalia_PDRC_s01_closeout",
+                    engagement_db_dataset="sdc_somalia_pdrc_s01_closeout",
+                    code_scheme_configurations=[
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("rqas/sdc_somalia/pdrc_s01_closeout"),
+                                                coda_code_schemes_count=3),
+                    ],
+                    ws_code_match_value="sdc_somalia_pdrc_s01_closeout"
                 ),
                 CodaDatasetConfiguration(
                     coda_dataset_id="IMAQAL_age",
@@ -360,6 +371,17 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     CodingConfiguration(
                         code_scheme=load_code_scheme("rqas/sdc_somalia/pdrc_s01_evaluation_other"),
                         analysis_dataset="pdrc_s01_evaluation_other"
+                    )
+                ]
+            ),
+            AnalysisDatasetConfiguration(
+                engagement_db_datasets=["sdc_somalia_pdrc_s01_closeout"],
+                dataset_type=DatasetTypes.RESEARCH_QUESTION_ANSWER,
+                raw_dataset="pdrc_s01_closeout_raw",
+                coding_configs=[
+                    CodingConfiguration(
+                        code_scheme=load_code_scheme("rqas/sdc_somalia/pdrc_s01_closeout"),
+                        analysis_dataset="pdrc_s01_closeout"
                     )
                 ]
             ),
