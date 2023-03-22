@@ -107,7 +107,10 @@
       "DisplayText": "NC (not coded)",
       "NumericValue": -30,
       "StringValue": "NC",
-      "VisibleInCoda": true
+      "VisibleInCoda": true,
+      "MatchValues": [
+        "NC"
+      ]
     },
     {
       "CodeID": "code-STOP-08b832a8",
