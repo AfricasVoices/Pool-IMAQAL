@@ -73,6 +73,11 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     "worldbank_scd_s01e01", "worldbank_scd_s01e01_follow_up_1", "worldbank_scd_s01e01_follow_up_2",
                     "worldbank_scd_s01_have_voice", "worldbank_scd_s01_suggestions", "worldbank_scd_s01_evaluation",
 
+                    "sdc_somalia_pdrc_s01e01", "sdc_somalia_pdrc_s01e02", "sdc_somalia_pdrc_s01e03",
+                    "sdc_somalia_pdrc_s01e04", "sdc_somalia_pdrc_s01e05",
+                    "sdc_somalia_pdrc_s01_have_voice", "sdc_somalia_pdrc_s01_suggestions",
+                    "sdc_somalia_pdrc_s01_evaluation_other",
+
                     "age", "gender", "household_language", "location", "recently_displaced", "disability"
                 ],
                 rapid_pro_contact_field=ContactField(
