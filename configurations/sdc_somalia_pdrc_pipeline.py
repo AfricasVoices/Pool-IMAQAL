@@ -44,6 +44,12 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     FlowResultConfiguration("sdc_somalia_demog", "imaqal_pool_recently_displaced", "recently_displaced"),
                     FlowResultConfiguration("sdc_somalia_demog", "imaqal_pool_disability", "disability"),
 
+                    FlowResultConfiguration("sdc_somalia_pdrc_s01e01_activation", "rqa_sdc_somalia_pdrc_s01e01", "sdc_somalia_pdrc_s01e01"),
+                    FlowResultConfiguration("sdc_somalia_pdrc_s01e02_activation", "rqa_sdc_somalia_pdrc_s01e02", "sdc_somalia_pdrc_s01e02"),
+                    FlowResultConfiguration("sdc_somalia_pdrc_s01e03_activation", "rqa_sdc_somalia_pdrc_s01e03", "sdc_somalia_pdrc_s01e03"),
+                    FlowResultConfiguration("sdc_somalia_pdrc_s01e04_activation", "rqa_sdc_somalia_pdrc_s01e04", "sdc_somalia_pdrc_s01e04"),
+                    FlowResultConfiguration("sdc_somalia_pdrc_s01e05_activation", "rqa_sdc_somalia_pdrc_s01e05", "sdc_somalia_pdrc_s01e05"),
+
                     # In the evaluation, we sent 2 questions, then collected any further replies in a general evaluation activation flow.
                     FlowResultConfiguration("sdc_somalia_pdrc_s01_evaluation", "sdc_somalia_pdrc_s01_have_voice", "sdc_somalia_pdrc_s01_have_voice"),
                     FlowResultConfiguration("sdc_somalia_pdrc_s01_evaluation", "sdc_somalia_pdrc_s01_suggestions", "sdc_somalia_pdrc_s01_suggestions"),
