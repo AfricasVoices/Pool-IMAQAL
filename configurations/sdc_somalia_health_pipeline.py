@@ -7,16 +7,16 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
     pipeline_name="SDC-Somalia-Health",
     description="Runs the SDC-Somalia programme's Health project pipeline. "
                 "This project takes place in NEZ and SCZ.",
-    # test_participant_uuids=[
-    #     "avf-participant-uuid-368c7741-7034-474a-9a87-6ae32a51f5a0",
-    #     "avf-participant-uuid-5ca68e07-3dba-484b-a29c-7a6c989036b7",
-    #     "avf-participant-uuid-45d15c2d-623c-4f89-bd91-7518147bf1dc",
-    #     "avf-participant-uuid-88ef05ba-4c56-41f8-a00c-29104abab73e",
-    #     "avf-participant-uuid-d9745740-3da5-43cc-a9d1-37fccb75380b",
-    #     "avf-participant-uuid-96ff0ba1-a7df-4715-84c5-9c90e9093eb4"
-    # ],
+    test_participant_uuids=[
+        "avf-participant-uuid-368c7741-7034-474a-9a87-6ae32a51f5a0",
+        "avf-participant-uuid-5ca68e07-3dba-484b-a29c-7a6c989036b7",
+        "avf-participant-uuid-45d15c2d-623c-4f89-bd91-7518147bf1dc",
+        "avf-participant-uuid-88ef05ba-4c56-41f8-a00c-29104abab73e",
+        "avf-participant-uuid-d9745740-3da5-43cc-a9d1-37fccb75380b",
+        "avf-participant-uuid-96ff0ba1-a7df-4715-84c5-9c90e9093eb4"
+    ],
     engagement_database=EngagementDatabaseClientConfiguration(
-        credentials_file_url="gs://avf-credentials/firebase-test.json",
+        credentials_file_url="gs://avf-credentials/avf-engagement-databases-firebase-credentials-file.json",
         # Sync back to IMAQAL-2 for now because the current IMAQAL pool has duplicated CSV messages that need
         # understanding.
         # TODO: Overwrite the IMAQAL pool with the current IMAQAL-2 pool and change this ref to use that IMAQAL
@@ -141,10 +141,10 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
         bucket_dir_path="2023/SDC-Somalia-Health"
     ),
     analysis=AnalysisConfiguration(
-        # google_drive_upload=GoogleDriveUploadConfiguration(
-        #     credentials_file_url="gs://avf-credentials/pipeline-runner-service-acct-avf-data-core-64cc71459fe7.json",
-        #     drive_dir="sdc_somalia_analysis_outputs/health"
-        # ),
+        google_drive_upload=GoogleDriveUploadConfiguration(
+            credentials_file_url="gs://avf-credentials/pipeline-runner-service-acct-avf-data-core-64cc71459fe7.json",
+            drive_dir="sdc_somalia_analysis_outputs/health"
+        ),
         dataset_configurations=[
             AnalysisDatasetConfiguration(
                 engagement_db_datasets=["sdc_somalia_health_s01e01"],
