@@ -291,6 +291,12 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
             ),
         ],
         ws_correct_dataset_code_scheme=load_code_scheme("ws_correct_dataset"),
-        traffic_labels=[]
+        traffic_labels=[
+            TrafficLabel(isoparse("2023-06-02T00:00+03:00"), isoparse("2023-06-04T24:00+03:00"), "E01 Promos"),
+            TrafficLabel(isoparse("2023-06-05T00:00+03:00"), isoparse("2023-06-05T16:40+03:00"), "E01 Monday, Before Advert"),
+            TrafficLabel(isoparse("2023-06-05T16:40+03:00"), isoparse("2023-06-05T24:00+03:00"), "E01 Advert"),
+            TrafficLabel(isoparse("2023-06-06T00:00+03:00"), isoparse("2023-06-06T24:00+03:00"), "E01 Shows"),
+            TrafficLabel(isoparse("2023-06-07T00:00+03:00"), isoparse("2023-06-08T24:00+03:00"), "E01 Other"),
+        ]
     )
 )
