@@ -3,7 +3,62 @@
     "Name": "SDC-Somalia-Health S01E01",
     "Version": "0.0.0.1",
     "Codes": [
-
+        {
+            "CodeID": "code-ad08e9c5",
+            "CodeType": "Normal",
+            "DisplayText": "women's health specialists",
+            "NumericValue": 1,
+            "StringValue": "womens_health_specialists",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-c814977b",
+            "CodeType": "Normal",
+            "DisplayText": "provision of nutritious food",
+            "NumericValue": 2,
+            "StringValue": "provision_of_nutritious_food",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-5fc42587",
+            "CodeType": "Normal",
+            "DisplayText": "healthcare centers",
+            "NumericValue": 3,
+            "StringValue": "healthcare_centers",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-5b48bf0a",
+            "CodeType": "Normal",
+            "DisplayText": "health education",
+            "NumericValue": 4,
+            "StringValue": "health_education",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-1b68f4b8",
+            "CodeType": "Normal",
+            "DisplayText": "stop female genital mutilation",
+            "NumericValue": 5,
+            "StringValue": "stop_female_genital_mutilation",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-4477c51c",
+            "CodeType": "Normal",
+            "DisplayText": "treatment of gender based violence",
+            "NumericValue": 6,
+            "StringValue": "treatment_of_gender_based_violence",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-496194f3",
+            "CodeType": "Normal",
+            "DisplayText": "other theme",
+            "NumericValue": 7,
+            "StringValue": "other_theme",
+            "VisibleInCoda": true
+        },
         {
             "CodeID": "code-NA-f93d3eb7",
             "CodeType": "Control",
