@@ -3,7 +3,94 @@
     "Name": "SDC-Somalia-Health S01E02",
     "Version": "0.0.0.1",
     "Codes": [
-
+        {
+            "CodeID": "code-803543aa",
+            "CodeType": "Normal",
+            "DisplayText": "more trusted",
+            "NumericValue": 1,
+            "StringValue": "more_trusted",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-0fd0f97a",
+            "CodeType": "Normal",
+            "DisplayText": "more experienced",
+            "NumericValue": 2,
+            "StringValue": "more_experienced",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-bb27321d",
+            "CodeType": "Normal",
+            "DisplayText": "traditional beliefs",
+            "NumericValue": 3,
+            "StringValue": "traditional_beliefs",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-c63afadf",
+            "CodeType": "Normal",
+            "DisplayText": "hospitals push for surgery",
+            "NumericValue": 4,
+            "StringValue": "hospitals_push_for_surgery",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-d6ca4c6b",
+            "CodeType": "Normal",
+            "DisplayText": "shortage of health facilities",
+            "NumericValue": 5,
+            "StringValue": "shortage_of_health_facilities",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-2a1a3d5d",
+            "CodeType": "Normal",
+            "DisplayText": "clinics are expensive",
+            "NumericValue": 6,
+            "StringValue": "clinics_are_expensive",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-6e3c34cc",
+            "CodeType": "Normal",
+            "DisplayText": "cheaper",
+            "NumericValue": 7,
+            "StringValue": "cheaper",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-924a6274",
+            "CodeType": "Normal",
+            "DisplayText": "more available",
+            "NumericValue": 8,
+            "StringValue": "more_available",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-4037f3e3",
+            "CodeType": "Normal",
+            "DisplayText": "lack of awareness",
+            "NumericValue": 9,
+            "StringValue": "lack_of_awareness",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-f1b002af",
+            "CodeType": "Normal",
+            "DisplayText": "more compassionate",
+            "NumericValue": 10,
+            "StringValue": "more_compassionate",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-222185e7",
+            "CodeType": "Normal",
+            "DisplayText": "other theme",
+            "NumericValue": 11,
+            "StringValue": "other_theme",
+            "VisibleInCoda": true
+        },
         {
             "CodeID": "code-NA-f93d3eb7",
             "CodeType": "Control",
