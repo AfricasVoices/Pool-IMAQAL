@@ -48,6 +48,39 @@
             ]
         },
         {
+            "CodeID": "code-c0d03872",
+            "CodeType": "Normal",
+            "DisplayText": "sdc-somalia-health s01e05",
+            "StringValue": "sdc_somalia_health_s01e05",
+            "NumericValue": 149,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "sdc_somalia_health_s01e05"
+            ]
+        },
+        {
+            "CodeID": "code-d7bd1430",
+            "CodeType": "Normal",
+            "DisplayText": "sdc-somalia-health s01e06",
+            "StringValue": "sdc_somalia_health_s01e06",
+            "NumericValue": 150,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "sdc_somalia_health_s01e06"
+            ]
+        },
+        {
+            "CodeID": "code-3d39e3ce",
+            "CodeType": "Normal",
+            "DisplayText": "sdc-somalia-health s01e07",
+            "StringValue": "sdc_somalia_health_s01e07",
+            "NumericValue": 151,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "sdc_somalia_health_s01e07"
+            ]
+        },
+        {
             "CodeID": "code-70ac05ab",
             "CodeType": "Normal",
             "DisplayText": "age",
