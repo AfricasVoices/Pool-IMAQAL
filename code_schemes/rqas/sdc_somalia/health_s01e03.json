@@ -3,7 +3,54 @@
     "Name": "SDC-Somalia-Health S01E03",
     "Version": "0.0.0.1",
     "Codes": [
-
+        {
+            "CodeID": "code-499ba0a9",
+            "CodeType": "Normal",
+            "DisplayText": "provide sanitary pads",
+            "NumericValue": 1,
+            "StringValue": "provide_sanitary_pads",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-11b788e3",
+            "CodeType": "Normal",
+            "DisplayText": "provide separate changing rooms",
+            "NumericValue": 2,
+            "StringValue": "provide_separate_changing_rooms",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-5c435ab1",
+            "CodeType": "Normal",
+            "DisplayText": "female teachers",
+            "NumericValue": 3,
+            "StringValue": "female_teachers",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-f9901ea2",
+            "CodeType": "Normal",
+            "DisplayText": "menstrual hygiene awareness",
+            "NumericValue": 4,
+            "StringValue": "menstrual_hygiene_awareness",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-f24ed8b9",
+            "CodeType": "Normal",
+            "DisplayText": "provide separate latrines",
+            "NumericValue": 5,
+            "StringValue": "provide_separate_latrines",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-7c251435",
+            "CodeType": "Normal",
+            "DisplayText": "other theme",
+            "NumericValue": 6,
+            "StringValue": "other_theme",
+            "VisibleInCoda": true
+        },
         {
             "CodeID": "code-NA-f93d3eb7",
             "CodeType": "Control",
