@@ -3,7 +3,54 @@
     "Name": "SDC-Somalia-Health S01E04",
     "Version": "0.0.0.1",
     "Codes": [
-
+        {
+            "CodeID": "code-cfd5180b",
+            "DisplayText": "stop female genital multilation",
+            "CodeType": "Normal",
+            "NumericValue": 1,
+            "StringValue": "stop_female_genital_multilation",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-7074a24b",
+            "DisplayText": "health education or awareness",
+            "CodeType": "Normal",
+            "NumericValue": 2,
+            "StringValue": "health_education_or_awareness",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-b30bb747",
+            "DisplayText": "provision of healthcare",
+            "CodeType": "Normal",
+            "NumericValue": 3,
+            "StringValue": "provision_of_healthcare",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-017d0c15",
+            "DisplayText": "provision of sanitary pads",
+            "CodeType": "Normal",
+            "NumericValue": 4,
+            "StringValue": "provision_of_sanitary_pads",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-4b43c475",
+            "DisplayText": "personal hygiene",
+            "CodeType": "Normal",
+            "NumericValue": 5,
+            "StringValue": "personal_hygiene",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-e6116cfb",
+            "DisplayText": "other theme",
+            "CodeType": "Normal",
+            "NumericValue": 6,
+            "StringValue": "other_theme",
+            "VisibleInCoda": true
+        },
         {
             "CodeID": "code-NA-f93d3eb7",
             "CodeType": "Control",
