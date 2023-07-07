@@ -12,26 +12,10 @@
             "VisibleInCoda": true
         },
         {
-            "CodeID": "code-e1540566",
-            "CodeType": "Normal",
-            "DisplayText": "uphold their rights",
-            "NumericValue": 2,
-            "StringValue": "uphold_their_rights",
-            "VisibleInCoda": true
-        },
-        {
-            "CodeID": "code-bcbdd18f",
-            "CodeType": "Normal",
-            "DisplayText": "community awareness",
-            "NumericValue": 3,
-            "StringValue": "community_awareness",
-            "VisibleInCoda": true
-        },
-        {
             "CodeID": "code-efedc64a",
             "CodeType": "Normal",
             "DisplayText": "justice for the victim",
-            "NumericValue": 4,
+            "NumericValue": 2,
             "StringValue": "justice_for_the_victim",
             "VisibleInCoda": true
         },
@@ -39,7 +23,7 @@
             "CodeID": "code-310bc7aa",
             "CodeType": "Normal",
             "DisplayText": "uphold their rights",
-            "NumericValue": 5,
+            "NumericValue": 3,
             "StringValue": "uphold_their_rights",
             "VisibleInCoda": true
         },
@@ -47,7 +31,7 @@
             "CodeID": "code-52194e36",
             "CodeType": "Normal",
             "DisplayText": "community awareness",
-            "NumericValue": 6,
+            "NumericValue": 4,
             "StringValue": "community_awareness",
             "VisibleInCoda": true
         },
@@ -55,7 +39,7 @@
             "CodeID": "code-5478d57b",
             "CodeType": "Normal",
             "DisplayText": "stop discrimination and stigmatization",
-            "NumericValue": 7,
+            "NumericValue": 5,
             "StringValue": "stop_discrimination_and_stigmatization",
             "VisibleInCoda": true
         },
@@ -63,7 +47,7 @@
             "CodeID": "code-10b16911",
             "CodeType": "Normal",
             "DisplayText": "encourage victims",
-            "NumericValue": 8,
+            "NumericValue": 6,
             "StringValue": "encourage_victims",
             "VisibleInCoda": true
         },
@@ -71,7 +55,7 @@
             "CodeID": "code-fecf55ef",
             "CodeType": "Normal",
             "DisplayText": "provision of healthcare",
-            "NumericValue": 9,
+            "NumericValue": 7,
             "StringValue": "provision_of_healthcare",
             "VisibleInCoda": true
         },
@@ -79,7 +63,7 @@
             "CodeID": "code-dcc23a8e",
             "CodeType": "Normal",
             "DisplayText": "financial support",
-            "NumericValue": 10,
+            "NumericValue": 8,
             "StringValue": "financial_support",
             "VisibleInCoda": true
         },
@@ -87,7 +71,7 @@
             "CodeID": "code-984d8b50",
             "CodeType": "Normal",
             "DisplayText": "establish rehabilitation centers",
-            "NumericValue": 11,
+            "NumericValue": 9,
             "StringValue": "establish_rehabilitation_centers",
             "VisibleInCoda": true
         },
@@ -95,7 +79,7 @@
             "CodeID": "code-89be2674",
             "CodeType": "Normal",
             "DisplayText": "stop female genital multilation",
-            "NumericValue": 12,
+            "NumericValue": 10,
             "StringValue": "stop_female_genital_multilation",
             "VisibleInCoda": true
         },
@@ -103,7 +87,7 @@
             "CodeID": "code-58698092",
             "CodeType": "Normal",
             "DisplayText": "other theme",
-            "NumericValue": 13,
+            "NumericValue": 11,
             "StringValue": "other_theme",
             "VisibleInCoda": true
         },
