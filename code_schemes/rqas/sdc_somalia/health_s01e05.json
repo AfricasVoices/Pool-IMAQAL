@@ -3,7 +3,94 @@
     "Name": "SDC-Somalia-Health S01E05",
     "Version": "0.0.0.1",
     "Codes": [
-
+        {
+            "CodeID": "code-691497b3",
+            "CodeType": "Normal",
+            "DisplayText": "support",
+            "NumericValue": 1,
+            "StringValue": "support",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-efedc64a",
+            "CodeType": "Normal",
+            "DisplayText": "justice for the victim",
+            "NumericValue": 2,
+            "StringValue": "justice_for_the_victim",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-310bc7aa",
+            "CodeType": "Normal",
+            "DisplayText": "uphold their rights",
+            "NumericValue": 3,
+            "StringValue": "uphold_their_rights",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-52194e36",
+            "CodeType": "Normal",
+            "DisplayText": "community awareness",
+            "NumericValue": 4,
+            "StringValue": "community_awareness",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-5478d57b",
+            "CodeType": "Normal",
+            "DisplayText": "stop discrimination and stigmatization",
+            "NumericValue": 5,
+            "StringValue": "stop_discrimination_and_stigmatization",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-10b16911",
+            "CodeType": "Normal",
+            "DisplayText": "encourage victims",
+            "NumericValue": 6,
+            "StringValue": "encourage_victims",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-fecf55ef",
+            "CodeType": "Normal",
+            "DisplayText": "provision of healthcare",
+            "NumericValue": 7,
+            "StringValue": "provision_of_healthcare",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-dcc23a8e",
+            "CodeType": "Normal",
+            "DisplayText": "financial support",
+            "NumericValue": 8,
+            "StringValue": "financial_support",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-984d8b50",
+            "CodeType": "Normal",
+            "DisplayText": "establish rehabilitation centers",
+            "NumericValue": 9,
+            "StringValue": "establish_rehabilitation_centers",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-89be2674",
+            "CodeType": "Normal",
+            "DisplayText": "stop female genital multilation",
+            "NumericValue": 10,
+            "StringValue": "stop_female_genital_multilation",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-58698092",
+            "CodeType": "Normal",
+            "DisplayText": "other theme",
+            "NumericValue": 11,
+            "StringValue": "other_theme",
+            "VisibleInCoda": true
+        },
         {
             "CodeID": "code-NA-f93d3eb7",
             "CodeType": "Control",
