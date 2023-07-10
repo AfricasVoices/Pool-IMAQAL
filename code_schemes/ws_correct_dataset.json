@@ -80,6 +80,17 @@
                 "sdc_somalia_health_s01e07"
             ]
         },
+         {
+            "CodeID": "code-971fc520",
+            "CodeType": "Normal",
+            "DisplayText": "sdc-somalia-health s01e05 support follow up",
+            "StringValue": "sdc_somalia_health_s01e05_support_follow_up",
+            "NumericValue": 152,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "sdc_somalia_health_s01e05_support_follow_up"
+            ]
+        },
         {
             "CodeID": "code-70ac05ab",
             "CodeType": "Normal",
