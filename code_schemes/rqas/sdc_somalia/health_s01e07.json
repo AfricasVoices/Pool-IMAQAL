@@ -3,7 +3,46 @@
     "Name": "SDC-Somalia-Health S01E07",
     "Version": "0.0.0.1",
     "Codes": [
-
+        {
+            "CodeID": "code-e36764f1",
+            "CodeType": "Normal",
+            "DisplayText": "justice for the victim",
+            "NumericValue": 1,
+            "StringValue": "justice_for_the_victim",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-fa3cdf80",
+            "CodeType": "Normal",
+            "DisplayText": "provision of healthcare",
+            "NumericValue": 2,
+            "StringValue": "provision_of_healthcare",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-6a325d75",
+            "CodeType": "Normal",
+            "DisplayText": "community awareness",
+            "NumericValue": 3,
+            "StringValue": "community_awareness",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-60706dd3",
+            "CodeType": "Normal",
+            "DisplayText": "provide moral support",
+            "NumericValue": 4,
+            "StringValue": "provide_moral_support",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-6242d08d",
+            "CodeType": "Normal",
+            "DisplayText": "other theme",
+            "NumericValue": 5,
+            "StringValue": "other_theme",
+            "VisibleInCoda": true
+        },
         {
             "CodeID": "code-NA-f93d3eb7",
             "CodeType": "Control",
