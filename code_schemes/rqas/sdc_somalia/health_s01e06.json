@@ -3,7 +3,78 @@
     "Name": "SDC-Somalia-Health S01E06",
     "Version": "0.0.0.1",
     "Codes": [
-
+        {
+            "CodeID": "code-4fe89d21",
+            "CodeType": "Normal",
+            "DisplayText": "enable health access",
+            "NumericValue": 1,
+            "StringValue": "enable_health_access",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-99f59905",
+            "CodeType": "Normal",
+            "DisplayText": "general support",
+            "NumericValue": 2,
+            "StringValue": "general_support",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-6a079081",
+            "CodeType": "Normal",
+            "DisplayText": "practice good sexual health behaviours",
+            "NumericValue": 3,
+            "StringValue": "practice_good_sexual_health_behaviours",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-6e4ca316",
+            "CodeType": "Normal",
+            "DisplayText": "reproductive health awareness",
+            "NumericValue": 4,
+            "StringValue": "reproductive_health_awareness",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-5c93498a",
+            "CodeType": "Normal",
+            "DisplayText": "stop female genital mutilation",
+            "NumericValue": 5,
+            "StringValue": "stop_female_genital_mutilation",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-a3e9b143",
+            "CodeType": "Normal",
+            "DisplayText": "prevent gbv",
+            "NumericValue": 6,
+            "StringValue": "prevent_gbv",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-90235efb",
+            "CodeType": "Normal",
+            "DisplayText": "financial support",
+            "NumericValue": 7,
+            "StringValue": "financial_support",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-81bff8bd",
+            "CodeType": "Normal",
+            "DisplayText": "provision of sanitary pads",
+            "NumericValue": 8,
+            "StringValue": "provision_of_sanitary_pads",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-507df06a",
+            "CodeType": "Normal",
+            "DisplayText": "other theme",
+            "NumericValue": 9,
+            "StringValue": "other_theme",
+            "VisibleInCoda": true
+        },
         {
             "CodeID": "code-NA-f93d3eb7",
             "CodeType": "Control",
