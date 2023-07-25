@@ -3,7 +3,54 @@
     "Name": "SDC-Somalia-Health Primary Follow-Up",
     "Version": "0.0.0.1",
     "Codes": [
-
+        {
+            "CodeID": "code-50366869",
+            "CodeType": "Normal",
+            "DisplayText": "the government",
+            "NumericValue": 1,
+            "StringValue": "the_government",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-83079cf7",
+            "CodeType": "Normal",
+            "DisplayText": "community leaders",
+            "NumericValue": 2,
+            "StringValue": "community_leaders",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-a459104b",
+            "CodeType": "Normal",
+            "DisplayText": "health workers",
+            "NumericValue": 3,
+            "StringValue": "health_workers",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-412ef246",
+            "CodeType": "Normal",
+            "DisplayText": "CSOs and NGOs",
+            "NumericValue": 4,
+            "StringValue": "csos_and_ngos",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-749ec54c",
+            "CodeType": "Normal",
+            "DisplayText": "community members",
+            "NumericValue": 5,
+            "StringValue": "community_members",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-aeba8887",
+            "CodeType": "Normal",
+            "DisplayText": "other theme",
+            "NumericValue": 6,
+            "StringValue": "other_theme",
+            "VisibleInCoda": true
+        },
         {
             "CodeID": "code-NA-f93d3eb7",
             "CodeType": "Control",
