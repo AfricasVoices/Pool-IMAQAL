@@ -4,7 +4,9 @@ from src.pipeline_configuration_spec import *
 
 
 PIPELINE_CONFIGURATION = PipelineConfiguration(
-    pipeline_name="WorldBank-SCD",
+    pipeline_name="SDC-Somalia-Health",
+    description="Runs the SDC-Somalia programme's Health project pipeline. "
+                "This project takes place in NEZ and SCZ.",
     test_participant_uuids=[
         "avf-participant-uuid-368c7741-7034-474a-9a87-6ae32a51f5a0",
         "avf-participant-uuid-5ca68e07-3dba-484b-a29c-7a6c989036b7",
@@ -37,141 +39,112 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
             ),
             sync_config=RapidProToEngagementDBConfiguration(
                 flow_result_configurations=[
-                    FlowResultConfiguration("worldbank_scd_demog", "imaqal_pool_district", "location"),
-                    FlowResultConfiguration("worldbank_scd_demog", "imaqal_pool_gender", "gender"),
-                    FlowResultConfiguration("worldbank_scd_demog", "imaqal_pool_age", "age"),
-                    FlowResultConfiguration("worldbank_scd_demog", "imaqal_pool_recently_displaced", "recently_displaced"),
-                    FlowResultConfiguration("worldbank_scd_demog", "imaqal_pool_household_language", "household_language"),
-                    FlowResultConfiguration("worldbank_scd_demog", "imaqal_pool_disability", "disability"),
+                    FlowResultConfiguration("sdc_somalia_health_demog", "imaqal_pool_district", "location"),
+                    FlowResultConfiguration("sdc_somalia_health_demog", "imaqal_pool_gender", "gender"),
+                    FlowResultConfiguration("sdc_somalia_health_demog", "imaqal_pool_age", "age"),
+                    FlowResultConfiguration("sdc_somalia_health_demog", "imaqal_pool_recently_displaced", "recently_displaced"),
+                    FlowResultConfiguration("sdc_somalia_health_demog", "imaqal_pool_disability", "disability"),
+                    FlowResultConfiguration("sdc_somalia_health_demog", "imaqal_pool_household_language", "household_language"),
 
-                    FlowResultConfiguration("worldbank_scd_s01e01_activation", "worldbank_scd_s01e01", "worldbank_scd_s01e01"),
+                    FlowResultConfiguration("sdc_somalia_health_s01e01_activation", "rqa_sdc_somalia_health_s01e01", "sdc_somalia_health_s01e01"),
+                    FlowResultConfiguration("sdc_somalia_health_s01e02_activation", "rqa_sdc_somalia_health_s01e02", "sdc_somalia_health_s01e02"),
+                    FlowResultConfiguration("sdc_somalia_health_s01e03_activation", "rqa_sdc_somalia_health_s01e03", "sdc_somalia_health_s01e03"),
+                    FlowResultConfiguration("sdc_somalia_health_s01e04_activation", "rqa_sdc_somalia_health_s01e04", "sdc_somalia_health_s01e04"),
+                    FlowResultConfiguration("sdc_somalia_health_s01e05_activation", "rqa_sdc_somalia_health_s01e05", "sdc_somalia_health_s01e05"),
+                    FlowResultConfiguration("sdc_somalia_health_s01e06_activation", "rqa_sdc_somalia_health_s01e06", "sdc_somalia_health_s01e06"),
+                    FlowResultConfiguration("sdc_somalia_health_s01e07_activation", "rqa_sdc_somalia_health_s01e07", "sdc_somalia_health_s01e07"),
 
-                    # We captured the follow-ups in 2 places, so we can send a thank-you reply the first time we hear
-                    # from someone, while silently collecting any future messages we get later.
-                    FlowResultConfiguration("worldbank_scd_s01e01_follow_up_1_ad", "worldbank_scd_s01e01_follow_up_1", "worldbank_scd_s01e01_follow_up_1"),
-                    FlowResultConfiguration("worldbank_scd_s01e01_follow_up_1_activation", "worldbank_scd_s01e01_follow_up_1", "worldbank_scd_s01e01_follow_up_1"),
-
-                    FlowResultConfiguration("worldbank_scd_s01e01_follow_up_2_ad", "worldbank_scd_s01e01_follow_up_2", "worldbank_scd_s01e01_follow_up_2"),
-                    FlowResultConfiguration("worldbank_scd_s01e01_follow_up_2_activation", "worldbank_scd_s01e01_follow_up_2", "worldbank_scd_s01e01_follow_up_2"),
-
-                    # Evaluation asked and captured 2 questions (have voice & suggestions).
-                    # We captured any other messages sent during this period into the evaluation_activation flow.
-                    FlowResultConfiguration("worldbank_scd_s01_evaluation", "worldbank_scd_s01_have_voice", "worldbank_scd_s01_have_voice"),
-                    FlowResultConfiguration("worldbank_scd_s01_evaluation", "worldbank_scd_s01_suggestions", "worldbank_scd_s01_suggestions"),
-                    FlowResultConfiguration("worldbank_scd_s01_evaluation_activation", "worldbank_scd_s01_evaluation", "worldbank_scd_s01_evaluation"),
+                    FlowResultConfiguration("sdc_somalia_health_s01e05_support_follow_up", "sdc_somalia_health_s01e05_support_followup", "sdc_somalia_health_s01e05_support_follow_up"),
+                    FlowResultConfiguration("sdc_somalia_health_s01e05_primary_follow_up", "sdc_somalia_health_s01e05_primary_followup", "sdc_somalia_health_s01e05_primary_follow_up"),
                 ]
             )
         )
-    ],
-    csv_sources=[
-        CSVSource(
-            "gs://avf-project-datasets/2022/WorldBank-SCD/recovered_hormuud_2022_12_de_identified.csv",
-            engagement_db_datasets=[
-                # Recovered data is mainly from outages caused when running adverts, so add all recovered data to the
-                # e01 dataset.
-                CSVDatasetConfiguration("worldbank_scd_s01e01"),
-            ],
-            timezone="Africa/Mogadishu"
-        )
-    ],
-    google_form_sources=[
-        GoogleFormSource(
-            # https://docs.google.com/forms/d/1bcXYzzvLK4zboc6BFISswRe2Gv4QtsshdE3Y0riXztM
-            google_form_client=GoogleFormsClientConfiguration(
-                credentials_file_url="gs://avf-credentials/pipeline-runner-service-acct-avf-data-core-64cc71459fe7.json"
-            ),
-            sync_config=GoogleFormToEngagementDBConfiguration(
-                form_id="1bcXYzzvLK4zboc6BFISswRe2Gv4QtsshdE3Y0riXztM",
-                question_configurations=[
-                    QuestionConfiguration(engagement_db_dataset="worldbank_scd_s01e01_google_form_consent", question_titles=["Do you consent to participate in the survey?"]),
-                    QuestionConfiguration(engagement_db_dataset="worldbank_scd_s01e01", question_titles=["Maxay yihiin labada sheey ee ay tahay mudnaanta in lasiiyo si loo hormariyo daryeelka bulshada sadexda sane ee soo socota?\nWhat are two priorities that would improve your community’s welfare in the next three years?"]),
-                    QuestionConfiguration(engagement_db_dataset="worldbank_scd_s01e01_follow_up_1", question_titles=["Aragtidaada, waa maxay caqabadaha ka hortaagan Soomaaliya inay cirib tirto saboolnimada?\nIn your opinion, what challenges are preventing Somalia from ending poverty?"]),
-                    QuestionConfiguration(engagement_db_dataset="worldbank_scd_s01e01_follow_up_2", question_titles=["Yaa ka mas`uul ah go`aan qaadashada muhiimka ah gudaha bulshadaada?\nWho is responsible for making important decisions in your community?"]),
-
-                    QuestionConfiguration(engagement_db_dataset="location", question_titles=["Degmadee ayaad ku nooshahay?\nIn which district of Somalia do you currently live?"]),
-                    QuestionConfiguration(engagement_db_dataset="gender", question_titles=["Mahadsanid. Ma waxaad tahay Rag mise Dumar? Fadlan kaga jawaab Rag ama Dumar.\nWhat is your gender?"]),
-                    QuestionConfiguration(engagement_db_dataset="age", question_titles=["Da'daadu maxay tahay? Fadlan kaga jawaab tiro.\nHow old are you? Please answer with a number in years."]),
-                    QuestionConfiguration(engagement_db_dataset="recently_displaced", question_titles=["Ma waxaad tahay qof soo barakacay dhawaan? Hadii haa ay tahay jawaabtadu, Maxa kusoo barakiciyay?\nAre you currently displaced? If so, what made you leave your home?"]),
-                    QuestionConfiguration(engagement_db_dataset="disability", question_titles=["Wax naafo ah miyaad leedahay? Haa/Maya\nDo you have a disability? Yes/No"]),
-                    QuestionConfiguration(engagement_db_dataset="household_language", question_titles=["Luuqaddee ayaad caadi ahaan gurigiinna dhexdiisa uga hadashaan?\nWhat language do you usually speak in your household?"])
-                ]
-            )
-        ),
     ],
     coda_sync=CodaConfiguration(
         coda=CodaClientConfiguration(credentials_file_url="gs://avf-credentials/coda-production.json"),
         sync_config=CodaSyncConfiguration(
             dataset_configurations=[
                 CodaDatasetConfiguration(
-                    coda_dataset_id="WorldBank_SCD_s01e01",
-                    engagement_db_dataset="worldbank_scd_s01e01",
+                    coda_dataset_id="SDC_Somalia_Health_s01e01",
+                    engagement_db_dataset="sdc_somalia_health_s01e01",
                     code_scheme_configurations=[
-                        CodeSchemeConfiguration(code_scheme=load_code_scheme("rqas/worldbank_scd/s01e01"),
-                                                coda_code_schemes_count=3
-                                                ),
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("rqas/sdc_somalia/health_s01e01"),
+                                                coda_code_schemes_count=3),
                     ],
-                    ws_code_match_value="worldbank_scd_s01e01"
+                    ws_code_match_value="sdc_somalia_health_s01e01"
                 ),
                 CodaDatasetConfiguration(
-                    coda_dataset_id="WorldBank_SCD_s01e01_follow_up_1",
-                    engagement_db_dataset="worldbank_scd_s01e01_follow_up_1",
+                    coda_dataset_id="SDC_Somalia_Health_s01e02",
+                    engagement_db_dataset="sdc_somalia_health_s01e02",
                     code_scheme_configurations=[
-                        CodeSchemeConfiguration(code_scheme=load_code_scheme("rqas/worldbank_scd/s01e01_follow_up_1"),
-                                                coda_code_schemes_count=3
-                                                ),
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("rqas/sdc_somalia/health_s01e02"),
+                                                coda_code_schemes_count=3),
                     ],
-                    ws_code_match_value="worldbank_scd_s01e01_follow_up_1"
+                    ws_code_match_value="sdc_somalia_health_s01e02"
                 ),
                 CodaDatasetConfiguration(
-                    coda_dataset_id="WorldBank_SCD_s01e01_follow_up_2",
-                    engagement_db_dataset="worldbank_scd_s01e01_follow_up_2",
+                    coda_dataset_id="SDC_Somalia_Health_s01e03",
+                    engagement_db_dataset="sdc_somalia_health_s01e03",
                     code_scheme_configurations=[
-                        CodeSchemeConfiguration(code_scheme=load_code_scheme("rqas/worldbank_scd/s01e01_follow_up_2"),
-                                                coda_code_schemes_count=3
-                                                ),
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("rqas/sdc_somalia/health_s01e03"),
+                                                coda_code_schemes_count=3),
                     ],
-                    ws_code_match_value="worldbank_scd_s01e01_follow_up_2"
+                    ws_code_match_value="sdc_somalia_health_s01e03"
                 ),
                 CodaDatasetConfiguration(
-                    coda_dataset_id="WorldBank_SCD_s01_have_voice",
-                    engagement_db_dataset="worldbank_scd_s01_have_voice",
+                    coda_dataset_id="SDC_Somalia_Health_s01e04",
+                    engagement_db_dataset="sdc_somalia_health_s01e04",
                     code_scheme_configurations=[
-                        CodeSchemeConfiguration(code_scheme=load_code_scheme("rqas/worldbank_scd/s01_have_voice"),
-                                                coda_code_schemes_count=3,
-                                                auto_coder=somali.DemographicCleaner.clean_yes_no
-                                                ),
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("rqas/sdc_somalia/health_s01e04"),
+                                                coda_code_schemes_count=3),
                     ],
-                    ws_code_match_value="worldbank_scd_s01_have_voice"
+                    ws_code_match_value="sdc_somalia_health_s01e04"
                 ),
                 CodaDatasetConfiguration(
-                    coda_dataset_id="WorldBank_SCD_s01_suggestions",
-                    engagement_db_dataset="worldbank_scd_s01_suggestions",
+                    coda_dataset_id="SDC_Somalia_Health_s01e05",
+                    engagement_db_dataset="sdc_somalia_health_s01e05",
                     code_scheme_configurations=[
-                        CodeSchemeConfiguration(code_scheme=load_code_scheme("rqas/worldbank_scd/s01_suggestions"),
-                                                coda_code_schemes_count=3
-                                                ),
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("rqas/sdc_somalia/health_s01e05"),
+                                                coda_code_schemes_count=3),
                     ],
-                    ws_code_match_value="worldbank_scd_s01_suggestions"
+                    ws_code_match_value="sdc_somalia_health_s01e05"
                 ),
                 CodaDatasetConfiguration(
-                    coda_dataset_id="WorldBank_SCD_s01_evaluation",
-                    engagement_db_dataset="worldbank_scd_s01_evaluation",
+                    coda_dataset_id="SDC_Somalia_Health_s01e06",
+                    engagement_db_dataset="sdc_somalia_health_s01e06",
                     code_scheme_configurations=[
-                        CodeSchemeConfiguration(code_scheme=load_code_scheme("rqas/worldbank_scd/s01_evaluation"),
-                                                coda_code_schemes_count=3
-                                                ),
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("rqas/sdc_somalia/health_s01e06"),
+                                                coda_code_schemes_count=3),
                     ],
-                    ws_code_match_value="worldbank_scd_s01_evaluation"
+                    ws_code_match_value="sdc_somalia_health_s01e06"
                 ),
                 CodaDatasetConfiguration(
-                    coda_dataset_id="WorldBank_SCD_s01e01_google_form_consent",
-                    engagement_db_dataset="worldbank_scd_s01e01_google_form_consent",
+                    coda_dataset_id="SDC_Somalia_Health_s01e07",
+                    engagement_db_dataset="sdc_somalia_health_s01e07",
                     code_scheme_configurations=[
-                        CodeSchemeConfiguration(code_scheme=load_code_scheme("rqas/worldbank_scd/s01e01_google_form_consent"),
-                                                coda_code_schemes_count=3
-                                                ),
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("rqas/sdc_somalia/health_s01e07"),
+                                                coda_code_schemes_count=3),
                     ],
-                    ws_code_match_value="worldbank_scd_s01e01_google_form_consent"
+                    ws_code_match_value="sdc_somalia_health_s01e07"
+                ),
+                CodaDatasetConfiguration(
+                    coda_dataset_id="SDC_Somalia_Health_s01e05_support_follow_up",
+                    engagement_db_dataset="sdc_somalia_health_s01e05_support_follow_up",
+                    code_scheme_configurations=[
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("rqas/sdc_somalia/health_s01e05_support_follow_up"),
+                                                coda_code_schemes_count=3),
+                    ],
+                    ws_code_match_value="sdc_somalia_health_s01e05_support_follow_up"
+                ),
+                CodaDatasetConfiguration(
+                    coda_dataset_id="SDC_Somalia_Health_s01e05_primary_follow_up",
+                    engagement_db_dataset="sdc_somalia_health_s01e05_primary_follow_up",
+                    code_scheme_configurations=[
+                        CodeSchemeConfiguration(
+                            code_scheme=load_code_scheme("rqas/sdc_somalia/health_s01e05_primary_follow_up"),
+                            coda_code_schemes_count=3),
+                    ],
+                    ws_code_match_value="sdc_somalia_health_s01e05_primary_follow_up"
                 ),
                 CodaDatasetConfiguration(
                     coda_dataset_id="IMAQAL_age",
@@ -211,8 +184,8 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                         CodeSchemeConfiguration(code_scheme=load_code_scheme("demographics/mogadishu_sub_district"),
                                                 auto_coder=somali.DemographicCleaner.clean_mogadishu_sub_district),
                         CodeSchemeConfiguration(code_scheme=load_code_scheme("demographics/somalia_district"), auto_coder=lambda text:
-                                                somali.DemographicCleaner.clean_somalia_district(text)
-                                                if somali.DemographicCleaner.clean_mogadishu_sub_district == Codes.NOT_CODED else Codes.NOT_CODED),
+                        somali.DemographicCleaner.clean_somalia_district(text)
+                        if somali.DemographicCleaner.clean_mogadishu_sub_district == Codes.NOT_CODED else Codes.NOT_CODED),
                         CodeSchemeConfiguration(code_scheme=load_code_scheme("demographics/somalia_region"), auto_coder=None),
                         CodeSchemeConfiguration(code_scheme=load_code_scheme("demographics/somalia_state"), auto_coder=None),
                         CodeSchemeConfiguration(code_scheme=load_code_scheme("demographics/somalia_zone"), auto_coder=None),
@@ -242,93 +215,115 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                 ),
             ],
             ws_correct_dataset_code_scheme=load_code_scheme("ws_correct_dataset"),
-            project_users_file_url="gs://avf-project-datasets/2022/WorldBank-SCD/coda_users.json"
+            project_users_file_url="gs://avf-project-datasets/2023/SDC-Somalia-Health/coda_users.json"
         )
     ),
     archive_configuration=ArchiveConfiguration(
         archive_upload_bucket="gs://pipeline-execution-backup-archive",
-        bucket_dir_path="2022/WorldBank-SCD"
+        bucket_dir_path="2023/SDC-Somalia-Health"
     ),
     analysis=AnalysisConfiguration(
         google_drive_upload=GoogleDriveUploadConfiguration(
             credentials_file_url="gs://avf-credentials/pipeline-runner-service-acct-avf-data-core-64cc71459fe7.json",
-            drive_dir="worldbank_scd_analysis_outputs"
+            drive_dir="sdc_somalia_health_analysis_outputs"
         ),
         dataset_configurations=[
             AnalysisDatasetConfiguration(
-                engagement_db_datasets=["worldbank_scd_s01e01"],
+                engagement_db_datasets=["sdc_somalia_health_s01e01"],
                 dataset_type=DatasetTypes.RESEARCH_QUESTION_ANSWER,
-                raw_dataset="s01e01_raw",
+                raw_dataset="health_s01e01_raw",
                 coding_configs=[
                     CodingConfiguration(
-                        code_scheme=load_code_scheme("rqas/worldbank_scd/s01e01"),
-                        analysis_dataset="s01e01"
+                        code_scheme=load_code_scheme("rqas/sdc_somalia/health_s01e01"),
+                        analysis_dataset="health_s01e01"
                     )
                 ]
             ),
             AnalysisDatasetConfiguration(
-                engagement_db_datasets=["worldbank_scd_s01e01_google_form_consent"],
+                engagement_db_datasets=["sdc_somalia_health_s01e02"],
                 dataset_type=DatasetTypes.RESEARCH_QUESTION_ANSWER,
-                raw_dataset="s01e01_google_form_consent_raw",
+                raw_dataset="health_s01e02_raw",
                 coding_configs=[
                     CodingConfiguration(
-                        code_scheme=load_code_scheme("rqas/worldbank_scd/s01e01_google_form_consent"),
-                        analysis_dataset="s01e01_google_form_consent"
+                        code_scheme=load_code_scheme("rqas/sdc_somalia/health_s01e02"),
+                        analysis_dataset="health_s01e02"
                     )
                 ]
             ),
             AnalysisDatasetConfiguration(
-                engagement_db_datasets=["worldbank_scd_s01e01_follow_up_1"],
+                engagement_db_datasets=["sdc_somalia_health_s01e03"],
                 dataset_type=DatasetTypes.RESEARCH_QUESTION_ANSWER,
-                raw_dataset="s01e01_follow_up_1_raw",
+                raw_dataset="health_s01e03_raw",
                 coding_configs=[
                     CodingConfiguration(
-                        code_scheme=load_code_scheme("rqas/worldbank_scd/s01e01_follow_up_1"),
-                        analysis_dataset="s01e01_follow_up_1"
+                        code_scheme=load_code_scheme("rqas/sdc_somalia/health_s01e03"),
+                        analysis_dataset="health_s01e03"
                     )
                 ]
             ),
             AnalysisDatasetConfiguration(
-                engagement_db_datasets=["worldbank_scd_s01e01_follow_up_2"],
+                engagement_db_datasets=["sdc_somalia_health_s01e04"],
                 dataset_type=DatasetTypes.RESEARCH_QUESTION_ANSWER,
-                raw_dataset="s01e01_follow_up_2_raw",
+                raw_dataset="health_s01e04_raw",
                 coding_configs=[
                     CodingConfiguration(
-                        code_scheme=load_code_scheme("rqas/worldbank_scd/s01e01_follow_up_2"),
-                        analysis_dataset="s01e01_follow_up_2"
+                        code_scheme=load_code_scheme("rqas/sdc_somalia/health_s01e04"),
+                        analysis_dataset="health_s01e04"
                     )
                 ]
             ),
             AnalysisDatasetConfiguration(
-                engagement_db_datasets=["worldbank_scd_s01_have_voice"],
+                engagement_db_datasets=["sdc_somalia_health_s01e05"],
                 dataset_type=DatasetTypes.RESEARCH_QUESTION_ANSWER,
-                raw_dataset="s01_have_voice_raw",
+                raw_dataset="health_s01e05_raw",
                 coding_configs=[
                     CodingConfiguration(
-                        code_scheme=load_code_scheme("rqas/worldbank_scd/s01_have_voice"),
-                        analysis_dataset="s01_have_voice"
+                        code_scheme=load_code_scheme("rqas/sdc_somalia/health_s01e05"),
+                        analysis_dataset="health_s01e05"
                     )
                 ]
             ),
             AnalysisDatasetConfiguration(
-                engagement_db_datasets=["worldbank_scd_s01_suggestions"],
+                engagement_db_datasets=["sdc_somalia_health_s01e06"],
                 dataset_type=DatasetTypes.RESEARCH_QUESTION_ANSWER,
-                raw_dataset="s01_suggestions_raw",
+                raw_dataset="health_s01e06_raw",
                 coding_configs=[
                     CodingConfiguration(
-                        code_scheme=load_code_scheme("rqas/worldbank_scd/s01_suggestions"),
-                        analysis_dataset="s01_suggestions"
+                        code_scheme=load_code_scheme("rqas/sdc_somalia/health_s01e06"),
+                        analysis_dataset="health_s01e06"
                     )
                 ]
             ),
             AnalysisDatasetConfiguration(
-                engagement_db_datasets=["worldbank_scd_s01_evaluation"],
+                engagement_db_datasets=["sdc_somalia_health_s01e07"],
                 dataset_type=DatasetTypes.RESEARCH_QUESTION_ANSWER,
-                raw_dataset="s01_evaluation_raw",
+                raw_dataset="health_s01e07_raw",
                 coding_configs=[
                     CodingConfiguration(
-                        code_scheme=load_code_scheme("rqas/worldbank_scd/s01_evaluation"),
-                        analysis_dataset="s01_evaluation"
+                        code_scheme=load_code_scheme("rqas/sdc_somalia/health_s01e07"),
+                        analysis_dataset="health_s01e07"
+                    )
+                ]
+            ),
+            AnalysisDatasetConfiguration(
+                engagement_db_datasets=["sdc_somalia_health_s01e05_support_follow_up"],
+                dataset_type=DatasetTypes.RESEARCH_QUESTION_ANSWER,
+                raw_dataset="health_s01e05_support_follow_up_raw",
+                coding_configs=[
+                    CodingConfiguration(
+                        code_scheme=load_code_scheme("rqas/sdc_somalia/health_s01e05_support_follow_up"),
+                        analysis_dataset="health_s01e05_support_follow_up"
+                    )
+                ]
+            ),
+            AnalysisDatasetConfiguration(
+                engagement_db_datasets=["sdc_somalia_health_s01e05_primary_follow_up"],
+                dataset_type=DatasetTypes.RESEARCH_QUESTION_ANSWER,
+                raw_dataset="health_s01e05_primary_follow_up_raw",
+                coding_configs=[
+                    CodingConfiguration(
+                        code_scheme=load_code_scheme("rqas/sdc_somalia/health_s01e05_primary_follow_up"),
+                        analysis_dataset="health_s01e05_primary_follow_up"
                     )
                 ]
             ),
@@ -422,17 +417,6 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                 ]
             ),
             AnalysisDatasetConfiguration(
-                engagement_db_datasets=["household_language"],
-                dataset_type=DatasetTypes.DEMOGRAPHIC,
-                raw_dataset="household_language",
-                coding_configs=[
-                    CodingConfiguration(
-                        code_scheme=load_code_scheme("demographics/household_language"),
-                        analysis_dataset="household_language"
-                    )
-                ]
-            ),
-            AnalysisDatasetConfiguration(
                 engagement_db_datasets=["disability"],
                 dataset_type=DatasetTypes.DEMOGRAPHIC,
                 raw_dataset="disability",
@@ -443,11 +427,19 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     )
                 ]
             ),
+            AnalysisDatasetConfiguration(
+                engagement_db_datasets=["household_language"],
+                dataset_type=DatasetTypes.DEMOGRAPHIC,
+                raw_dataset="household_language",
+                coding_configs=[
+                    CodingConfiguration(
+                        code_scheme=load_code_scheme("demographics/household_language"),
+                        analysis_dataset="household_language"
+                    )
+                ]
+            ),
         ],
         ws_correct_dataset_code_scheme=load_code_scheme("ws_correct_dataset"),
-        traffic_labels=[],
-        cross_tabs=[
-            ("operator", "state")
-        ]
+        traffic_labels=[]
     )
 )

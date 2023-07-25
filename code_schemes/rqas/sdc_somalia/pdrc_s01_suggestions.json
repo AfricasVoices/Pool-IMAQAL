@@ -1,78 +1,62 @@
 {
-  "SchemeID": "Scheme-e3290e1f",
-  "Name": "Household Language",
-  "Version": "0.0.0.3",
+  "SchemeID": "Scheme-e81e7e85",
+  "Name": "WorldBank-SCD S01 Suggestions",
+  "Version": "0.0.0.1",
   "Codes": [
     {
-      "CodeID": "code-23cf3616",
+      "CodeID": "code-ae583583",
       "CodeType": "Normal",
-      "DisplayText": "somali",
+      "DisplayText": "improve radio stations",
       "NumericValue": 1,
-      "StringValue": "somali",
+      "StringValue": "improve_radio_stations",
       "VisibleInCoda": true
     },
     {
-      "CodeID": "code-83d97143",
+      "CodeID": "code-b849d4e0",
       "CodeType": "Normal",
-      "DisplayText": "mother-tongue",
+      "DisplayText": "diversification of programs",
       "NumericValue": 2,
-      "StringValue": "mother-tongue",
+      "StringValue": "diversification_of_programs",
       "VisibleInCoda": true
     },
     {
-      "CodeID": "code-ee4f6f30",
+      "CodeID": "code-99e5b33a",
       "CodeType": "Normal",
-      "DisplayText": "english",
+      "DisplayText": "community awareness",
       "NumericValue": 3,
-      "StringValue": "english",
+      "StringValue": "community_awareness",
       "VisibleInCoda": true
     },
     {
-      "CodeID": "code-cf7da7d2",
+      "CodeID": "code-345eb143",
       "CodeType": "Normal",
-      "DisplayText": "kiswahili",
+      "DisplayText": "honesty from radio broadcast",
       "NumericValue": 4,
-      "StringValue": "kiswahili",
+      "StringValue": "honesty_from_radio_broadcast",
       "VisibleInCoda": true
     },
     {
-      "CodeID": "code-92844263",
+      "CodeID": "code-f4b41ff8",
       "CodeType": "Normal",
-      "DisplayText": "arabic",
+      "DisplayText": "promote peace",
       "NumericValue": 5,
-      "StringValue": "arabic",
+      "StringValue": "promote_peace",
       "VisibleInCoda": true
     },
     {
-      "CodeID": "code-f61048db",
+      "CodeID": "code-90e86612",
       "CodeType": "Normal",
-      "DisplayText": "maimai",
+      "DisplayText": "consistent or continued shows",
       "NumericValue": 6,
-      "StringValue": "maimai",
+      "StringValue": "consistent_or_continued_shows",
       "VisibleInCoda": true
     },
     {
-      "CodeID": "code-b190b739",
-      "CodeType": "Normal",
-      "DisplayText": "barawe",
-      "NumericValue": 7,
-      "StringValue": "barawe",
-      "VisibleInCoda": true
-    },
-    {
-      "CodeID": "code-49087f30",
+      "CodeID": "code-c178401c",
       "CodeType": "Normal",
       "DisplayText": "other theme",
-      "NumericValue": 8,
+      "NumericValue": 7,
       "StringValue": "other_theme",
-      "VisibleInCoda": true
-    },
-    {
-      "CodeID": "code-2405e210",
-      "CodeType": "Normal",
-      "DisplayText": "multiple languages",
-      "NumericValue": 100,
-      "StringValue": "multiple_languages",
       "VisibleInCoda": true
     },
     {
@@ -220,42 +204,6 @@
       "VisibleInCoda": true
     },
     {
-      "CodeID": "code-GR-e6de1b7e",
-      "CodeType": "Meta",
-      "MetaCode": "gratitude",
-      "DisplayText": "meta: gratitude",
-      "NumericValue": -100100,
-      "StringValue": "gratitude",
-      "VisibleInCoda": true
-    },
-    {
-      "CodeID": "code-CR-8e99616b",
-      "CodeType": "Meta",
-      "MetaCode": "chasing_reply",
-      "DisplayText": "meta: chasing reply",
-      "NumericValue": -100130,
-      "StringValue": "chasing_reply",
-      "VisibleInCoda": true
-    },
-    {
-      "CodeID": "code-I-b13a41f6",
-      "CodeType": "Meta",
-      "MetaCode": "impact",
-      "DisplayText": "meta: impact",
-      "NumericValue": -100140,
-      "StringValue": "impact",
-      "VisibleInCoda": true
-    },
-    {
-      "CodeID": "code-O-7ce0d2a7",
-      "CodeType": "Meta",
-      "MetaCode": "other",
-      "DisplayText": "meta: other",
-      "NumericValue": -100110,
-      "StringValue": "other",
-      "VisibleInCoda": true
-    },
-    {
       "CodeID": "code-E-720cdb66",
       "CodeType": "Meta",
       "MetaCode": "escalate",
@@ -264,7 +212,61 @@
       "StringValue": "escalate",
       "VisibleInCoda": true,
       "Shortcut": "e"
+    },
+    {
+      "CodeID": "code-S-461bfcdf",
+      "CodeType": "Meta",
+      "MetaCode": "statement",
+      "DisplayText": "meta: statement",
+      "NumericValue": -100090,
+      "StringValue": "statement",
+      "VisibleInCoda": true,
+      "Shortcut": "s"
+    },
+    {
+      "MetaCode": "other",
+      "StringValue": "other",
+      "DisplayText": "meta: other",
+      "VisibleInCoda": true,
+      "NumericValue": -100110,
+      "CodeID": "code-O-7ce0d2a7",
+      "CodeType": "Meta"
+    },
+    {
+      "DisplayText": "meta: gratitude",
+      "VisibleInCoda": true,
+      "NumericValue": -100100,
+      "CodeID": "code-GR-e6de1b7e",
+      "CodeType": "Meta",
+      "MetaCode": "gratitude",
+      "StringValue": "gratitude"
+    },
+    {
+      "DisplayText": "meta: about conversation",
+      "VisibleInCoda": true,
+      "CodeID": "code-AC-9ed22631",
+      "NumericValue": -100120,
+      "CodeType": "Meta",
+      "MetaCode": "about_conversation",
+      "StringValue": "about_conversation"
+    },
+    {
+      "NumericValue": -100130,
+      "CodeID": "code-CR-8e99616b",
+      "CodeType": "Meta",
+      "MetaCode": "chasing_reply",
+      "StringValue": "chasing_reply",
+      "DisplayText": "meta: chasing reply",
+      "VisibleInCoda": true
+    },
+    {
+      "NumericValue": -100140,
+      "CodeID": "code-I-b13a41f6",
+      "CodeType": "Meta",
+      "MetaCode": "impact",
+      "StringValue": "impact",
+      "DisplayText": "meta: impact",
+      "VisibleInCoda": true
     }
   ]
 }
-

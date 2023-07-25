@@ -1,79 +1,43 @@
 {
-  "SchemeID": "Scheme-e3290e1f",
-  "Name": "Household Language",
-  "Version": "0.0.0.3",
+  "SchemeID": "Scheme-77e0796b",
+  "Name": "SDC-Somalia-PDRC S01 Have Voice",
+  "Version": "0.0.0.2",
   "Codes": [
     {
-      "CodeID": "code-23cf3616",
+      "CodeID": "code-7be6e5d1",
       "CodeType": "Normal",
-      "DisplayText": "somali",
+      "DisplayText": "yes",
       "NumericValue": 1,
-      "StringValue": "somali",
-      "VisibleInCoda": true
+      "StringValue": "yes",
+      "Shortcut": "y",
+      "VisibleInCoda": true,
+      "MatchValues": [
+        "yes"
+      ]
     },
     {
-      "CodeID": "code-83d97143",
+      "CodeID": "code-8bf6a963",
       "CodeType": "Normal",
-      "DisplayText": "mother-tongue",
+      "DisplayText": "no",
+      "Shortcut": "n",
       "NumericValue": 2,
-      "StringValue": "mother-tongue",
-      "VisibleInCoda": true
+      "StringValue": "no",
+      "VisibleInCoda": true,
+      "MatchValues": [
+        "no"
+      ]
     },
     {
-      "CodeID": "code-ee4f6f30",
+      "CodeID": "code-b7113b5d",
       "CodeType": "Normal",
-      "DisplayText": "english",
+      "DisplayText": "ambivalent",
+      "Shortcut": "a",
       "NumericValue": 3,
-      "StringValue": "english",
-      "VisibleInCoda": true
-    },
-    {
-      "CodeID": "code-cf7da7d2",
-      "CodeType": "Normal",
-      "DisplayText": "kiswahili",
-      "NumericValue": 4,
-      "StringValue": "kiswahili",
-      "VisibleInCoda": true
-    },
-    {
-      "CodeID": "code-92844263",
-      "CodeType": "Normal",
-      "DisplayText": "arabic",
-      "NumericValue": 5,
-      "StringValue": "arabic",
-      "VisibleInCoda": true
-    },
-    {
-      "CodeID": "code-f61048db",
-      "CodeType": "Normal",
-      "DisplayText": "maimai",
-      "NumericValue": 6,
-      "StringValue": "maimai",
-      "VisibleInCoda": true
-    },
-    {
-      "CodeID": "code-b190b739",
-      "CodeType": "Normal",
-      "DisplayText": "barawe",
-      "NumericValue": 7,
-      "StringValue": "barawe",
-      "VisibleInCoda": true
-    },
-    {
-      "CodeID": "code-49087f30",
-      "CodeType": "Normal",
-      "DisplayText": "other theme",
-      "NumericValue": 8,
-      "StringValue": "other_theme",
-      "VisibleInCoda": true
-    },
-    {
-      "CodeID": "code-2405e210",
-      "CodeType": "Normal",
-      "DisplayText": "multiple languages",
-      "NumericValue": 100,
-      "StringValue": "multiple_languages",
-      "VisibleInCoda": true
+      "StringValue": "ambivalent",
+      "VisibleInCoda": true,
+      "MatchValues": [
+        "ambivalent"
+      ]
     },
     {
       "CodeID": "code-NA-f93d3eb7",
@@ -220,42 +184,6 @@
       "VisibleInCoda": true
     },
     {
-      "CodeID": "code-GR-e6de1b7e",
-      "CodeType": "Meta",
-      "MetaCode": "gratitude",
-      "DisplayText": "meta: gratitude",
-      "NumericValue": -100100,
-      "StringValue": "gratitude",
-      "VisibleInCoda": true
-    },
-    {
-      "CodeID": "code-CR-8e99616b",
-      "CodeType": "Meta",
-      "MetaCode": "chasing_reply",
-      "DisplayText": "meta: chasing reply",
-      "NumericValue": -100130,
-      "StringValue": "chasing_reply",
-      "VisibleInCoda": true
-    },
-    {
-      "CodeID": "code-I-b13a41f6",
-      "CodeType": "Meta",
-      "MetaCode": "impact",
-      "DisplayText": "meta: impact",
-      "NumericValue": -100140,
-      "StringValue": "impact",
-      "VisibleInCoda": true
-    },
-    {
-      "CodeID": "code-O-7ce0d2a7",
-      "CodeType": "Meta",
-      "MetaCode": "other",
-      "DisplayText": "meta: other",
-      "NumericValue": -100110,
-      "StringValue": "other",
-      "VisibleInCoda": true
-    },
-    {
       "CodeID": "code-E-720cdb66",
       "CodeType": "Meta",
       "MetaCode": "escalate",
@@ -264,7 +192,61 @@
       "StringValue": "escalate",
       "VisibleInCoda": true,
       "Shortcut": "e"
+    },
+    {
+      "CodeID": "code-S-461bfcdf",
+      "CodeType": "Meta",
+      "MetaCode": "statement",
+      "DisplayText": "meta: statement",
+      "NumericValue": -100090,
+      "StringValue": "statement",
+      "VisibleInCoda": true,
+      "Shortcut": "s"
+    },
+    {
+      "MetaCode": "other",
+      "StringValue": "other",
+      "DisplayText": "meta: other",
+      "VisibleInCoda": true,
+      "NumericValue": -100110,
+      "CodeID": "code-O-7ce0d2a7",
+      "CodeType": "Meta"
+    },
+    {
+      "DisplayText": "meta: gratitude",
+      "VisibleInCoda": true,
+      "NumericValue": -100100,
+      "CodeID": "code-GR-e6de1b7e",
+      "CodeType": "Meta",
+      "MetaCode": "gratitude",
+      "StringValue": "gratitude"
+    },
+    {
+      "DisplayText": "meta: about conversation",
+      "VisibleInCoda": true,
+      "CodeID": "code-AC-9ed22631",
+      "NumericValue": -100120,
+      "CodeType": "Meta",
+      "MetaCode": "about_conversation",
+      "StringValue": "about_conversation"
+    },
+    {
+      "NumericValue": -100130,
+      "CodeID": "code-CR-8e99616b",
+      "CodeType": "Meta",
+      "MetaCode": "chasing_reply",
+      "StringValue": "chasing_reply",
+      "DisplayText": "meta: chasing reply",
+      "VisibleInCoda": true
+    },
+    {
+      "NumericValue": -100140,
+      "CodeID": "code-I-b13a41f6",
+      "CodeType": "Meta",
+      "MetaCode": "impact",
+      "StringValue": "impact",
+      "DisplayText": "meta: impact",
+      "VisibleInCoda": true
     }
   ]
 }
-

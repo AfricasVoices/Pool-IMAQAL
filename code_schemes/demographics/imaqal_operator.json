@@ -1,6 +1,6 @@
 {
   "SchemeID": "Scheme-f86cff0b",
-  "Name": "Somalia Operator",
+  "Name": "IMAQAL Operator",
   "Version": "0.0.1.0",
   "Codes": [
     {
@@ -70,6 +70,28 @@
       ]
     },
     {
+      "CodeID": "code-9aaa32b2",
+      "CodeType": "Normal",
+      "DisplayText": "telegram",
+      "NumericValue": 7,
+      "StringValue": "telegram",
+      "VisibleInCoda": true,
+      "MatchValues":  [
+        "telegram"
+      ]
+    },
+    {
+      "CodeID": "code-6c999d1b",
+      "CodeType": "Normal",
+      "DisplayText": "google form",
+      "NumericValue": 8,
+      "StringValue": "google_form",
+      "VisibleInCoda": true,
+      "MatchValues":  [
+        "google_form"
+      ]
+    },
+    {
       "CodeID": "code-NA-f93d3eb7",
       "CodeType": "Control",
       "ControlCode": "NA",
@@ -85,7 +107,10 @@
       "DisplayText": "NC (not coded)",
       "NumericValue": -30,
       "StringValue": "NC",
-      "VisibleInCoda": true
+      "VisibleInCoda": true,
+      "MatchValues": [
+        "NC"
+      ]
     },
     {
       "CodeID": "code-STOP-08b832a8",
@@ -95,16 +120,6 @@
       "NumericValue": -90,
       "StringValue": "STOP",
       "VisibleInCoda": false
-    },
-    {
-      "CodeID": "code-E-720cdb66",
-      "CodeType": "Meta",
-      "MetaCode": "escalate",
-      "DisplayText": "meta: ESCALATE",
-      "NumericValue": -100080,
-      "StringValue": "escalate",
-      "VisibleInCoda": true,
-      "Shortcut": "e"
     }
   ]
 }
