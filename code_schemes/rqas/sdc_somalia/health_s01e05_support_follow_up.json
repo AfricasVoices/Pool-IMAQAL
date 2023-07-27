@@ -3,7 +3,62 @@
     "Name": "SDC-Somalia-Health Support Follow-Up",
     "Version": "0.0.0.1",
     "Codes": [
-
+        {
+            "CodeID": "code-4d136f1f",
+            "CodeType": "Normal",
+            "DisplayText": "health and education",
+            "NumericValue": 1,
+            "StringValue": "health_and_education",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-2a2ed6a3",
+            "CodeType": "Normal",
+            "DisplayText": "establish rehabilitation centers",
+            "NumericValue": 2,
+            "StringValue": "establish_rehabilitation_centers",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-f6baba3e",
+            "CodeType": "Normal",
+            "DisplayText": "justice for the victim",
+            "NumericValue": 3,
+            "StringValue": "justice_for_the_victim",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-cfb31cf3",
+            "CodeType": "Normal",
+            "DisplayText": "financial support",
+            "NumericValue": 4,
+            "StringValue": "financial_support",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-c73b16d7",
+            "CodeType": "Normal",
+            "DisplayText": "community awareness",
+            "NumericValue": 5,
+            "StringValue": "community_awareness",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-2ccecae6",
+            "CodeType": "Normal",
+            "DisplayText": "stop discrimination and stigmatization",
+            "NumericValue": 6,
+            "StringValue": "stop_discrimination_and_stigmatization",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-99716544",
+            "CodeType": "Normal",
+            "DisplayText": "other theme",
+            "NumericValue": 7,
+            "StringValue": "other_theme",
+            "VisibleInCoda": true
+        },
         {
             "CodeID": "code-NA-f93d3eb7",
             "CodeType": "Control",
