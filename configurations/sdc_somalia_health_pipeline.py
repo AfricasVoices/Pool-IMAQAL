@@ -58,6 +58,9 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     FlowResultConfiguration("sdc_somalia_health_s01e05_primary_follow_up", "sdc_somalia_health_s01e05_primary_followup", "sdc_somalia_health_s01e05_primary_follow_up"),
 
                     FlowResultConfiguration("sdc_somalia_health_s01_closeout_activation", "rqa_sdc_somalia_health_s01_closeout", "sdc_somalia_health_s01_closeout")
+                    FlowResultConfiguration("sdc_somalia_health_s01_evaluation", "sdc_somalia_health_s01_lessons_learnt", "sdc_somalia_health_s01_lessons_learnt"),
+                    FlowResultConfiguration("sdc_somalia_health_s01_evaluation", "sdc_somalia_health_s01_suggestions", "sdc_somalia_health_s01_suggestions"),
+                    FlowResultConfiguration("sdc_somalia_health_s01_evaluation_activation", "rqa_sdc_somalia_health_s01_evaluation", "sdc_somalia_health_s01_evaluation_other")
                 ]
             )
         )
@@ -156,6 +159,33 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                                                 coda_code_schemes_count=3),
                     ],
                     ws_code_match_value="sdc_somalia_health_s01_closeout"
+                ),
+                CodaDatasetConfiguration(
+                    coda_dataset_id="SDC_Somalia_Health_s01_lessons_learnt",
+                    engagement_db_dataset="sdc_somalia_health_s01_lessons_learnt",
+                    code_scheme_configurations=[
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("rqas/sdc_somalia/health_s01_lessons_learnt"),
+                                                coda_code_schemes_count=3),
+                    ],
+                    ws_code_match_value="sdc_somalia_health_s01_lessons_learnt"
+                ),
+                CodaDatasetConfiguration(
+                    coda_dataset_id="SDC_Somalia_Health_s01_suggestions",
+                    engagement_db_dataset="sdc_somalia_health_s01_suggestions",
+                    code_scheme_configurations=[
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("rqas/sdc_somalia/health_s01_suggestions"),
+                                                coda_code_schemes_count=3),
+                    ],
+                    ws_code_match_value="sdc_somalia_health_s01_suggestions"
+                ),
+                CodaDatasetConfiguration(
+                    coda_dataset_id="SDC_Somalia_Health_s01_evaluation_other",
+                    engagement_db_dataset="sdc_somalia_health_s01_evaluation_other",
+                    code_scheme_configurations=[
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("rqas/sdc_somalia/health_s01_evaluation_other"),
+                                                coda_code_schemes_count=3),
+                    ],
+                    ws_code_match_value="sdc_somalia_health_s01_evaluation_other"
                 ),
                 CodaDatasetConfiguration(
                     coda_dataset_id="IMAQAL_age",
@@ -346,6 +376,39 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     CodingConfiguration(
                         code_scheme=load_code_scheme("rqas/sdc_somalia/health_s01_closeout"),
                         analysis_dataset="health_s01_closeout"
+                    )
+                ]
+            ),
+            AnalysisDatasetConfiguration(
+                engagement_db_datasets=["sdc_somalia_health_s01_lessons_learnt"],
+                dataset_type=DatasetTypes.RESEARCH_QUESTION_ANSWER,
+                raw_dataset="health_s01_lessons_learnt_raw",
+                coding_configs=[
+                    CodingConfiguration(
+                        code_scheme=load_code_scheme("rqas/sdc_somalia/health_s01_lessons_learnt"),
+                        analysis_dataset="health_s01_lessons_learnt"
+                    )
+                ]
+            ),
+            AnalysisDatasetConfiguration(
+                engagement_db_datasets=["sdc_somalia_health_s01_suggestions"],
+                dataset_type=DatasetTypes.RESEARCH_QUESTION_ANSWER,
+                raw_dataset="health_s01_suggestions_raw",
+                coding_configs=[
+                    CodingConfiguration(
+                        code_scheme=load_code_scheme("rqas/sdc_somalia/health_s01_suggestions"),
+                        analysis_dataset="health_s01_suggestions"
+                    )
+                ]
+            ),
+            AnalysisDatasetConfiguration(
+                engagement_db_datasets=["sdc_somalia_health_s01_evaluation_other"],
+                dataset_type=DatasetTypes.RESEARCH_QUESTION_ANSWER,
+                raw_dataset="health_s01_evaluation_other_raw",
+                coding_configs=[
+                    CodingConfiguration(
+                        code_scheme=load_code_scheme("rqas/sdc_somalia/health_s01_evaluation_other"),
+                        analysis_dataset="health_s01_evaluation_other"
                     )
                 ]
             ),
