@@ -103,6 +103,17 @@
             ]
         },
         {
+            "CodeID": "code-6069eeb1",
+            "CodeType": "Normal",
+            "DisplayText": "sdc-somalia-health s01 closeout",
+            "StringValue": "sdc_somalia_health_s01_closeout",
+            "NumericValue": 154,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "sdc_somalia_health_s01_closeout"
+            ]
+        },
+        {
             "CodeID": "code-70ac05ab",
             "CodeType": "Normal",
             "DisplayText": "age",
