@@ -57,7 +57,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     FlowResultConfiguration("sdc_somalia_health_s01e05_support_follow_up", "sdc_somalia_health_s01e05_support_followup", "sdc_somalia_health_s01e05_support_follow_up"),
                     FlowResultConfiguration("sdc_somalia_health_s01e05_primary_follow_up", "sdc_somalia_health_s01e05_primary_followup", "sdc_somalia_health_s01e05_primary_follow_up"),
 
-                    FlowResultConfiguration("sdc_somalia_health_s01_closeout_activation", "rqa_sdc_somalia_health_s01_closeout", "sdc_somalia_health_s01_closeout")
+                    FlowResultConfiguration("sdc_somalia_health_s01_closeout_activation", "rqa_sdc_somalia_health_s01_closeout", "sdc_somalia_health_s01_closeout"),
                     FlowResultConfiguration("sdc_somalia_health_s01_evaluation", "sdc_somalia_health_s01_lessons_learnt", "sdc_somalia_health_s01_lessons_learnt"),
                     FlowResultConfiguration("sdc_somalia_health_s01_evaluation", "sdc_somalia_health_s01_suggestions", "sdc_somalia_health_s01_suggestions"),
                     FlowResultConfiguration("sdc_somalia_health_s01_evaluation_activation", "rqa_sdc_somalia_health_s01_evaluation", "sdc_somalia_health_s01_evaluation_other")
