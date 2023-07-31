@@ -114,6 +114,39 @@
             ]
         },
         {
+            "CodeID": "code-3b843b4b",
+            "CodeType": "Normal",
+            "DisplayText": "sdc-somalia-health s01 lessons learnt",
+            "StringValue": "sdc_somalia_health_s01_lessons_learnt",
+            "NumericValue": 155,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "sdc_somalia_health_s01_lessons_learnt"
+            ]
+        },
+        {
+            "CodeID": "code-5f3163ff",
+            "CodeType": "Normal",
+            "DisplayText": "sdc-somalia-health s01 suggestions",
+            "StringValue": "sdc_somalia_health_s01_suggestions",
+            "NumericValue": 156,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "sdc_somalia_health_s01_suggestions"
+            ]
+        },
+        {
+            "CodeID": "code-d567163f",
+            "CodeType": "Normal",
+            "DisplayText": "sdc-somalia-health s01 evaluation other",
+            "StringValue": "sdc_somalia_health_s01_evaluation_other",
+            "NumericValue": 157,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "sdc_somalia_health_s01_evaluation_other"
+            ]
+        },
+        {
             "CodeID": "code-70ac05ab",
             "CodeType": "Normal",
             "DisplayText": "age",
