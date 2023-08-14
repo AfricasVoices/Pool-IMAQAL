@@ -3,7 +3,46 @@
     "Name": "SDC-Somalia-Health S01 Suggestions",
     "Version": "0.0.0.1",
     "Codes": [
-
+        {
+            "CodeID": "code-78fb8140",
+            "DisplayText": "to continue with such topics",
+            "CodeType": "Normal",
+            "NumericValue": 1,
+            "StringValue": "to_continue_with_such_topics",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-1bdff2de",
+            "DisplayText": "allocate more time",
+            "CodeType": "Normal",
+            "NumericValue": 2,
+            "StringValue": "allocate_more_time",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-d5fc5672",
+            "DisplayText": "make both text it and calls",
+            "CodeType": "Normal",
+            "NumericValue": 3,
+            "StringValue": "make_both_text_it_and_calls",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-7e14b0eb",
+            "DisplayText": "expand discussion topics",
+            "CodeType": "Normal",
+            "NumericValue": 4,
+            "StringValue": "expand_discussion_topics",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-005007d2",
+            "DisplayText": "other theme",
+            "CodeType": "Normal",
+            "NumericValue": 5,
+            "StringValue": "other_theme",
+            "VisibleInCoda": true
+        },
         {
             "CodeID": "code-NA-f93d3eb7",
             "CodeType": "Control",
