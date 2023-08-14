@@ -8,7 +8,7 @@
             "DisplayText": "importance of women's health",
             "CodeType": "Normal",
             "NumericValue": 1,
-            "StringValue": "importance_of_women's_health",
+            "StringValue": "importance_of_women_s_health",
             "VisibleInCoda": true
         },
         {
@@ -16,7 +16,7 @@
             "DisplayText": "women's right",
             "CodeType": "Normal",
             "NumericValue": 2,
-            "StringValue": "women's_right",
+            "StringValue": "women_s_right",
             "VisibleInCoda": true
         },
         {
