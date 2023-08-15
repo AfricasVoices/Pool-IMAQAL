@@ -21,10 +21,10 @@
         },
         {
             "CodeID": "code-d5fc5672",
-            "DisplayText": "make both text it and calls",
+            "DisplayText": "make both text and calls",
             "CodeType": "Normal",
             "NumericValue": 3,
-            "StringValue": "make_both_text_it_and_calls",
+            "StringValue": "make_both_text_and_calls",
             "VisibleInCoda": true
         },
         {
