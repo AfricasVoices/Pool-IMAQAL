@@ -83,7 +83,7 @@
         {
             "CodeID": "code-26d0df1c",
             "CodeType": "Normal",
-            "DisplayText": "sdc-survey chasp inclusion",
+            "DisplayText": "sdc-survey-chasp inclusion",
             "StringValue": "sdc_survey_chasp_inclusion",
             "NumericValue": 165,
             "VisibleInCoda": true,
@@ -94,7 +94,7 @@
         {
             "CodeID": "code-064fe60d",
             "CodeType": "Normal",
-            "DisplayText": "sdc-survey chasp suggestions",
+            "DisplayText": "sdc-survey-chasp suggestions",
             "StringValue": "sdc_survey_chasp_suggestions",
             "NumericValue": 166,
             "VisibleInCoda": true,
@@ -105,7 +105,7 @@
         {
             "CodeID": "code-5f516a1d",
             "CodeType": "Normal",
-            "DisplayText": "sdc-survey chasp support",
+            "DisplayText": "sdc-survey-chasp support",
             "StringValue": "sdc_survey_chasp_support",
             "NumericValue": 167,
             "VisibleInCoda": true,
