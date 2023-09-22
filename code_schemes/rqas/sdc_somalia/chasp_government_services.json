@@ -3,7 +3,78 @@
     "Name": "CHASP Government Services",
     "Version": "0.0.0.1",
     "Codes": [
-
+        {
+            "CodeID": "code-fcae0179",
+            "DisplayText": "0",
+            "CodeType": "Normal",
+            "NumericValue": 1,
+            "StringValue": "0",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-7a7cb033",
+            "DisplayText": "1",
+            "CodeType": "Normal",
+            "NumericValue": 2,
+            "StringValue": "1",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-a9c6fffd",
+            "DisplayText": "2",
+            "CodeType": "Normal",
+            "NumericValue": 3,
+            "StringValue": "2",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-a75f60ab",
+            "DisplayText": "3",
+            "CodeType": "Normal",
+            "NumericValue": 4,
+            "StringValue": "3",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-31ea431c",
+            "DisplayText": "4",
+            "CodeType": "Normal",
+            "NumericValue": 5,
+            "StringValue": "4",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-37cb1b67",
+            "DisplayText": "5",
+            "CodeType": "Normal",
+            "NumericValue": 6,
+            "StringValue": "5",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-228bef22",
+            "DisplayText": "satisfied",
+            "CodeType": "Normal",
+            "NumericValue": 7,
+            "StringValue": "satisfied",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-f20778b6",
+            "DisplayText": "not satisfied",
+            "CodeType": "Normal",
+            "NumericValue": 8,
+            "StringValue": "not_satisfied",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-916adbf6",
+            "DisplayText": "other theme",
+            "CodeType": "Normal",
+            "NumericValue": 9,
+            "StringValue": "other_theme",
+            "VisibleInCoda": true
+        },
         {
             "CodeID": "code-NA-f93d3eb7",
             "CodeType": "Control",
