@@ -3,7 +3,70 @@
     "Name": "SOMREP Suggestions",
     "Version": "0.0.0.1",
     "Codes": [
-
+        {
+            "CodeID": "code-ca71bc8a",
+            "DisplayText": "enhance security",
+            "CodeType": "Normal",
+            "NumericValue": 1,
+            "StringValue": "enhance_security",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-983721bf",
+            "DisplayText": "provide accountable services",
+            "CodeType": "Normal",
+            "NumericValue": 2,
+            "StringValue": "provide_accountable_services",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-8692e698",
+            "DisplayText": "provide health and education",
+            "CodeType": "Normal",
+            "NumericValue": 3,
+            "StringValue": "provide_health_and_education",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-4a8a3c55",
+            "DisplayText": "promote unity",
+            "CodeType": "Normal",
+            "NumericValue": 4,
+            "StringValue": "promote_unity",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-0079d8c8",
+            "DisplayText": "improve services",
+            "CodeType": "Normal",
+            "NumericValue": 5,
+            "StringValue": "improve_services",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-25b1503e",
+            "DisplayText": "public awareness",
+            "CodeType": "Normal",
+            "NumericValue": 6,
+            "StringValue": "public_awareness",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-0c04461d",
+            "DisplayText": "to support vulnerable people",
+            "CodeType": "Normal",
+            "NumericValue": 7,
+            "StringValue": "to_support_vulnerable_people",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-2a2ffa5b",
+            "DisplayText": "other theme",
+            "CodeType": "Normal",
+            "NumericValue": 8,
+            "StringValue": "other_theme",
+            "VisibleInCoda": true
+        },
         {
             "CodeID": "code-NA-f93d3eb7",
             "CodeType": "Control",
