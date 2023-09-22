@@ -3,7 +3,54 @@
     "Name": "CHASP Suggestions",
     "Version": "0.0.0.1",
     "Codes": [
-
+        {
+            "CodeID": "code-20a69ab9",
+            "DisplayText": "enhance security",
+            "CodeType": "Normal",
+            "NumericValue": 1,
+            "StringValue": "enhance_security",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-da9731b2",
+            "DisplayText": "provide accountable services",
+            "CodeType": "Normal",
+            "NumericValue": 2,
+            "StringValue": "provide_accountable_services",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-dfbc5513",
+            "DisplayText": "job creation",
+            "CodeType": "Normal",
+            "NumericValue": 3,
+            "StringValue": "job_creation",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-df0841bb",
+            "DisplayText": "provide health and education",
+            "CodeType": "Normal",
+            "NumericValue": 4,
+            "StringValue": "provide_health_and_education",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-fee831a3",
+            "DisplayText": "to support vulnerable people",
+            "CodeType": "Normal",
+            "NumericValue": 5,
+            "StringValue": "to_support_vulnerable_people",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-3b0f567b",
+            "DisplayText": "other theme",
+            "CodeType": "Normal",
+            "NumericValue": 6,
+            "StringValue": "other_theme",
+            "VisibleInCoda": true
+        },
         {
             "CodeID": "code-NA-f93d3eb7",
             "CodeType": "Control",
