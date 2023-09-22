@@ -3,7 +3,30 @@
     "Name": "SIRA Suggestions",
     "Version": "0.0.0.1",
     "Codes": [
-
+        {
+            "CodeID": "code-a22efc93",
+            "DisplayText": "enhance security",
+            "CodeType": "Normal",
+            "NumericValue": 1,
+            "StringValue": "enhance_security",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-4d395d27",
+            "DisplayText": "improve services",
+            "CodeType": "Normal",
+            "NumericValue": 2,
+            "StringValue": "improve_services",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-a17144bb",
+            "DisplayText": "other theme",
+            "CodeType": "Normal",
+            "NumericValue": 3,
+            "StringValue": "other_theme",
+            "VisibleInCoda": true
+        },
         {
             "CodeID": "code-NA-f93d3eb7",
             "CodeType": "Control",
