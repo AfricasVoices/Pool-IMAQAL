@@ -3,7 +3,70 @@
     "Name": "CHASP Complains Feedback",
     "Version": "0.0.0.1",
     "Codes": [
-
+        {
+            "CodeID": "code-61ad536a",
+            "DisplayText": "0",
+            "CodeType": "Normal",
+            "NumericValue": 1,
+            "StringValue": "0",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-ac43a6da",
+            "DisplayText": "1",
+            "CodeType": "Normal",
+            "NumericValue": 2,
+            "StringValue": "1",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-8e96ecaf",
+            "DisplayText": "2",
+            "CodeType": "Normal",
+            "NumericValue": 3,
+            "StringValue": "2",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-6d1e0b3e",
+            "DisplayText": "3",
+            "CodeType": "Normal",
+            "NumericValue": 4,
+            "StringValue": "3",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-91f3a1c0",
+            "DisplayText": "4",
+            "CodeType": "Normal",
+            "NumericValue": 5,
+            "StringValue": "4",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-e44f8920",
+            "DisplayText": "5",
+            "CodeType": "Normal",
+            "NumericValue": 6,
+            "StringValue": "5",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-6c4480a9",
+            "DisplayText": "satisfied",
+            "CodeType": "Normal",
+            "NumericValue": 7,
+            "StringValue": "satisfied",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-1233debd",
+            "DisplayText": "other theme",
+            "CodeType": "Normal",
+            "NumericValue": 8,
+            "StringValue": "other_theme",
+            "VisibleInCoda": true
+        },
         {
             "CodeID": "code-NA-f93d3eb7",
             "CodeType": "Control",
