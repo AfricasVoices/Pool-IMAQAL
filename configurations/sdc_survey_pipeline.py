@@ -284,8 +284,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     coda_dataset_id="IMAQAL_clan",
                     engagement_db_dataset="clan",
                     code_scheme_configurations=[
-                        CodeSchemeConfiguration(code_scheme=load_code_scheme("demographics/clan"),
-                                                auto_coder=somali.DemographicCleaner.clean_yes_no)
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("demographics/clan"))
                     ],
                     ws_code_match_value="clan",
                     dataset_users_file_url="gs://avf-project-datasets/2022/IMAQAL-POOL/coda_users.json"
