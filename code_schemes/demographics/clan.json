@@ -4,6 +4,30 @@
     "Version": "0.0.0.1",
     "Codes": [
         {
+            "CodeID": "code-70b63d93",
+            "DisplayText": "among the 4 major clans",
+            "CodeType": "Normal",
+            "NumericValue": 1,
+            "StringValue": "among_the_4_major_clans",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-da3c7b4c",
+            "DisplayText": "among 0.5",
+            "CodeType": "Normal",
+            "NumericValue": 2,
+            "StringValue": "among_0_point_5",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-b1bc958d",
+            "DisplayText": "other theme",
+            "CodeType": "Normal",
+            "NumericValue": 3,
+            "StringValue": "other_theme",
+            "VisibleInCoda": true
+        },
+        {
             "CodeID": "code-NA-f93d3eb7",
             "CodeType": "Control",
             "ControlCode": "NA",
