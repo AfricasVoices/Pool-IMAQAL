@@ -378,6 +378,17 @@
             ]
         },
         {
+            "CodeID": "code-dd5ae0e2",
+            "CodeType": "Normal",
+            "DisplayText": "clan",
+            "StringValue": "clan",
+            "NumericValue": 173,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "clan"
+            ]
+        },
+        {
             "CodeID": "code-fd7e0bc5",
             "CodeType": "Normal",
             "DisplayText": "sdc-somalia-pdrc s01e01",
