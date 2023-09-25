@@ -3,7 +3,62 @@
     "Name": "SOMREP Government Services",
     "Version": "0.0.0.1",
     "Codes": [
-
+        {
+            "CodeID": "code-4d6db260",
+            "DisplayText": "0",
+            "CodeType": "Normal",
+            "NumericValue": 1,
+            "StringValue": "0",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-a5822edb",
+            "DisplayText": "1",
+            "CodeType": "Normal",
+            "NumericValue": 2,
+            "StringValue": "1",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-0ca96f2d",
+            "DisplayText": "2",
+            "CodeType": "Normal",
+            "NumericValue": 3,
+            "StringValue": "2",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-7ed0846a",
+            "DisplayText": "3",
+            "CodeType": "Normal",
+            "NumericValue": 4,
+            "StringValue": "3",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-51dacf63",
+            "DisplayText": "4",
+            "CodeType": "Normal",
+            "NumericValue": 5,
+            "StringValue": "4",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-261fb036",
+            "DisplayText": "5",
+            "CodeType": "Normal",
+            "NumericValue": 6,
+            "StringValue": "5",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-dbc7e6f9",
+            "DisplayText": "other theme",
+            "CodeType": "Normal",
+            "NumericValue": 7,
+            "StringValue": "other_theme",
+            "VisibleInCoda": true
+        },
         {
             "CodeID": "code-NA-f93d3eb7",
             "CodeType": "Control",
