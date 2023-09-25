@@ -3,7 +3,78 @@
     "Name": "SOMREP Resilience Support",
     "Version": "0.0.0.1",
     "Codes": [
-
+        {
+            "CodeID": "code-e53ba816",
+            "DisplayText": "0",
+            "CodeType": "Normal",
+            "NumericValue": 1,
+            "StringValue": "0",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-e5af05ca",
+            "DisplayText": "1",
+            "CodeType": "Normal",
+            "NumericValue": 2,
+            "StringValue": "1",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-7076d8fa",
+            "DisplayText": "2",
+            "CodeType": "Normal",
+            "NumericValue": 3,
+            "StringValue": "2",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-5f4d6b26",
+            "DisplayText": "3",
+            "CodeType": "Normal",
+            "NumericValue": 4,
+            "StringValue": "3",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-98eedeba",
+            "DisplayText": "4",
+            "CodeType": "Normal",
+            "NumericValue": 5,
+            "StringValue": "4",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-a35f301e",
+            "DisplayText": "5",
+            "CodeType": "Normal",
+            "NumericValue": 6,
+            "StringValue": "5",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-df391a35",
+            "DisplayText": "satisfied",
+            "CodeType": "Normal",
+            "NumericValue": 7,
+            "StringValue": "satisfied",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-9fdf7cc9",
+            "DisplayText": "not satisfied",
+            "CodeType": "Normal",
+            "NumericValue": 8,
+            "StringValue": "not_satisfied",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-dccb4387",
+            "DisplayText": "other theme",
+            "CodeType": "Normal",
+            "NumericValue": 9,
+            "StringValue": "other_theme",
+            "VisibleInCoda": true
+        },
         {
             "CodeID": "code-NA-f93d3eb7",
             "CodeType": "Control",
