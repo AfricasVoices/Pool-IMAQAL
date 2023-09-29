@@ -44,6 +44,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     FlowResultConfiguration("sdc_survey_demog", "imaqal_pool_recently_displaced", "recently_displaced"),
                     FlowResultConfiguration("sdc_survey_demog", "imaqal_pool_disability", "disability"),
                     FlowResultConfiguration("sdc_survey_demog", "imaqal_pool_household_language", "household_language"),
+                    FlowResultConfiguration("sdc_survey_demog", "imaqal_pool_clan", "clan"),
 
                     FlowResultConfiguration("sdc_survey_SIRA_s01_sms_ad", "sdc_survey_sira_complains_feedback", "sdc_survey_sira_complains_feedback"),
                     FlowResultConfiguration("sdc_survey_SIRA_s01_sms_ad", "sdc_survey_sira_government_services", "sdc_survey_sira_government_services"),
@@ -277,6 +278,15 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                                                 auto_coder=somali.DemographicCleaner.clean_yes_no)
                     ],
                     ws_code_match_value="disability",
+                    dataset_users_file_url="gs://avf-project-datasets/2022/IMAQAL-POOL/coda_users.json"
+                ),
+                CodaDatasetConfiguration(
+                    coda_dataset_id="IMAQAL_clan",
+                    engagement_db_dataset="clan",
+                    code_scheme_configurations=[
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("demographics/clan"))
+                    ],
+                    ws_code_match_value="clan",
                     dataset_users_file_url="gs://avf-project-datasets/2022/IMAQAL-POOL/coda_users.json"
                 ),
             ],
@@ -572,6 +582,17 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     CodingConfiguration(
                         code_scheme=load_code_scheme("demographics/household_language"),
                         analysis_dataset="household_language"
+                    )
+                ]
+            ),
+            AnalysisDatasetConfiguration(
+                engagement_db_datasets=["clan"],
+                dataset_type=DatasetTypes.DEMOGRAPHIC,
+                raw_dataset="clan",
+                coding_configs=[
+                    CodingConfiguration(
+                        code_scheme=load_code_scheme("demographics/clan"),
+                        analysis_dataset="clan"
                     )
                 ]
             ),
