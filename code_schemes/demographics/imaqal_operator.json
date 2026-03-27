@@ -92,6 +92,39 @@
       ]
     },
     {
+      "CodeID": "code-61ce2043",
+      "CodeType": "Normal",
+      "DisplayText": "ethiopian telephone",
+      "NumericValue": 9,
+      "StringValue": "ethiopian_telephone",
+      "VisibleInCoda": true,
+      "MatchValues":  [
+        "ethiopian telephone"
+      ]
+    },
+    {
+      "CodeID": "code-de2a3031",
+      "CodeType": "Normal",
+      "DisplayText": "kenyan telephone",
+      "NumericValue": 10,
+      "StringValue": "kenyan_telephone",
+      "VisibleInCoda": true,
+      "MatchValues":  [
+        "kenyan telephone"
+      ]
+    },
+    {
+      "CodeID": "code-68e59f36",
+      "CodeType": "Normal",
+      "DisplayText": "kobotoolbox",
+      "NumericValue": 11,
+      "StringValue": "kobotoolbox",
+      "VisibleInCoda": true,
+      "MatchValues":  [
+        "kobotoolbox"
+      ]
+    },
+    {
       "CodeID": "code-NA-f93d3eb7",
       "CodeType": "Control",
       "ControlCode": "NA",

@@ -37,6 +37,17 @@
             ]
         },
         {
+            "CodeID": "code-4dfab90e",
+            "CodeType": "Normal",
+            "DisplayText": "kenya location",
+            "StringValue": "kenya_location",
+            "NumericValue": -3,
+            "VisibleInCoda": false,
+            "MatchValues": [
+                "kenya_location"
+            ]
+        },
+        {
             "CodeID": "code-c2ef3b7f",
             "CodeType": "Normal",
             "DisplayText": "recently displaced",
@@ -81,12 +92,531 @@
             ]
         },
         {
+            "CodeID": "code-4b7f9f49",
+            "CodeType": "Normal",
+            "DisplayText": "agropastoralist_status",
+            "StringValue": "agropastoralist_status",
+            "NumericValue": 260,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "agropastoralist_status"
+            ]
+        },
+        {
+            "CodeID": "code-e300cd1a",
+            "CodeType": "Normal",
+            "DisplayText": "sdc_ews_s01e01",
+            "StringValue": "sdc_ews_s01e01",
+            "NumericValue": 259,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "sdc_ews_s01e01"
+            ]
+        },
+        {
+            "CodeID": "code-428e2990",
+            "CodeType": "Normal",
+            "DisplayText": "sdc_ews_s01e02",
+            "StringValue": "sdc_ews_s01e02",
+            "NumericValue": 258,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "sdc_ews_s01e02"
+            ]
+        },
+        {
+            "CodeID": "code-15cefbff",
+            "CodeType": "Normal",
+            "DisplayText": "sdc_ews_s01e03",
+            "StringValue": "sdc_ews_s01e03",
+            "NumericValue": 257,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "sdc_ews_s01e03"
+            ]
+        },
+        {
+            "CodeID": "code-4da1e40b",
+            "CodeType": "Normal",
+            "DisplayText": "sdc_endline_leadership_roles",
+            "StringValue": "sdc_endline_leadership_roles",
+            "NumericValue": 247,
+            "VisibleInCoda": true,
+            "MatchValues": ["sdc_endline_leadership_roles"]
+        },
+        {
+            "CodeID": "code-96faede3",
+            "CodeType": "Normal",
+            "DisplayText": "sdc_endline_income_generating",
+            "StringValue": "sdc_endline_income_generating",
+            "NumericValue": 248,
+            "VisibleInCoda": true,
+            "MatchValues": ["sdc_endline_income_generating"]
+        },
+        {
+            "CodeID": "code-a2bbfd5b",
+            "CodeType": "Normal",
+            "DisplayText": "sdc_endline_decision_making",
+            "StringValue": "sdc_endline_decision_making",
+            "NumericValue": 249,
+            "VisibleInCoda": true,
+            "MatchValues": ["sdc_endline_decision_making"]
+        },
+        {
+            "CodeID": "code-ab044df4",
+            "CodeType": "Normal",
+            "DisplayText": "sdc_endline_access_to_aid",
+            "StringValue": "sdc_endline_access_to_aid",
+            "NumericValue": 250,
+            "VisibleInCoda": true,
+            "MatchValues": ["sdc_endline_access_to_aid"]
+        },
+        {
+            "CodeID": "code-c9308ed4",
+            "CodeType": "Normal",
+            "DisplayText": "sdc_endline_service_experience",
+            "StringValue": "sdc_endline_service_experience",
+            "NumericValue": 251,
+            "VisibleInCoda": true,
+            "MatchValues": ["sdc_endline_service_experience"]
+        },
+        {
+            "CodeID": "code-84a88478",
+            "CodeType": "Normal",
+            "DisplayText": "sdc_endline_contributors",
+            "StringValue": "sdc_endline_contributors",
+            "NumericValue": 252,
+            "VisibleInCoda": true,
+            "MatchValues": ["sdc_endline_contributors"]
+        },
+        {
+            "CodeID": "code-9cc6393f",
+            "CodeType": "Normal",
+            "DisplayText": "sdc_endline_challenges",
+            "StringValue": "sdc_endline_challenges",
+            "NumericValue": 253,
+            "VisibleInCoda": true,
+            "MatchValues": ["sdc_endline_challenges"]
+        },
+        {
+            "CodeID": "code-b48efad4",
+            "CodeType": "Normal",
+            "DisplayText": "sdc_endline_service_satisfaction",
+            "StringValue": "sdc_endline_service_satisfaction",
+            "NumericValue": 254,
+            "VisibleInCoda": true,
+            "MatchValues": ["sdc_endline_service_satisfaction"]
+        },
+        {
+            "CodeID": "code-cfe4860d",
+            "CodeType": "Normal",
+            "DisplayText": "sdc_endline_community_voice",
+            "StringValue": "sdc_endline_community_voice",
+            "NumericValue": 255,
+            "VisibleInCoda": true,
+            "MatchValues": ["sdc_endline_community_voice"]
+        },
+        {
+            "CodeID": "code-90f1dae5",
+            "CodeType": "Normal",
+            "DisplayText": "sdc_endline_feedback",
+            "StringValue": "sdc_endline_feedback",
+            "NumericValue": 256,
+            "VisibleInCoda": true,
+            "MatchValues": ["sdc_endline_feedback"]
+        },
+        {
+            "CodeID": "code-2b548607",
+            "CodeType": "Normal",
+            "DisplayText": "sdc_survey_s03e01",
+            "StringValue": "sdc_survey_s03e01",
+            "NumericValue": 241,
+            "VisibleInCoda": false,
+            "MatchValues": [
+                "sdc_survey_s03e01"
+            ]
+        },
+        {
+            "CodeID": "code-d20f5703",
+            "CodeType": "Normal",
+            "DisplayText": "sdc_survey_s03e01_follow_up",
+            "StringValue": "sdc_survey_s03e01_follow_up",
+            "NumericValue": 242,
+            "VisibleInCoda": false,
+            "MatchValues": [
+                "sdc_survey_s03e01_follow_up"
+            ]
+        },
+        {
+            "CodeID": "code-cabbd209",
+            "CodeType": "Normal",
+            "DisplayText": "sdc_survey_s03e02",
+            "StringValue": "sdc_survey_s03e02",
+            "NumericValue": 243,
+            "VisibleInCoda": false,
+            "MatchValues": [
+                "sdc_survey_s03e02"
+            ]
+        },
+        {
+            "CodeID": "code-e1960517",
+            "CodeType": "Normal",
+            "DisplayText": "sdc_survey_s03e02_follow_up",
+            "StringValue": "sdc_survey_s03e02_follow_up",
+            "NumericValue": 244,
+            "VisibleInCoda": false,
+            "MatchValues": [
+                "sdc_survey_s03e02_follow_up"
+            ]
+        },
+        {
+            "CodeID": "code-b681e4af",
+            "CodeType": "Normal",
+            "DisplayText": "sdc_survey_s03e03",
+            "StringValue": "sdc_survey_s03e03",
+            "NumericValue": 245,
+            "VisibleInCoda": false,
+            "MatchValues": [
+                "sdc_survey_s03e03"
+            ]
+        },
+        {
+            "CodeID": "code-78bb8228",
+            "CodeType": "Normal",
+            "DisplayText": "sdc_survey_s03e03_follow_up",
+            "StringValue": "sdc_survey_s03e03_follow_up",
+            "NumericValue": 246,
+            "VisibleInCoda": false,
+            "MatchValues": [
+                "sdc_survey_s03e03_follow_up"
+            ]
+        },
+        {
+            "CodeID": "code-ca41717d",
+            "CodeType": "Normal",
+            "DisplayText": "sdc_pea s01e01",
+            "StringValue": "sdc_pea_s01e01",
+            "NumericValue": 226,
+            "VisibleInCoda": false,
+            "MatchValues": [
+                "sdc_pea_s01e01"
+            ]
+        },
+        {
+            "CodeID": "code-836f9cbe",
+            "CodeType": "Normal",
+            "DisplayText": "sdc_pea s01e01 follow-up",
+            "StringValue": "sdc_pea_s01e01_follow_up",
+            "NumericValue": 227,
+            "VisibleInCoda": false,
+            "MatchValues": [
+                "sdc_pea_s01e01_follow_up"
+            ]
+        },
+        {
+            "CodeID": "code-d4baf6d8",
+            "CodeType": "Normal",
+            "DisplayText": "sdc_pea e01 income gen activities",
+            "StringValue": "sdc_pea_e01_income_gen_activities",
+            "NumericValue": 232,
+            "VisibleInCoda": false,
+            "MatchValues": [
+                "sdc_pea_e01_income_gen_activities"
+            ]
+        },
+        {
+            "CodeID": "code-896788a5",
+            "CodeType": "Normal",
+            "DisplayText": "sdc_pea s01e02",
+            "StringValue": "sdc_pea_s01e02",
+            "NumericValue": 228,
+            "VisibleInCoda": false,
+            "MatchValues": [
+                "sdc_pea_s01e02"
+            ]
+        },
+        {
+            "CodeID": "code-301b6960",
+            "CodeType": "Normal",
+            "DisplayText": "sdc_pea e02 service delivery",
+            "StringValue": "sdc_pea_e02_service_delivery",
+            "NumericValue": 229,
+            "VisibleInCoda": false,
+            "MatchValues": [
+                "sdc_pea_e02_service_delivery"
+            ]
+        },
+        {
+            "CodeID": "code-738712a9",
+            "CodeType": "Normal",
+            "DisplayText": "sdc_pea e02 feedback frequency",
+            "StringValue": "sdc_pea_e02_feedback_frequency",
+            "NumericValue": 230,
+            "VisibleInCoda": false,
+            "MatchValues": [
+                "sdc_pea_e02_feedback_frequency"
+            ]
+        },
+        {
+            "CodeID": "code-58816fca",
+            "CodeType": "Normal",
+            "DisplayText": "sdc_pea e02 service reporting",
+            "StringValue": "sdc_pea_e02_service_reporting",
+            "NumericValue": 231,
+            "VisibleInCoda": false,
+            "MatchValues": [
+                "sdc_pea_e02_service_reporting"
+            ]
+        },
+        {
+            "CodeID": "code-16dd6f23",
+            "CodeType": "Normal",
+            "DisplayText": "sdc_pea s01e03",
+            "StringValue": "sdc_pea_s01e03",
+            "NumericValue": 233,
+            "VisibleInCoda": false,
+            "MatchValues": [
+                "sdc_pea_s01e03"
+            ]
+        },
+        {
+            "CodeID": "code-22e7066a",
+            "CodeType": "Normal",
+            "DisplayText": "sdc_pea e03 leadership selection",
+            "StringValue": "sdc_pea_e03_leadership_selection",
+            "NumericValue": 234,
+            "VisibleInCoda": false,
+            "MatchValues": [
+                "sdc_pea_e03_leadership_selection"
+            ]
+        },
+        {
+            "CodeID": "code-7cb473f4",
+            "CodeType": "Normal",
+            "DisplayText": "sdc_pea e03 participation impact",
+            "StringValue": "sdc_pea_e03_participation_impact",
+            "NumericValue": 235,
+            "VisibleInCoda": false,
+            "MatchValues": [
+                "sdc_pea_e03_participation_impact"
+            ]
+        },
+        {
+            "CodeID": "code-1041be35",
+            "CodeType": "Normal",
+            "DisplayText": "sdc_pea e03 participation in leadership",
+            "StringValue": "sdc_pea_e03_participation_in_leadership",
+            "NumericValue": 236,
+            "VisibleInCoda": false,
+            "MatchValues": [
+                "sdc_pea_e03_participation_in_leadership"
+            ]
+        },
+        {
+            "CodeID": "code-779afbb7",
+            "CodeType": "Normal",
+            "DisplayText": "sdc_pea e03 problem solving",
+            "StringValue": "sdc_pea_e03_problem_solving",
+            "NumericValue": 237,
+            "VisibleInCoda": false,
+            "MatchValues": [
+                "sdc_pea_e03_problem_solving"
+            ]
+        },
+        {
+            "CodeID": "code-7ac5b948",
+            "CodeType": "Normal",
+            "DisplayText": "sdc_pea e02 involvement services",
+            "StringValue": "sdc_pea_e02_involvement_services",
+            "NumericValue": 238,
+            "VisibleInCoda": false,
+            "MatchValues": [
+                "sdc_pea_e02_involvement_services"
+            ]
+        },
+        {
+            "CodeID": "code-0e7f9dd2",
+            "CodeType": "Normal",
+            "DisplayText": "sdc_pea e02 service improvement",
+            "StringValue": "sdc_pea_e02_service_improvement",
+            "NumericValue": 239,
+            "VisibleInCoda": false,
+            "MatchValues": [
+                "sdc_pea_e02_service_improvement"
+            ]
+        },
+        {
+            "CodeID": "code-edbf4beb",
+            "CodeType": "Normal",
+            "DisplayText": "sdc_pea e03 leaders selection",
+            "StringValue": "sdc_pea_e03_leaders_selection",
+            "NumericValue": 240,
+            "VisibleInCoda": false,
+            "MatchValues": [
+                "sdc_pea_e03_leaders_selection"
+            ]
+        },
+        {
+            "CodeID": "code-312f18c4",
+            "CodeType": "Normal",
+            "DisplayText": "sdc_youth_governance s01e01",
+            "StringValue": "sdc_youth_governance_s01e01",
+            "NumericValue": 225,
+            "VisibleInCoda": false,
+            "MatchValues": [
+                "sdc_youth_governance_s01e01"
+            ]
+        },
+        {
+            "CodeID": "code-9873cea0",
+            "CodeType": "Normal",
+            "DisplayText": "sdc_pulse_check e01",
+            "StringValue": "sdc_pulse_check_e01",
+            "NumericValue": 224,
+            "VisibleInCoda": false,
+            "MatchValues": [
+                "sdc_pulse_check_e01"
+            ]
+        },
+        {
+            "CodeID": "code-5aef97cc",
+            "CodeType": "Normal",
+            "DisplayText": "sdc_baseline onboarding_responses",
+            "StringValue": "sdc_baseline_onboarding_responses",
+            "NumericValue": 220,
+            "VisibleInCoda": false,
+            "MatchValues": [
+                "sdc_baseline_onboarding_responses"
+            ]
+        },
+        {
+            "CodeID": "code-542e3190",
+            "CodeType": "Normal",
+            "DisplayText": "sdc_baseline service_experience",
+            "StringValue": "sdc_baseline_service_experience",
+            "NumericValue": 221,
+            "VisibleInCoda": false,
+            "MatchValues": [
+                "sdc_baseline_service_experience"
+            ]
+        },
+        {
+            "CodeID": "code-a83c3e7e",
+            "CodeType": "Normal",
+            "DisplayText": "sdc_baseline community_voice",
+            "StringValue": "sdc_baseline_community_voice",
+            "NumericValue": 222,
+            "VisibleInCoda": false,
+            "MatchValues": [
+                "sdc_baseline_community_voice"
+            ]
+        },
+        {
+            "CodeID": "code-4866f862",
+            "CodeType": "Normal",
+            "DisplayText": "sdc_baseline service_satisfaction",
+            "StringValue": "sdc_baseline_service_satisfaction",
+            "NumericValue": 223,
+            "VisibleInCoda": false,
+            "MatchValues": [
+                "sdc_baseline_service_satisfaction"
+            ]
+        },
+        {
+            "CodeID": "code-eb081ca8",
+            "CodeType": "Normal",
+            "DisplayText": "sdc-mi s01e01",
+            "StringValue": "sdc_mi_s01e01",
+            "NumericValue": 212,
+            "VisibleInCoda": false,
+            "MatchValues": [
+                "sdc_mi_s01e01"
+            ]
+        },
+        {
+            "CodeID": "code-6c59041a",
+            "CodeType": "Normal",
+            "DisplayText": "sdc-mi s01e02",
+            "StringValue": "sdc_mi_s01e02",
+            "NumericValue": 213,
+            "VisibleInCoda": false,
+            "MatchValues": [
+                "sdc_mi_s01e02"
+            ]
+        },
+        {
+            "CodeID": "code-9767d0c3",
+            "CodeType": "Normal",
+            "DisplayText": "sdc-mi s01e03",
+            "StringValue": "sdc_mi_s01e03",
+            "NumericValue": 214,
+            "VisibleInCoda": false,
+            "MatchValues": [
+                "sdc_mi_s01e03"
+            ]
+        },
+        {
+            "CodeID": "code-72a79cb2",
+            "CodeType": "Normal",
+            "DisplayText": "sdc-mi s01e04",
+            "StringValue": "sdc_mi_s01e04",
+            "NumericValue": 215,
+            "VisibleInCoda": false,
+            "MatchValues": [
+                "sdc_mi_s01e04"
+            ]
+        },
+        {
+            "CodeID": "code-8dd61131",
+            "CodeType": "Normal",
+            "DisplayText": "sdc-mi s01e05",
+            "StringValue": "sdc_mi_s01e05",
+            "NumericValue": 216,
+            "VisibleInCoda": false,
+            "MatchValues": [
+                "sdc_mi_s01e05"
+            ]
+        },
+        {
+            "CodeID": "code-e3e1450d",
+            "CodeType": "Normal",
+            "DisplayText": "sdc-mi s01e06",
+            "StringValue": "sdc_mi_s01e06",
+            "NumericValue": 217,
+            "VisibleInCoda": false,
+            "MatchValues": [
+                "sdc_mi_s01e06"
+            ]
+        },
+        {
+            "CodeID": "code-eb1bc820",
+            "CodeType": "Normal",
+            "DisplayText": "sdc-mi s01_eval_lessons_learnt",
+            "StringValue": "sdc_mi_s01_eval_lessons_learnt",
+            "NumericValue": 218,
+            "VisibleInCoda": false,
+            "MatchValues": [
+                "sdc_mi_s01_eval_lessons_learnt"
+            ]
+        },
+        {
+            "CodeID": "code-ed705dc3",
+            "CodeType": "Normal",
+            "DisplayText": "sdc-mi s01_eval_suggestions",
+            "StringValue": "sdc_mi_s01_eval_suggestions",
+            "NumericValue": 219,
+            "VisibleInCoda": false,
+            "MatchValues": [
+                "sdc_mi_s01_eval_suggestions"
+            ]
+        },
+        {
             "CodeID": "code-8aa1d609",
             "CodeType": "Normal",
             "DisplayText": "sdc-survey s02e01",
             "StringValue": "sdc_survey_s02e01",
             "NumericValue": 174,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "sdc_survey_s02e01"
             ]
@@ -97,7 +627,7 @@
             "DisplayText": "sdc-survey s02e02",
             "StringValue": "sdc_survey_s02e02",
             "NumericValue": 175,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "sdc_survey_s02e02"
             ]
@@ -108,7 +638,7 @@
             "DisplayText": "sdc-survey s02e03",
             "StringValue": "sdc_survey_s02e03",
             "NumericValue": 178,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "sdc_survey_s02e03"
             ]
@@ -119,7 +649,7 @@
             "DisplayText": "sdc-survey s02e01 follow-up",
             "StringValue": "sdc_survey_s02e01_follow_up",
             "NumericValue": 176,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "sdc_survey_s02e01_follow_up"
             ]
@@ -130,7 +660,7 @@
             "DisplayText": "sdc-survey s02e02 follow-up",
             "StringValue": "sdc_survey_s02e02_follow_up",
             "NumericValue": 177,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "sdc_survey_s02e02_follow_up"
             ]
@@ -141,7 +671,7 @@
             "DisplayText": "sdc-survey s02e03 follow-up",
             "StringValue": "sdc_survey_s02e03_follow_up",
             "NumericValue": 179,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "sdc_survey_s02e03_follow_up"
             ]
@@ -152,7 +682,7 @@
             "DisplayText": "somrep_s02_feedback_mechanism",
             "StringValue": "somrep_s02_feedback_mechanism",
             "NumericValue": 180,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "somrep_s02_feedback_mechanism"
             ]
@@ -163,7 +693,7 @@
             "DisplayText": "somrep_s02_reason_feedback",
             "StringValue": "somrep_s02_reason_feedback",
             "NumericValue": 181,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "somrep_s02_reason_feedback"
             ]
@@ -174,7 +704,7 @@
             "DisplayText": "somrep_s02_gov_services",
             "StringValue": "somrep_s02_gov_services",
             "NumericValue": 182,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "somrep_s02_gov_services"
             ]
@@ -185,7 +715,7 @@
             "DisplayText": "somrep_s02_reasons_gov_services",
             "StringValue": "somrep_s02_reasons_gov_services",
             "NumericValue": 183,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "somrep_s02_reasons_gov_services"
             ]
@@ -196,7 +726,7 @@
             "DisplayText": "somrep_s02_inclusion",
             "StringValue": "somrep_s02_inclusion",
             "NumericValue": 184,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "somrep_s02_inclusion"
             ]
@@ -207,7 +737,7 @@
             "DisplayText": "somrep_s02_reasons_inclusion",
             "StringValue": "somrep_s02_reasons_inclusion",
             "NumericValue": 185,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "somrep_s02_reasons_inclusion"
             ]
@@ -218,7 +748,7 @@
             "DisplayText": "somrep_s02_resilience_support",
             "StringValue": "somrep_s02_resilience_support",
             "NumericValue": 186,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "somrep_s02_resilience_support"
             ]
@@ -229,7 +759,7 @@
             "DisplayText": "somrep_s02_reason_resilience_support",
             "StringValue": "somrep_s02_reason_resilience_support",
             "NumericValue": 187,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "somrep_s02_reason_resilience_support"
             ]
@@ -240,7 +770,7 @@
             "DisplayText": "chasp_s02_complains_feedback",
             "StringValue": "chasp_s02_complains_feedback",
             "NumericValue": 188,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "chasp_s02_complains_feedback"
             ]
@@ -251,7 +781,7 @@
             "DisplayText": "chasp_s02_reasons_complains",
             "StringValue": "chasp_s02_reasons_complains",
             "NumericValue": 189,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "chasp_s02_reasons_complains"
             ]
@@ -262,7 +792,7 @@
             "DisplayText": "chasp_s02_gov_services",
             "StringValue": "chasp_s02_gov_services",
             "NumericValue": 190,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "chasp_s02_gov_services"
             ]
@@ -273,7 +803,7 @@
             "DisplayText": "chasp_s02_reasons_gov_services",
             "StringValue": "chasp_s02_reasons_gov_services",
             "NumericValue": 191,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "chasp_s02_reasons_gov_services"
             ]
@@ -284,7 +814,7 @@
             "DisplayText": "chasp_s02_inclusion",
             "StringValue": "chasp_s02_inclusion",
             "NumericValue": 192,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "chasp_s02_inclusion"
             ]
@@ -295,7 +825,7 @@
             "DisplayText": "chasp_s02_reasons_inclusion",
             "StringValue": "chasp_s02_reasons_inclusion",
             "NumericValue": 193,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "chasp_s02_reasons_inclusion"
             ]
@@ -306,7 +836,7 @@
             "DisplayText": "chasp_s02_support",
             "StringValue": "chasp_s02_support",
             "NumericValue": 194,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "chasp_s02_support"
             ]
@@ -317,7 +847,7 @@
             "DisplayText": "chasp_s02_reasons_support",
             "StringValue": "chasp_s02_reasons_support",
             "NumericValue": 195,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "chasp_s02_reasons_support"
             ]
@@ -328,7 +858,7 @@
             "DisplayText": "sira_s02_feedback_mechanism",
             "StringValue": "sira_s02_feedback_mechanism",
             "NumericValue": 196,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "sira_s02_feedback_mechanism"
             ]
@@ -339,7 +869,7 @@
             "DisplayText": "sira_s02_reasons_feedback",
             "StringValue": "sira_s02_reasons_feedback",
             "NumericValue": 197,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "sira_s02_reasons_feedback"
             ]
@@ -350,7 +880,7 @@
             "DisplayText": "sira_s02_gov_services",
             "StringValue": "sira_s02_gov_services",
             "NumericValue": 198,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "sira_s02_gov_services"
             ]
@@ -361,7 +891,7 @@
             "DisplayText": "sira_s02_reasons_gov_services",
             "StringValue": "sira_s02_reasons_gov_services",
             "NumericValue": 199,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "sira_s02_reasons_gov_services"
             ]
@@ -372,7 +902,7 @@
             "DisplayText": "sira_s02_inclusion",
             "StringValue": "sira_s02_inclusion",
             "NumericValue": 200,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "sira_s02_inclusion"
             ]
@@ -383,7 +913,7 @@
             "DisplayText": "sira_s02_reasons_inclusion",
             "StringValue": "sira_s02_reasons_inclusion",
             "NumericValue": 201,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "sira_s02_reasons_inclusion"
             ]
@@ -394,7 +924,7 @@
             "DisplayText": "sira_s02_support",
             "StringValue": "sira_s02_support",
             "NumericValue": 202,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "sira_s02_support"
             ]
@@ -405,7 +935,7 @@
             "DisplayText": "sira_s02_reasons_support",
             "StringValue": "sira_s02_reasons_support",
             "NumericValue": 203,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "sira_s02_reasons_support"
             ]
@@ -416,7 +946,7 @@
             "DisplayText": "r2p_s01_inclusion",
             "StringValue": "r2p_s01_inclusion",
             "NumericValue": 204,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "r2p_s01_inclusion"
             ]
@@ -427,7 +957,7 @@
             "DisplayText": "r2p_s01_reasons_inclusion",
             "StringValue": "r2p_s01_reasons_inclusion",
             "NumericValue": 205,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "r2p_s01_reasons_inclusion"
             ]
@@ -438,7 +968,7 @@
             "DisplayText": "r2p_s01_governance",
             "StringValue": "r2p_s01_governance",
             "NumericValue": 206,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "r2p_s01_governance"
             ]
@@ -449,7 +979,7 @@
             "DisplayText": "r2p_s01_reasons_governance",
             "StringValue": "r2p_s01_reasons_governance",
             "NumericValue": 207,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "r2p_s01_reasons_governance"
             ]
@@ -460,7 +990,7 @@
             "DisplayText": "r2p_s01_impact",
             "StringValue": "r2p_s01_impact",
             "NumericValue": 208,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "r2p_s01_impact"
             ]
@@ -471,7 +1001,7 @@
             "DisplayText": "r2p_s01_reasons_impact",
             "StringValue": "r2p_s01_reasons_impact",
             "NumericValue": 209,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "r2p_s01_reasons_impact"
             ]
@@ -482,7 +1012,7 @@
             "DisplayText": "r2p_s01_support",
             "StringValue": "r2p_s01_support",
             "NumericValue": 210,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "r2p_s01_support"
             ]
@@ -493,7 +1023,7 @@
             "DisplayText": "r2p_s01_reasons_support",
             "StringValue": "r2p_s01_reasons_support",
             "NumericValue": 211,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "r2p_s01_reasons_support"
             ]
@@ -504,7 +1034,7 @@
             "DisplayText": "sdc-survey-sira complains feedback",
             "StringValue": "sdc_survey_sira_complains_feedback",
             "NumericValue": 158,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "sdc_survey_sira_complains_feedback"
             ]
@@ -515,7 +1045,7 @@
             "DisplayText": "sdc-survey-sira government services",
             "StringValue": "sdc_survey_sira_government_services",
             "NumericValue": 159,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "sdc_survey_sira_government_services"
             ]
@@ -526,7 +1056,7 @@
             "DisplayText": "sdc-survey-sira suggestions",
             "StringValue": "sdc_survey_sira_suggestions",
             "NumericValue": 160,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "sdc_survey_sira_suggestions"
             ]
@@ -537,7 +1067,7 @@
             "DisplayText": "sdc-survey-sira inclusion",
             "StringValue": "sdc_survey_sira_inclusion",
             "NumericValue": 161,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "sdc_survey_sira_inclusion"
             ]
@@ -548,7 +1078,7 @@
             "DisplayText": "sdc-survey-sira support",
             "StringValue": "sdc_survey_sira_support",
             "NumericValue": 162,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "sdc_survey_sira_support"
             ]
@@ -559,7 +1089,7 @@
             "DisplayText": "sdc-survey-chasp complains feedback",
             "StringValue": "sdc_survey_chasp_complains_feedback",
             "NumericValue": 163,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "sdc_survey_chasp_complains_feedback"
             ]
@@ -570,7 +1100,7 @@
             "DisplayText": "sdc-survey-chasp government services",
             "StringValue": "sdc_survey_chasp_government_services",
             "NumericValue": 164,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "sdc_survey_chasp_government_services"
             ]
@@ -581,7 +1111,7 @@
             "DisplayText": "sdc-survey-chasp inclusion",
             "StringValue": "sdc_survey_chasp_inclusion",
             "NumericValue": 165,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "sdc_survey_chasp_inclusion"
             ]
@@ -592,7 +1122,7 @@
             "DisplayText": "sdc-survey-chasp suggestions",
             "StringValue": "sdc_survey_chasp_suggestions",
             "NumericValue": 166,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "sdc_survey_chasp_suggestions"
             ]
@@ -603,7 +1133,7 @@
             "DisplayText": "sdc-survey-chasp support",
             "StringValue": "sdc_survey_chasp_support",
             "NumericValue": 167,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "sdc_survey_chasp_support"
             ]
@@ -614,7 +1144,7 @@
             "DisplayText": "sdc-survey-somrep feedback mechanism",
             "StringValue": "sdc_survey_somrep_feedback_mechanism",
             "NumericValue": 168,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "sdc_survey_somrep_feedback_mechanism"
             ]
@@ -625,7 +1155,7 @@
             "DisplayText": "sdc-survey-somrep government services",
             "StringValue": "sdc_survey_somrep_government_services",
             "NumericValue": 169,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "sdc_survey_somrep_government_services"
             ]
@@ -636,7 +1166,7 @@
             "DisplayText": "sdc-survey-somrep inclusion",
             "StringValue": "sdc_survey_somrep_inclusion",
             "NumericValue": 170,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "sdc_survey_somrep_inclusion"
             ]
@@ -647,7 +1177,7 @@
             "DisplayText": "sdc-survey-somrep resilience support",
             "StringValue": "sdc_survey_somrep_resilience_support",
             "NumericValue": 171,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "sdc_survey_somrep_resilience_support"
             ]
@@ -658,7 +1188,7 @@
             "DisplayText": "sdc-survey-somrep suggestions",
             "StringValue": "sdc_survey_somrep_suggestions",
             "NumericValue": 172,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "sdc_survey_somrep_suggestions"
             ]
@@ -669,7 +1199,7 @@
             "DisplayText": "sdc-somalia-health s01e01",
             "StringValue": "sdc_somalia_health_s01e01",
             "NumericValue": 145,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "sdc_somalia_health_s01e01"
             ]
@@ -680,7 +1210,7 @@
             "DisplayText": "sdc-somalia-health s01e02",
             "StringValue": "sdc_somalia_health_s01e02",
             "NumericValue": 146,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "sdc_somalia_health_s01e02"
             ]
@@ -691,7 +1221,7 @@
             "DisplayText": "sdc-somalia-health s01e03",
             "StringValue": "sdc_somalia_health_s01e03",
             "NumericValue": 147,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "sdc_somalia_health_s01e03"
             ]
@@ -702,7 +1232,7 @@
             "DisplayText": "sdc-somalia-health s01e04",
             "StringValue": "sdc_somalia_health_s01e04",
             "NumericValue": 148,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "sdc_somalia_health_s01e04"
             ]
@@ -713,7 +1243,7 @@
             "DisplayText": "sdc-somalia-health s01e05",
             "StringValue": "sdc_somalia_health_s01e05",
             "NumericValue": 149,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "sdc_somalia_health_s01e05"
             ]
@@ -724,7 +1254,7 @@
             "DisplayText": "sdc-somalia-health s01e06",
             "StringValue": "sdc_somalia_health_s01e06",
             "NumericValue": 150,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "sdc_somalia_health_s01e06"
             ]
@@ -735,7 +1265,7 @@
             "DisplayText": "sdc-somalia-health s01e07",
             "StringValue": "sdc_somalia_health_s01e07",
             "NumericValue": 151,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "sdc_somalia_health_s01e07"
             ]
@@ -746,7 +1276,7 @@
             "DisplayText": "sdc-somalia-health s01e05 support follow up",
             "StringValue": "sdc_somalia_health_s01e05_support_follow_up",
             "NumericValue": 152,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "sdc_somalia_health_s01e05_support_follow_up"
             ]
@@ -757,7 +1287,7 @@
             "DisplayText": "sdc-somalia-health s01e05 primary follow up",
             "StringValue": "sdc_somalia_health_s01e05_primary_follow_up",
             "NumericValue": 153,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "sdc_somalia_health_s01e05_primary_follow_up"
             ]
@@ -768,7 +1298,7 @@
             "DisplayText": "sdc-somalia-health s01 closeout",
             "StringValue": "sdc_somalia_health_s01_closeout",
             "NumericValue": 154,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "sdc_somalia_health_s01_closeout"
             ]
@@ -779,7 +1309,7 @@
             "DisplayText": "sdc-somalia-health s01 lessons learnt",
             "StringValue": "sdc_somalia_health_s01_lessons_learnt",
             "NumericValue": 155,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "sdc_somalia_health_s01_lessons_learnt"
             ]
@@ -790,7 +1320,7 @@
             "DisplayText": "sdc-somalia-health s01 suggestions",
             "StringValue": "sdc_somalia_health_s01_suggestions",
             "NumericValue": 156,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "sdc_somalia_health_s01_suggestions"
             ]
@@ -801,7 +1331,7 @@
             "DisplayText": "sdc-somalia-health s01 evaluation other",
             "StringValue": "sdc_somalia_health_s01_evaluation_other",
             "NumericValue": 157,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "sdc_somalia_health_s01_evaluation_other"
             ]
@@ -812,7 +1342,7 @@
             "DisplayText": "sdc-somalia-pdrc s01e01",
             "StringValue": "sdc_somalia_pdrc_s01e01",
             "NumericValue": 136,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "sdc_somalia_pdrc_s01e01"
             ]
@@ -823,7 +1353,7 @@
             "DisplayText": "sdc-somalia-pdrc s01e02",
             "StringValue": "sdc_somalia_pdrc_s01e02",
             "NumericValue": 137,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "sdc_somalia_pdrc_s01e02"
             ]
@@ -834,7 +1364,7 @@
             "DisplayText": "sdc-somalia-pdrc s01e03",
             "StringValue": "sdc_somalia_pdrc_s01e03",
             "NumericValue": 138,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "sdc_somalia_pdrc_s01e03"
             ]
@@ -845,7 +1375,7 @@
             "DisplayText": "sdc-somalia-pdrc s01e04",
             "StringValue": "sdc_somalia_pdrc_s01e04",
             "NumericValue": 139,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "sdc_somalia_pdrc_s01e04"
             ]
@@ -856,7 +1386,7 @@
             "DisplayText": "sdc-somalia-pdrc s01e05",
             "StringValue": "sdc_somalia_pdrc_s01e05",
             "NumericValue": 140,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "sdc_somalia_pdrc_s01e05"
             ]
@@ -867,7 +1397,7 @@
             "DisplayText": "sdc-somalia-pdrc s01 have voice",
             "StringValue": "sdc_somalia_pdrc_s01_have_voice",
             "NumericValue": 142,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "sdc_somalia_pdrc_s01_have_voice"
             ]
@@ -878,7 +1408,7 @@
             "DisplayText": "sdc-somalia-pdrc s01 suggestions",
             "StringValue": "sdc_somalia_pdrc_s01_suggestions",
             "NumericValue": 143,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "sdc_somalia_pdrc_s01_suggestions"
             ]
@@ -889,7 +1419,7 @@
             "DisplayText": "sdc-somalia-pdrc s01 evaluation other",
             "StringValue": "sdc_somalia_pdrc_s01_evaluation_other",
             "NumericValue": 144,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "sdc_somalia_pdrc_s01_evaluation_other"
             ]
@@ -900,7 +1430,7 @@
             "DisplayText": "worldbank-scd s01e01",
             "StringValue": "worldbank_scd_s01e01",
             "NumericValue": 129,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "worldbank_scd_s01e01"
             ]
@@ -911,7 +1441,7 @@
             "DisplayText": "worldbank-scd s01e01 google form consent",
             "StringValue": "worldbank_scd_s01e01_google_form_consent",
             "NumericValue": 141,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "worldbank_scd_s01e01_google_form_consent"
             ]
@@ -922,7 +1452,7 @@
             "DisplayText": "worldbank-scd s01e01 follow-up 1",
             "StringValue": "worldbank_scd_s01e01_follow_up_1",
             "NumericValue": 131,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "worldbank_scd_s01e01_follow_up_1"
             ]
@@ -933,7 +1463,7 @@
             "DisplayText": "worldbank-scd s01e01 follow-up 2",
             "StringValue": "worldbank_scd_s01e01_follow_up_2",
             "NumericValue": 132,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "worldbank_scd_s01e01_follow_up_2"
             ]
@@ -944,7 +1474,7 @@
             "DisplayText": "worldbank-scd s01 have voice",
             "StringValue": "worldbank_scd_s01_have_voice",
             "NumericValue": 133,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "worldbank_scd_s01_have_voice"
             ]
@@ -955,7 +1485,7 @@
             "DisplayText": "worldbank-scd s01 suggestions",
             "StringValue": "worldbank_scd_s01_suggestions",
             "NumericValue": 134,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "worldbank_scd_s01_suggestions"
             ]
@@ -966,7 +1496,7 @@
             "DisplayText": "worldbank-scd s01 evaluation",
             "StringValue": "worldbank_scd_s01_evaluation",
             "NumericValue": 135,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "worldbank_scd_s01_evaluation"
             ]
@@ -977,7 +1507,7 @@
             "DisplayText": "rvi elections s01e01",
             "StringValue": "rvi_elections_s01e01",
             "NumericValue": 122,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "rvi_elections_s01e01"
             ]
@@ -988,7 +1518,7 @@
             "DisplayText": "rvi elections s01e02",
             "StringValue": "rvi_elections_s01e02",
             "NumericValue": 123,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "rvi_elections_s01e02"
             ]
@@ -999,7 +1529,7 @@
             "DisplayText": "rvi elections s01e03",
             "StringValue": "rvi_elections_s01e03",
             "NumericValue": 124,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "rvi_elections_s01e03"
             ]
@@ -1010,7 +1540,7 @@
             "DisplayText": "rvi elections s01e04",
             "StringValue": "rvi_elections_s01e04",
             "NumericValue": 125,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "rvi_elections_s01e04"
             ]
@@ -1021,7 +1551,7 @@
             "DisplayText": "rvi elections s01e05",
             "StringValue": "rvi_elections_s01e05",
             "NumericValue": 126,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "rvi_elections_s01e05"
             ]
@@ -1032,7 +1562,7 @@
             "DisplayText": "rvi elections s01e06",
             "StringValue": "rvi_elections_s01e06",
             "NumericValue": 127,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "rvi_elections_s01e06"
             ]
@@ -1043,7 +1573,7 @@
             "DisplayText": "rvi elections s01 closeout",
             "StringValue": "rvi_elections_s01_closeout",
             "NumericValue": 128,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "rvi_elections_s01_closeout"
             ]
@@ -1054,7 +1584,7 @@
             "DisplayText": "ssf ppe s01e01",
             "StringValue": "ssf_ppe_s01e01",
             "NumericValue": 114,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "ssf_ppe_s01e01"
             ]
@@ -1065,7 +1595,7 @@
             "DisplayText": "ssf ppe s01e02",
             "StringValue": "ssf_ppe_s01e02",
             "NumericValue": 115,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "ssf_ppe_s01e02"
             ]
@@ -1076,7 +1606,7 @@
             "DisplayText": "ssf ppe s01 closeout",
             "StringValue": "ssf_ppe_s01_closeout",
             "NumericValue": 121,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "ssf_ppe_s01_closeout"
             ]
@@ -1087,7 +1617,7 @@
             "DisplayText": "ssf sld s01e01",
             "StringValue": "ssf_sld_s01e01",
             "NumericValue": 116,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "ssf_sld_s01e01"
             ]
@@ -1098,7 +1628,7 @@
             "DisplayText": "ssf sld s01e02",
             "StringValue": "ssf_sld_s01e02",
             "NumericValue": 117,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "ssf_sld_s01e02"
             ]
@@ -1109,7 +1639,7 @@
             "DisplayText": "ssf sld s01e03",
             "StringValue": "ssf_sld_s01e03",
             "NumericValue": 118,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "ssf_sld_s01e03"
             ]
@@ -1120,7 +1650,7 @@
             "DisplayText": "ssf sld s01e04",
             "StringValue": "ssf_sld_s01e04",
             "NumericValue": 119,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "ssf_sld_s01e04"
             ]
@@ -1131,7 +1661,7 @@
             "DisplayText": "ssf sld s01e05",
             "StringValue": "ssf_sld_s01e05",
             "NumericValue": 120,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "ssf_sld_s01e05"
             ]
@@ -1142,7 +1672,7 @@
             "DisplayText": "ssf rec s01e01",
             "StringValue": "ssf_rec_s01e01",
             "NumericValue": 106,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "ssf_rec_s01e01"
             ]
@@ -1153,7 +1683,7 @@
             "DisplayText": "ssf rec s01e02",
             "StringValue": "ssf_rec_s01e02",
             "NumericValue": 107,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "ssf_rec_s01e02"
             ]
@@ -1164,7 +1694,7 @@
             "DisplayText": "ssf rec s01e03",
             "StringValue": "ssf_rec_s01e03",
             "NumericValue": 108,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "ssf_rec_s01e03"
             ]
@@ -1175,7 +1705,7 @@
             "DisplayText": "ssf rec s01e04",
             "StringValue": "ssf_rec_s01e04",
             "NumericValue": 109,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "ssf_rec_s01e04"
             ]
@@ -1186,7 +1716,7 @@
             "DisplayText": "ssf elections s01e01",
             "StringValue": "ssf_elections_s01e01",
             "NumericValue": 99,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "ssf_elections_s01e01"
             ]
@@ -1197,7 +1727,7 @@
             "DisplayText": "ssf elections s01e02",
             "StringValue": "ssf_elections_s01e02",
             "NumericValue": 100,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "ssf_elections_s01e02"
             ]
@@ -1208,7 +1738,7 @@
             "DisplayText": "ssf elections s01e03",
             "StringValue": "ssf_elections_s01e03",
             "NumericValue": 101,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "ssf_elections_s01e03"
             ]
@@ -1219,7 +1749,7 @@
             "DisplayText": "ssf elections s01e04",
             "StringValue": "ssf_elections_s01e04",
             "NumericValue": 102,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "ssf_elections_s01e04"
             ]
@@ -1230,7 +1760,7 @@
             "DisplayText": "ssf elections s01e05",
             "StringValue": "ssf_elections_s01e05",
             "NumericValue": 103,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "ssf_elections_s01e05"
             ]
@@ -1241,7 +1771,7 @@
             "DisplayText": "ssf elections s01e06",
             "StringValue": "ssf_elections_s01e06",
             "NumericValue": 104,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "ssf_elections_s01e06"
             ]
@@ -1252,7 +1782,7 @@
             "DisplayText": "ssf elections s01e07",
             "StringValue": "ssf_elections_s01e07",
             "NumericValue": 105,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "ssf_elections_s01e07"
             ]
@@ -1263,7 +1793,7 @@
             "DisplayText": "ssf dcf s01e01",
             "StringValue": "ssf_dcf_s01e01",
             "NumericValue": 110,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "ssf_dcf_s01e01"
             ]
@@ -1274,7 +1804,7 @@
             "DisplayText": "ssf dcf s01e02",
             "StringValue": "ssf_dcf_s01e02",
             "NumericValue": 111,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "ssf_dcf_s01e02"
             ]
@@ -1285,7 +1815,7 @@
             "DisplayText": "ssf dcf s01e03",
             "StringValue": "ssf_dcf_s01e03",
             "NumericValue": 112,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "ssf_dcf_s01e03"
             ]
@@ -1296,7 +1826,7 @@
             "DisplayText": "ssf dcf s01e04",
             "StringValue": "ssf_dcf_s01e04",
             "NumericValue": 113,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "ssf_dcf_s01e04"
             ]
@@ -1307,7 +1837,7 @@
             "DisplayText": "imaqal covid19 s02e01 promo",
             "StringValue": "imaqal_covid19_s02e01_promo",
             "NumericValue": 93,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "imaqal_covid19_s02e01_promo"
             ]
@@ -1318,7 +1848,7 @@
             "DisplayText": "imaqal covid19 s02e02 promo",
             "StringValue": "imaqal_covid19_s02e02_promo",
             "NumericValue": 94,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "imaqal_covid19_s02e02_promo"
             ]
@@ -1329,7 +1859,7 @@
             "DisplayText": "imaqal covid19 s02e03 promo",
             "StringValue": "imaqal_covid19_s02e03_promo",
             "NumericValue": 95,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "imaqal_covid19_s02e03_promo"
             ]
@@ -1340,7 +1870,7 @@
             "DisplayText": "imaqal covid19 s02e04",
             "StringValue": "imaqal_covid19_s02e04",
             "NumericValue": 96,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "imaqal_covid19_s02e04"
             ]
@@ -1351,7 +1881,7 @@
             "DisplayText": "imaqal covid19 vaccination thoughts",
             "StringValue": "imaqal_covid19_vaccination_thoughts",
             "NumericValue": 97,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "imaqal_covid19_vaccination_thoughts"
             ]
@@ -1362,7 +1892,7 @@
             "DisplayText": "imaqal covid19 vaccination thoughts other messages",
             "StringValue": "imaqal_covid19_vaccination_thoughts_other_messages",
             "NumericValue": 98,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "imaqal_covid19_vaccination_thoughts_other_messages"
             ]
@@ -1373,7 +1903,7 @@
             "DisplayText": "imaqal covid19 s01e01",
             "StringValue": "imaqal_covid19_s01e01",
             "NumericValue": 68,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "imaqal_covid19_s01e01"
             ]
@@ -1384,7 +1914,7 @@
             "DisplayText": "imaqal covid19 s01e02",
             "StringValue": "imaqal_covid19_s01e02",
             "NumericValue": 69,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "imaqal_covid19_s01e02"
             ]
@@ -1395,7 +1925,7 @@
             "DisplayText": "imaqal covid19 s01e03",
             "StringValue": "imaqal_covid19_s01e03",
             "NumericValue": 70,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "imaqal_covid19_s01e03"
             ]
@@ -1406,7 +1936,7 @@
             "DisplayText": "imaqal covid19 s01e04",
             "StringValue": "imaqal_covid19_s01e04",
             "NumericValue": 71,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "imaqal_covid19_s01e04"
             ]
@@ -1417,7 +1947,7 @@
             "DisplayText": "imaqal covid19 s01e05",
             "StringValue": "imaqal_covid19_s01e05",
             "NumericValue": 72,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "imaqal_covid19_s01e05"
             ]
@@ -1428,7 +1958,7 @@
             "DisplayText": "imaqal covid19 s01e06",
             "StringValue": "imaqal_covid19_s01e06",
             "NumericValue": 73,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "imaqal_covid19_s01e06"
             ]
@@ -1439,7 +1969,7 @@
             "DisplayText": "imaqal covid19 s01e07",
             "StringValue": "imaqal_covid19_s01e07",
             "NumericValue": 74,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "imaqal_covid19_s01e07"
             ]
@@ -1450,7 +1980,7 @@
             "DisplayText": "imaqal covid19 s01e08",
             "StringValue": "imaqal_covid19_s01e08",
             "NumericValue": 75,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "imaqal_covid19_s01e08"
             ]
@@ -1461,7 +1991,7 @@
             "DisplayText": "imaqal covid19 s01e09",
             "StringValue": "imaqal_covid19_s01e09",
             "NumericValue": 76,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "imaqal_covid19_s01e09"
             ]
@@ -1472,7 +2002,7 @@
             "DisplayText": "imaqal covid19 s01e10",
             "StringValue": "imaqal_covid19_s01e10",
             "NumericValue": 77,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "imaqal_covid19_s01e10"
             ]
@@ -1483,7 +2013,7 @@
             "DisplayText": "imaqal covid19 s01e11",
             "StringValue": "imaqal_covid19_s01e11",
             "NumericValue": 78,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "imaqal_covid19_s01e11"
             ]
@@ -1494,7 +2024,7 @@
             "DisplayText": "imaqal covid19 s01e12",
             "StringValue": "imaqal_covid19_s01e12",
             "NumericValue": 79,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "imaqal_covid19_s01e12"
             ]
@@ -1505,7 +2035,7 @@
             "DisplayText": "imaqal covid19 diagnostic s01e03",
             "StringValue": "imaqal_covid19_diagnostic_s01e03",
             "NumericValue": 80,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "imaqal_covid19_diagnostic_s01e03"
             ]
@@ -1516,7 +2046,7 @@
             "DisplayText": "imaqal covid19 s01e13",
             "StringValue": "imaqal_covid19_s01e13",
             "NumericValue": 81,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "imaqal_covid19_s01e13"
             ]
@@ -1527,7 +2057,7 @@
             "DisplayText": "imaqal covid19 s01e14",
             "StringValue": "imaqal_covid19_s01e14",
             "NumericValue": 82,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "imaqal_covid19_s01e14"
             ]
@@ -1538,7 +2068,7 @@
             "DisplayText": "imaqal covid19 s01e15",
             "StringValue": "imaqal_covid19_s01e15",
             "NumericValue": 83,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "imaqal_covid19_s01e15"
             ]
@@ -1549,7 +2079,7 @@
             "DisplayText": "imaqal covid19 s01e16",
             "StringValue": "imaqal_covid19_s01e16",
             "NumericValue": 84,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "imaqal_covid19_s01e16"
             ]
@@ -1560,7 +2090,7 @@
             "DisplayText": "imaqal covid19 s01e17",
             "StringValue": "imaqal_covid19_s01e17",
             "NumericValue": 85,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "imaqal_covid19_s01e17"
             ]
@@ -1571,7 +2101,7 @@
             "DisplayText": "imaqal covid19 s01e18",
             "StringValue": "imaqal_covid19_s01e18",
             "NumericValue": 86,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "imaqal_covid19_s01e18"
             ]
@@ -1582,7 +2112,7 @@
             "DisplayText": "imaqal covid19 s01e19",
             "StringValue": "imaqal_covid19_s01e19",
             "NumericValue": 87,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "imaqal_covid19_s01e19"
             ]
@@ -1593,7 +2123,7 @@
             "DisplayText": "imaqal covid19 s01e20",
             "StringValue": "imaqal_covid19_s01e20",
             "NumericValue": 88,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "imaqal_covid19_s01e20"
             ]
@@ -1604,7 +2134,7 @@
             "DisplayText": "imaqal covid19 s01e21",
             "StringValue": "imaqal_covid19_s01e21",
             "NumericValue": 89,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "imaqal_covid19_s01e21"
             ]
@@ -1615,7 +2145,7 @@
             "DisplayText": "imaqal covid19 s01e22",
             "StringValue": "imaqal_covid19_s01e22",
             "NumericValue": 90,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "imaqal_covid19_s01e22"
             ]
@@ -1626,7 +2156,7 @@
             "DisplayText": "imaqal covid19 s01e23",
             "StringValue": "imaqal_covid19_s01e23",
             "NumericValue": 91,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "imaqal_covid19_s01e23"
             ]
@@ -1637,7 +2167,7 @@
             "DisplayText": "imaqal covid19 s01 closeout",
             "StringValue": "imaqal_covid19_s01_closeout",
             "NumericValue": 92,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "imaqal_covid19_s01_closeout"
             ]
@@ -1648,7 +2178,7 @@
             "DisplayText": "covid19 som s01e01",
             "StringValue": "covid19_som_s01e01",
             "NumericValue": 65,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "covid19_som_s01e01"
             ]
@@ -1659,7 +2189,7 @@
             "DisplayText": "covid19 som s01e02",
             "StringValue": "covid19_som_s01e02",
             "NumericValue": 67,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "covid19_som_s01e02"
             ]
@@ -1670,7 +2200,7 @@
             "DisplayText": "imaqal s01e01",
             "StringValue": "imaqal_s01e01",
             "NumericValue": 7,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "imaqal_s01e01"
             ]
@@ -1681,7 +2211,7 @@
             "DisplayText": "imaqal s01e02",
             "StringValue": "imaqal_s01e02",
             "NumericValue": 8,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "imaqal_s01e02"
             ]
@@ -1692,7 +2222,7 @@
             "DisplayText": "imaqal s01e03",
             "StringValue": "imaqal_s01e03",
             "NumericValue": 9,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "imaqal_s01e03"
             ]
@@ -1703,7 +2233,7 @@
             "DisplayText": "imaqal s01e04",
             "StringValue": "imaqal_s01e04",
             "NumericValue": 10,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "imaqal_s01e04"
             ]
@@ -1714,7 +2244,7 @@
             "DisplayText": "imaqal s01e05",
             "StringValue": "imaqal_s01e05",
             "NumericValue": 11,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "imaqal_s01e05"
             ]
@@ -1725,7 +2255,7 @@
             "DisplayText": "imaqal s01e06",
             "StringValue": "imaqal_s01e06",
             "NumericValue": 12,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "imaqal_s01e06"
             ]
@@ -1736,14 +2266,14 @@
             "DisplayText": "imaqal s01e07",
             "StringValue": "imaqal_s01e07",
             "NumericValue": 13,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "imaqal_s01e07"
             ]
         },
         {
             "DisplayText": "imaqal women participation",
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "NumericValue": 14,
             "CodeID": "code-h321daf4",
             "CodeType": "Normal",
@@ -1754,7 +2284,7 @@
         },
         {
             "DisplayText": "imaqal s01mag03",
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "NumericValue": 15,
             "CodeID": "code-5779c382",
             "CodeType": "Normal",
@@ -1765,7 +2295,7 @@
         },
         {
             "DisplayText": "imaqal s01mag04",
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "NumericValue": 16,
             "CodeID": "code-0e19748c",
             "CodeType": "Normal",
@@ -1776,7 +2306,7 @@
         },
         {
             "DisplayText": "imaqal s01mag05",
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "NumericValue": 17,
             "CodeID": "code-2dcbe7ba",
             "CodeType": "Normal",
@@ -1787,7 +2317,7 @@
         },
         {
             "DisplayText": "imaqal s01mag06",
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "NumericValue": 18,
             "CodeID": "code-617439b6",
             "CodeType": "Normal",
@@ -1798,7 +2328,7 @@
         },
         {
             "DisplayText": "imaqal s01mag07",
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "NumericValue": 19,
             "CodeID": "code-8fa0ec44",
             "CodeType": "Normal",
@@ -1809,7 +2339,7 @@
         },
         {
             "DisplayText": "imaqal s01mag08",
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "NumericValue": 20,
             "CodeID": "code-f27ee566",
             "CodeType": "Normal",
@@ -1820,7 +2350,7 @@
         },
         {
             "DisplayText": "imaqal s01mag09",
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "NumericValue": 21,
             "CodeID": "code-0cb9f95f",
             "CodeType": "Normal",
@@ -1831,7 +2361,7 @@
         },
         {
             "DisplayText": "imaqal s01mag10",
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "NumericValue": 22,
             "CodeID": "code-424c1d93",
             "CodeType": "Normal",
@@ -1842,7 +2372,7 @@
         },
         {
             "DisplayText": "imaqal s01mag11",
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "NumericValue": 23,
             "CodeID": "code-93f0c63c",
             "CodeType": "Normal",
@@ -1853,7 +2383,7 @@
         },
         {
             "DisplayText": "imaqal s01mag12",
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "NumericValue": 24,
             "CodeID": "code-86b74420",
             "CodeType": "Normal",
@@ -1864,7 +2394,7 @@
         },
         {
             "DisplayText": "imaqal s01mag13",
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "NumericValue": 25,
             "CodeID": "code-dd19ad74",
             "CodeType": "Normal",
@@ -1875,7 +2405,7 @@
         },
         {
             "DisplayText": "imaqal s01mag14",
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "NumericValue": 26,
             "CodeID": "code-d587b931",
             "CodeType": "Normal",
@@ -1886,7 +2416,7 @@
         },
         {
             "DisplayText": "imaqal s01mag15",
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "NumericValue": 27,
             "CodeID": "code-eb74cbca",
             "CodeType": "Normal",
@@ -1897,7 +2427,7 @@
         },
         {
             "DisplayText": "imaqal minority clan issues",
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "NumericValue": 28,
             "CodeID": "code-3a0e771e",
             "CodeType": "Normal",
@@ -1908,7 +2438,7 @@
         },
         {
             "DisplayText": "imaqal young people issues",
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "NumericValue": 29,
             "CodeID": "code-130c3221",
             "CodeType": "Normal",
@@ -1919,7 +2449,7 @@
         },
         {
             "DisplayText": "imaqal s01mag16",
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "NumericValue": 30,
             "CodeID": "code-4d4e1ac9",
             "CodeType": "Normal",
@@ -1930,7 +2460,7 @@
         },
         {
             "DisplayText": "imaqal s01mag17",
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "NumericValue": 31,
             "CodeID": "code-3c592378",
             "CodeType": "Normal",
@@ -1941,7 +2471,7 @@
         },
         {
             "DisplayText": "imaqal s01mag18",
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "NumericValue": 32,
             "CodeID": "code-8b9fc454",
             "CodeType": "Normal",
@@ -1952,7 +2482,7 @@
         },
         {
             "DisplayText": "imaqal s01mag19",
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "NumericValue": 33,
             "CodeID": "code-7007a173",
             "CodeType": "Normal",
@@ -1963,7 +2493,7 @@
         },
         {
             "DisplayText": "imaqal s01mag20",
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "NumericValue": 34,
             "CodeID": "code-94bd4fa7",
             "CodeType": "Normal",
@@ -1974,7 +2504,7 @@
         },
         {
             "DisplayText": "imaqal decisions minority clan",
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "NumericValue": 35,
             "CodeID": "code-5b57a1de",
             "CodeType": "Normal",
@@ -1989,7 +2519,7 @@
             "DisplayText": "imaqal s02e08",
             "StringValue": "imaqal_s02e08",
             "NumericValue": 36,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "imaqal_s02e08"
             ]
@@ -2000,7 +2530,7 @@
             "DisplayText": "imaqal s02e09",
             "StringValue": "imaqal_s02e09",
             "NumericValue": 37,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "imaqal_s02e09"
             ]
@@ -2011,7 +2541,7 @@
             "DisplayText": "imaqal s02e10",
             "StringValue": "imaqal_s02e10",
             "NumericValue": 38,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "imaqal_s02e10"
             ]
@@ -2022,7 +2552,7 @@
             "DisplayText": "imaqal s02e11",
             "StringValue": "imaqal_s02e11",
             "NumericValue": 39,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "imaqal_s02e11"
             ]
@@ -2033,7 +2563,7 @@
             "DisplayText": "imaqal s02e12",
             "StringValue": "imaqal_s02e12",
             "NumericValue": 40,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "imaqal_s02e12"
             ]
@@ -2044,7 +2574,7 @@
             "DisplayText": "imaqal s02e13",
             "StringValue": "imaqal_s02e13",
             "NumericValue": 41,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "imaqal_s02e13"
             ]
@@ -2055,7 +2585,7 @@
             "DisplayText": "imaqal s02e14",
             "StringValue": "imaqal_s02e14",
             "NumericValue": 42,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "imaqal_s02e14"
             ]
@@ -2066,7 +2596,7 @@
             "DisplayText": "imaqal idps decision making opportunities",
             "StringValue": "imaqal_idps_decision_making_opportunities",
             "NumericValue": 43,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "imaqal_idps_decision_making_opportunities"
             ]
@@ -2077,14 +2607,14 @@
             "DisplayText": "imaqal women decision making opportunities",
             "StringValue": "imaqal_women_decision_making_opportunities",
             "NumericValue": 44,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "imaqal_women_decision_making_opportunities"
             ]
         },
         {
             "DisplayText": "imaqal s02mag21",
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "NumericValue": 45,
             "CodeID": "code-de2de1e3",
             "CodeType": "Normal",
@@ -2095,7 +2625,7 @@
         },
         {
             "DisplayText": "imaqal s02mag22",
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "NumericValue": 46,
             "CodeID": "code-3973947b",
             "CodeType": "Normal",
@@ -2106,7 +2636,7 @@
         },
         {
             "DisplayText": "imaqal s02mag23",
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "NumericValue": 47,
             "CodeID": "code-a0e4f6c5",
             "CodeType": "Normal",
@@ -2117,7 +2647,7 @@
         },
         {
             "DisplayText": "imaqal s02mag24",
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "NumericValue": 48,
             "CodeID": "code-eeee28b2",
             "CodeType": "Normal",
@@ -2128,7 +2658,7 @@
         },
         {
             "DisplayText": "imaqal s02mag25",
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "NumericValue": 49,
             "CodeID": "code-067d10f9",
             "CodeType": "Normal",
@@ -2139,7 +2669,7 @@
         },
         {
             "DisplayText": "imaqal s02mag26",
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "NumericValue": 50,
             "CodeID": "code-c464380c",
             "CodeType": "Normal",
@@ -2150,7 +2680,7 @@
         },
         {
             "DisplayText": "imaqal s02mag27",
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "NumericValue": 51,
             "CodeID": "code-68afc5f5",
             "CodeType": "Normal",
@@ -2161,7 +2691,7 @@
         },
         {
             "DisplayText": "imaqal s02mag28",
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "NumericValue": 52,
             "CodeID": "code-2b087bd6",
             "CodeType": "Normal",
@@ -2172,7 +2702,7 @@
         },
         {
             "DisplayText": "imaqal s02mag29",
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "NumericValue": 53,
             "CodeID": "code-b3977063",
             "CodeType": "Normal",
@@ -2183,7 +2713,7 @@
         },
         {
             "DisplayText": "imaqal s02mag30",
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "NumericValue": 54,
             "CodeID": "code-f6d0e044",
             "CodeType": "Normal",
@@ -2194,7 +2724,7 @@
         },
         {
             "DisplayText": "imaqal_idps_minority_clan_decision_making_opportunities",
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "NumericValue": 55,
             "CodeID": "code-110c88c3",
             "CodeType": "Normal",
@@ -2205,7 +2735,7 @@
         },
         {
             "DisplayText": "imaqal_young_people_issues_two",
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "NumericValue": 56,
             "CodeID": "code-6daf1602",
             "CodeType": "Normal",
@@ -2220,7 +2750,7 @@
             "DisplayText": "imaqal_special_show",
             "StringValue": "imaqal_special_show",
             "NumericValue": 57,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "imaqal_special_show"
             ]
@@ -2231,7 +2761,7 @@
             "DisplayText": "imaqal s03e15",
             "StringValue": "imaqal_s03e15",
             "NumericValue": 58,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "imaqal_s03e15"
             ]
@@ -2242,7 +2772,7 @@
             "DisplayText": "imaqal s03e16",
             "StringValue": "imaqal_s03e16",
             "NumericValue": 59,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "imaqal_s03e16"
             ]
@@ -2253,7 +2783,7 @@
             "DisplayText": "imaqal s03e17",
             "StringValue": "imaqal_s03e17",
             "NumericValue": 60,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "imaqal_s03e17"
             ]
@@ -2264,7 +2794,7 @@
             "DisplayText": "imaqal s03e18",
             "StringValue": "imaqal_s03e18",
             "NumericValue": 61,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "imaqal_s03e18"
             ]
@@ -2275,7 +2805,7 @@
             "DisplayText": "imaqal s03e19",
             "StringValue": "imaqal_s03e19",
             "NumericValue": 62,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "imaqal_s03e19"
             ]
@@ -2286,7 +2816,7 @@
             "DisplayText": "imaqal s03e20",
             "StringValue": "imaqal_s03e20",
             "NumericValue": 63,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "imaqal_s03e20"
             ]
@@ -2297,7 +2827,7 @@
             "DisplayText": "imaqal s03e21",
             "StringValue": "imaqal_s03e21",
             "NumericValue": 64,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "imaqal_s03e21"
             ]
@@ -2308,7 +2838,7 @@
             "DisplayText": "imaqal youth decision making opportunities",
             "StringValue": "imaqal_youth_decision_making_opportunities",
             "NumericValue": 66,
-            "VisibleInCoda": true,
+            "VisibleInCoda": false,
             "MatchValues": [
                 "imaqal_youth_decision_making_opportunities"
             ]

@@ -17,7 +17,7 @@
       "DisplayText": "mother-tongue",
       "NumericValue": 2,
       "StringValue": "mother-tongue",
-      "VisibleInCoda": true
+      "VisibleInCoda": false
     },
     {
       "CodeID": "code-ee4f6f30",
@@ -60,6 +60,38 @@
       "VisibleInCoda": true
     },
     {
+      "CodeID": "code-44e7035d",
+      "CodeType": "Normal",
+      "DisplayText": "amharic",
+      "NumericValue": 9,
+      "StringValue": "amharic",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-3742416a",
+      "CodeType": "Normal",
+      "DisplayText": "bajuni",
+      "NumericValue": 10,
+      "StringValue": "bajuni",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-d7480f0c",
+      "CodeType": "Normal",
+      "DisplayText": "barawani",
+      "NumericValue": 11,
+      "StringValue": "barawani",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-87a87a4c",
+      "CodeType": "Normal",
+      "DisplayText": "benadiri",
+      "NumericValue": 12,
+      "StringValue": "benadiri",
+      "VisibleInCoda": true
+    },
+    {
       "CodeID": "code-49087f30",
       "CodeType": "Normal",
       "DisplayText": "other theme",
@@ -73,7 +105,7 @@
       "DisplayText": "multiple languages",
       "NumericValue": 100,
       "StringValue": "multiple_languages",
-      "VisibleInCoda": true
+      "VisibleInCoda": false
     },
     {
       "CodeID": "code-NA-f93d3eb7",

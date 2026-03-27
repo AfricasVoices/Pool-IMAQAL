@@ -37,6 +37,15 @@
       ]
     },
     {
+      "CodeID": "code-loc-161e4148",
+      "CodeType": "Control",
+      "ControlCode": "diaspora",
+      "DisplayText": "diaspora",
+      "NumericValue": -5,
+      "StringValue": "diaspora",
+      "VisibleInCoda": true
+    },
+    {
       "CodeID": "code-NA-f93d3eb7",
       "CodeType": "Control",
       "ControlCode": "NA",
