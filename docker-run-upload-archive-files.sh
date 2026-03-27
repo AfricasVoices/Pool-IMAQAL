@@ -17,7 +17,7 @@ CONFIGURATION_FILE=$3
 CODE_SCHEMES_DIR=$4
 ARCHIVE_DIR=$5
 
-CMD="pipenv run python -u upload_archive_files.py ${USER} /credentials/google-cloud-credentials.json \
+CMD="pdm run python -u upload_archive_files.py ${USER} /credentials/google-cloud-credentials.json \
     configuration /archives"
 
 # Create the container. Note that we use a bind mount here rather than a volume or docker cp so we can directly

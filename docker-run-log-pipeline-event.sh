@@ -20,7 +20,7 @@ GOOGLE_CLOUD_CREDENTIALS_PATH=$3
 RUN_ID=$4
 EVENT_KEY=$5
 
-CMD="pipenv run python -u log_pipeline_event.py configuration /credentials/google-cloud-credentials.json \
+CMD="pdm run python -u log_pipeline_event.py configuration /credentials/google-cloud-credentials.json \
        ${RUN_ID} ${EVENT_KEY}"
 
 container="$(docker container create -w /app "$IMAGE_NAME" /bin/bash -c "$CMD")"
