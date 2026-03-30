@@ -56,6 +56,32 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
             )
         )
     ],
+    kobotoolbox_sources=[
+        KoboToolBoxSource(
+            token_file_url="gs://avf-credentials/uraia-kobotoolbox-token.json",
+            sync_config=KoboToolBoxToEngagementDBConfiguration(
+                asset_uid="aSB5n98rXtUey7sXDz9jf3",
+                ignore_invalid_mobile_numbers=True,
+                question_configurations=[
+                    KoboToolBoxQuestionConfiguration(data_column_name="SDC_EWS_S01e01", engagement_db_dataset="sdc_ews_s01e01"),
+                    KoboToolBoxQuestionConfiguration(data_column_name="SDC_EWS_S01e02", engagement_db_dataset="sdc_ews_s01e02"),
+                    KoboToolBoxQuestionConfiguration(data_column_name="SDC_EWS_S01e03", engagement_db_dataset="sdc_ews_s01e03"),
+                    KoboToolBoxQuestionConfiguration(data_column_name="SDC_EWS_S01e04", engagement_db_dataset="sdc_ews_s01e04"),
+                    KoboToolBoxQuestionConfiguration(data_column_name="SDC_EWS_S01e05", engagement_db_dataset="sdc_ews_s01e05"),
+                    KoboToolBoxQuestionConfiguration(data_column_name="SDC_EWS_s01E06", engagement_db_dataset="sdc_ews_s01e06"),
+
+                    KoboToolBoxQuestionConfiguration(data_column_name="Gender", engagement_db_dataset="gender"),
+                    KoboToolBoxQuestionConfiguration(data_column_name="Age", engagement_db_dataset="age"),
+                    KoboToolBoxQuestionConfiguration(data_column_name="Location", engagement_db_dataset="location"),
+                    KoboToolBoxQuestionConfiguration(data_column_name="Disability", engagement_db_dataset="disability"),
+                    KoboToolBoxQuestionConfiguration(data_column_name="Agropastoralism", engagement_db_dataset="agropastoralist_status"),
+
+                    KoboToolBoxQuestionConfiguration(data_column_name="Household_Languages", engagement_db_dataset="household_language"),
+                    KoboToolBoxQuestionConfiguration(data_column_name="Displacement", engagement_db_dataset="recently_displaced"),
+                ]
+            )
+        ),    
+    ],
     coda_sync=CodaConfiguration(
         coda=CodaClientConfiguration(credentials_file_url="gs://avf-credentials/coda-production.json"),
         sync_config=CodaSyncConfiguration(
