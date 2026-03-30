@@ -150,15 +150,6 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     ws_code_match_value="sdc_ews_s01e03_follow_up"
                 ),
                 CodaDatasetConfiguration(
-                    coda_dataset_id="SDC_EWS_s01e04",
-                    engagement_db_dataset="sdc_ews_s01e04",
-                    code_scheme_configurations=[
-                        CodeSchemeConfiguration(code_scheme=load_code_scheme("rqas/sdc_ews_s01e04"),
-                                                coda_code_schemes_count=3),
-                    ],
-                    ws_code_match_value="sdc_ews_s01e04"
-                ),
-                CodaDatasetConfiguration(
                     coda_dataset_id="IMAQAL_agropastoralist_status",
                     engagement_db_dataset="agropastoralist_status",
                     code_scheme_configurations=[
@@ -332,17 +323,6 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     CodingConfiguration(
                         code_scheme=load_code_scheme("rqas/sdc_ews_s01e03_follow_up"),
                         analysis_dataset="sdc_ews_s01e03_follow_up"
-                    )
-                ]
-            ),
-            AnalysisDatasetConfiguration(
-                engagement_db_datasets=["sdc_ews_s01e04"],
-                dataset_type=DatasetTypes.RESEARCH_QUESTION_ANSWER,
-                raw_dataset="sdc_ews_s01e04_raw",
-                coding_configs=[
-                    CodingConfiguration(
-                        code_scheme=load_code_scheme("rqas/sdc_ews_s01e04"),
-                        analysis_dataset="sdc_ews_s01e04"
                     )
                 ]
             ),
