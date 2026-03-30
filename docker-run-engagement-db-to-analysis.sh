@@ -13,6 +13,9 @@ while [[ $# -gt 0 ]]; do
             INCREMENTAL_ARG="--incremental-cache-path /cache"
             INCREMENTAL_CACHE_VOLUME_NAME="$2"
             shift 2;;
+        --export-large-files)
+            EXPORT_LARGE_FILES_ARG="--export-large-files"
+            shift;;
         --)
             shift
             break;;
@@ -24,9 +27,9 @@ done
 # Check that the correct number of arguments were provided.
 if [[ $# -ne 5 ]]; then
     echo "Usage: $0 
-    [--dry-run] [--incremental-cache-volume <incremental-cache-volume>]
+    [--dry-run] [--export-large-files] [--incremental-cache-volume <incremental-cache-volume>]
     <user> <google-cloud-credentials-file-path> <configuration-file> <code-schemes-dir> <data-dir>"
-    exit
+    exit 1
 fi
 
 # Assign the program arguments to bash variables.
