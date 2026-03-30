@@ -4,6 +4,94 @@
     "Version": "0.0.0.1",
     "Codes": [
         {
+            "CodeID": "code-5f55424f",
+            "DisplayText": "gendered access to information",
+            "CodeType": "Normal",
+            "NumericValue": 8,
+            "StringValue": "gendered_access_to_information",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-a335dcf9",
+            "DisplayText": "clan and social capital",
+            "CodeType": "Normal",
+            "NumericValue": 9,
+            "StringValue": "clan_and_social_capital",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-ad6d1493",
+            "DisplayText": "location ",
+            "CodeType": "Normal",
+            "NumericValue": 10,
+            "StringValue": "location",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-94549011",
+            "DisplayText": "technology",
+            "CodeType": "Normal",
+            "NumericValue": 11,
+            "StringValue": "technology",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-dd007e67",
+            "DisplayText": "beliefs",
+            "CodeType": "Normal",
+            "NumericValue": 12,
+            "StringValue": "beliefs",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-5fbc223d",
+            "DisplayText": "financial constraints",
+            "CodeType": "Normal",
+            "NumericValue": 13,
+            "StringValue": "financial_constraints",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-50ddba10",
+            "DisplayText": "education level",
+            "CodeType": "Normal",
+            "NumericValue": 14,
+            "StringValue": "education_level",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-9e18aa4d",
+            "DisplayText": "resource availability",
+            "CodeType": "Normal",
+            "NumericValue": 15,
+            "StringValue": "resource_availability",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-dc0e3f06",
+            "DisplayText": "culture",
+            "CodeType": "Normal",
+            "NumericValue": 16,
+            "StringValue": "culture",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-160e59f3",
+            "DisplayText": "physical barriers",
+            "CodeType": "Normal",
+            "NumericValue": 17,
+            "StringValue": "physical_barriers",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-af19b2a2",
+            "DisplayText": "no effect",
+            "CodeType": "Normal",
+            "NumericValue": 18,
+            "StringValue": "no_effect",
+            "VisibleInCoda": true
+        },
+        {
             "CodeID": "code-ee463751",
             "DisplayText": "other theme",
             "CodeType": "Normal",
