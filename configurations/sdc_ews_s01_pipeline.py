@@ -80,7 +80,29 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     KoboToolBoxQuestionConfiguration(data_column_name="Displacement", engagement_db_dataset="recently_displaced"),
                 ]
             )
-        ),    
+        ),
+        KoboToolBoxSource(
+            token_file_url="gs://avf-credentials/uraia-kobotoolbox-token.json",
+            sync_config=KoboToolBoxToEngagementDBConfiguration(
+                asset_uid="a6oPkbdQxddKTvtYftKfmH",
+                ignore_invalid_mobile_numbers=True,
+                question_configurations=[
+                    KoboToolBoxQuestionConfiguration(data_column_name="group_gs1dd35/SDC_EWS_S01e01", engagement_db_dataset="sdc_ews_s01e01"),
+                    KoboToolBoxQuestionConfiguration(data_column_name="group_gs1dd35/SDC_EWS_S01e02", engagement_db_dataset="sdc_ews_s01e02"),
+                    KoboToolBoxQuestionConfiguration(data_column_name="group_gs1dd35/SDC_EWS_S01e03", engagement_db_dataset="sdc_ews_s01e03"),
+                    KoboToolBoxQuestionConfiguration(data_column_name="group_gs1dd35/sdc_ews_s01e03_follow_up", engagement_db_dataset="sdc_ews_s01e03_follow_up"),
+                    KoboToolBoxQuestionConfiguration(data_column_name="group_gs1dd35/SDC_EWS_S01e04", engagement_db_dataset="sdc_ews_s01e04"),
+                    KoboToolBoxQuestionConfiguration(data_column_name="group_gs1dd35/SDC_EWS_S01e05", engagement_db_dataset="sdc_ews_s01e05"),
+                    KoboToolBoxQuestionConfiguration(data_column_name="group_gs1dd35/SDC_EWS_s01E06", engagement_db_dataset="sdc_ews_s01e06"),
+
+                    KoboToolBoxQuestionConfiguration(data_column_name="group_hp1ov89/Gender", engagement_db_dataset="gender"),
+                    KoboToolBoxQuestionConfiguration(data_column_name="group_hp1ov89/Age", engagement_db_dataset="age"),
+                    KoboToolBoxQuestionConfiguration(data_column_name="group_hp1ov89/Location", engagement_db_dataset="location_2"),
+                    KoboToolBoxQuestionConfiguration(data_column_name="group_hp1ov89/Disability", engagement_db_dataset="disability"),
+                    KoboToolBoxQuestionConfiguration(data_column_name="group_hp1ov89/Agropastoralism", engagement_db_dataset="agropastoralist_status")
+                ]
+            )
+        ),     
     ],
     coda_sync=CodaConfiguration(
         coda=CodaClientConfiguration(credentials_file_url="gs://avf-credentials/coda-production.json"),
