@@ -4,6 +4,46 @@
     "Version": "0.0.0.1",
     "Codes": [
         {
+            "CodeID": "code-845c89b5",
+            "DisplayText": "dependence on daily income",
+            "CodeType": "Normal",
+            "NumericValue": 8,
+            "StringValue": "dependence_on_daily_income",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-3332cf95",
+            "DisplayText": "disability",
+            "CodeType": "Normal",
+            "NumericValue": 9,
+            "StringValue": "disability",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-46e67d06",
+            "DisplayText": "poor governance",
+            "CodeType": "Normal",
+            "NumericValue": 10,
+            "StringValue": "poor_governance",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-9dc6ee52",
+            "DisplayText": "elders decide",
+            "CodeType": "Normal",
+            "NumericValue": 11,
+            "StringValue": "elders_decide",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-337d8f8e",
+            "DisplayText": "insecurity and conflict",
+            "CodeType": "Normal",
+            "NumericValue": 12,
+            "StringValue": "insecurity_and_conflict",
+            "VisibleInCoda": true
+        },
+        {
             "CodeID": "code-09abf5b3",
             "DisplayText": "lack of understanding",
             "CodeType": "Normal",
