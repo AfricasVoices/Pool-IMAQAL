@@ -136,6 +136,39 @@
             ]
         },
         {
+            "CodeID": "code-3e99e859",
+            "CodeType": "Normal",
+            "DisplayText": "sdc_ews_s01e04",
+            "StringValue": "sdc_ews_s01e04",
+            "NumericValue": 261,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "sdc_ews_s01e04"
+            ]
+        },
+        {
+            "CodeID": "code-0c9a17b8",
+            "CodeType": "Normal",
+            "DisplayText": "sdc_ews_s01e05",
+            "StringValue": "sdc_ews_s01e05",
+            "NumericValue": 262,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "sdc_ews_s01e05"
+            ]
+        },
+        {
+            "CodeID": "code-0a9f9951",
+            "CodeType": "Normal",
+            "DisplayText": "sdc_ews_s01e06",
+            "StringValue": "sdc_ews_s01e06",
+            "NumericValue": 263,
+            "VisibleInCoda": true,
+            "MatchValues": [
+                "sdc_ews_s01e06"
+            ]
+        },
+        {
             "CodeID": "code-4da1e40b",
             "CodeType": "Normal",
             "DisplayText": "sdc_endline_leadership_roles",
