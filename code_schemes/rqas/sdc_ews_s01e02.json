@@ -4,6 +4,38 @@
     "Version": "0.0.0.1",
     "Codes": [
         {
+            "CodeID": "code-03fd109a",
+            "DisplayText": "ngos",
+            "CodeType": "Normal",
+            "NumericValue": 8,
+            "StringValue": "ngos",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-eb54dc37",
+            "DisplayText": "religious leaders",
+            "CodeType": "Normal",
+            "NumericValue": 9,
+            "StringValue": "religious_leaders",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-4ba5d6f3",
+            "DisplayText": "traditional knowledge",
+            "CodeType": "Normal",
+            "NumericValue": 10,
+            "StringValue": "traditional_knowledge",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-14eefebe",
+            "DisplayText": "community members",
+            "CodeType": "Normal",
+            "NumericValue": 11,
+            "StringValue": "community_members",
+            "VisibleInCoda": true
+        },
+        {
             "CodeID": "code-c35ecc0a",
             "DisplayText": "through media",
             "CodeType": "Normal",
