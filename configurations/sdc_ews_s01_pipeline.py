@@ -212,6 +212,16 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
                     dataset_users_file_url="gs://avf-project-datasets/2022/IMAQAL-POOL/coda_users.json"
                 ),
                 CodaDatasetConfiguration(
+                    coda_dataset_id="IMAQAL_KE_location",
+                    engagement_db_dataset="location_2",
+                    code_scheme_configurations=[
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("demographics/kenya_ward"), auto_coder=None),
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("demographics/kenya_constituency"), auto_coder=None),
+                        CodeSchemeConfiguration(code_scheme=load_code_scheme("demographics/kenya_county"), auto_coder=None)
+                    ],
+                    ws_code_match_value="kenya_location"
+                ),
+                CodaDatasetConfiguration(
                     coda_dataset_id="IMAQAL_location",
                     engagement_db_dataset="location",
                     code_scheme_configurations=[
