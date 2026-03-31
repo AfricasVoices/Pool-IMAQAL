@@ -4,6 +4,78 @@
     "Version": "0.0.0.1",
     "Codes": [
         {
+            "CodeID": "code-63024fca",
+            "DisplayText": "clear message",
+            "CodeType": "Normal",
+            "NumericValue": 7,
+            "StringValue": "clear_message",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-69efecf4",
+            "DisplayText": "repeated message",
+            "CodeType": "Normal",
+            "NumericValue": 8,
+            "StringValue": "repeated_message",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-f318e4f2",
+            "DisplayText": "proper channels",
+            "CodeType": "Normal",
+            "NumericValue": 9,
+            "StringValue": "proper_channels",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-07d9f5f4",
+            "DisplayText": "general not specific",
+            "CodeType": "Normal",
+            "NumericValue": 10,
+            "StringValue": "general_not_specific",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-86f0b823",
+            "DisplayText": "lack of support",
+            "CodeType": "Normal",
+            "NumericValue": 11,
+            "StringValue": "lack_of_support",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-31eb49be",
+            "DisplayText": "exclusion",
+            "CodeType": "Normal",
+            "NumericValue": 12,
+            "StringValue": "exclusion",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-4c41e9fd",
+            "DisplayText": "technical and irrelevant",
+            "CodeType": "Normal",
+            "NumericValue": 13,
+            "StringValue": "technical_and_irrelevant",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-edcc22de",
+            "DisplayText": "untrusted channels",
+            "CodeType": "Normal",
+            "NumericValue": 14,
+            "StringValue": "untrusted_channels",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-f7335e1d",
+            "DisplayText": "limited access",
+            "CodeType": "Normal",
+            "NumericValue": 15,
+            "StringValue": "limited_access",
+            "VisibleInCoda": true
+        },
+        {
             "CodeID": "code-0f7be158",
             "DisplayText": "language barrier",
             "CodeType": "Normal",
