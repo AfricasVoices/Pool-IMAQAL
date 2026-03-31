@@ -4,6 +4,78 @@
     "Version": "0.0.0.1",
     "Codes": [
         {
+            "CodeID": "code-c6469c9f",
+            "DisplayText": "government institutions",
+            "CodeType": "Normal",
+            "NumericValue": 6,
+            "StringValue": "government_institutions",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-839be1b4",
+            "DisplayText": "ngos",
+            "CodeType": "Normal",
+            "NumericValue": 7,
+            "StringValue": "ngos",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-531dd9dc",
+            "DisplayText": "community organizations",
+            "CodeType": "Normal",
+            "NumericValue": 8,
+            "StringValue": "community_organizations",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-8b317360",
+            "DisplayText": "traditional knowledge",
+            "CodeType": "Normal",
+            "NumericValue": 9,
+            "StringValue": "traditional_knowledge",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-5d3bc1b0",
+            "DisplayText": "hydrological observation",
+            "CodeType": "Normal",
+            "NumericValue": 10,
+            "StringValue": "hydrological_observation",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-a6dc1e9f",
+            "DisplayText": "biological and animal behavior",
+            "CodeType": "Normal",
+            "NumericValue": 11,
+            "StringValue": "biological_and_animal_behavior",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-8f07115e",
+            "DisplayText": "depletion of pasture",
+            "CodeType": "Normal",
+            "NumericValue": 12,
+            "StringValue": "depletion_of_pasture",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-c6eb130e",
+            "DisplayText": "economic and market signals",
+            "CodeType": "Normal",
+            "NumericValue": 13,
+            "StringValue": "economic_and_market_signals",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-97144f08",
+            "DisplayText": "reactive observation",
+            "CodeType": "Normal",
+            "NumericValue": 14,
+            "StringValue": "reactive_observation",
+            "VisibleInCoda": true
+        },
+        {
             "CodeID": "code-594477d5",
             "DisplayText": "through media",
             "CodeType": "Normal",
