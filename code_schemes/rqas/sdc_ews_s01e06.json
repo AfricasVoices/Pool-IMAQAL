@@ -4,6 +4,78 @@
     "Version": "0.0.0.1",
     "Codes": [
         {
+            "CodeID": "code-c753ea28",
+            "DisplayText": "water storage and harvesting",
+            "CodeType": "Normal",
+            "NumericValue": 1,
+            "StringValue": "water_storage_and_harvesting",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-37facf32",
+            "DisplayText": "livestock management",
+            "CodeType": "Normal",
+            "NumericValue": 2,
+            "StringValue": "livestock_management",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-a5f141cc",
+            "DisplayText": "crop management",
+            "CodeType": "Normal",
+            "NumericValue": 3,
+            "StringValue": "crop_management",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-cd0fe9e6",
+            "DisplayText": "food storage",
+            "CodeType": "Normal",
+            "NumericValue": 4,
+            "StringValue": "food_storage",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-d74ad83f",
+            "DisplayText": "saving money",
+            "CodeType": "Normal",
+            "NumericValue": 5,
+            "StringValue": "saving_money",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-d71a4293",
+            "DisplayText": "disaster preparedness",
+            "CodeType": "Normal",
+            "NumericValue": 6,
+            "StringValue": "disaster_preparedness",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-201b1e10",
+            "DisplayText": "early warning communication",
+            "CodeType": "Normal",
+            "NumericValue": 7,
+            "StringValue": "early_warning_communication",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-a4a98c91",
+            "DisplayText": "community support",
+            "CodeType": "Normal",
+            "NumericValue": 8,
+            "StringValue": "community_support",
+            "VisibleInCoda": true
+        },
+        {
+            "CodeID": "code-1fb7242f",
+            "DisplayText": "need for awareness",
+            "CodeType": "Normal",
+            "NumericValue": 9,
+            "StringValue": "need_for_awareness",
+            "VisibleInCoda": true
+        },
+        {
             "CodeID": "code-ee463751",
             "DisplayText": "other theme",
             "CodeType": "Normal",
