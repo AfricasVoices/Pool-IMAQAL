@@ -97,7 +97,7 @@ PIPELINE_CONFIGURATION = PipelineConfiguration(
 
                     KoboToolBoxQuestionConfiguration(data_column_name="group_hp1ov89/Gender", engagement_db_dataset="gender"),
                     KoboToolBoxQuestionConfiguration(data_column_name="group_hp1ov89/Age", engagement_db_dataset="age"),
-                    KoboToolBoxQuestionConfiguration(data_column_name="group_hp1ov89/Location", engagement_db_dataset="location_2"),
+                    KoboToolBoxQuestionConfiguration(data_column_name="group_hp1ov89/Location", engagement_db_dataset="sdc_ews_ke_location"),
                     KoboToolBoxQuestionConfiguration(data_column_name="group_hp1ov89/Disability", engagement_db_dataset="disability"),
                     KoboToolBoxQuestionConfiguration(data_column_name="group_hp1ov89/Agropastoralism", engagement_db_dataset="agropastoralist_status")
                 ]
